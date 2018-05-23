@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
@@ -8,23 +9,38 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd
 		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
-
+	
+	<context:component-scan
+		base-package="com.main.*.*.DAO"></context:component-scan>
+	<context:component-scan
+		base-package="com.main.*.*.Service"></context:component-scan>
+	<context:component-scan
+		base-package="com.main.*.*.VO"></context:component-scan>
+	
+	<bean id="tiles" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		<property name="order" value="2" />
+	</bean>
+	
 	<!-- Data Source -->
 	<!-- <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close"> -->
-	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<!-- JDBC 드라이버 클래스명 설정 -->
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		JDBC 드라이버 클래스명 설정
+		<property name="driverClassName" value="net.sf.log4jdbc.DriverSpy"></property>
 		<property name="driverClassName">
 			<value>oracle.jdbc.driver.OracleDriver</value>
 		</property>
-		<!-- JDBC 접속 문자열 생성 -->
+		JDBC 접속 문자열 생성
 		<property name="url">
-			<value>jdbc:oracle:thin:@mydatabase.cneupgctltbi.ap-northeast-2.rds.amazonaws.com:1521:ORCL</value>
+			<value>jdbc:log4jdbc:oracle:thin:@mydatabase.cneupgctltbi.ap-northeast-2.rds.amazonaws.com:1521:ORCL</value>
 		</property>
 		<property name="username">
 			<value>admin</value>
@@ -34,22 +50,22 @@
 		</property>
 	</bean>
 
-	<!-- Transaction 관리자 설정 -->
+	Transaction 관리자 설정
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
 		p:dataSource-ref="dataSource" />
 		
-	<!-- myBatis 사용을 위한 설정 -->
+	myBatis 사용을 위한 설정
 	<bean id="sqlSessionFactoryBean"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation"
 			value="classpath:/myBatis/myBatis-config.xml" />
-		<!-- <property name="mapperLocations" value="classpath:/myBatis/test/test.xml"></property> -->
+		<property name="mapperLocations" value="classpath:/myBatis/test/test.xml"></property>
 	</bean>
 	<bean id="sqlSessionTemplate"
 		class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg name="sqlSessionFactory"
 			ref="sqlSessionFactoryBean" />
-	</bean>
+	</bean> -->
 </beans>

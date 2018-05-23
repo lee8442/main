@@ -2,9 +2,24 @@
 <!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <!--Sql Mapper 설정-->
-    <mappers>
-        <!-- 위치값을 줄때 루트 폴터는 resources 폴더이다. -->
-        <mapper resource="myBatis/test/test.xml"></mapper>
-    </mappers>
+	<!--DataSource 설정 -->
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="net.sf.log4jdbc.DriverSpy" />
+				<property name="url"
+					value="jdbc:log4jdbc:oracle:thin:@mydatabase.cneupgctltbi.ap-northeast-2.rds.amazonaws.com:1521:ORCL" />
+				<property name="username" value="admin" />
+				<property name="password" value="asdf1234" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<!--Sql Mapper 설정 -->
+	<mappers>
+		<!-- 위치값을 줄때 루트 폴터는 resources 폴더이다. -->
+		<mapper
+			resource="myBatis/customer/member/insertMemberSql.xml"></mapper>
+	</mappers>
 </configuration>
