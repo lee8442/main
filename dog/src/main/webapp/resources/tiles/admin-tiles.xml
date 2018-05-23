@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<!-- Definitions for Tiles documentation -->
+<tiles-definitions>
+	<!-- Doc indexpage description -->
+	<definition	name="layout" template="/WEB-INF/views/adminView/layout/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/adminView/layout/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/adminView/layout/footer.jsp" />
+		<put-attribute name="content" value="" />
+	</definition>
+	
+	<definition name="admin/*" extends="layout">
+		<put-attribute name="content" value="/WEB-INF/views/adminView/{1}.jsp" />
+	</definition>
+	<definition name="admin/*/*" extends="layout">
+		<put-attribute name="content" value="/WEB-INF/views/adminView/{1}/{2}.jsp" />
+	</definition>
+	<definition name="admin/*/*/*" extends="layout">
+		<put-attribute name="content" value="/WEB-INF/views/adminView/{1}/{2}/{3}.jsp" />
+	</definition>
+
+	<!-- 특정 layout을 사용하지 않을 경우
+	<definition name="member/memberForm" extends="layout">
+		<put-attribute name="content" value="/WEB-INF/views/customerView/member/memberForm.jsp" />
+	</definition> -->
+</tiles-definitions>
