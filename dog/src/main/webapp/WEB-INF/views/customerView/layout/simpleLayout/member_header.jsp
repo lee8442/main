@@ -14,7 +14,7 @@
 	</header>
 	<div id="visual">
 		<img class="mySlides" src="resources/image/main/img1.png" style="width:100%; height:250px; z-index: -1000; ">
-		<img class="mySlides" src="resources/image/main/img4.png" style="width:100%; height:250px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/img2.png" style="width:100%; height:250px; z-index: -1000;">
 		<img class="mySlides" src="resources/image/main/img3.png" style="width:100%; height:250px; z-index: -1000;">
 		<img class="mySlides" src="resources/image/main/img5.png" style="width:100%; height:250px; z-index: -1000;">
 		<nav id="nav" class="cf">
