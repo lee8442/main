@@ -11,6 +11,13 @@ import com.main.customer.member.VO.MemberVO;
 public class InsertMemberController {
 	@Autowired
 	InsertMemberService InsertMemberService;
+	
+	@RequestMapping(value = "/main.do")
+	public String main() {
+		System.out.println("메인 페이지");
+
+		return "main/main/main";
+	}
 
 	@RequestMapping(value = "/insertMemberForm.do")
 	public String insertMemberForm() {

@@ -10,19 +10,15 @@
 <script type="text/javascript" src="resources/member/js/jquery-3.3.1.min.js"></script> -->
 </head>
 <body>
-<strong>메인레이아웃</strong>
 	<header id="header">
 	</header>
 	<div id="visual">
-		<img class="mySlides" src="resources/member/image/main.png" style="width:100%; height:200px; z-index: -1000;">
-		<img class="mySlides" src="resources/member/image/main1.jpg" style="width:100%; height:200px; z-index: -1000;">
-		<img class="mySlides" src="resources/member/image/main2.jpg" style="width:100%; height:200px; z-index: -1000;">
-		<img class="mySlides" src="resources/member/image/main3.jpg" style="width:100%; height:200px; z-index: -1000;">
+		<img class="mySlides" src="resources/member/image/main.png" style="width:100%; height:400px; z-index: -1000;">
+		<img class="mySlides" src="resources/member/image/main1.jpg" style="width:100%; height:400px; z-index: -1000;">
+		<img class="mySlides" src="resources/member/image/main2.jpg" style="width:100%; height:400px; z-index: -1000;">
+		<img class="mySlides" src="resources/member/image/main3.jpg" style="width:100%; height:400px; z-index: -1000;">
 		<nav id="nav" class="cf">
 			<div class="title">
-				<div class="logo">
-					<img alt="logo" src="resources/member/image/logo.jpg">
-				</div>
 				<a href="#">#DOG</a>
 			</div>
 			<ul class="topMenu cf">
@@ -32,6 +28,15 @@
 				<li><a href="#">회원가입</a></li>
 			</ul>
 		</nav>
+		<div class="inner cf">
+			<h2># DOG 을 방문해 주셔서 감사합니다</h2>
+			<div class="divbox">
+				<form>
+					<input class="text" type="text">
+				</form>
+			</div>
+			<a href="#">상품찾기</a>
+		</div>
 	</div>
 	<div id="container">
 		<div id="content">
