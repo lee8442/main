@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+.body {
+	margin-top: 100px;
+}
+
+.body-all {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 700px;
+}
+
+.bar {
+	padding: 5px;
+	position: inherit;
+}
+
+.a1 {
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none
+}
+
+.a2 {
+	font-weight: bold;
+	text-decoration: none
+}
+
+.a3 {
+	font-weight: bold;
+	float: right;
+	text-decoration: none;
+	margin-right: 10px;
+	font-size: 18px;
+}
+
+.bar a {
+	padding: 0 0 0 15px;
+}
+
+div.text {
+	border: 1px solid black;
+	height: 150px;
+	padding-top: 50px;
+	position: relative;
+}
+
+
+.text h1 {
+	text-align: center;
+}
+
+.container {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.tab {
+	display: block;
+	margin-left: 69px;
+}
+
+ul.tab {
+	list-style: none;
+}
+
+.tab li {
+	float: left;
+	list-style: none;
+	background: #6d6d6d;
+	border: 1px solid #e2e2e2;
+	border-right: 0;
+	border-bottom: 0;
+	color: black;
+}
+
+.tab li a {
+	color: white;
+	display: inline-block;
+	padding: 15px 20px;
+	font-size: 15px;
+	text-align: center;
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+/* <container 1 시작 > */
+
+
+.tab-container {
+	width: 980px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	height: 380px;
+}
+
+.tab_content {
+	display: block;
+	width: 565px;
+	height: 350px;
+	margin: auto;
+}
+
+#pass {
+	display: table-column;
+}
+
+/* Create an active/current "tab button" class */
+.tab-list li.active {
+	background-color: #444444;
+	font-weight: bold;
+	border: 1px solid;
+}
+
+ul.tab li a:hover {
+	background: #808080;
+}
+
+html ul.tab li.active, html ul.tab li.active a:hover {
+	background: #000000;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+.tabcontent-name {
+	margin-top: 150px;
+}
+
+.name {
+	height: 48px;
+	padding: 5px;
+	margin-left: 38px;
+	float: right;
+	width: 304px;
+	font-size: 20px;
+}
+
+.tel {
+	height: 34px;
+	margin-left: 10px;
+	width: 290px;
+	float: right;
+	margin-top: 7px;
+	padding: 5px;
+	font-size: 20px;
+}
+
+.tabcontent-ok {
+	height: 100px;
+	width: 120px;
+	margin-left: 7px;
+	float: right;
+	border-color: white;
+	color: #fefeff;
+	background-color: #0c0c0b;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 0;
+	position: relative;
+}
+
+.tebcontent-b-name {
+	font-weight: bold;
+	font-size: 17px;
+	float: left;
+	margin-top: 15px;
+}
+
+.tebcontent-b-tel {
+	font-weight: bold;
+	font-size: 17px;
+	float: left;
+	margin-top: 15px;
+}
+/*  content2 시작  */
+.tab-pass-content {
+	text-align: center;
+	padding-top: 150px;
+	height: 200px;
+	width: 500px;
+}
+
+.tab-pass-ul {
+	list-style: none;
+	width: 400px;
+}
+
+.tab-pass-content li {
+	height: 50px;
+}
+
+.tab-pass-content li a {
+	
+}
+
+.content-name {
+	float: right;
+	width: 290px;
+	height: 35px;
+	font-size: 20px;
+	padding-left: 5px;
+}
+
+.content-tel {
+	
+	float: right;
+	width: 290px;
+	height: 35px;
+	font-size: 20px;
+	padding-left: 5px;
+}
+
+.content-id {
+	width: 195px;
+	height: 35px;
+	margin-left: 47px;
+	font-size: 20px;
+	float: left;
+	padding-left: 5px;
+}
+
+.content-id-ok {
+	float: right;
+	width: 88px;
+	font-size: 13px;
+	font-weight: bold;
+	height: 41px;
+}
+
+.content-tel-ok {
+	    float: left;
+    height: 41px;
+    width: 105px;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+    color: #000;
+    background: #fff;
+    border: 1px solid #0f0f0f;
+}
+
+
+.content-submit {
+	    float: right;
+   
+    height: 35px;
+}
+
+.content-name-a {
+	float: left;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.content-tel-a {
+	float: left;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.content-id-ok-a {
+	float: left;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.content-tel-ok-a {
+	float: left;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.tabcontent-ok2 {
+	height: 195px;
+	width: 120px;
+	margin-top: 112px;
+	margin-left: 7px;
+	float: right;
+	border-color: white;
+	color: #fefeff;
+	background-color: #0c0c0b;
+	border-right: 0;
+	border-left: 0;
+	border-bottom: 0;
+	position: relative;
+}
