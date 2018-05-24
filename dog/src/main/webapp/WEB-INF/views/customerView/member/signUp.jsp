@@ -4,24 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="css/singUp.css">
-<script type="text/javascript" src="js/singUp.js"></script>
-<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="resources/css/member/signUp.css">
+
 <title>Insert title here</title>
 </head>
 <body>
 	<div class="body-all">
 		<div class="bar">
-			<a href="#" class="a1">홈</a> &nbsp; <a href="login.jsp" class="a2">로그인</a>
-			&nbsp; <a href="singUp.jsp" class="a2">회원가입</a> <a href="#"
-				class="a3">#DOG</a>
+			<a href="#" class="a1">홈</a> &nbsp;> <a href="login.jsp" class="a2">로그인</a>
+			&nbsp;><a href="singUp.jsp" class="a2">회원가입</a> 
 		</div>
 		<center>
 			<div class="body-list">
 
 
-				<div class="text">
-					<h1>회원가입</h1>
+				<div class="h1-font">
+					<h1 class="h1">회원가입</h1>
 				</div>
 			</div>
 			<form action="" onsubmit="return insertCheck()" method="post">
@@ -81,5 +79,7 @@
 			</form>
 		</center>
 	</div>
+	<script type="text/javascript" src="resources/js/member/singUp.js"></script>
+<script type="text/javascript" src="resources/js/jquery/jquery-3.3.1.min.js"></script>
 </body>
 </html>

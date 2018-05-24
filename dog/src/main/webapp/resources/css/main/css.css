@@ -1,4 +1,5 @@
 *{box-sizing: border-box;}
+
 .mySlides{
 	position: absolute;
 }
@@ -9,9 +10,10 @@
 #visual #nav {
 	width: 100%;
 	margin: auto;
+	font-size: 
 }
 #visual #nav .title{
-	padding-top: 130px;
+	padding-top: 35px;
 	float: left;
 }
 #visual #nav .title .logo{
@@ -37,10 +39,12 @@
 }
 #visual #nav .topMenu li a{
 	color: #ffffff;
+	margin-right: 10px;
+    font-size: 15px;
 }
 #visual .inner{
 	width:700px;
-	padding-top:140px;
+	
 	margin:auto;
 }
 #visual .inner h2{
@@ -83,12 +87,13 @@
 }
 #content{
 	width: 100%;	
+	
 }
 #content .mainMenu_full{
 	width: 1200px;
-	background-color: #f4f5f6;
+	
 	margin: auto;
-	height: 70px;
+	
 }
 #content .mainMenu_full ul li{
 	float: left;
@@ -119,7 +124,9 @@
 #content .mainMenu_full .cf li:hover .mainMenu_backfull{
  	display: block;
 }
-
+.cf{
+	margin-top: 50px;
+}
 #content .hot{
 	font-size: 25px;
 	width:1200px;
@@ -345,7 +352,7 @@
 	margin-left:0;
 }
 #footer{
-	margin-top:100px;
+	margin-top:530px;
 	width: 100%;
 	border-top: 1px solid #dcdcdc;
 	height: 200px;
