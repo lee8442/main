@@ -47,7 +47,7 @@
 			<div class="mainMenu_full">
 				<div class="mainMenu">
 					<ul class="cf">
-						<li><a href="#">카테고리</a>
+						<li><a href="#">전체카테고리</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -56,8 +56,9 @@
 										<li><a href="#">Extensions</a></li>
 									</ul>
 								</div>
-							</div></li>
-						<li><a href="#">상품</a>
+							</div>
+						</li>
+						<li><a href="#">사료/간식</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -66,8 +67,9 @@
 										<li><a href="#">Extensions</a></li>
 									</ul>
 								</div>
-							</div></li>
-						<li><a href="#">고객센터</a>
+							</div>
+						</li>
+						<li><a href="#">미용/목욕</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -76,8 +78,9 @@
 										<li><a href="#">Extensions</a></li>
 									</ul>
 								</div>
-							</div></li>
-						<li><a href="#">리뷰평</a>
+							</div>
+						</li>
+						<li><a href="#">장난감</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -86,8 +89,9 @@
 										<li><a href="#">Extensions</a></li>
 									</ul>
 								</div>
-							</div></li>
-						<li><a href="#">만남의 광장</a>
+							</div>
+						</li>
+						<li><a href="#">하우스/울타리</a>	
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -96,8 +100,9 @@
 										<li><a href="#">Extensions</a></li>
 									</ul>
 								</div>
-							</div></li>
-						<li><a href="#">배송조회</a>
+							</div>
+						</li>
+						<li><a href="#">의류</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -106,8 +111,9 @@
 										<li><a href="#">Extensions</a></li>
 									</ul>
 								</div>
-							</div></li>
-						<li><a href="#">1:1문의</a>
+							</div>
+						</li>
+						<li><a href="#">베스트상품</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -116,8 +122,9 @@
 										<li><a href="#">Extensions</a></li>
 									</ul>
 								</div>
-							</div></li>
-						<li><a href="#">고객문의</a>
+							</div>
+						</li>
+						<li><a href="#">공지사항</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -126,7 +133,30 @@
 										<li><a href="#">Extensions</a></li>
 									</ul>
 								</div>
-							</div></li>
+							</div>
+						</li>
+						<li><a href="#">1:1상품문의</a>
+							<div class="mainMenu_backfull">
+								<div class="mainMenu_back">
+									<ul class="mainMenu_backul">
+										<li><a href="#">Sliders</a></li>
+										<li><a href="#">Extensions</a></li>
+										<li><a href="#">Extensions</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li><a href="#">상품평</a>
+							<div class="mainMenu_backfull">
+								<div class="mainMenu_back">
+									<ul class="mainMenu_backul">
+										<li><a href="#">Sliders</a></li>
+										<li><a href="#">Extensions</a></li>
+										<li><a href="#">Extensions</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>

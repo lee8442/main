@@ -55,6 +55,7 @@ a {
 	text-decoration: none;
 }
 
+a.allCategories{font-size: 20px;}
 .cf:after{display:block; content:"";clear:both}
 img{ max-width:100% ; vertical-align: top;}
 

@@ -97,12 +97,19 @@
 }
 #content .mainMenu_full ul li{
 	float: left;
-	width: 100px;
+	
 	height: 70px;
-	margin-left: 50px;
+	margin-left: 20px;
 	font-size: 10px;
 	line-height: 75px;
 }
+#content .mainMenu_full ul li
+.allCategories_li{margin-right: 25px;}
+li.cloth={text-align: center;}
+.toy{text-align: center;
+    margin-left: 0;
+}
+
 #content .mainMenu_full .mainMenu .mainMenu_backfull{
 	width: 100%;
 	height:150px;
