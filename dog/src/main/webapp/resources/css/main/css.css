@@ -1,152 +1,213 @@
-*{box-sizing: border-box;}
+* {
+	box-sizing: border-box;
+}
 
-.mySlides{
+.mySlides {
 	position: absolute;
 }
-#visual{
+
+#visual {
 	width: 100%;
 	height: 200px;
 }
+
 #visual #nav {
 	width: 100%;
 	margin: auto;
-	font-size: 
+	font-size:
 }
-#visual #nav .title{
-	padding-top: 35px;
+
+#visual #nav .title {
+	padding-top: 5px;
 	float: left;
 }
-#visual #nav .title .logo{
+
+#visual #nav .title .logo {
 	width: 50px;
 	height: 50px;
 	float: left;
 	margin-left: 30px;
 }
-#visual #nav .title a{
-	color:#ffffff;
+
+#visual #nav .title a {
+	color: #ffffff;
 	text-align: left;
 	font-size: 30px;
 	padding: 0 0 0 10px;
 	margin-top: 180px;
 }
-#visual #nav .topMenu{
-	float:right;
+
+#visual #nav .topMenu {
+	float: right;
 	margin: 10px 10px 0 0;
 }
-#visual #nav .topMenu li{
+
+#visual #nav .topMenu li {
 	float: left;
 	margin-left: 10px;
 }
-#visual #nav .topMenu li a{
+
+#visual #nav .topMenu li a {
 	color: #ffffff;
 	margin-right: 10px;
-    font-size: 15px;
+	font-size: 15px;
 }
-#visual .inner{
-	width:700px;
-	
-	margin:auto;
+
+#visual .inner {
+	width: 700px;
+	margin: auto;
+	margin-top: 130px;
 }
-#visual .inner h2{
+
+#visual .inner h2 {
 	font-size: 28px;
-	margin:0 0 20px 80px;
+	margin: 0 0 20px 80px;
 	color: white;
 }
-#visual .inner .divbox{
+
+#visual .inner .divbox {
 	width: 400px;
-	height: 45px; color:#fff;
-	float:left;
-	margin: 0 0 0 80px;
+	height: 45px;
+	color: #fff;
+	float: left;
+	margin: 0 0 0 45px;
 }
-#visual .inner form .text{
-	width: 400px;
+
+#visual .inner form.searchbox {
+	float: right;
+}
+
+#visual .inner form input.text {
+	width: 260px;
 	height: 40px;
-	border: none;
-	border-radius: 5px;
+	padding: 5px;
+	font-size: 20px;
 	box-shadow: 1px 1px 5px #666666;
 }
-#visual .inner a{
+
+#visual .inner a {
 	width: 100px;
 	height: 40px;
-	background-color: #566270;
+	background-color: black;
 	font-size: 17px;
 	display: inline-block;
-	float:left; 
-	line-height:2.2;
-	text-align:center;
-	color:#fff;
+	float: left;
+	line-height: 2.2;
+	text-align: center;
+	color: #fff;
 	margin-left: -10px;
 }
-#container{
+
+#container {
 	height: 100%;
 }
-#container:after{
-	content:"";
-	clear:both;
+
+#container:after {
+	content: "";
+	clear: both;
 	display: block;
 }
-#content{
-	width: 100%;	
-	
+
+#content {
+	width: 100%;
 }
-#content .mainMenu_full{
+
+#content .mainMenu_full {
 	width: 1200px;
-	
 	margin: auto;
-	
 }
-#content .mainMenu_full ul li{
+
+#content .mainMenu_full ul li {
 	float: left;
-	
+	margin-right: 20px;
 	height: 70px;
 	margin-left: 20px;
 	font-size: 10px;
 	line-height: 75px;
 }
-#content .mainMenu_full ul li
-.allCategories_li{margin-right: 25px;}
-li.cloth={text-align: center;}
-.toy{text-align: center;
-    margin-left: 0;
+
+#content .mainMenu_full ul li.allCategories_li {
+	margin-right: 30px;
+	margin-left: 0;
 }
 
-#content .mainMenu_full .mainMenu .mainMenu_backfull{
+#content .mainMenu_full ul li.main_img {
+	margin-right: 0;
+	margin-top: 18px;
+}
+
+#content .mainMenu_full ul li.best {
+	margin-right: 20px;
+}
+
+#content .mainMenu_full ul li a.smallgroup {
+	font-size: 12px;
+}
+
+.allCategories_li {
+	margin-right: 25px;
+}
+
+li
+.cloth
+ 
+={
+text-align
+:
+ 
+center
+;
+
+
+}
+.toy {
+	text-align: center;
+	margin-left: 0;
+}
+
+#content .mainMenu_full .mainMenu .mainMenu_backfull {
 	width: 100%;
-	height:150px;
-	display:none;  
-	position: absolute;
-	left:0;
+	height: 150px;
 	display: none;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	position: absolute;
+	left: 0;
+	display: none;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 	margin-top: -5px;
 }
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back{
+
+#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back {
 	margin: auto;
 	width: 1200px;
 	background-color: #ffffff;
 	height: 150px;
 	border-top: 0.5px solid;
 }
-#content .mainMenu_full .cf li:hover .mainMenu_backfull{
- 	display: block;
+
+#content .mainMenu_full .cf li:hover .mainMenu_backfull {
+	display: block;
 }
-.cf{
+
+.cf {
 	margin-top: 50px;
 }
-#content .hot{
+
+#content .hot {
 	font-size: 25px;
-	width:1200px;
+	width: 1200px;
 	position: relative;
 	margin: 30px auto 0;
 	height: 300px;
 }
-#content .hot .imageLogin_full{
-    height: 278px;
-    width: 760px;
-    float: left;
+
+#content .hot .imageLogin_full {
+	height: 278px;
+	width: 760px;
+	float: left;
 }
-#content .hot .imageLogin_full .imageLogin{
+
+#content .hot .imageLogin_full .imageLogin {
 	display: none;
 	width: 741px;
 	height: 242px;
@@ -155,25 +216,28 @@ li.cloth={text-align: center;}
 	margin-top: 10px;
 	vertical-align: middle;
 }
-#content .hot .imageLogin_full .imageLogin .newImage{
+
+#content .hot .imageLogin_full .imageLogin .newImage {
 	margin-left: 30px;
 	margin-top: 10px;
 }
+
 #content .hot .imageLogin_full .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 53%;
-    RIGHT: 59%;
-    padding: 16px;
-    margin-top: -22px;
-    color: #f0f0f0;
-    MARGIN-RIGHT: 425PX;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+	cursor: pointer;
+	position: absolute;
+	top: 53%;
+	RIGHT: 59%;
+	padding: 16px;
+	margin-top: -22px;
+	color: #f0f0f0;
+	MARGIN-RIGHT: 425PX;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
 }
+
 #content .hot .imageLogin_full .next {
 	right: 0;
 	border-radius: 3px 0 0 3px;
@@ -183,66 +247,97 @@ li.cloth={text-align: center;}
 	background-color: #f1f1f1;
 	color: black;
 }
-#content .hot .boardImage{
+
+#content .hot .boardImage {
 	width: 440px;
-    height: 228px;
-    float: right;
-    margin-top: 58px;	
+	height: 228px;
+	float: right;
+	margin-top: 58px;
 }
-#content .hot .boardImage  .boardImage_top{
-	background-color: #e9e9e9;
+
+#content .hot .boardImage  .boardImage_top {
+	background-color: #f1f1f1;
 	width: 70%;
 	height: 75%;
 	margin: 0 auto 0;
 }
-#content .hot .boardImage  .boardImage_top .login_Form{
+
+#content .hot .boardImage  .boardImage_top .login_Form {
 	float: left;
 	width: 208px;
 	height: 100px;
-	border: 1px solid #d7d7d7;	
+	border: 1px solid #d7d7d7;
 }
-#content .hot .boardImage  .boardImage_top .login_Form .loginId{
-	margin-left: 30px;
+
+#content .hot .boardImage  .boardImage_top .login_Form .loginId {
+	margin-left: 18px;
+	height: 30px;
+	margin-top: 13px;
+	padding: 5px;
+	width: 171px;
+	font-size: 15px;
 }
-#content .hot .boardImage  .boardImage_top .login_Image{
+
+#content .hot .boardImage  .boardImage_top .login_Image {
 	width: 100px;
 	height: 100px;
 	float: right;
-	border: 1px solid #d7d7d7;	
-}
-#content .hot .boardImage  .boardImage_top .login_Image .loginbtn{
-	height: 70px;
-	width: 70px;
-	margin:10px 0 0 10px;
-}
-#content .hot .boardImage  .boardImage_top .loginSaveForm{
-	font-size: 15px;
 	border: 1px solid #d7d7d7;
 }
-#content .hot .boardImage  .boardImage_top .loginSaveForm .loginCheck{
-	margin-left: 80px;
-	
+
+#content .hot .boardImage  .boardImage_top .login_Image .loginbtn {
+	height: 70px;
+	width: 70px;
+	margin: 15px 0 0 15px;
+	 background-color: black;
+	 color:white;  
+	 border-top: 0;
+	 border-left: 0;
+	 border-bottom: 0;
+	 border-right: 0;
 }
-#content .hot .boardImage  .boardImage_top .loginSaveForm .loginSave{
+
+#content .hot .boardImage  .boardImage_top .loginSaveForm {
+	font-size: 15px;
+}
+
+#content .hot .boardImage  .boardImage_top .loginSaveForm .loginCheck {
+	margin-left: 20px;
+}
+
+#content .hot .boardImage  .boardImage_top .loginSaveForm .loginSave {
 	float: left;
-	width: 208px;
-	border: 0 1px 1px 1px solid #d7d7d7;	
+	width: 308px;
+	    margin-top: 13px;
 }
-#content .hot .boardImage  .boardImage_top .loginSaveForm a{
+
+#content .hot .boardImage  .boardImage_top .loginSaveForm a {
 	padding-left: 15px;
 	font-size: 15px;
 }
-#content .hot .boardImage  .boardImage_top .loginFind{
+
+#content .hot .boardImage  .boardImage_top .loginFind {
 	font-size: 15px;
-	margin:10px 0 0 72px;
 }
-#content .hot .boardImage .boardImage_bottom{
+
+#content .hot .boardImage  .boardImage_top .loginFind a.loginFind-id {
+	font-size: 14px;
+	margin-left: 20px;
+}
+
+#content .hot .boardImage  .boardImage_top .loginFind a.loginFind-signUp
+	{
+	
+}
+
+#content .hot .boardImage .boardImage_bottom {
 	width: 70%;
 	height: 20%;
 	margin: 0 auto 0;
 	text-align: center;
 }
-#content .hot .boardImage .boardImage_bottom .loginBtn{
+
+#content .hot .boardImage .boardImage_bottom .loginBtn {
 	width: 154px;
 	height: 60px;
 	background-color: #623738;
@@ -250,125 +345,156 @@ li.cloth={text-align: center;}
 	float: left;
 	
 }
-#content .box{ 
-	width: 1200px;
-	margin:50px auto 0;
+#content .hot .boardImage .boardImage_bottom .loginBtn2{
+	width: 154px;
+	height: 60px;
+	background-color: #623738;
+	color: white;
+	float: left;
 }
-#content .box h4{
+
+#content .box {
+	width: 1200px;
+	margin: 50px auto 0;
+}
+
+#content .box h4 {
 	font-size: 25px;
 	margin-bottom: 10px;
 }
-#content .box ul{
+
+#content .box ul {
 	margin-left: 30px;
 }
-#content .box ul li{
+
+#content .box ul li {
 	float: left;
 	width: 210px;
 	height: 280px;
 	background-color: #566270;
 	margin-left: 13px;
 }
-#content .box ul li:nth-child(1){
-	margin-left:0;
+
+#content .box ul li:nth-child(1) {
+	margin-left: 0;
 }
-#content .dogParkfull{
+
+#content .dogParkfull {
 	width: 100%;
 	margin-top: 100px;
 }
 
-#content .dogParkfull .dogPark{
+#content .dogParkfull .dogPark {
 	width: 1200px;
 	margin: auto;
 	height: 400px;
 	background-color: red;
 }
-#content .dogParkfull .dogPark .dogParkleft{	
+
+#content .dogParkfull .dogPark .dogParkleft {
 	width: 300px;
 	height: 400px;
 	background-color: aqua;
 	float: left;
 }
-#content .dogParkfull .dogPark .dogParkleft .dogParkleftup{
+
+#content .dogParkfull .dogPark .dogParkleft .dogParkleftup {
 	width: 300px;
 	height: 200px;
 	background-color: #8080ff;
 }
-#content .dogParkfull .dogPark .dogParkleft .dogParkleftdown{
+
+#content .dogParkfull .dogPark .dogParkleft .dogParkleftdown {
 	width: 300px;
 	height: 200px;
 	background-color: #ff8000;
 }
-#content .dogParkfull .dogPark .dogParkcenter{
+
+#content .dogParkfull .dogPark .dogParkcenter {
 	width: 600px;
 	height: 400px;
 	float: left;
 	background-color: silver;
 }
-#content .dogParkfull .dogPark .dogParkcenterup{
+
+#content .dogParkfull .dogPark .dogParkcenterup {
 	width: 600px;
 	height: 200px;
 	background-color: maroon;
 	float: left;
 }
-#content .dogParkfull .dogPark .dogParkcenterup .dogParkcenterup_left{
+
+#content .dogParkfull .dogPark .dogParkcenterup .dogParkcenterup_left {
 	width: 300px;
 	height: 200px;
 	background-color: #400040;
 	float: left;
 }
-#content .dogParkfull .dogPark .dogParkcenterup .dogParkcenterup_right{
+
+#content .dogParkfull .dogPark .dogParkcenterup .dogParkcenterup_right {
 	width: 300px;
 	height: 200px;
 	background-color: #804040;
 	float: left;
 }
-#content .dogParkfull .dogPark .dogParkcenterdown{
+
+#content .dogParkfull .dogPark .dogParkcenterdown {
 	width: 600px;
 	height: 200px;
 	background-color: #00ffff;
 	float: left;
 }
-#content .dogParkfull .dogPark .dogParkright{
+
+#content .dogParkfull .dogPark .dogParkright {
 	width: 300px;
 	height: 400px;
 	background-color: yellow;
-	float:left;	
+	float: left;
 }
-#content .dogParkfull .dogParkwrite{
+
+#content .dogParkfull .dogParkwrite {
 	text-align: center;
 }
-#content .boxNew{
+
+#content .boxNew {
 	width: 1200px;
-	margin:50px auto 0;
+	margin: 50px auto 0;
 }
-#content .boxNew h4{
+
+#content .boxNew h4 {
 	font-size: 25px;
 	margin-bottom: 10px;
 }
-#content .boxNew ul{
+
+#content .boxNew ul {
 	margin-left: 30px;
 }
-#content .boxNew ul li{
+
+#content .boxNew ul li {
 	float: left;
 	width: 330px;
 	height: 280px;
 	background-color: #566270;
 	margin-left: 55px;
 }
-#content .boxNew ul li:nth-child(1){
-	margin-left:0;
+
+#content .boxNew ul li:nth-child(1) {
+	margin-left: 0;
 }
-#footer{
-	margin-top:530px;
+
+#footer {
+	margin-top: 530px;
 	width: 100%;
 	border-top: 1px solid #dcdcdc;
 	height: 200px;
 }
-#footer .inner{
+
+#footer .inner {
 	width: 1200px;
 	margin: auto;
 }
-#footer .inner .ftbox{
+
+#footer .inner .ftbox {
 	width: 400px;
 	height: 140px;
 	border-right: 1px solid #dcdcdc;
@@ -376,6 +502,7 @@ li.cloth={text-align: center;}
 	box-sizing: border-box;
 	margin-top: 30px;
 }
-#footer .inner .right{
+
+#footer .inner .right {
 	border: none;
 }

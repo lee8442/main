@@ -7,21 +7,23 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/main/reset.css">
 <link rel="stylesheet" href="resources/css/main/css.css">
-
 </head>
 <body>
 	<header id="header"> </header>
 	<div id="visual">
-		<img class="mySlides" src="resources//image/main/main.png"
-			style="width: 100%; height: 400px; z-index: -1000;"> <img
-			class="mySlides" src="resources/image/main/main1.jpg"
-			style="width: 100%; height: 400px; z-index: -1000;"> <img
-			class="mySlides" src="resources/image/main/main2.jpg"
-			style="width: 100%; height: 400px; z-index: -1000;"> <img
-			class="mySlides" src="resources/image/main/main3.jpg"
-			style="width: 100%; height: 400px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/img1.png"
+			style="width: 100%; height: 250px; z-index: -1000;"> <img
+			class="mySlides" src="resources/image/main/img2.png"
+			style="width: 100%; height: 250px; z-index: -1000;"> <img
+			class="mySlides" src="resources/image/main/img3.png"
+			style="width: 100%; height: 250px; z-index: -1000;"> <img
+			class="mySlides" src="resources/image/main/img5.png"
+			style="width: 100%; height: 250px; z-index: -1000;">
 		<nav id="nav" class="cf">
 			<div class="title">
+			<div class="logo">
+					<img alt="logo" src="resources/image/main/logo.png">
+				</div>
 				<a href="#">#DOG</a>
 			</div>
 			<ul class="topMenu cf">
@@ -33,9 +35,9 @@
 			</ul>
 		</nav>
 		<div class="inner cf">
-			<h2># DOG 을 방문해 주셔서 감사합니다</h2>
+			
 			<div class="divbox">
-				<form>
+				<form class="searchbox">
 					<input class="text" type="text">
 				</form>
 			</div>
@@ -46,111 +48,98 @@
 		<div class="mainMenu_full">
 			<div class="mainMenu">
 				<ul class="cf">
-					<li><a href="#">전체카테고리</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
-								</ul>
-							</div>
-						</div></li>
-					<li><a href="#">사료/간식</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
-								</ul>
-							</div>
-						</div></li>
-					<li><a href="#">미용/목욕</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
-								</ul>
-							</div>
-						</div></li>
-					<li><a href="#">장난감</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
-								</ul>
-							</div>
-						</div></li>
-					<li><a href="#">하우스/울타리</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
-								</ul>
-							</div>
-						</div></li>
-					<li><a href="#">의류</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
-								</ul>
-							</div>
-						</div></li>
-					<li><a href="#">베스트상품</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
-								</ul>
-							</div>
-						</div></li>
-					<li><a href="#">공지사항</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
-								</ul>
-							</div>
-						</div></li>
-					<li><a href="#">1:1상품문의</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
-								</ul>
-							</div>
-						</div></li>
-					<li><a href="#">상품평</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
-								</ul>
-							</div>
-						</div></li>
-				</ul>
+				<li class="main_img"><a href="#"> <img
+								src="resources/image/main/List.png"></a>
+							<div class="mainMenu_backfull">
+								<div class="mainMenu_back">
+									<ul class="mainMenu_backul">
+										<li><a href="#">Sliders</a></li>
+										<li><a href="#">Extensions</a></li>
+										<li><a href="#">Extensions</a></li>
+									</ul>
+								</div>
+							</div></li>
+					<li class="allCategories_li"><a href="#"
+							class="allCategories">전체카테고리</a>
+							<div class="mainMenu_backfull">
+								<div class="mainMenu_back">
+									<ul class="mainMenu_backul">
+										<li><a href="#">Sliders</a></li>
+										<li><a href="#">Extensions</a></li>
+										<li><a href="#">Extensions</a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li><a href="#">사료/간식</a>
+							<div class="mainMenu_backfull">
+								<div class="mainMenu_back">
+									<ul class="mainMenu_backul">
+										<li><a href="#">Sliders</a></li>
+										<li><a href="#">Extensions</a></li>
+										<li><a href="#">Extensions</a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li><a href="#">미용/목욕</a>
+							<div class="mainMenu_backfull">
+								<div class="mainMenu_back">
+									<ul class="mainMenu_backul">
+										<li><a href="#">Sliders</a></li>
+										<li><a href="#">Extensions</a></li>
+										<li><a href="#">Extensions</a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li><a href="#" class="toy">장난감</a>
+							<div class="mainMenu_backfull">
+								<div class="mainMenu_back">
+									<ul class="mainMenu_backul">
+										<li><a href="#">Sliders</a></li>
+										<li><a href="#">Extensions</a></li>
+										<li><a href="#">Extensions</a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li><a href="#">하우스/울타리</a>
+							<div class="mainMenu_backfull">
+								<div class="mainMenu_back">
+									<ul class="mainMenu_backul">
+										<li><a href="#">Sliders</a></li>
+										<li><a href="#">Extensions</a></li>
+										<li><a href="#">Extensions</a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li class="cloth"><a href="#">의류</a>
+							<div class="mainMenu_backfull">
+								<div class="mainMenu_back">
+									<ul class="mainMenu_backul">
+										<li><a href="#">Sliders</a></li>
+										<li><a href="#">Extensions</a></li>
+										<li><a href="#">Extensions</a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li class="best"><a href="#">베스트상품</a>
+							<div class="mainMenu_backfull">
+								<div class="mainMenu_back">
+									<ul class="mainMenu_backul">
+										<li><a href="#">Sliders</a></li>
+										<li><a href="#">Extensions</a></li>
+										<li><a href="#">Extensions</a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li><a href="#" class="smallgroup">공지사항</a></li>
+						<li><a href="#" class="smallgroup">1:1상품문의</a></li>
+						<li><a href="#" class="smallgroup">상품평</a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
 		<div class="imageLogin"></div>
 	</div>
+
 	<script type="text/javascript" src="resources/js/main/jquery.js"></script>
+	<script type="text/javascript" src="resources/member/js/jquery.js"></script>
 </body>
 </html>
