@@ -10,5 +10,6 @@ public class mainController {
 		System.out.println("메인 페이지");
 
 		return "main/main/main";
+		
 	}
 }
