@@ -5,30 +5,42 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<!-- <link rel="stylesheet" href="resources/member/css/reset.css">
-<link rel="stylesheet" href="resources/member/css/css.css">
-<script type="text/javascript" src="resources/member/js/jquery-3.3.1.min.js"></script> -->
+ <link rel="stylesheet" href="resources/css/main/reset.css">
+<link rel="stylesheet" href="resources/css/main/css.css">
+
 </head>
 <body>
 	<header id="header">
 	</header>
 	<div id="visual">
+<<<<<<< HEAD
 		<img class="mySlides" src="resources/image/main/main.png" style="width:100%; height:200px; z-index: -1000;">
 		<img class="mySlides" src="resources/image/main/main1.jpg" style="width:100%; height:200px; z-index: -1000;">
 		<img class="mySlides" src="resources/image/main/main2.jpg" style="width:100%; height:200px; z-index: -1000;">
 		<img class="mySlides" src="resources/image/main/main3.jpg" style="width:100%; height:200px; z-index: -1000;">
+=======
+		<img class="mySlides" src="resources/image/main/img1.png" style="width:100%; height:250px; z-index: -1000; ">
+		<img class="mySlides" src="resources/image/main/img2.png" style="width:100%; height:250px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/img3.png" style="width:100%; height:250px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/img5.png" style="width:100%; height:250px; z-index: -1000;">
+>>>>>>> branch 'master' of https://github.com/lee8442/main.git
 		<nav id="nav" class="cf">
 			<div class="title">
 				<div class="logo">
+<<<<<<< HEAD
 					<img alt="logo" src="resources/image/main/logo.png">
+=======
+					<img alt="logo" src="resources/image/main/dog.png">
+>>>>>>> branch 'master' of https://github.com/lee8442/main.git
 				</div>
 				<a href="#">#DOG</a>
 			</div>
 			<ul class="topMenu cf">
-				<li><a href="#">고객센터&nbsp;ㅣ</a></li>
-				<li><a href="#">마이페이지&nbsp;ㅣ</a></li>
 				<li><a href="#">로그인&nbsp;ㅣ</a></li>
-				<li><a href="#">회원가입</a></li>
+				<li><a href="#">회원가입&nbsp;ㅣ</a></li>
+				<li><a href="#">주문배송조회&nbsp;ㅣ</a></li>
+				<li><a href="#">장바구니&nbsp;ㅣ</a></li>
+				<li><a href="#">고객센터</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -37,7 +49,7 @@
 			<div class="mainMenu_full">
 				<div class="mainMenu">
 					<ul class="cf">
-						<li><a href="#">카테고리</a>
+						<li><a href="#">전체카테고리</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -48,7 +60,7 @@
 								</div>
 							</div>
 						</li>
-						<li><a href="#">상품</a>
+						<li><a href="#">의류/하우스</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -59,7 +71,7 @@
 								</div>
 							</div>
 						</li>
-						<li><a href="#">고객센터</a>
+						<li><a href="#">사료/간식</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -70,7 +82,7 @@
 								</div>
 							</div>
 						</li>
-						<li><a href="#">리뷰평</a>
+						<li><a href="#">건강/미용</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -81,7 +93,7 @@
 								</div>
 							</div>
 						</li>
-						<li><a href="#">만남의 광장</a>	
+						<li><a href="#">장난감</a>	
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -92,7 +104,7 @@
 								</div>
 							</div>
 						</li>
-						<li><a href="#">배송조회</a>
+						<li><a href="#">베스트상품</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -103,7 +115,7 @@
 								</div>
 							</div>
 						</li>
-						<li><a href="#">1:1문의</a>
+						<li><a href="#">공지사항</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -114,7 +126,7 @@
 								</div>
 							</div>
 						</li>
-						<li><a href="#">고객문의</a>
+						<li><a href="#">1:1상품문의</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
@@ -132,6 +144,11 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 	<script type="text/javascript" src="resources/js/main/jquery.js"></script>
+=======
+		<script type="text/javascript" src="resources/js/main/jquery.js"></script>
+		<script type="text/javascript" src="resources/js/jquery/jquery-3.3.1.min.js"></script> 
+>>>>>>> branch 'master' of https://github.com/lee8442/main.git
 </body>
 </html>

@@ -18,6 +18,13 @@ public class InsertMemberController {
 
 		return "simple/member/signUp";
 	}
+	
+	@RequestMapping(value = "/login.do")
+	public String login() {
+		System.out.println("로그인 페이지");
+
+		return "simple/member/login";
+	}
 
 	@RequestMapping(value = "/insertMember.do")
 	public String insertMember(MemberVO vo) {
