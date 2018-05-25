@@ -23,7 +23,7 @@
 				<div class="text">
 					<h1>회원가입</h1>
 
-
+				</div>
 				<div class="h1-font">
 					<h1 class="h1">회원가입</h1>
 				</div>
@@ -78,6 +78,7 @@
 							class="cancel" type="button" value="취소">
 					</div>
 				</div>
+			
 			</form>
 		</center>
 	</div>
