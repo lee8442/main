@@ -12,19 +12,13 @@ public class InsertMemberController {
 	@Autowired
 	InsertMemberService InsertMemberService;
 	
-	@RequestMapping(value = "/main.do")
-	public String main() {
-		System.out.println("메인 페이지");
-
-		return "main/main/main";
-	}
-
 	@RequestMapping(value = "/insertMemberForm.do")
 	public String insertMemberForm() {
 		System.out.println("회원가입 페이지");
 
 		return "simple/member/signUp";
 	}
+	
 	@RequestMapping(value = "/login.do")
 	public String login() {
 		System.out.println("로그인 페이지");

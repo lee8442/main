@@ -13,14 +13,25 @@
 	<header id="header">
 	</header>
 	<div id="visual">
+<<<<<<< HEAD
+		<img class="mySlides" src="resources/image/main/main.png" style="width:100%; height:200px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/main1.jpg" style="width:100%; height:200px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/main2.jpg" style="width:100%; height:200px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/main3.jpg" style="width:100%; height:200px; z-index: -1000;">
+=======
 		<img class="mySlides" src="resources/image/main/img1.png" style="width:100%; height:250px; z-index: -1000; ">
 		<img class="mySlides" src="resources/image/main/img2.png" style="width:100%; height:250px; z-index: -1000;">
 		<img class="mySlides" src="resources/image/main/img3.png" style="width:100%; height:250px; z-index: -1000;">
 		<img class="mySlides" src="resources/image/main/img5.png" style="width:100%; height:250px; z-index: -1000;">
+>>>>>>> branch 'master' of https://github.com/lee8442/main.git
 		<nav id="nav" class="cf">
 			<div class="title">
 				<div class="logo">
+<<<<<<< HEAD
+					<img alt="logo" src="resources/image/main/logo.png">
+=======
 					<img alt="logo" src="resources/image/main/dog.png">
+>>>>>>> branch 'master' of https://github.com/lee8442/main.git
 				</div>
 				<a href="#">#DOG</a>
 			</div>
@@ -155,7 +166,11 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
+	<script type="text/javascript" src="resources/js/main/jquery.js"></script>
+=======
 		<script type="text/javascript" src="resources/js/main/jquery.js"></script>
 		<script type="text/javascript" src="resources/js/jquery/jquery-3.3.1.min.js"></script> 
+>>>>>>> branch 'master' of https://github.com/lee8442/main.git
 </body>
 </html>

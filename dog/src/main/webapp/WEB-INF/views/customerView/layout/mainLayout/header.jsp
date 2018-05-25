@@ -162,6 +162,11 @@
 			</div>
 			<div class="imageLogin"></div>
 		</div>
+<<<<<<< HEAD
+	</div>
+	<script type="text/javascript" src="resources/js/main/jquery.js"></script>
+=======
 	<script type="text/javascript" src="resources/member/js/jquery.js"></script>
+>>>>>>> branch 'master' of https://github.com/lee8442/main.git
 </body>
 </html>

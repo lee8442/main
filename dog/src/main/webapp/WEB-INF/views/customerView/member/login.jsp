@@ -1,10 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<<<<<<< HEAD
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+=======
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+>>>>>>> branch 'master' of https://github.com/lee8442/main.git
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<<<<<<< HEAD
+<link rel="stylesheet" href="css/member/login.css">
+=======
 <link rel="stylesheet" href=" resources/css/member/login.css">
+>>>>>>> branch 'master' of https://github.com/lee8442/main.git
 <title>로그인</title>
 </head>
 <body class="body">
