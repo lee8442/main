@@ -21,7 +21,7 @@
 		<nav id="nav" class="cf">
 			<div class="title">
 				<div class="logo">
-					<img alt="logo" src="resources/member/image/logo.jpg">
+					<img alt="logo" src="resources/member/image/logo.png">
 				</div>
 				<a href="#">#DOG</a>
 			</div>

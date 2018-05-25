@@ -138,6 +138,6 @@
 			</div>
 		</div>
 	</div>
-		<script type="text/javascript" src="resources/member/js/jquery.js"></script>
+	<script type="text/javascript" src="resources/js/main/jquery.js"></script>
 </body>
 </html>

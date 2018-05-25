@@ -13,14 +13,14 @@
 	<header id="header">
 	</header>
 	<div id="visual">
-		<img class="mySlides" src="resources/member/image/main.png" style="width:100%; height:200px; z-index: -1000;">
-		<img class="mySlides" src="resources/member/image/main1.jpg" style="width:100%; height:200px; z-index: -1000;">
-		<img class="mySlides" src="resources/member/image/main2.jpg" style="width:100%; height:200px; z-index: -1000;">
-		<img class="mySlides" src="resources/member/image/main3.jpg" style="width:100%; height:200px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/main.png" style="width:100%; height:200px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/main1.jpg" style="width:100%; height:200px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/main2.jpg" style="width:100%; height:200px; z-index: -1000;">
+		<img class="mySlides" src="resources/image/main/main3.jpg" style="width:100%; height:200px; z-index: -1000;">
 		<nav id="nav" class="cf">
 			<div class="title">
 				<div class="logo">
-					<img alt="logo" src="resources/member/image/logo.jpg">
+					<img alt="logo" src="resources/image/main/logo.png">
 				</div>
 				<a href="#">#DOG</a>
 			</div>
@@ -132,6 +132,6 @@
 			</div>
 		</div>
 	</div>
-		<script type="text/javascript" src="resources/member/js/jquery.js"></script>
+	<script type="text/javascript" src="resources/js/main/jquery.js"></script>
 </body>
 </html>

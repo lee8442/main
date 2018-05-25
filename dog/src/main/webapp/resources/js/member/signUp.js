@@ -6,8 +6,8 @@ function insertCheck() {
 	var jumin = document.getElementById('jumin1').value + document.getElementById('jumin2').value;
 	var passtext = document.getElementById("pass");
 	var repasstext = document.getElementById("repass");
-
-
+	$("registration").val(jumin);
+	
 	var id = idtext.value;
 	var pass= passtext.value;
 	var repass = repasstext.value;

@@ -23,7 +23,7 @@ public class InsertMemberController {
 	public String insertMemberForm() {
 		System.out.println("회원가입 페이지");
 
-		return "simple/member/NewFile";
+		return "simple/member/signUp";
 	}
 
 	@RequestMapping(value = "/insertMember.do")
