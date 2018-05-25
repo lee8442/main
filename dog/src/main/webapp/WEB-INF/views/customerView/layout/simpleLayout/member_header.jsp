@@ -13,10 +13,6 @@
 	<header id="header">
 	</header>
 	<div id="visual">
-		<img class="mySlides" src="resources/image/main/main.png" style="width:100%; height:200px; z-index: -1000;">
-		<img class="mySlides" src="resources/image/main/main1.jpg" style="width:100%; height:200px; z-index: -1000;">
-		<img class="mySlides" src="resources/image/main/main2.jpg" style="width:100%; height:200px; z-index: -1000;">
-		<img class="mySlides" src="resources/image/main/main3.jpg" style="width:100%; height:200px; z-index: -1000;">
 		<img class="mySlides" src="resources/image/main/img1.png" style="width:100%; height:250px; z-index: -1000; ">
 		<img class="mySlides" src="resources/image/main/img2.png" style="width:100%; height:250px; z-index: -1000;">
 		<img class="mySlides" src="resources/image/main/img3.png" style="width:100%; height:250px; z-index: -1000;">
@@ -25,13 +21,12 @@
 			<div class="title">
 				<div class="logo">
 					<img alt="logo" src="resources/image/main/logo.png">
-					<img alt="logo" src="resources/image/main/dog.png">
 				</div>
 				<a href="#">#DOG</a>
 			</div>
 			<ul class="topMenu cf">
 				<li><a href="#">로그인&nbsp;ㅣ</a></li>
-				<li><a href="#">회원가입&nbsp;ㅣ</a></li>
+				<li><a href="insertMemberForm.do">회원가입&nbsp;ㅣ</a></li>
 				<li><a href="#">주문배송조회&nbsp;ㅣ</a></li>
 				<li><a href="#">장바구니&nbsp;ㅣ</a></li>
 				<li><a href="#">고객센터</a></li>
@@ -160,8 +155,6 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="resources/js/main/jquery.js"></script>
 		<script type="text/javascript" src="resources/js/main/jquery.js"></script>
-		<script type="text/javascript" src="resources/js/jquery/jquery-3.3.1.min.js"></script> 
 </body>
 </html>

@@ -6,24 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="resources/css/member/signUp.css">
 <!-- <script type="text/javascript" src="jquery-3.3.1.min.js"></script> -->
-
 <title>Insert title here</title>
 </head>
 <body>
 	<div class="body-all">
 		<div class="bar">
-			<a href="#" class="a1">홈</a> &nbsp; <a href="login.jsp" class="a2">로그인</a>
-			&nbsp; <a href="signUp.jsp" class="a2">회원가입</a> <a href="#"
-				class="a3">#DOG</a>
 			<a href="#" class="a1">홈</a> &nbsp;> <a href="login.jsp" class="a2">로그인</a>
-			&nbsp;><a href="singUp.jsp" class="a2">회원가입</a> 
+			&nbsp;><a href="singUp.jsp" class="a2">회원가입</a>
 		</div>
 		<center>
 			<div class="body-list">
-				<div class="text">
-					<h1>회원가입</h1>
-
-				</div>
 				<div class="h1-font">
 					<h1 class="h1">회원가입</h1>
 				</div>
@@ -70,20 +62,17 @@
 								</select>
 							</div></li>
 						<li><h4>※ 이메일 형식에 맞게 입력해주세요.</h4></li>
-						<li><b>point</b><input class="point-input" type="text"></li>
 					</ul>
-
 					<div class="tab-list-btn">
 						<input class="save" type="submit" value="저장"> <input
 							class="cancel" type="button" value="취소">
 					</div>
 				</div>
-			
 			</form>
 		</center>
 	</div>
-	<script type="text/javascript" src="resources/js/member/signUp.js"></script>
 	<script type="text/javascript" src="resources/js/member/singUp.js"></script>
-<script type="text/javascript" src="resources/js/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript"
+		src="resources/js/jquery/jquery-3.3.1.min.js"></script>
 </body>
 </html>
