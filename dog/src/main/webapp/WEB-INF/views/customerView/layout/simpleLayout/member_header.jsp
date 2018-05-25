@@ -38,7 +38,7 @@
 			<div class="mainMenu_full">
 				<div class="mainMenu">
 					<ul class="cf">
-						<li class="allCategories_li"><a href="#" class="allCategories"><img alt="logo" src="resources/image/main/dog.png">전체카테고리</a>
+						<li class="allCategories_li"><a href="#" class="allCategories">전체카테고리</a>
 							<div class="mainMenu_backfull">
 								<div class="mainMenu_back">
 									<ul class="mainMenu_backul">
