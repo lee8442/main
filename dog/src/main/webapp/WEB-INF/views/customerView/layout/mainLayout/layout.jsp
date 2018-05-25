@@ -19,10 +19,7 @@
 	<div class="footer">
 		<t:insertAttribute name="footer" />
 	</div>
-<<<<<<< HEAD
 	<script type="text/javascript" src="resources/js/jquery/jquery-3.3.1.min.js"></script>
-=======
 		<script type="text/javascript" src="resources/js/jquery/jquery-3.3.1.min.js"></script>
->>>>>>> branch 'master' of https://github.com/lee8442/main.git
 </body>
 </html>
