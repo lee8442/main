@@ -5,8 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="resources/css/member/signUp.css">
-
-
 <title>Insert title here</title>
 </head>
 <body>
@@ -76,7 +74,5 @@
 		</center>
 	</div>
 	<script type="text/javascript" src="resources/js/member/signUp.js"></script>
-	<script type="text/javascript"
-		src="resources/js/jquery/jquery-3.3.1.min.js"></script>
 </body>
 </html>

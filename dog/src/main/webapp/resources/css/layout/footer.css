@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+#footer {
+	margin-top: 530px;
+	width: 100%;
+	border-top: 1px solid #dcdcdc;
+	height: 200px;
+}
+
+#footer .inner {
+	width: 1200px;
+	margin: auto;
+}
+
+#footer .inner .ftbox {
+	width: 400px;
+	height: 140px;
+	border-right: 1px solid #dcdcdc;
+	float: left;
+	box-sizing: border-box;
+	margin-top: 30px;
+}
+
+#footer .inner .right {
+	border: none;
+}

@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="resources/css/main/reset.css">
-<link rel="stylesheet" href="resources/css/main/css.css">
+<link rel="stylesheet" href="resources/css/layout/header.css">
 </head>
 <body>
 	<header id="header"> </header>
@@ -138,8 +137,6 @@
 			</div>
 		<div class="imageLogin"></div>
 	</div>
-
-	<script type="text/javascript" src="resources/js/main/jquery.js"></script>
-	<script type="text/javascript" src="resources/member/js/jquery.js"></script>
+	<script type="text/javascript" src="resources/js/layout/header.js"></script>
 </body>
 </html>
