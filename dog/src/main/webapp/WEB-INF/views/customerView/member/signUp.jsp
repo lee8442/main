@@ -10,8 +10,8 @@
 <body>
 	<div class="body-all">
 		<div class="bar">
-			<a href="main.do" class="a1">홈</a> &nbsp;> <a href="login.jsp"
-				class="a2">로그인</a> &nbsp;><a href="singUp.jsp" class="a2">회원가입</a>
+			<a href="main.do" class="a1">홈</a> &nbsp;> <a href="loginForm.do"
+				class="a2">로그인</a> &nbsp;><a href="insertMemberForm.do" class="a2">회원가입</a>
 		</div>
 		<center>
 			<div class="body-list">
@@ -84,8 +84,6 @@
 			</form>
 		</center>
 	</div>
-	<script type="text/javascript"
-		src="resources/js/jquery/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="resources/js/member/signUp.js"></script>
 </body>
 </html>

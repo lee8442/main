@@ -15,4 +15,10 @@ public class InsertMemberServiceImpl implements InsertMemberService {
 	public void insertMember(MemberVO vo) {
 		MemberDAO.insertMember(vo);
 	}
+	
+	@Override
+	public int idCheck(String id) {
+		int result = MemberDAO.idCheck(id);
+		return result;
+	};
 }

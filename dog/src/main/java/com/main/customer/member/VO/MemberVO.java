@@ -1,7 +1,5 @@
 package com.main.customer.member.VO;
 
-import java.sql.Timestamp;
-
 public class MemberVO {
 	private String id;
 	private String name;

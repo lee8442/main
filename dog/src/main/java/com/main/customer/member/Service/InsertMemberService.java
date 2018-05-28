@@ -4,4 +4,6 @@ import com.main.customer.member.VO.MemberVO;
 
 public interface InsertMemberService {
 	public void insertMember(MemberVO vo);
+	
+	public int idCheck(String id);
 }

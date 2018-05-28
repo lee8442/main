@@ -2,12 +2,12 @@ package com.main.customer.member.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 @Controller
 public class IdpassFind {
 	@RequestMapping(value = "/idpassFind.do")
 	public String idpassFind() {
-		System.out.println("¾ÆÀÌµğ ÆĞ½º¿öµåÃ£±â ÆäÀÌÁö ");
-
+		System.out.println("ì•„ì´ë””, ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°");
 		return "simple/member/idpassFind";
 	}
 }

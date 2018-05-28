@@ -26,7 +26,7 @@
 				<a href="main.do">#DOG</a>
 			</div>
 			<ul class="topMenu cf">
-				<li><a href="#">로그인&nbsp;ㅣ</a></li>
+				<li><a href="loginForm.do">로그인&nbsp;ㅣ</a></li>
 				<li><a href="insertMemberForm.do">회원가입&nbsp;ㅣ</a></li>
 				<li><a href="#">주문배송조회&nbsp;ㅣ</a></li>
 				<li><a href="#">장바구니&nbsp;ㅣ</a></li>
@@ -34,99 +34,96 @@
 			</ul>
 		</nav>
 	</div>
-	<div id="container">
-		<div id="content">
-			<div class="mainMenu_full">
-				<div class="mainMenu">
-					<ul class="cf">
-						<li class="main_img"><a href="#"> <img
-								src="resources/image/main/List.png"></a>
-							<div class="mainMenu_backfull">
-								<div class="mainMenu_back">
-									<ul class="mainMenu_backul">
-										<li><a href="#">Sliders</a></li>
-										<li><a href="#">Extensions</a></li>
-										<li><a href="#">Extensions</a></li>
-									</ul>
-								</div>
-							</div></li>
+	<div id="content">
+		<div class="mainMenu_full">
+			<div class="mainMenu">
+				<ul class="cf">
+					<li class="main_img"><a href="#"> <img
+							src="resources/image/main/List.png"></a>
+						<div class="mainMenu_backfull">
+							<div class="mainMenu_back">
+								<ul class="mainMenu_backul">
+									<li><a href="#">Sliders</a></li>
+									<li><a href="#">Extensions</a></li>
+									<li><a href="#">Extensions</a></li>
+								</ul>
+							</div>
+						</div></li>
 
-						<li class="allCategories_li"><a href="#"
-							class="allCategories">전체카테고리</a>
-							<div class="mainMenu_backfull">
-								<div class="mainMenu_back">
-									<ul class="mainMenu_backul">
-										<li><a href="#">Sliders</a></li>
-										<li><a href="#">Extensions</a></li>
-										<li><a href="#">Extensions</a></li>
-									</ul>
-								</div>
-							</div></li>
-						<li><a href="#">사료/간식</a>
-							<div class="mainMenu_backfull">
-								<div class="mainMenu_back">
-									<ul class="mainMenu_backul">
-										<li><a href="#">Sliders</a></li>
-										<li><a href="#">Extensions</a></li>
-										<li><a href="#">Extensions</a></li>
-									</ul>
-								</div>
-							</div></li>
-						<li><a href="#">미용/목욕</a>
-							<div class="mainMenu_backfull">
-								<div class="mainMenu_back">
-									<ul class="mainMenu_backul">
-										<li><a href="#">Sliders</a></li>
-										<li><a href="#">Extensions</a></li>
-										<li><a href="#">Extensions</a></li>
-									</ul>
-								</div>
-							</div></li>
-						<li><a href="#" class="toy">장난감</a>
-							<div class="mainMenu_backfull">
-								<div class="mainMenu_back">
-									<ul class="mainMenu_backul">
-										<li><a href="#">Sliders</a></li>
-										<li><a href="#">Extensions</a></li>
-										<li><a href="#">Extensions</a></li>
-									</ul>
-								</div>
-							</div></li>
-						<li><a href="#">하우스/울타리</a>
-							<div class="mainMenu_backfull">
-								<div class="mainMenu_back">
-									<ul class="mainMenu_backul">
-										<li><a href="#">Sliders</a></li>
-										<li><a href="#">Extensions</a></li>
-										<li><a href="#">Extensions</a></li>
-									</ul>
-								</div>
-							</div></li>
-						<li class="cloth"><a href="#">의류</a>
-							<div class="mainMenu_backfull">
-								<div class="mainMenu_back">
-									<ul class="mainMenu_backul">
-										<li><a href="#">Sliders</a></li>
-										<li><a href="#">Extensions</a></li>
-										<li><a href="#">Extensions</a></li>
-									</ul>
-								</div>
-							</div></li>
-						<li class="best"><a href="#">베스트상품</a>
-							<div class="mainMenu_backfull">
-								<div class="mainMenu_back">
-									<ul class="mainMenu_backul">
-										<li><a href="#">Sliders</a></li>
-										<li><a href="#">Extensions</a></li>
-										<li><a href="#">Extensions</a></li>
-									</ul>
-								</div>
-							</div></li>
-						<li><a href="#" class="smallgroup">공지사항</a></li>
-						<li><a href="#" class="smallgroup">1:1상품문의</a></li>
-						<li><a href="#" class="smallgroup">상품평</a></li>
-					</ul>
-				</div>
+					<li class="allCategories_li"><a href="#" class="allCategories">전체카테고리</a>
+						<div class="mainMenu_backfull">
+							<div class="mainMenu_back">
+								<ul class="mainMenu_backul">
+									<li><a href="#">Sliders</a></li>
+									<li><a href="#">Extensions</a></li>
+									<li><a href="#">Extensions</a></li>
+								</ul>
+							</div>
+						</div></li>
+					<li><a href="#">사료/간식</a>
+						<div class="mainMenu_backfull">
+							<div class="mainMenu_back">
+								<ul class="mainMenu_backul">
+									<li><a href="#">Sliders</a></li>
+									<li><a href="#">Extensions</a></li>
+									<li><a href="#">Extensions</a></li>
+								</ul>
+							</div>
+						</div></li>
+					<li><a href="#">미용/목욕</a>
+						<div class="mainMenu_backfull">
+							<div class="mainMenu_back">
+								<ul class="mainMenu_backul">
+									<li><a href="#">Sliders</a></li>
+									<li><a href="#">Extensions</a></li>
+									<li><a href="#">Extensions</a></li>
+								</ul>
+							</div>
+						</div></li>
+					<li><a href="#" class="toy">장난감</a>
+						<div class="mainMenu_backfull">
+							<div class="mainMenu_back">
+								<ul class="mainMenu_backul">
+									<li><a href="#">Sliders</a></li>
+									<li><a href="#">Extensions</a></li>
+									<li><a href="#">Extensions</a></li>
+								</ul>
+							</div>
+						</div></li>
+					<li><a href="#">하우스/울타리</a>
+						<div class="mainMenu_backfull">
+							<div class="mainMenu_back">
+								<ul class="mainMenu_backul">
+									<li><a href="#">Sliders</a></li>
+									<li><a href="#">Extensions</a></li>
+									<li><a href="#">Extensions</a></li>
+								</ul>
+							</div>
+						</div></li>
+					<li class="cloth"><a href="#">의류</a>
+						<div class="mainMenu_backfull">
+							<div class="mainMenu_back">
+								<ul class="mainMenu_backul">
+									<li><a href="#">Sliders</a></li>
+									<li><a href="#">Extensions</a></li>
+									<li><a href="#">Extensions</a></li>
+								</ul>
+							</div>
+						</div></li>
+					<li class="best"><a href="#">베스트상품</a>
+						<div class="mainMenu_backfull">
+							<div class="mainMenu_back">
+								<ul class="mainMenu_backul">
+									<li><a href="#">Sliders</a></li>
+									<li><a href="#">Extensions</a></li>
+									<li><a href="#">Extensions</a></li>
+								</ul>
+							</div>
+						</div></li>
+					<li><a href="#" class="smallgroup">공지사항</a></li>
+					<li><a href="#" class="smallgroup">1:1상품문의</a></li>
+					<li><a href="#" class="smallgroup">상품평</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>

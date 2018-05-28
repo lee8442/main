@@ -50,9 +50,9 @@
 
 						</div>
 						<div class="loginFind">
-							<a class="loginFind-id" href="idpassFind.do">아이디 찾기 / 비밀번호
-								찾기 </a> <a class="loginFind-signUp" href="insertMemberForm.do">
-								| 회원가입</a>
+							<a class="loginFind-id" href="idpassFind.do">아이디 찾기 / 비밀번호 찾기
+							</a> <a class="loginFind-signUp" href="insertMemberForm.do"> |
+								회원가입</a>
 						</div>
 					</div>
 					<div class="boardImage_bottom">
@@ -66,8 +66,7 @@
 			<div class="box">
 				<h4>추천 상품</h4>
 				<ul class="cf">
-					<li><a href="detailsPage.do">
-					</a><img
+					<li><a href="detailsPage.do"> </a><img
 						src="resources/member/image/image03.jpg"></li>
 					<li><a href="#"></a><img
 						src="resources/member/image/image03.jpg"></li>

@@ -8,36 +8,23 @@
 <link rel="stylesheet" href="resources/css/product/detailPage.css">
 </head>
 <body>
-
 	<div id="container">
 		<div id="contents">
-
-			<!-- 업데이트 2017-05-28 -->
-			<!--
-    $category_page = /product/list.html
-    $project_page = /product/project.html
-    $jointbuy_page = /product/jointbuy.html
--->
-
 			<!-- 상단 전체영역 시작  -->
 			<div id="df-product-detail" df-data-custom="" df-data-price="154000"
 				class="xans-element- xans-product xans-product-detail close">
 				<!-- 디테일전체 영역 시작 -->
 				<div class="detailArea">
-
-
 					<!-- 이미지 영역 시작 -->
 					<div class="imgArea-wrap">
 						<div
 							class="xans-element- xans-product xans-product-image imgArea ">
 							<div class="keyImg">
 								<div class="thumbnail">
-
 									<!-- 상품 상세이미지 -->
 									<span class="detail-image"><img src="../image/개사료.jpg"
 										alt="초코텐트" class="big_img_size BigImage "></span>
 									<div id="zoom_wrap"></div>
-
 									<!-- 좋아요 -->
 									<div class="likeButton btn-effect displaynone">
 										<button type="button">
@@ -47,7 +34,6 @@
 										<span class="bg-layer1"></span><span class="bg-layer2"></span><span
 											class="bg-layer3"></span><span class="bg-layer4"></span>
 									</div>
-
 									<!-- 이전.다음상품 -->
 									<div class="df-move-control">
 										<a href="#none"
@@ -64,9 +50,7 @@
 												class="fa fa-caret-down ico-arrow"></i></span>
 										</a>
 									</div>
-
 								</div>
-
 								<!-- 상품 추가이미지-->
 								<div
 									class="xans-element- xans-product xans-product-addimage listImg"
@@ -78,40 +62,28 @@
 											</div></li>
 									</ul>
 								</div>
-
 							</div>
 						</div>
 					</div>
 					<!-- //이미지 영역 종료 -->
-
-
 					<!-- 상품정보 영역 시작 -->
 					<div class="infoArea-wrap">
 						<div class="infoArea">
-
 							<!-- DF픽스박스(상품정보영역) -->
 							<div class="df-detail-fixed-box">
-
 								<!-- DF픽스박스(스크롤영역 -->
 								<div class="df-detail-fixed-scroll">
-
 									<div class="headingArea ">
 										<span class="icon"></span>
-
 										<!-- 상품명 -->
 										<h2>Choco Tent (Natural Beige)</h2>
-
 										<!-- 해외배송문구 -->
 										<span class="delivery displaynone">[해외배송 가능상품]</span>
-
 										<!-- 상품색상 -->
 										<div class="color displaynone"></div>
 									</div>
-
 									<!-- 상품요약설명 -->
 									<div class="df-summary-desc"></div>
-
-
 									<!-- 공급사정보 -->
 									<table border="1" summary="" class="supply displaynone">
 										<tbody>
@@ -167,26 +139,18 @@
 																<p></p>
 														</span><span class="df-custom-add"></span> </span></td>
 												</tr>
-
 											</tbody>
 										</table>
 									</div>
 									<!-- //상품 기본정보 끝 -->
-
-
 									<!-- 상품간략설명 -->
 									<div class="df-simple-desc"></div>
-
-
 									<p class="displaynone">
 										<img
 											src="//img.echosting.cafe24.com/skin/base_ko_KR/product/txt_naver.gif"
 											alt="개인결제창을 통한 결제 시 네이버 마일리지 적립 및 사용이 가능합니다.">
 									</p>
 									<!-- //상세정보 내역 -->
-
-
-									<!-- 2017-05-25 업데이트 -->
 									<!-- 상품옵션 전체영역 -->
 									<ul border="1" summary=""
 										class="xans-element- xans-product xans-product-option xans-record-">
@@ -201,8 +165,6 @@
 											src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_manual_select.gif"
 											alt="옵션 선택"></a>
 									</div>
-
-
 									<div class="guideArea">
 										<!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
 										<p class="info ">
@@ -213,16 +175,10 @@
 											class="size_guide_info" product_no="17"><i
 												class="fa fa-expand" aria-hidden="true"></i>사이즈 가이드</a></span>
 									</div>
-
-
 									<!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
 									<!-- //참고 -->
-
-
 									<!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
 									<!-- //참고 -->
-
-
 									<!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
 									<div id="totalProducts" class=" ">
 										<div class="thead-wrap"></div>
@@ -240,7 +196,6 @@
 													<th scope="col">가격</th>
 												</tr>
 											</thead>
-
 											<tbody class="">
 												<tr>
 													<td>Choco Tent (Natural Beige)</td>
@@ -287,8 +242,6 @@
 										</table>
 									</div>
 									<!-- //참고 -->
-
-
 									<div id="totalPrice" class="totalPrice">
 										<strong>TOTAL</strong> : <span class="total"><strong><em>154,000원</em></strong>
 											(1개)</span>
@@ -296,13 +249,9 @@
 									<p class="ec-base-help txt11 displaynone EC-price-warning">할인가가
 										적용된 최종 결제예정금액은 주문 시 확인할 수 있습니다.</p>
 									<!-- //2017-05-25 업데이트 끝 -->
-
-
 								</div>
 								<!-- //DF픽스박스(스크롤영역 -->
-
 								<!-- 2017-02-25 구매 & 예약구매 버튼확인할것 상품코드: P00000DI -->
-
 								<div class="xans-element- xans-product xans-product-action">
 									<!--구매·장바구니·관심상품·품절 버튼 -->
 									<div class="ec-base-button df-action-button">
@@ -448,9 +397,7 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -469,9 +416,7 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -490,9 +435,7 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -511,9 +454,7 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -532,9 +473,7 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -553,9 +492,7 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -574,9 +511,7 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -595,15 +530,11 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -622,15 +553,11 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -649,15 +576,11 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -676,15 +599,11 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -733,21 +652,15 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -766,15 +679,11 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -793,9 +702,7 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -814,9 +721,7 @@
 						</div>
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
-							<img alt=""
-								src="../image/개사료.jpg"
-								style="font-size: 9pt;">
+							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
 						</div>
 						<div style="text-align: center;">
 							<br>
@@ -1035,12 +940,10 @@
 											<td>3</td>
 											<td class="subject left txtBreak"><a
 												href="/article/review/4/249/?no=249&amp;board_no=4&amp;spread_flag=T">초코텐트
-													너무 예뻐요! </a><span class="ico-board"><img
-													src="" alt="HIT"><img
-													src="" alt="파일첨부"
-													onmouseover=""
-													onmouseout=""><span
-													id="afile_249" style="display: none;"></span></span><span
+													너무 예뻐요! </a><span class="ico-board"><img src=""
+													alt="HIT"><img src="" alt="파일첨부" onmouseover=""
+													onmouseout=""><span id="afile_249"
+													style="display: none;"></span></span><span
 												class="txtWarn comment-count">[1]</span></td>
 											<td>서****</td>
 											<td class="txtInfo txt11">2017-10-31</td>
@@ -1266,7 +1169,8 @@
 							<p class="last">
 								<a
 									href="?product_no=17&amp;cate_no=1&amp;display_group=3&amp;page_6=2#use_qna"><img
-									src="resource/image/detilsPage/btn_pagingLast.png" class="img_on" alt="last"></a>
+									src="resource/image/detilsPage/btn_pagingLast.png"
+									class="img_on" alt="last"></a>
 							</p>
 						</div>
 					</div>

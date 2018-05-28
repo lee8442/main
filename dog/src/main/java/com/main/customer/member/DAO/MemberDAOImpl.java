@@ -8,17 +8,25 @@ import com.main.util.SqlSessionFactoryBean;
 
 @Repository
 public class MemberDAOImpl implements MemberDAO {
-
 	private SqlSession SqlSession;
 
 	public MemberDAOImpl() {
 		SqlSession = SqlSessionFactoryBean.getSqlSessionInstance();
 	}
 
+	@Override
 	public void insertMember(MemberVO vo) {
 		System.out.println(vo.toString());
 		SqlSession.insert("myBatis.customer.member.insertMember", vo);
 		SqlSession.commit();
-		System.out.println("완료");
+		System.out.println("회원가입 완료");
+	}
+	
+	@Override
+	public int idCheck(String id) {
+		int result = SqlSession.selectOne("myBatis.customer.member.idCheck", id);
+		System.out.println("아이디 중복 확인 완료");
+		System.out.println("결과 : " + result);
+		return result;
 	}
 }
