@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="css/idpassFind.css">
+<link rel="stylesheet" href="resources/css/member/idpassFind.css">
 <title>idSearch</title>
 </head>
 <body class="body">
@@ -32,13 +32,26 @@
 						<input type="submit" class="tabcontent-ok" value="확인">
 					</div>
 					<div class="tabcontent-name">
-						<b class="tebcontent-b-name">이름</b> <input type="search" id="name"
+						<b class="tebcontent-b-name">이름</b> 
+						<input type="search" id="name"
 							class="name" placeholder="이름을 입력해주세요">
 					</div>
-					<div class="tabcontnent-tel">
-						<b class="tebcontent-b-tel">전화번호</b><input type="tel" id="tel"
-							class="tel" placeholder="'-'없이 입력해주세요">
+					<div>
+					<b class="tebcontent-b-tel" >전화번호</b>
 					</div>
+							<div >
+							<div>
+								<select class="phone-list-1" name="phone1">
+									<option onclick="phoneOption()" value="010">010</option>
+									<option value="070">070</option>
+								</select>
+								</div>
+								<div>
+									<input class="phone-input-1" name="phone2" 	type="text" onkeyup="phoneInput(this)">
+									<br><b>ㅡ</b>
+									<input class="phone-input-1" name="phone3"  type="text" onkeyup="phoneInput(this)">
+							</div>
+							</div> <input name="phone" type="hidden">
 				</div>
 				<!-- 비밀번호 찾기  -->
 				<div id="tab2" class="tab_content" style="display: block;">
@@ -48,8 +61,16 @@
 							<ul class="tab-pass-ul">
 								<li><a class="content-name-a">이름</a><input
 									class="content-name" type="text"></li>
-								<li><a class="content-tel-a">휴대폰번호</a><input
-									class="content-tel" type="tel"></li>
+								<li><b>전화번호</b>
+							<div>
+								<select class="phone-list" name="phone1">
+									<option onclick="phoneOption()" value="010">010</option>
+									<option value="070">070</option>
+								</select><b class="b-">ㅡ</b><input class="phone-input" name="phone2"
+									type="text" onkeyup="phoneInput(this)"><b class="b-">ㅡ</b><input
+									class="phone-input" name="phone3" type="text"
+									onkeyup="phoneInput(this)">
+							</div> <input name="phone" type="hidden"></li>
 								<li><a class="content-id-ok-a">아이디</a><input
 									class="content-id" type="text"> <input
 									class="content-id-ok" type="submit" value="아이디확인"></li>

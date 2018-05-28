@@ -16,83 +16,6 @@
 	width: 100%;
 }
 
-#content .mainMenu_full {
-	width: 1200px;
-	margin: auto;
-}
-
-#content .mainMenu_full ul li {
-	float: left;
-	margin-right: 20px;
-	height: 70px;
-	margin-left: 20px;
-	font-size: 10px;
-	line-height: 75px;
-}
-
-#content .mainMenu_full ul li.allCategories_li {
-	margin-right: 30px;
-	margin-left: 0;
-}
-
-#content .mainMenu_full ul li.main_img {
-	margin-right: 0;
-	margin-top: 18px;
-}
-
-#content .mainMenu_full ul li.best {
-	margin-right: 20px;
-}
-
-#content .mainMenu_full ul li a.smallgroup {
-	font-size: 12px;
-}
-
-.allCategories_li {
-	margin-right: 25px;
-}
-
-li
-.cloth
- 
-={
-text-align
-:
- 
-center
-;
-
-
-}
-.toy {
-	text-align: center;
-	margin-left: 0;
-}
-
-#content .mainMenu_full .mainMenu .mainMenu_backfull {
-	width: 100%;
-	height: 150px;
-	display: none;
-	position: absolute;
-	left: 0;
-	display: none;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
-	margin-top: -5px;
-}
-
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back {
-	margin: auto;
-	width: 1200px;
-	background-color: #ffffff;
-	height: 150px;
-	border-top: 0.5px solid;
-}
-
-#content .mainMenu_full .cf li:hover .mainMenu_backfull {
-	display: block;
-}
-
 .cf {
 	margin-top: 50px;
 }
@@ -193,12 +116,12 @@ center
 	height: 70px;
 	width: 70px;
 	margin: 15px 0 0 15px;
-	 background-color: black;
-	 color:white;  
-	 border-top: 0;
-	 border-left: 0;
-	 border-bottom: 0;
-	 border-right: 0;
+	background-color: black;
+	color: white;
+	border-top: 0;
+	border-left: 0;
+	border-bottom: 0;
+	border-right: 0;
 }
 
 #content .hot .boardImage  .boardImage_top .loginSaveForm {
@@ -212,7 +135,7 @@ center
 #content .hot .boardImage  .boardImage_top .loginSaveForm .loginSave {
 	float: left;
 	width: 308px;
-	    margin-top: 13px;
+	margin-top: 13px;
 }
 
 #content .hot .boardImage  .boardImage_top .loginSaveForm a {
@@ -247,9 +170,9 @@ center
 	background-color: #623738;
 	color: white;
 	float: left;
-	
 }
-#content .hot .boardImage .boardImage_bottom .loginBtn2{
+
+#content .hot .boardImage .boardImage_bottom .loginBtn2 {
 	width: 154px;
 	height: 60px;
 	background-color: #623738;

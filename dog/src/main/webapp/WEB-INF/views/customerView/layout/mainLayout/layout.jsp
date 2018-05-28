@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>#dog</title>
-<link rel="stylesheet" href="resources/css/main/reset.css">
+<link rel="stylesheet" href="resources/css/layout/reset.css">
 <script type="text/javascript"
 	src="resources/js/jquery/jquery-3.3.1.min.js"></script>
 </head>
