@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,16 +8,31 @@
 <link rel="stylesheet" href="resources/css/layout/footer.css">
 </head>
 <body>
-	<footer id="footer">
-		<div class="inner cf">
-			<div class="left ftbox">가장 소리다.이것은 얼마나 못할 산야에 천하를 아니다. 지혜는
-				천자만홍이 꾸며 이상 별과 쓸쓸한 이것이다. 같지 희망의 이상의 수 힘차게 보배를 그들의 힘있다.</div>
-			<div class="center ftbox">그들의 수 그와 이상의 만물은 것이다. 눈이 품었기 오직 힘차게
-				피다. 스며들어 크고 피가 그리하였는가?</div>
-			<div class="right ftbox">얼마나 청춘에서만 피는 힘있다. 일월과 용기가 풍부하게 새가
-				소담스러운 듣는다. 지혜는 구하지 사람은 놀이 실현에 용감하고 뜨고, 석가는 황금시대다. 청춘 그림자는 청춘에서만 것이다.
-			</div>
-		</div>
-	</footer>
+   <footer id="footer">
+      <div class="inner cf">
+         <div class="left ftbox">
+            <div>
+               <div class="footerimage">
+                  <img src="resources/image/layout/dog.png">
+               </div>
+               <div class="imagebottom">강아지용품은 따지고 고르는 #도그</div>
+            </div>
+         </div>
+         <div class="center ftbox">
+            <ul>
+               <li>(주)#DOG | 대표이사 : 김이사</li>
+               <li>서울특별시 강남구 삼성로 221</li>
+               <li>사업자 등록번호 : 100-00-10000 | 통신판매업신고 : 2018-강남구청-0000</li>
+               <li>개인정보관리책임자 : 김이사 24@naver.com | Tel : 02-2424-2424, 070-2424-2424  </li>
+               <li>Copyright(C) Petsbe Inc. All rights reserved.</li>
+            </ul>
+         </div>
+         <div class="right ftbox">
+            <div>
+               <img class="footerimage2" src="resources/image/layout/footer.gif">
+            </div>
+         </div>
+      </div>
+   </footer>
 </body>
 </html>

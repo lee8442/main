@@ -85,17 +85,7 @@ function nameInput(obj) {
 	}
 }
 
-/*$('select[name=phone1]').change(function() {
-	alert("11");
-	$('input[name=phone2]').focus();
-});*/
 
-$('select[name=phone1]').blur(function() {
-	alert("11");
-	$('input[name=phone2]').focus();
-});
-
-//$('select[name=phone1]')
 
 function phoneOption() {
 	alert("11");

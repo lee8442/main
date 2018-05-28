@@ -28,25 +28,25 @@
 							onchange="idChange()"> <input class="id-btn"
 							type="button" value="중복 확인" onclick="idCheck()"></li>
 						<li class="li-h5"><h5>아이디를 입력하세요.</h5></li>
-						<li class="li-id-ok"><h4 class="h4-id">※5 ~ 15자 사이 영문
+						<li class="li-id-ok"><h4 class="h4-id">※ 5 ~ 15자 사이 영문
 								대/소문자, 숫자로 입력하세요.</h4></li>
 						<li><b>이름</b><input name="name" class="name-input"
 							type="text" onkeyup="nameInput(this)"></li>
-						<li><h4 class="h4-name">※2 ~ 10자 사이 한글, 영문 대/소문자로 입력하세요.</h4></li>
+						<li><h4 class="h4-name">※ 2 ~ 10자 사이 한글, 영문 대/소문자로 입력하세요.</h4></li>
 						<li><b>전화번호</b>
 							<div>
 								<select class="phone-list" name="phone1">
-									<option onclick="phoneOption()" value="010">010</option>
+									<option value="010">010</option>
 									<option value="070">070</option>
 								</select><b class="b-">ㅡ</b><input class="phone-input" name="phone2"
 									type="text" onkeyup="phoneInput(this)"><b class="b-">ㅡ</b><input
 									class="phone-input" name="phone3" type="text"
 									onkeyup="phoneInput(this)">
 							</div> <input name="phone" type="hidden"></li>
-						<li><h4 class="h4-phone">※' - ' 없이 숫자로만 입력하세요.</h4></li>
+						<li><h4 class="h4-phone">※ ' - ' 없이 숫자로만 입력하세요.</h4></li>
 						<li><b>비밀번호</b><input class="pass-input" name="password"
 							type="password">
-						<li><h4 class="h4-pass">※숫자, 특문 각 1회 이상, 영문은 2개 이상 사용하여
+						<li><h4 class="h4-pass">※ 숫자, 특문 각 1회 이상, 영문은 2개 이상 사용하여
 								8자리 이상 입력</h4></li>
 						<li><input class="repass-btn" type="button" value="확인"></li>
 						<li><b>비밀번호확인</b><input class="repass-input"
