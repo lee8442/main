@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../css/buycss.css">
+<link rel="stylesheet" href="resources/css/product/detailPage.css">
 </head>
 <body>
 
@@ -1036,10 +1036,10 @@
 											<td class="subject left txtBreak"><a
 												href="/article/review/4/249/?no=249&amp;board_no=4&amp;spread_flag=T">초코텐트
 													너무 예뻐요! </a><span class="ico-board"><img
-													src="/web/upload/icon_201703161514423400.png" alt="HIT"><img
-													src="/web/upload/icon_201703161514546800.png" alt="파일첨부"
-													onmouseover="BOARD.load_attached_image('afile_249','1','4');"
-													onmouseout="BOARD.load_attached_image('afile_249','0','4');"><span
+													src="" alt="HIT"><img
+													src="" alt="파일첨부"
+													onmouseover=""
+													onmouseout=""><span
 													id="afile_249" style="display: none;"></span></span><span
 												class="txtWarn comment-count">[1]</span></td>
 											<td>서****</td>
@@ -1083,7 +1083,7 @@
 						</div>
 
 						<p class="ec-base-button fs-0">
-							<span class="gRight"> <a href="../user/productReView.jsp"
+							<span class="gRight"> <a href="productReview.do"
 								class="df-btn dark normal mr-5">상품후기작성</a> <a
 								href="/board/product/list.html?board_no=4"
 								class="df-btn light normal">모두보기</a>
@@ -1266,7 +1266,7 @@
 							<p class="last">
 								<a
 									href="?product_no=17&amp;cate_no=1&amp;display_group=3&amp;page_6=2#use_qna"><img
-									src="../image/btn_pagingLast.png" class="img_on" alt="last"></a>
+									src="resource/image/detilsPage/btn_pagingLast.png" class="img_on" alt="last"></a>
 							</p>
 						</div>
 					</div>

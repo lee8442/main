@@ -128,7 +128,6 @@
 					</ul>
 				</div>
 			</div>
-			<div class="imageLogin"></div>
 		</div>
 	</div>
 	<script type="text/javascript" src="resources/js/layout/header.js"></script>

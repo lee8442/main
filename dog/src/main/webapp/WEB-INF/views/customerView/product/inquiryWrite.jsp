@@ -5,8 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../css/reset.css">
-<link rel="stylesheet" href="../css/css.css">
+<link rel="stylesheet" href=" resources/css/product/inquiryWrite.css">
 </head>
 <body>
 <center>
@@ -50,5 +49,6 @@
 </table>
 </form>
 </center>
+<script type="text/javascript" src="resources/js/member/inquiryWrite.js"></script>
 </body>
 </html>
