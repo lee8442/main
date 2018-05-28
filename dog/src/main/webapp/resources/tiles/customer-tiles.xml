@@ -22,7 +22,7 @@
 	</definition>
 	
 	<definition	name="simpleLayout" template="/WEB-INF/views/customerView/layout/simpleLayout/layout.jsp">
-		<put-attribute name="header" value="/WEB-INF/views/customerView/layout/simpleLayout/member_header.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/customerView/layout/simpleLayout/header.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/views/customerView/layout/simpleLayout/footer.jsp" />
 		<put-attribute name="content" value="" />
 	</definition>

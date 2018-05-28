@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="resources/css/layout/header.css">
 </head>
 <body>
-	<header id="header"> </header>
+	<header id="header"></header>
 	<div id="visual">
 		<img class="mySlides" src="resources/image/main/img1.png"
 			style="width: 100%; height: 250px; z-index: -1000;"> <img
