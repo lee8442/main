@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="resources/css/member/signUp.css">
+<link rel="stylesheet" href="resources/css/member/insertMemberForm.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -84,6 +84,6 @@
 			</form>
 		</center>
 	</div>
-	<script type="text/javascript" src="resources/js/member/signUp.js"></script>
+	<script type="text/javascript" src="resources/js/member/insertMemberForm.js"></script>
 </body>
 </html>

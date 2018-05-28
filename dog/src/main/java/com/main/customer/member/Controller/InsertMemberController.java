@@ -17,7 +17,7 @@ public class InsertMemberController {
 	@RequestMapping(value = "/insertMemberForm.do")
 	public String insertMemberForm() {
 		System.out.println("회원가입 페이지");
-		return "simple/member/signUp";
+		return "simple/member/insertMemberForm";
 	}
 
 	@RequestMapping(value = "/idCheck.do", method = RequestMethod.POST)
