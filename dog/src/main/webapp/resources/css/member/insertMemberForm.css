@@ -1,14 +1,9 @@
 @charset "UTF-8";
 
-.body {
-	margin-top: 100px;
-}
-
 .body-all {
 	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 700px;
 	margin-top: 50px;
 }
 
