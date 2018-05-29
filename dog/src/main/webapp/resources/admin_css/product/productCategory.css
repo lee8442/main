@@ -1,0 +1,26 @@
+@charset "UTF-8";
+#categori ul{
+	list-style: none;
+	text-align: center;
+}
+#categori ul li{
+	display: inline;
+}
+#dfirst{
+	boder: 1px;
+	display: inline-block;
+	width: 350px;
+}
+#dsecond{
+	boder: 1px;
+	display: inline-block;
+	width: 350px;
+}
+#dfirst2{
+	display: inline-block;
+	width: 350px;
+}
+#dsecond2{
+	display: inline-block;
+	width: 350px;
+}
