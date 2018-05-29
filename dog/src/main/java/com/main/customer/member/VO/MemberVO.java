@@ -8,7 +8,6 @@ public class MemberVO {
 	private String address;
 	private String email;
 	private int phone;
-	private int point;
 
 	public String getId() {
 		return id;
@@ -66,17 +65,9 @@ public class MemberVO {
 		this.phone = phone;
 	}
 
-	public int getPoint() {
-		return point;
-	}
-
-	public void setPoint(int point) {
-		this.point = point;
-	}
-
 	@Override
 	public String toString() {
 		return "MemberVO [id=" + id + ", name=" + name + ", password=" + password + ", registration=" + registration
-				+ ", address=" + address + ", email=" + email + ", phone=" + phone + ", point=" + point + "]";
+				+ ", address=" + address + ", email=" + email + ", phone=" + phone + "]";
 	}
 }

@@ -77,7 +77,7 @@
 					</ul>
 					<div class="tab-list-btn">
 						<input class="save" type="submit" value="회원가입"> <input
-							class="cancel" type="button" value="취소" onclick="main.do;">
+							class="cancel" type="button" value="취소" onclick="window.location='main.do'">
 					</div>
 				</div>
 

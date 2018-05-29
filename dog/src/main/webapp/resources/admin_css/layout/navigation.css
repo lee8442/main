@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#asideleft{
+	float: left;
+}
+#asideleft ul{
+	list-style: none;
+}
+#asideleft ul li a:hover{
+	color: #d40203;
+}

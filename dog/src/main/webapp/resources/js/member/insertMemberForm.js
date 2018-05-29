@@ -123,7 +123,7 @@ function insertCheck() {
 	 * alert($('input[name=registration]').val());
 	 * alert($('input[name=address]').val());
 	 * alert($('input[name=email]').val()); alert($('input[name=phone]').val());
-	 */
+	*/ 
 
 	if (!idReg.test($('input[name=id]').val())) {
 		alert("아이디는 5 ~ 15자 사이 영문 대/소문자, 숫자로 입력하세요.");
@@ -145,7 +145,7 @@ function insertCheck() {
 		alert("이름은 2~5자 사이 한글 또는 영문 대/소문자로 입력하세요.");
 		return false;
 	}
-	if (!emailReg.test(document.newmemberForm.newmemberEmail.value)) {
+	if (!emailReg.test($('input[name=email]').val())) {
 		alert("이메일 형식이 맞는지 확인하세요.");
 		return false;
 	}

@@ -1,4 +1,4 @@
-package com.main.admin.main.product.Controller;
+package com.main.admin.main.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
 	@RequestMapping(value = "/main.ado")
 	public String main() {
-		System.out.println("¸ŞÀÎÆäÀÌÁö");
-		return "main/main";
+		System.out.println("ê´€ë¦¬ì ë©”ì¸ í˜ì´ì§€");
+		return "admin/main/main";
 	}
 }

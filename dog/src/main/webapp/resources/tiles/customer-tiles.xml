@@ -7,8 +7,8 @@
 	<!-- Doc indexpage description -->
 	<definition	name="mainLayout" template="/WEB-INF/views/customerView/layout/mainLayout/layout.jsp">
 		<put-attribute name="header" value="/WEB-INF/views/customerView/layout/mainLayout/header.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/customerView/layout/mainLayout/footer.jsp" />
 		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/customerView/layout/mainLayout/footer.jsp" />
 	</definition>
 	
 	<definition name="main/*" extends="mainLayout">
@@ -23,8 +23,8 @@
 	
 	<definition	name="simpleLayout" template="/WEB-INF/views/customerView/layout/simpleLayout/layout.jsp">
 		<put-attribute name="header" value="/WEB-INF/views/customerView/layout/simpleLayout/header.jsp" />
-		<put-attribute name="footer" value="/WEB-INF/views/customerView/layout/simpleLayout/footer.jsp" />
 		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/customerView/layout/simpleLayout/footer.jsp" />
 	</definition>
 	
 	<definition name="simple/*" extends="simpleLayout">

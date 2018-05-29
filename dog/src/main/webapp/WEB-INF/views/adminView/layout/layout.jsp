@@ -5,19 +5,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>#dog</title>
-<!-- <link rel="stylesheet" href="resources/css/main/css.css"> -->
+<title>#dog 관리자 페이지</title>
+<script type="text/javascript"
+	src="resources/admin_js/jquery/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 	<div class="header">
 		<t:insertAttribute name="header" />
 	</div>
+	<div class="navigation">
+		<t:insertAttribute name="navigation" />
+	</div>
 	<div class="content">
 		<t:insertAttribute name="content" />
 	</div>
-	<div class="footer">
-		<t:insertAttribute name="footer" />
-	</div>
-	<script type="text/javascript" src="resources/js/jquery/jquery-3.3.1.min.js"></script>
 </body>
 </html>
