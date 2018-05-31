@@ -9,3 +9,16 @@
 #asideleft ul li a:hover{
 	color: #d40203;
 }
+#asideleft {
+	font-family: Roboto, Arial, 'Nanum Gothic', 'Malgun Gothic', '맑은 고딕',
+		Dotum, '돋움', 'Apple SD Gothic Neo', 'AppleGothic', sans-serif;
+	font-size: 18px;
+	width: 220px;
+}
+#asideleft ul li a{
+text-decoration: none;
+color:black;
+}
+.menu{
+font-size: 25px;
+}

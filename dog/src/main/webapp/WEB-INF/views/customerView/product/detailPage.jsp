@@ -5,26 +5,39 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="resources/css/product/detailPage.css">
+<link rel="stylesheet" href="resources/css/product/detailsPage.css">
 </head>
 <body>
+
 	<div id="container">
 		<div id="contents">
+
+			<!-- 업데이트 2017-05-28 -->
+			<!--
+    $category_page = /product/list.html
+    $project_page = /product/project.html
+    $jointbuy_page = /product/jointbuy.html
+-->
+
 			<!-- 상단 전체영역 시작  -->
 			<div id="df-product-detail" df-data-custom="" df-data-price="154000"
 				class="xans-element- xans-product xans-product-detail close">
 				<!-- 디테일전체 영역 시작 -->
 				<div class="detailArea">
+
+
 					<!-- 이미지 영역 시작 -->
 					<div class="imgArea-wrap">
 						<div
 							class="xans-element- xans-product xans-product-image imgArea ">
 							<div class="keyImg">
 								<div class="thumbnail">
+
 									<!-- 상품 상세이미지 -->
-									<span class="detail-image"><img src="../image/개사료.jpg"
-										alt="초코텐트" class="big_img_size BigImage "></span>
+									<span class="detail-image"><img src="resources/image/product/nike.jpg"
+										alt="나이키" class="big_img_size BigImage "></span>
 									<div id="zoom_wrap"></div>
+
 									<!-- 좋아요 -->
 									<div class="likeButton btn-effect displaynone">
 										<button type="button">
@@ -34,6 +47,7 @@
 										<span class="bg-layer1"></span><span class="bg-layer2"></span><span
 											class="bg-layer3"></span><span class="bg-layer4"></span>
 									</div>
+
 									<!-- 이전.다음상품 -->
 									<div class="df-move-control">
 										<a href="#none"
@@ -50,7 +64,9 @@
 												class="fa fa-caret-down ico-arrow"></i></span>
 										</a>
 									</div>
+
 								</div>
+
 								<!-- 상품 추가이미지-->
 								<div
 									class="xans-element- xans-product xans-product-addimage listImg"
@@ -58,32 +74,44 @@
 									<ul>
 										<li class="xans-record-" style="display: none;"><div
 												class="thumb">
-												<img src="../image/개사료.jpg" class="ThumbImage">
+												<img src="resources/image/product/nike.jpg" class="ThumbImage">
 											</div></li>
 									</ul>
 								</div>
+
 							</div>
 						</div>
 					</div>
 					<!-- //이미지 영역 종료 -->
+
+
 					<!-- 상품정보 영역 시작 -->
 					<div class="infoArea-wrap">
 						<div class="infoArea">
+
 							<!-- DF픽스박스(상품정보영역) -->
 							<div class="df-detail-fixed-box">
+
 								<!-- DF픽스박스(스크롤영역 -->
 								<div class="df-detail-fixed-scroll">
+
 									<div class="headingArea ">
 										<span class="icon"></span>
+
 										<!-- 상품명 -->
-										<h2>Choco Tent (Natural Beige)</h2>
+										<h2>Choco Tent (Natural Beige)----이거 디비에서 어케가져옴?</h2>
+
 										<!-- 해외배송문구 -->
 										<span class="delivery displaynone">[해외배송 가능상품]</span>
+
 										<!-- 상품색상 -->
 										<div class="color displaynone"></div>
 									</div>
+
 									<!-- 상품요약설명 -->
 									<div class="df-summary-desc"></div>
+
+
 									<!-- 공급사정보 -->
 									<table border="1" summary="" class="supply displaynone">
 										<tbody>
@@ -113,7 +141,7 @@
 												<tr class="manu_name_css  xans-record-">
 													<th scope="row"><span
 														style="font-size: 11px; color: #555555;">제조사</span></th>
-													<td><span style="font-size: 11px; color: #555555;">자체제작</span><span
+													<td><span style="font-size: 11px; color: #555555;">어디서가져와??</span><span
 														class="df-custom-add"></span></td>
 												</tr>
 												<tr class="made_in_css  xans-record-">
@@ -126,7 +154,7 @@
 													<th scope="row"><span
 														style="font-size: 11px; color: #555555;">판매가</span></th>
 													<td><span style="font-size: 11px; color: #555555;"><strong
-															id="span_product_price_text">154,000원</strong><input
+															id="span_product_price_text">어떻게가져와?</strong><input
 															id="product_price" name="product_price" value=""
 															type="hidden"></span><span class="df-custom-add"></span>
 													</td>
@@ -135,22 +163,30 @@
 													<th scope="row"><span
 														style="font-size: 11px; color: #555555;">적립금</span></th>
 													<td><span style="font-size: 11px; color: #555555;"><span
-															id="span_mileage_text">3,000원 (2%)
+															id="span_mileage_text">어떠케 가져오냐고
 																<p></p>
 														</span><span class="df-custom-add"></span> </span></td>
 												</tr>
+
 											</tbody>
 										</table>
 									</div>
 									<!-- //상품 기본정보 끝 -->
+
+
 									<!-- 상품간략설명 -->
 									<div class="df-simple-desc"></div>
+
+
 									<p class="displaynone">
 										<img
 											src="//img.echosting.cafe24.com/skin/base_ko_KR/product/txt_naver.gif"
 											alt="개인결제창을 통한 결제 시 네이버 마일리지 적립 및 사용이 가능합니다.">
 									</p>
 									<!-- //상세정보 내역 -->
+
+
+									<!-- 2017-05-25 업데이트 -->
 									<!-- 상품옵션 전체영역 -->
 									<ul border="1" summary=""
 										class="xans-element- xans-product xans-product-option xans-record-">
@@ -165,6 +201,8 @@
 											src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_manual_select.gif"
 											alt="옵션 선택"></a>
 									</div>
+
+
 									<div class="guideArea">
 										<!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
 										<p class="info ">
@@ -175,10 +213,16 @@
 											class="size_guide_info" product_no="17"><i
 												class="fa fa-expand" aria-hidden="true"></i>사이즈 가이드</a></span>
 									</div>
+
+
 									<!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
 									<!-- //참고 -->
+
+
 									<!-- 참고 : 뉴상품관리 전용 모듈입니다. 뉴상품관리 이외의 곳에서 사용하면 정상동작하지 않습니다. -->
 									<!-- //참고 -->
+
+
 									<!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
 									<div id="totalProducts" class=" ">
 										<div class="thead-wrap"></div>
@@ -196,6 +240,7 @@
 													<th scope="col">가격</th>
 												</tr>
 											</thead>
+
 											<tbody class="">
 												<tr>
 													<td>Choco Tent (Natural Beige)</td>
@@ -207,12 +252,12 @@
 																src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif"
 																alt="수량감소" class="QuantityDown down"></a>
 													</span></td>
-													<td class="right"><span class="quantity_price">154,000원<input
+													<td class="right"><span class="quantity_price">2,000,000<input
 															type="hidden" name="option_box_price"
 															class="option_box_price" value="154000"
 															item_code="P000000Q000A"></span> <span class="mileage "><img
 															src="//img.echosting.cafe24.com/design/skin/admin/ko_KR/ico_product_point.gif">
-															&nbsp;<span class="mileage_price">3,000원</span></span></td>
+															&nbsp;<span class="mileage_price">적립금갔고찌푼짜람?</span></span></td>
 												</tr>
 											</tbody>
 											<!-- 참고 : 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다.-->
@@ -242,16 +287,22 @@
 										</table>
 									</div>
 									<!-- //참고 -->
+
+
 									<div id="totalPrice" class="totalPrice">
-										<strong>TOTAL</strong> : <span class="total"><strong><em>154,000원</em></strong>
-											(1개)</span>
+										<strong>TOTAL</strong> : <span class="total"><strong><em>얼마얼마얼마</em></strong>
+											(1개)이것도 부탁한다 리주늬...</span>
 									</div>
 									<p class="ec-base-help txt11 displaynone EC-price-warning">할인가가
 										적용된 최종 결제예정금액은 주문 시 확인할 수 있습니다.</p>
 									<!-- //2017-05-25 업데이트 끝 -->
+
+
 								</div>
 								<!-- //DF픽스박스(스크롤영역 -->
+
 								<!-- 2017-02-25 구매 & 예약구매 버튼확인할것 상품코드: P00000DI -->
+
 								<div class="xans-element- xans-product xans-product-action">
 									<!--구매·장바구니·관심상품·품절 버튼 -->
 									<div class="ec-base-button df-action-button">
@@ -340,27 +391,29 @@
 						<!-- 상품상세페이지 본문 -->
 						<p></p>
 						<div style="text-align: center;">
+							<br><img src="resources/image/product/nike.jpg">
+						</div>
+						<br><br><br><br><br><br><br><br>
+						<br>
+						<p>
 							<br>
-						</div>
+						</p>
+						<br>
+						<p></p>
 						<div style="text-align: center;">
-							<br>
+							<img alt="" src="resources/image/product/nike.jpg" style="font-size: 9pt;">
 						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
+						<p>
+						<br>
+						</p>
+						<p>
+						<br>
+						</p>
+						<br>
 						<div style="text-align: center;">
 							<p>
 								<img alt=""
-									src="/web/upload/NNEditor/20170830/IMG_0117_1720_shop1_015834.jpg"
+									src="resources/image/product/nike.jpg"
 									width="860">
 							</p>
 							<p>&nbsp;뭐임???????????????????????????????????????????????????????????</p>
@@ -378,376 +431,9 @@
 						<p style="text-align: center;">&nbsp;</p>
 						<div style="text-align: center;">
 
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
+							<img alt="" src="resources/image/product/nike.jpg" style="font-size: 9pt;">
 						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt=""
-								src="/web/upload/NNEditor/20170822/18_shop1_004515.jpg"
-								style="font-size: 9pt;">
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt=""
-								src="/web/upload/NNEditor/20170822/19_shop1_004515.jpg"
-								style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt="" src="../image/개사료.jpg" style="font-size: 9pt;">
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<div style="text-align: center;">
-							<br>
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<img alt=""
-								src="/web/upload/NNEditor/20170822/27_shop1_004517.jpg"
-								style="font-size: 9pt;">
-						</div>
-						<p style="text-align: center;">&nbsp;</p>
-						<div style="text-align: center;">
-							<br>
-						</div>
+						
 						<p></p>
 						<!-- 배너관리v2:상세페이지 하단 공통이미지 -->
 						<div class="detail-common-img">
@@ -903,16 +589,7 @@
 							<a name="use_review"></a>
 							<p class="noAccess displaynone">글읽기 권한이 없습니다.</p>
 							<div class="minor displaynone">
-								<p>
-									<img
-										src="//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_under19.gif"
-										alt=""> &nbsp;<strong>"19세 미만의 미성년자"</strong>는 출입을 금합니다!
-								</p>
-								<p class="button">
-									<a href="/intro/board.html"><img
-										src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_adult_certification.gif"
-										alt="성인인증 하기"></a>
-								</p>
+							
 							</div>
 							<div class="ec-base-table typeList">
 								<table border="1" summary="" class="">
@@ -937,48 +614,7 @@
 									</thead>
 									<tbody class="center">
 										<tr class="xans-record-">
-											<td>3</td>
-											<td class="subject left txtBreak"><a
-												href="/article/review/4/249/?no=249&amp;board_no=4&amp;spread_flag=T">초코텐트
-													너무 예뻐요! </a><span class="ico-board"><img src=""
-													alt="HIT"><img src="" alt="파일첨부" onmouseover=""
-													onmouseout=""><span id="afile_249"
-													style="display: none;"></span></span><span
-												class="txtWarn comment-count">[1]</span></td>
-											<td>서****</td>
-											<td class="txtInfo txt11">2017-10-31</td>
-											<td class="txtInfo txt11">419</td>
-											<td class="displaynone"><img
-												src="../image/ico_point_star5.png" class="ico-point"
-												alt="5점"></td>
-										</tr>
-										<tr class="xans-record-">
-											<td>2</td>
-											<td class="subject left txtBreak"><a
-												href="/article/review/4/80/?no=80&amp;board_no=4&amp;spread_flag=T">강아지가
-													좋아해요.</a><span class="ico-board"><img
-													src="/web/upload/icon_201703161514423400.png" alt="HIT"></span><span
-												class="txtWarn comment-count">[1]</span></td>
-											<td>정****</td>
-											<td class="txtInfo txt11">2017-03-31</td>
-											<td class="txtInfo txt11">521</td>
-											<td class="displaynone"><img
-												src="../image/ico_point_star5.png" class="ico-point"
-												alt="5점"></td>
-										</tr>
-										<tr class="xans-record-">
-											<td>1</td>
-											<td class="subject left txtBreak"><a
-												href="/article/review/4/14/?no=14&amp;board_no=4&amp;spread_flag=T">도착했습니다</a><span
-												class="ico-board"><img
-													src="/web/upload/icon_201703161514423400.png" alt="HIT"></span><span
-												class="txtWarn comment-count">[1]</span></td>
-											<td>김****</td>
-											<td class="txtInfo txt11">2016-09-03</td>
-											<td class="txtInfo txt11">759</td>
-											<td class="displaynone"><img
-												src="../image/ico_point_star5.png" class="ico-point"
-												alt="5점"></td>
+										
 										</tr>
 									</tbody>
 								</table>
@@ -995,27 +631,7 @@
 
 						<div
 							class="xans-element- xans-product xans-product-reviewpaging df-base-paging">
-							<p class="first">
-								<a href="#none"><img src="../image/btn_pagingFirst.png"
-									class="img_on" alt="first"></a>
-							</p>
-							<p>
-								<a href="#none"><img src="../image/btn_pagingPrev.png"
-									class="img_on" alt="prev"></a>
-							</p>
-							<ol>
-								<li class="xans-record-"><a
-									href="?product_no=17&amp;cate_no=1&amp;display_group=3&amp;page_4=1#use_review"
-									class="this">1</a></li>
-							</ol>
-							<p>
-								<a href="#none"><img src="../image/btn_pagingNext.png"
-									class="img_on" alt="next"></a>
-							</p>
-							<p class="last">
-								<a href="#none"><img src="../image/btn_pagingLast.png"
-									class="img_on" alt="last"></a>
-							</p>
+							
 						</div>
 					</div>
 				</div>
@@ -1039,16 +655,7 @@
 							<a name="use_qna"></a>
 							<p class="noAccess displaynone">글읽기 권한이 없습니다.</p>
 							<div class="minor displaynone">
-								<p>
-									<img
-										src="//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_under19.gif"
-										alt=""> &nbsp;<strong>"19세 미만의 미성년자"</strong>는 출입을 금합니다!
-								</p>
-								<p class="button">
-									<a href="/intro/board.html"><img
-										src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_adult_certification.gif"
-										alt="성인인증 하기"></a>
-								</p>
+								
 							</div>
 							<div class="ec-base-table typeList">
 								<table border="1" summary="" class="">
@@ -1071,64 +678,7 @@
 									</thead>
 									<tbody class="center">
 										<tr class="xans-record-">
-											<td>7</td>
-											<td class="subject left txtBreak"><img
-												src="../image/icon_201703161514504700.png" alt="비밀글">
-												<a
-												href="/article/q-a/6/498/?no=498&amp;board_no=6&amp;spread_flag=T">방석</a><span
-												class="ico-board"></span><span class="txtWarn comment-count">[1]</span>
-											</td>
-											<td>오****</td>
-											<td class="txtInfo txt11">2018-05-17</td>
-											<td class="txtInfo txt11">3</td>
-										</tr>
-										<tr class="xans-record-">
-											<td>6</td>
-											<td class="subject left txtBreak"><img
-												src="../image/icon_201703161514504700.png" alt="비밀글">
-												<a
-												href="/article/q-a/6/433/?no=433&amp;board_no=6&amp;spread_flag=T">빠른답변좀
-													부탁드립니다</a><span class="ico-board"></span><span
-												class="txtWarn comment-count">[3]</span></td>
-											<td>김****</td>
-											<td class="txtInfo txt11">2018-03-19</td>
-											<td class="txtInfo txt11">9</td>
-										</tr>
-										<tr class="xans-record-">
-											<td>5</td>
-											<td class="subject left txtBreak"><img
-												src="../image/icon_201703161514504700.png" alt="비밀글">
-												<a
-												href="/article/q-a/6/393/?no=393&amp;board_no=6&amp;spread_flag=T">방석도
-													함께오나요?</a><span class="ico-board"></span><span
-												class="txtWarn comment-count">[1]</span></td>
-											<td>이****</td>
-											<td class="txtInfo txt11">2018-02-07</td>
-											<td class="txtInfo txt11">2</td>
-										</tr>
-										<tr class="xans-record-">
-											<td>4</td>
-											<td class="subject left txtBreak"><img
-												src="../image/icon_201703161514504700.png" alt="비밀글">
-												<a
-												href="/article/q-a/6/379/?no=379&amp;board_no=6&amp;spread_flag=T">내부</a><span
-												class="ico-board"></span><span class="txtWarn comment-count">[1]</span>
-											</td>
-											<td>강****</td>
-											<td class="txtInfo txt11">2018-01-25</td>
-											<td class="txtInfo txt11">5</td>
-										</tr>
-										<tr class="xans-record-">
-											<td>3</td>
-											<td class="subject left txtBreak"><img
-												src="../image/icon_201703161514504700.png" alt="비밀글">
-												<a
-												href="/article/q-a/6/324/?no=324&amp;board_no=6&amp;spread_flag=T">문의</a><span
-												class="ico-board"></span><span class="txtWarn comment-count">[1]</span>
-											</td>
-											<td>최****</td>
-											<td class="txtInfo txt11">2017-12-28</td>
-											<td class="txtInfo txt11">2</td>
+										
 										</tr>
 									</tbody>
 								</table>
@@ -1143,35 +693,8 @@
 							</span>
 						</p>
 
-						<div
-							class="xans-element- xans-product xans-product-qnapaging df-base-paging">
-							<p class="first">
-								<a href="#none"><img src="../image/btn_pagingFirst.png"
-									class="img_on" alt="first"></a>
-							</p>
-							<p>
-								<a href="#none"><img src="../image/btn_pagingPrev.png"
-									class="img_on" alt="prev"></a>
-							</p>
-							<ol>
-								<li class="xans-record-"><a
-									href="?product_no=17&amp;cate_no=1&amp;display_group=3&amp;page_6=1#use_qna"
-									class="this">1</a></li>
-								<li class="xans-record-"><a
-									href="?product_no=17&amp;cate_no=1&amp;display_group=3&amp;page_6=2#use_qna"
-									class="other">2</a></li>
-							</ol>
-							<p>
-								<a
-									href="?product_no=17&amp;cate_no=1&amp;display_group=3&amp;page_6=2#use_qna"><img
-									src="../image/btn_pagingNext.png" class="img_on" alt="next"></a>
-							</p>
-							<p class="last">
-								<a
-									href="?product_no=17&amp;cate_no=1&amp;display_group=3&amp;page_6=2#use_qna"><img
-									src="resource/image/detilsPage/btn_pagingLast.png"
-									class="img_on" alt="last"></a>
-							</p>
+						<div class="xans-element- xans-product xans-product-qnapaging df-base-paging">
+							
 						</div>
 					</div>
 				</div>
