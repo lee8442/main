@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,17 +10,15 @@
 </head>
 <body>
 	<h3>상품 등록</h3><hr/>
-	<form>
+	<form action="productReg.ado" >
 		<label>상품 분류</label>
 		<!-- el태그를 이용한 for문 db데이터 받아오는기능으로 변경해야됨 -->
 		<select id="big" name="bigclass">
-			<option value="0">대분류</option>
-			<option value="1">사료</option>
-			<option value="2">미용/목욕</option>
-			<option value="3">장난감</option>
-			<option value="4">하우스/울타리</option>
-			<option value="5">간식</option>
-			<option value="6">의류</option>
+			<option>대분류</option>
+      <c:forEach var="CBig" items="${categoryList }" >
+   
+      <option value="${CBig.code }">${CBig.name }</option>
+      </c:forEach>
 		</select>
 		<select id="small" name="smallclass">
 			<option value="0">소분류</option>

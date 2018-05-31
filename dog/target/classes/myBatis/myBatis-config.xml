@@ -2,6 +2,12 @@
 <!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+	<typeAliases>
+		<typeAlias type="com.main.admin.product.VO.ProductVO"
+			alias="ProductVO" />
+		<typeAlias type="com.main.admin.product.VO.CategoryVO"
+			alias="CategoryVO" />
+	</typeAliases>
 	<!--DataSource 설정 -->
 	<environments default="development">
 		<environment id="development">
@@ -19,7 +25,12 @@
 	<!--Sql Mapper 설정 -->
 	<mappers>
 		<!-- 위치값을 줄때 루트 폴터는 resources 폴더이다. -->
+		<mapper resource="myBatis/customer/member/insertMemberSql.xml" />
 		<mapper
-			resource="myBatis/customer/member/insertMemberSql.xml"></mapper>
+			resource="myBatis/admin/productReg/insertProductSql.xml" />
+		<mapper
+			resource="myBatis/admin/productReg/selectProductListSql.xml" />
+		<mapper
+			resource="myBatis/admin/productReg/selectCategorySql.xml" />
 	</mappers>
 </configuration>

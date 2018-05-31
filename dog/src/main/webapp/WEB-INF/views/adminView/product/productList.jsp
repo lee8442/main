@@ -13,9 +13,20 @@
 	<!-- 검색기능 넣어야함. --><br/>
 	<label>상품 리스트</label>
 	<!-- for 문 -->
-	<!-- 등록한 이미지 로드 -->
+	
+	
+	
+	
+	
+	<c:forEach items="${list }" var="product">
+	
+	<input type="text" name="image"  value="${product.image } ">
+	<input type="text" name="explain" value="${product.explain }">
+	<input type="text" name="simple_explain" value="${product.simple_explain }">		
+	</c:forEach>
+
 	<!-- 상품명 -->
-	<!-- 상품 설명 --><br/>
+	<!-- 상품 설명 -->
 	<input type="button" onclick="window.location='productUp.jsp'" value="수정">
 	<input type="button" action="#" value="삭제">
 </body>

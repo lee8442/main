@@ -9,9 +9,8 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="../css/productCategorics.css"/>
 </head>
-<body>
 	<h3>상품 분류</h3>
-	<input type="button" onclick="window.location='productCategoriInsert.jsp'" value="카테고리 추가">
+	<input type="button" onclick="window.location='productCategoriIn.jsp'" value="카테고리 추가">
 	<input type="button" onclick="window.location='productCategoriUD.jsp'" value="카테고리 수정 삭제"><br/>
 	<div id="categori">
 		<ul>
@@ -25,15 +24,11 @@
 	</div>
 	<!-- el태그를 이용한 for문 db데이터 받아오는기능으로 변경해야됨 -->
 	<select id="first">
-		<c:forEach var="categoriBig" items="${categoriList }">
-		<option value="0">대분류</option>
-		<option value="1">사료</option>
-		<option value="2">미용/목욕</option>
-		<option value="3">장난감</option>
-		<option value="4">하우스/울타리</option>
-		<option value="5">간식</option>
-		<option value="6">의류</option>
-		</c:forEach>
+		<option>대분류</option>
+      <c:forEach var="CBig" items="${categoryList }" >
+   
+      <option value="${CBig.code }">${CBig.name }</option>
+      </c:forEach>
 	</select>
 	<select id="secont">
 		<option value="0">소분류</option>

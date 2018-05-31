@@ -1,19 +1,24 @@
 package com.main.admin.product.VO;
 
 public class ProductVO {
-	private int big_class_code;
 	private int code;
 	private String name;
-	private String Bname;
+	private int price;
+	private int stock;
+/*	private String image;*/
+	private String explain;
+	private String simple_explain;
+	
 
-	public int getBig_class_code() {
-		return big_class_code;
+/*
+	public String getImage() {
+		return image;
 	}
 
-	public void setBig_class_code(int big_class_code) {
-		this.big_class_code = big_class_code;
+	public void setImage(String image) {
+		this.image = image;
 	}
-
+*/
 	public int getCode() {
 		return code;
 	}
@@ -30,17 +35,50 @@ public class ProductVO {
 		this.name = name;
 	}
 
-	public String getBname() {
-		return Bname;
+	public int getPrice() {
+		return price;
 	}
 
-	public void setBname(String bname) {
-		Bname = bname;
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+
+	public String getExplain() {
+		return explain;
+	}
+
+	public void setExplain(String explain) {
+		this.explain = explain;
+	}
+
+	public String getSimple_explain() {
+		return simple_explain;
+	}
+
+	public void setSimple_explain(String simple_explain) {
+		this.simple_explain = simple_explain;
+	}
+
+	public Object getImg() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public String toString() {
-		return "ProductVO [big_class_code=" + big_class_code + ", code=" + code + ", name=" + name + ", Bname=" + Bname
-				+ "]";
+		return "ProductVO [code=" + code + ", name=" + name + ", price=" + price + ", stock=" + stock + ", explain="
+				+ explain + ", simple_explain=" + simple_explain + "]";
 	}
+	
 }
+
+
+

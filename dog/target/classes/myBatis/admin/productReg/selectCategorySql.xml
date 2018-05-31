@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="getCategory">
+   <resultMap id="resultGetCategory" type="CategoryVO">
+      <result property="code" column="code"/>
+      <result property="name" column="name" />
+   </resultMap>
+   <select id="selectCategoryBig" parameterType="CategoryVO" resultType="CategoryVO">
+      <![CDATA[select * from big_class]]>
+   </select>
+</mapper>
