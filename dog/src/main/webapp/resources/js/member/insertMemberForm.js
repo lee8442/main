@@ -17,14 +17,13 @@ var emailReg = /^[A-Za-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/;
 var id_check = 0;
 
 // 모든 input의 공백 제거
-$('input').change(
-		function(e) {
-			if (e.target.name != "address-search"
-					&& e.target.name != "details-address") {
-				e.target.value = e.target.value.replace(/\s/gi, "");
-			}
-
-		});
+/*
+ * $('input').change( function(e) { if (e.target.name != "address-search" &&
+ * e.target.name != "details-address") { e.target.value =
+ * e.target.value.replace(/\s/gi, ""); }
+ * 
+ * });
+ */
 
 // 아이디 input에 특수 문자와 한글 방지, 15자 넘어가면 이름 input으로 포커스
 function idInput(obj) {
@@ -172,6 +171,14 @@ function juminInput(obj) {
 	}
 }
 
+// 이메일 input에 한글과 공백 방지
+function emailInput(obj) {
+	var val = obj.value;
+	if (/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣\s]/g.test(val)) {
+		obj.value = val.replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣\s]/g, "");
+	}
+}
+
 // 주소검색을 수행할 팝업 페이지를 호출합니다.
 function goPopup() {
 	// 호출된 페이지(jusopopup.jsp)에서 실제
@@ -227,6 +234,13 @@ function insertCheck() {
 	var address = $('input[name=address-search]').val() + " "
 			+ $('input[name=details-address]').val();
 	$('input[name=address]').val(address);
+	if ($('select[name=email-list]').val() == "직접 입력") {
+		$('input[name=email]').val($('input[name=tempEmail]').val());
+		alret($('input[name=email]').val());
+	} else {
+		$('input[name=email]').val($('input[name=tempEmail]').val() + "@" + $('select[name=email-list]').val());
+		alret($('input[name=email]').val());
+	}
 	/*
 	 * alert($('input[name=id]').val()); alert($('input[name=name]').val());
 	 * alert($('input[name=password]').val());
@@ -267,5 +281,5 @@ function insertCheck() {
 	 * $('#newmemberPass').val(shapass); $('#newmemberPass2').val(shapass);
 	 */
 	alert("환영합니다! #dog 회원가입이 완료되었습니다!");
-	return true;
+	return false;
 }

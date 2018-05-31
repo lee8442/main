@@ -53,8 +53,9 @@
 							<h4 class="h4-pass" id="repassCheck"></h4></li>
 						<li><b>주민등록번호</b><input class="jumin1-input" name="jumin1"
 							type="text" onkeyup="juminInput(this)"><b class="b-">ㅡ</b><input
-							class="jumin2-input" name="jumin2" type="password" onkeyup="juminInput(this)"><input
-							name="registration" type="hidden"></li>
+							class="jumin2-input" name="jumin2" type="password"
+							onkeyup="juminInput(this)"><input name="registration"
+							type="hidden"></li>
 						<li><b>주소</b><input class="address-search"
 							name="address-search" type="text"><input
 							class="address-btn" type="button" value="검색" onClick="goPopup()">
@@ -62,18 +63,17 @@
 						<li><b>상세주소</b><input class="details-address"
 							name="details-address" type="text"><input name="address"
 							type="hidden"></li>
-						<li><b>이메일</b> <input class="email-input" name="email"
-							type="text">
+						<li><b>이메일</b> <input class="email-input" name="tempEmail"
+							type="text" onkeyup="emailInput(this)">
 							<div>
-								<select class="email-list">
-									<option value="0">직접입력</option>
-									<option value="1">naver.com</option>
-									<option value="2">hanmail.net</option>
-									<option value="3">gmail.com</option>
-									<option value="4">cyworld.co.kr</option>
-									<option value="5">nate.com</option>
+								<select class="email-list" name="email-list">
+									<option value="직접 입력">직접 입력</option>
+									<option value="naver.com">naver.com</option>
+									<option value="hanmail.net">hanmail.net</option>
+									<option value="gmail.com">gmail.com</option>
+									<option value="nate.com">nate.com</option>
 								</select>
-							</div></li>
+							</div> <input name="email" type="hidden"></li>
 						<li><h4>※ 이메일 형식에 맞게 입력해주세요.</h4></li>
 					</ul>
 					<div class="tab-list-btn">
