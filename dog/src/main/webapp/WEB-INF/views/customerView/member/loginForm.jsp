@@ -33,7 +33,7 @@
 						<div class="tabBlock">
 							<ul class="tab-list">
 								<li><input class="checkbox" width="10" height="10"
-									type="checkbox"> <b>아이디 저장</b> <a href="insertMemberForm.do"
+									type="checkbox"> <b>아이디 저장</b> <a href="insertMember.do"
 									class="" id="">&nbsp;|&nbsp;회원가입</a> <a href="idpassFind.do"
 									class="" id="">아이디찾기/비밀번호찾기</a></li>
 							</ul>

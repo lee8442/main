@@ -27,7 +27,7 @@
 			</div>
 			<ul class="topMenu cf">
 				<li><a href="loginForm.do">로그인&nbsp;ㅣ</a></li>
-				<li><a href="insertMemberForm.do">회원가입&nbsp;ㅣ</a></li>
+				<li><a href="insertMember.do">회원가입&nbsp;ㅣ</a></li>
 				<li><a href="#">주문배송조회&nbsp;ㅣ</a></li>
 				<li><a href="#">장바구니&nbsp;ㅣ</a></li>
 				<li><a href="#">고객센터</a></li>

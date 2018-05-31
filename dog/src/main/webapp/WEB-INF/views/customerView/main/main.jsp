@@ -51,7 +51,7 @@
 						</div>
 						<div class="loginFind">
 							<a class="loginFind-id" href="idpassFind.do">아이디 찾기 / 비밀번호 찾기
-							</a> <a class="loginFind-signUp" href="insertMemberForm.do"> |
+							</a> <a class="loginFind-signUp" href="insertMember.do"> |
 								회원가입</a>
 						</div>
 					</div>

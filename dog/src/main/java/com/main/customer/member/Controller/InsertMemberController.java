@@ -14,7 +14,7 @@ public class InsertMemberController {
 	@Autowired
 	InsertMemberService InsertMemberService;
 
-	@RequestMapping(value = "/insertMemberForm.do")
+	@RequestMapping(value = "/insertMember.do", method = RequestMethod.GET)
 	public String insertMemberForm() {
 		System.out.println("회원가입 페이지");
 		return "simple/member/insertMemberForm";
@@ -28,7 +28,13 @@ public class InsertMemberController {
 		return result;
 	}
 	
-	@RequestMapping(value = "/insertMember.do")
+	@RequestMapping(value = "/mapSearch.do")
+	public String mapSearch() {
+		System.out.println("주소 검색 결과");
+		return "simple/member/mapSearch";
+	}
+	
+	@RequestMapping(value = "/insertMember.do", method = RequestMethod.POST)
 	public String insertMember(MemberVO vo) {
 		System.out.println("회원가입 완료");
 		InsertMemberService.insertMember(vo);

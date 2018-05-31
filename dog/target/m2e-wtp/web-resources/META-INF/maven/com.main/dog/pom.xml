@@ -53,6 +53,12 @@
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+		<!-- <dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<version>1.6</version>
+		</dependency> -->
 
 		<!-- myBatis -->
 		<dependency>
@@ -72,7 +78,7 @@
 			<artifactId>ojdbc6</artifactId>
 			<version>12.1.0.1-atlassian-hosted</version>
 		</dependency>
-		
+
 		<!-- tiles lib -->
 		<dependency>
 			<groupId>org.apache.tiles</groupId>
