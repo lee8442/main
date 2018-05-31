@@ -11,9 +11,9 @@
 	<div id="asideleft">
 		<ul>
 			<li class="menu">상품관리</li>
-			<li><a href="main/main/main"> 상품분류</a></li>
-			<li><a href="productCategoryInsert.ado"> 상품등록</a></li>
-			<li><a href="../product/productList.jsp"> 상품목록</a></li>
+			<li><a href="selectCategoryForm.ado"> 상품분류</a></li>
+			<li><a href="insertProductRegForm.ado"> 상품등록</a></li>
+			<li><a href="selectProductListForm.ado"> 상품목록</a></li>
 			<br />
 			<li class="menu">주문관리</li>
 			<li><a href="../order/adminOrderList.jsp"> 주문목록</a></li>
