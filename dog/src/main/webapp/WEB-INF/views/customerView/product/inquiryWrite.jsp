@@ -21,7 +21,10 @@
 	</tr>
 	<tr class="this">
 		<td class="thistd">질문유형</td>
-		<td class="thistd"><input type="text" name="question" placeholder="내용을 입력해주세요."/></td>
+		<td class="thistd"><select name="what_question"><option value="1">환불문의</option>
+		<option value="2">배송문의</option>
+		<option value="3">사이즈문의</option>
+		</select></td>
 	</tr>
 	<tr class="this">
 		<td class="thistd">이메일</td>
@@ -49,6 +52,7 @@
 </table>
 </form>
 </center>
-<script type="text/javascript" src="resources/js/member/inquiryWrite.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="resources/js/member/QnAView"></script>
 </body>
 </html>
