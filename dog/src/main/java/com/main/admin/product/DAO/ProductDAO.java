@@ -7,6 +7,7 @@ import com.main.admin.product.VO.ProductVO;
 
 public interface ProductDAO {
 	public void ProductReg(ProductVO vo);
-public List<CategoryVO> selectCategory(CategoryVO vo);
+
 public List<ProductVO> productList(ProductVO vo);
+public List<CategoryVO> selectCategory(CategoryVO vo);
 }

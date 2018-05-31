@@ -8,5 +8,5 @@
 	<insert id="regProduct"  parameterType="ProductVO">
 	insert into product (code,name,price,stock,explain,simple_explain)values(#{code},#{name},#{price},#{stock},#{explain},#{simple_explain})
 	</insert>
-      
+	
 </mapper>

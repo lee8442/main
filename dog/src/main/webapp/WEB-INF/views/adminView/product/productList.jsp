@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,15 +14,9 @@
 	<!-- 검색기능 넣어야함. --><br/>
 	<label>상품 리스트</label>
 	<!-- for 문 -->
-	
-	
-	
-	
-	
 	<c:forEach items="${list }" var="product">
-	
-	<input type="text" name="image"  value="${product.image } ">
-	<input type="text" name="explain" value="${product.explain }">
+<%-- 	<input type="text" name="image"  value="${product.image } "> --%>
+	<input type="text" name="explain" value="${product.explain }" disabled="disabled">
 	<input type="text" name="simple_explain" value="${product.simple_explain }">		
 	</c:forEach>
 

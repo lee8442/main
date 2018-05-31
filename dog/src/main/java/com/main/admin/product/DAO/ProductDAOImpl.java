@@ -25,6 +25,7 @@ public class ProductDAOImpl implements ProductDAO {
 		SqlSession.insert("ProductReg.regProduct", vo);
 			
 	}
+
 	@Override
 	   public List<CategoryVO> selectCategory(CategoryVO vo){
 		System.out.println("===> mybatis로 대분류 가져오기 기능 수행");
@@ -34,7 +35,7 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public List<ProductVO> productList(ProductVO vo) {
 		// TODO Auto-generated method stub
-		System.out.println("===> mybatis로 대분류 찍기 기능 수행");
+		System.out.println("===> mybatis로 디비에서 목록받아오기기능 수행");
 		return SqlSession.selectList("ProductReg.productList",vo);
 	}
 }
