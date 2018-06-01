@@ -12,7 +12,7 @@
 <form id="QnA_board"method="post" action="" name="QnA_board" enctype="multipart/form-data" onsubmit="return QnAformCheck();">
     <input type="hidden" name="board_id" value="${sessionScope.sessionID}">
     <br>
-    <b><font size="6" color="black">상품문의</font></b>
+    <b><font size="6" color="black">1 : 1상품문의</font></b>
     <br>
     <table border="3" bordercolor="lightgray" align="center" class="this">
 	<tr class="this">
@@ -21,22 +21,26 @@
 	</tr>
 	<tr class="this">
 		<td class="thistd">질문유형</td>
-		<td class="thistd"><select name="what_question"><option value="1">환불문의</option>
+		<td class="thistd">
+		<select name="what_question">
+		<option value="0">문의</option>
+		<option value="1">환불문의</option>
 		<option value="2">배송문의</option>
 		<option value="3">사이즈문의</option>
+		<option value="4">기타문의</option>
 		</select></td>
 	</tr>
 	<tr class="this">
 		<td class="thistd">이메일</td>
-		<td class="thistd"><input type="text" name="email" placeholder="이메일을 입력해주세요."/></td>
+		<td class="thistd"><input type="text" name="email"/></td>
 	</tr>
 	<tr class="this">
 		<td class="thistd">제목</td>
-		<td class="thistd"><input type="text" name="title" placeholder="제목을 입력해주세요."/></td>
+		<td class="thistd"><input type="text" name="title" /></td>
 	</tr>
 	<tr class="this">
 		<td class="thistd">내용</td> 
-		<td class="thistd"><textarea name="QnA_content" cols="100" rows="30" placeholder="내용을 입력해주세요."></textarea></td>
+		<td class="thistd"><textarea name="QnA_content" cols="100" rows="30" ></textarea></td>
 	</tr>
 	<tr class="this">
 		<td class="thistd">비밀번호</td>
@@ -44,15 +48,14 @@
 	</tr>
 	<tr valign="middle" class="this">
                 <td colspan="5" scope="row" class="thistd">
-                <input type="reset" value="작성취소" >
                 <input type="submit" value="등록" >
-                <input type="button" value="목록" >
+                <input type="reset" value="취소" >
+                <input type="button" value="상품목록" >
                 </td>
    </tr>            
 </table>
 </form>
 </center>
-	<script type="text/javascript" src="resources/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="resources/js/member/QnAView"></script>
 </body>
 </html>

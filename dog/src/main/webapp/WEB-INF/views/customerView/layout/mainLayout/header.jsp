@@ -11,13 +11,13 @@
 	<header id="header"> </header>
 	<div id="visual">
 		<img class="mySlides" src="resources/image/main/img1.png"
-			style="width: 100%; height: 250px; z-index: -1000;"> <img
+			style="width: 100%; height: 300px; z-index: -1000;"> <img
 			class="mySlides" src="resources/image/main/img2.png"
-			style="width: 100%; height: 250px; z-index: -1000;"> <img
+			style="width: 100%; height: 300px; z-index: -1000;"> <img
 			class="mySlides" src="resources/image/main/img3.png"
-			style="width: 100%; height: 250px; z-index: -1000;"> <img
+			style="width: 100%; height: 300px; z-index: -1000;"> <img
 			class="mySlides" src="resources/image/main/img5.png"
-			style="width: 100%; height: 250px; z-index: -1000;">
+			style="width: 100%; height: 300px; z-index: -1000;">
 		<nav id="nav" class="cf">
 			<div class="title">
 				<div class="logo">
@@ -119,8 +119,8 @@
 							</div>
 						</div></li>
 					<li><a href="#" class="smallgroup">공지사항</a></li>
-					<li><a href="#" class="smallgroup">1:1상품문의</a></li>
-					<li><a href="#" class="smallgroup">상품평</a></li>
+					<li><a href="inquiryAllBoardList.do" class="smallgroup">1:1상품문의</a></li>
+					<li><a href="reviewAllBoardList.do" class="smallgroup">상품평</a></li>
 				</ul>
 			</div>
 		</div>
