@@ -100,7 +100,7 @@
 				</div>
 				<div
 					class="xans-element- xans-board xans-board-buttonlist-4 xans-board-buttonlist xans-board-4  ">
-					<a href="inquiryWrite.do"
+					<a href="insertBoardInquiryForm.do"
 						class="btn Normal Wnormal Dark "> 쓰기 </a>
 				</div>
 			</div>
