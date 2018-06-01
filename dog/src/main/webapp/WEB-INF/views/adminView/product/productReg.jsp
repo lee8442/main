@@ -7,13 +7,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="../css/productRegCS.css">
+<link rel="stylesheet" type="text/css" href="resources/admin_css/product/productReg.css">
 </head>
 <body>
 	<h3>상품 등록</h3><hr/>
 	<form action="productReg.ado" >
 		<label>상품 분류</label>
 		<!-- el태그를 이용한 for문 db데이터 받아오는기능으로 변경해야됨 -->
+		<label>CODE</label>
+		<input type="text" disabled="disabled" class="code_01">/<input class="code_02" type="text"><br/>
 		<select id="big" name="bigclass">
 			<option>대분류</option>
       <c:forEach var="CBig" items="${categoryList }" >
