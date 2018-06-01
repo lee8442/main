@@ -17,9 +17,9 @@ public class InsertProductServiceImpl implements InsertProductService {
 	public void ProductReg(ProductVO vo) {
 		productDAO.ProductReg(vo);
 	}
-	@Override
-	public List<CategoryVO> selectCategory(CategoryVO vo) throws Exception{
-		return productDAO.selectCategory(vo);
-	}
 	
+	 @Override
+	   public List<CategoryVO> selectBigCategory(CategoryVO vo) throws Exception {
+	      return productDAO.selectBigCategory(vo);
+	   }
 }

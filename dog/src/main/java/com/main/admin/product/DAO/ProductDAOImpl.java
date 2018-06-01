@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.main.admin.product.VO.CategorySVO;
 import com.main.admin.product.VO.CategoryVO;
 import com.main.admin.product.VO.ProductVO;
 import com.main.util.SqlSessionFactoryBean;
@@ -25,11 +26,11 @@ public class ProductDAOImpl implements ProductDAO {
 		SqlSession.insert("ProductReg.regProduct", vo);
 			
 	}
-
+	//대분류
 	@Override
-	   public List<CategoryVO> selectCategory(CategoryVO vo){
+	   public List<CategoryVO> selectBigCategory(CategoryVO vo){
 		System.out.println("===> mybatis로 대분류 가져오기 기능 수행");
-	      return SqlSession.selectList("getCategory.selectCategoryBig", vo);
+	      return SqlSession.selectList("getCategory.selectBigCategory", vo);
 	   }
 
 	@Override
@@ -37,5 +38,18 @@ public class ProductDAOImpl implements ProductDAO {
 		// TODO Auto-generated method stub
 		System.out.println("===> mybatis로 디비에서 목록받아오기기능 수행");
 		return SqlSession.selectList("ProductReg.productList",vo);
+	}
+	//소분류
+	@Override
+	public List<CategorySVO> selectSmallCategory(int bigCategory) {
+		List<CategorySVO> smallCategory = SqlSession.selectList("getCategory.selectSmallCategory", bigCategory);
+		int index = smallCategory.size();
+		System.out.println("소분류 검색 완료");
+		for (int i = 0; i < index; i++) {
+			System.out.println("결과 : " + smallCategory.get(i).getBcode());
+			System.out.println("결과 : " + smallCategory.get(i).getName());
+			System.out.println("결과 : " + smallCategory.get(i).getCode());
+		}
+		return smallCategory;
 	}
 }

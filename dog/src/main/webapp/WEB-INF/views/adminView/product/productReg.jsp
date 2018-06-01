@@ -18,15 +18,12 @@
 		<input type="text" disabled="disabled" class="code_01">/<input class="code_02" type="text"><br/>
 		<select id="big" name="bigclass">
 			<option>대분류</option>
-      <c:forEach var="CBig" items="${categoryList }" >
+      <c:forEach var="CBig" items="${selectCategory }" >
       <option value="${CBig.code }">${CBig.name }</option>
       </c:forEach>
 		</select>
-		<select id="small" name="smallclass">
-			<option value="0">소분류</option>
-			<option value="1">피부/피모건강</option>
-			<option value="2">다이어트</option>
-			<option value="3">영양공급</option>
+		<select id="small">
+		<option>소분류</option>
 		</select><br/>
 		<label>상품명</label>
 		<input type="text" name="name" placeholder="상품명"><br/>
@@ -41,5 +38,7 @@
 		<input type="submit" value="등록">
 		<input type="reset" onclick="window.location='../main/adminMainScreen.jsp'" value="취소">
 	</form>
+	<script type="text/javascript"
+		src="resources/admin_js/product/productCategory.js"></script>
 </body>
 </html>

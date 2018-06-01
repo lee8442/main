@@ -6,7 +6,10 @@
       <result property="code" column="code"/>
       <result property="name" column="name" />
    </resultMap>
-   <select id="selectCategoryBig" parameterType="CategoryVO" resultType="CategoryVO">
+   <select id="selectBigCategory" parameterType="CategoryVO" resultType="CategoryVO">
       <![CDATA[select * from big_class]]>
    </select>
+   <select id="selectSmallCategory" parameterType="int" resultType="com.main.admin.product.VO.CategorySVO">
+		<![CDATA[select * from small_class where big_class_code = #{bigCategory}]]>
+	</select>
 </mapper>
