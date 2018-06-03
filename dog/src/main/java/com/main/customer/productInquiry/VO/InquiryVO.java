@@ -1,4 +1,4 @@
-package com.main.customer.inquiry.VO;
+package com.main.customer.productInquiry.VO;
 
 import java.util.Date;
 

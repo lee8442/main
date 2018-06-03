@@ -119,7 +119,7 @@
 							</div>
 						</div></li>
 					<li><a href="#" class="smallgroup">공지사항</a></li>
-					<li><a href="inquiryAllBoardList.do" class="smallgroup">1:1상품문의</a></li>
+					<li><a href="productInquiry.do" class="smallgroup">1:1상품문의</a></li>
 					<li><a href="reviewAllBoardList.do" class="smallgroup">상품평</a></li>
 				</ul>
 			</div>

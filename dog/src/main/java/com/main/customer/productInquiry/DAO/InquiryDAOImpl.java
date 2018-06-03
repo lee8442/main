@@ -1,9 +1,9 @@
-package com.main.customer.inquiry.DAO;
+package com.main.customer.productInquiry.DAO;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.main.customer.inquiry.VO.InquiryVO;
+import com.main.customer.productInquiry.VO.InquiryVO;
 import com.main.util.SqlSessionFactoryBean;
 @Repository
 public class InquiryDAOImpl implements InquiryDAO {
