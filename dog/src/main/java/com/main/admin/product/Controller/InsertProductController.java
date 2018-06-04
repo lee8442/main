@@ -59,6 +59,5 @@ public class InsertProductController {
 		insertProductService.ProductReg(vo);
 		
 		return "admin/main/main";
-
 	}
 }	

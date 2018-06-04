@@ -4,10 +4,10 @@ public class MemberVO {
 	private String id;
 	private String name;
 	private String password;
-	private int registration;
+	private String registration;
 	private String address;
 	private String email;
-	private int phone;
+	private String phone;
 
 	public String getId() {
 		return id;
@@ -33,11 +33,11 @@ public class MemberVO {
 		this.password = password;
 	}
 
-	public int getRegistration() {
+	public String getRegistration() {
 		return registration;
 	}
 
-	public void setRegistration(int registration) {
+	public void setRegistration(String registration) {
 		this.registration = registration;
 	}
 
@@ -57,11 +57,11 @@ public class MemberVO {
 		this.email = email;
 	}
 
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
