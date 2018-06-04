@@ -14,7 +14,7 @@ import com.main.admin.product.VO.CategoryVO;
 @Controller
 public class SelectCategoryController {
 	@Autowired
-	SelectCategoryService selectCategoryService;
+	private SelectCategoryService selectCategoryService;
 	//분류관리 폼이동
 	@RequestMapping(value = "/selectCategoryForm.ado")
 	public String selectCategoryForm(CategoryVO vo, Model model) throws Exception {

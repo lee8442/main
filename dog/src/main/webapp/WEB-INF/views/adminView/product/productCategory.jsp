@@ -17,7 +17,7 @@
 	<br />
 	<select id="big" onchange="selectBig()">
 		<option>대분류</option>
-		<c:forEach var="CBig" items="${selectCategory }">
+		<c:forEach var="CBig" items="${selectBigCategory }">
 			<option value="${CBig.code }">${CBig.name }</option>
 		</c:forEach>
 	</select>
@@ -44,7 +44,7 @@
 	<br />
 	<c:forEach var="#" items="#">
 		<div id="divCategory">
-			<c:forEach var="CBig" items="${selectCategory }">
+			<c:forEach var="CBig" items="${selectBigCategory }">
 				<div id="divBigVal">
 					<input type="checkbox">${CBig.name }<br />
 				</div>
@@ -52,19 +52,7 @@
 			<div id="divSmallVal"></div>
 		</div>
 	</c:forEach>
-<!-- 	<script type="text/javascript">
-$(document).ready(function(){
-	$("#big").change(function(){
-		$("#small").load("#small");
-	});
-});
 
-function chageBig(){
-	var bigSelect = document.getElementById("big");
-	var selectValueB = bigSelect.option[bigSelect.selectedIndex].value;
-	var selectTextB = bigSelect.option[bigSelect.selectedIndex].text;
-}
-</script> -->
 	<script type="text/javascript"
 		src="resources/admin_js/product/productCategory.js"></script>
 </body>

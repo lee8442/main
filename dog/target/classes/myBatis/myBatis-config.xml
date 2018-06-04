@@ -7,6 +7,8 @@
 			alias="ProductVO" />
 		<typeAlias type="com.main.admin.product.VO.CategoryVO"
 			alias="CategoryVO" />
+			<typeAlias type="com.main.admin.product.VO.CategorySVO"
+			alias="CategorySVO" />
 	</typeAliases>
 	<!--DataSource 설정 -->
 	<environments default="development">

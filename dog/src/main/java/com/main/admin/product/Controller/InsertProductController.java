@@ -6,11 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.main.admin.product.Service.InsertProductService;
 import com.main.admin.product.Service.SelectCategoryService;
-import com.main.admin.product.VO.CategorySVO;
 import com.main.admin.product.VO.CategoryVO;
 import com.main.admin.product.VO.ProductVO;
 
@@ -33,14 +31,7 @@ public class InsertProductController {
 		return "admin/product/productReg";
 	}
 	//소분류 기능
-	@RequestMapping(value = "/getSmallCategory.ado")
-	@ResponseBody
-	public List<CategorySVO> getSmallCategory(String bigCategory) {
-		System.out.println(bigCategory);
-		int bigCategoryInt = Integer.valueOf(bigCategory);
-		List<CategorySVO> selectSmallCategory = selectCategoryService.selectSmallCategory(bigCategoryInt);
-		return selectSmallCategory;
-	}
+	
 	
 	@RequestMapping(value = "/productReg.ado")
 	public String productReg (ProductVO vo ) {

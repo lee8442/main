@@ -18,7 +18,7 @@
 		<input type="text" disabled="disabled" class="code_01">/<input class="code_02" type="text"><br/>
 		<select id="big" name="bigclass">
 			<option>대분류</option>
-      <c:forEach var="CBig" items="${selectCategory }" >
+      <c:forEach var="CBig" items="${selectBigCategory }" >
       <option value="${CBig.code }">${CBig.name }</option>
       </c:forEach>
 		</select>

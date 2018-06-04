@@ -2,11 +2,12 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="getCategory">
-   <resultMap id="resultGetCategory" type="CategoryVO">
+   <resultMap id="resultGetCategory" type="com.main.admin.product.VO.CategorySVO">
       <result property="code" column="code"/>
       <result property="name" column="name" />
+      <result property="big_class_code" column="big_class_code"/>
    </resultMap>
-   <select id="selectBigCategory" parameterType="CategoryVO" resultType="CategoryVO">
+   <select id="selectBigCategory" parameterType="com.main.admin.product.VO.CategoryVO" resultType="com.main.admin.product.VO.CategoryVO">
       <![CDATA[select * from big_class]]>
    </select>
    <select id="selectSmallCategory" parameterType="int" resultType="com.main.admin.product.VO.CategorySVO">
