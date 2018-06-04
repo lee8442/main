@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -115,14 +116,11 @@
 						<legend>게시물 검색</legend>
 						<p class="category displaynone"></p>
 						<p>
-						 <select id="search_key" name="search_key" fw-filter=""
-								fw-label="" fw-msg="">
-								<option value="subject">제목</option>
-								<option value="content">내용</option>
-								<option value="writer_name">글쓴이</option>
-								<option value="member_id">아이디</option>
-								<option value="nick_name">별명</option>
-								<option value="product">상품정보</option>
+						 <select id="search_key" name="search_key">
+								<option>검색</option>
+								<c:forEach var="ss" items="${InquiryCategory }">
+									<option value="${ss.code }">${ss.name }</option>
+								</c:forEach>
 							</select> <input id="search" name="search" fw-filter="" fw-label=""
 								fw-msg="" class="inputTypeText" placeholder="" value=""
 								type="text"><a href="#none"

@@ -9,6 +9,8 @@
 			alias="CategoryVO" />
 			<typeAlias type="com.main.admin.product.VO.CategorySVO"
 			alias="CategorySVO" />
+			<typeAlias type="com.main.customer.productInquiry.VO.InquiryCategoryVO"
+			alias="InquiryCategoryVO" />
 	</typeAliases>
 	<!--DataSource 설정 -->
 	<environments default="development">
@@ -29,6 +31,7 @@
 		<!-- 위치값을 줄때 루트 폴터는 resources 폴더이다. -->
 		<mapper 
 			resource="myBatis/customer/member/insertMemberSql.xml" />
+			<mapper resource="myBatis/customer/product/InquiryCategorySql.xml" />
 		<mapper
 			resource="myBatis/admin/productReg/insertProductSql.xml" />
 		<mapper
