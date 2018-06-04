@@ -29,7 +29,7 @@ public class productInquiryController {
 	}
 	@RequestMapping(value="/productInquiryWrite.do")
 	public String productInquiryWrite(InquiryVO vo) {
-		System.out.println("문의 등록이벤트");
+		System.out.println("상품문의 글쓰기 페이지 ");
 		return "simple/product/productInquiryWrite";
 	}
 	
