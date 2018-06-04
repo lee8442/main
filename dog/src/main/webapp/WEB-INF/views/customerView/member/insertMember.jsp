@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="resources/css/member/insertMemberForm.css">
+<link rel="stylesheet" href="resources/css/member/insertMember.css">
 <title>Insert title here</title>
 </head>
 <body>
 	<div class="body-all">
 		<div class="bar">
 			<a href="main.do" class="a1">홈</a> &nbsp;> <a href="loginForm.do"
-				class="a2">로그인</a> &nbsp;><a href="insertMemberForm.do" class="a2">회원가입</a>
+				class="a2">로그인</a> &nbsp;><a href="insertMember.do" class="a2">회원가입</a>
 		</div>
 		<center>
 			<div class="body-list">
@@ -20,7 +20,7 @@
 				</div>
 			</div>
 			<form action="insertMember.do" onsubmit="return insertCheck()"
-				method="post">
+				method="post" id="insertForm">
 				<div class="tab-content">
 					<ul class="tab-list-ul">
 						<li class="li-id"><b class="li-id-b">아이디</b><input name="id"
@@ -28,7 +28,7 @@
 							onchange="idChange()"> <input class="id-btn"
 							type="button" value="중복 확인" onclick="idCheck()"></li>
 						<li class="li-h5"><h5>아이디를 입력하세요.</h5></li>
-						<li class="li-id-ok"><h4 class="h4-id">※ 5 ~ 15자 사이 영문 ,
+						<li class="li-id-ok"><h4 class="h4-id">※ 5 ~ 15자 사이 영문,
 								숫자로 입력하세요.</h4></li>
 						<li><b>이름</b><input name="name" class="name-input"
 							type="text" onkeyup="nameInput(this)"></li>
@@ -74,7 +74,7 @@
 									<option value="nate.com">nate.com</option>
 								</select>
 							</div> <input name="email" type="hidden"></li>
-						<li><h4>※ 이메일 형식에 맞게 입력해주세요.</h4></li>
+						<li><h4>※ 직접 입력 시 @ 뒤의 메일 주소까지 입력하세요. 'example@xxx.com'</h4></li>
 					</ul>
 					<div class="tab-list-btn">
 						<input class="save" type="submit" value="회원가입"> <input
@@ -82,11 +82,10 @@
 							onclick="window.location='main.do'">
 					</div>
 				</div>
-
 			</form>
 		</center>
 	</div>
 	<script type="text/javascript"
-		src="resources/js/member/insertMemberForm.js"></script>
+		src="resources/js/member/insertMember.js"></script>
 </body>
 </html>

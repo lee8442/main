@@ -1,5 +1,5 @@
 // 아이디 영문자 대소문자 숫자로 시작가능 5 ~ 15자 끝날 때 제한없음
-var idReg = /^[A-Za-z0-9]{5,15}/g;
+var idReg = /^[^0-9a-zA-Z]{5,15}/g;
 
 // 한글 이름 2 ~ 5자 이내
 var nameReg = /^[ㄱ-ㅎ|ㅏ-ㅣ|가-힣a-zA-Z]{2,10}$/;
@@ -40,6 +40,7 @@ function idInput(obj) {
 function idChange() {
 	$('h5').text("아이디 중복 확인을 하세요.");
 	$('h5').css("color", "red");
+	id_check = 0;
 	if ($('input[name=id]').val() == "") {
 		$('h5').text("아이디를 입력하세요.");
 		$('h5').css("color", "black");
@@ -116,6 +117,7 @@ function passwordInput(obj) {
 		obj.value = val.substring(0, 20);
 		$('input[name=repassword]').focus();
 	}
+	val = val.substring(0, 20);
 	if (passReg.test(val)) {
 		$('#passCheck').text("양식에 올바릅니다.");
 		$('#passCheck').css("color", "green");
@@ -123,7 +125,9 @@ function passwordInput(obj) {
 		$('#passCheck').text("양식에 올바르지 않습니다.");
 		$('#passCheck').css("color", "red");
 	}
-	if ($('input[name=password]').val() == $('input[name=repassword]').val()) {
+	if ($('input[name=password]').val() == $('input[name=repassword]').val()
+			&& $('input[name=password]').val() != ""
+			&& $('input[name=repassword]').val() != "") {
 		$('#repassCheck').text("비밀번호와 비밀번호 확인이 일치합니다.");
 		$('#repassCheck').css("color", "green");
 		$('input[name=jumin1]').focus();
@@ -223,57 +227,172 @@ function jusoCallBack(roadFullAddr, roadAddrPart1, addrDetail, roadAddrPart2,
 	}
 }
 
+function isYYYYMMDD(y, m, d) {
+	switch (m) {
+	case 2: // 2월의 경우
+		if (d > 29)
+			return false;
+		if (d == 29) {
+			// 2월 29의 경우 당해가 윤년인지를 확인
+			if ((y % 4 != 0) || (y % 100 == 0) && (y % 400 != 0))
+				return false;
+		}
+		break;
+	case 4: // 작은 달의 경우
+	case 6:
+	case 9:
+	case 11:
+		if (d == 31)
+			return false;
+	}
+	// 큰 달의 경우
+	return true;
+}
+function isLeapYear(y) {
+	if (y < 100)
+		y = y + 1900;
+	if ((y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+function getNumberOfDate(yy, mm) {
+	month = new Array(29, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+	if (mm == 2 && isLeapYear(yy))
+		mm = 0;
+	return month[mm];
+}
+function isSSN(s1, s2) {
+	n = 2;
+	sum = 0;
+	for (i = 0; i < s1.length; i++)
+		sum += parseInt(s1.substr(i, 1)) * n++;
+	for (i = 0; i < s2.length - 1; i++) {
+		sum += parseInt(s2.substr(i, 1)) * n++;
+		if (n == 10)
+			n = 2;
+	}
+	c = 11 - sum % 11;
+	if (c == 11)
+		c = 1;
+	if (c == 10)
+		c = 0;
+	if (c != parseInt(s2.substr(6, 1)))
+		return false;
+	else
+		return true;
+}
+
 // 회원가입 양식 체크
 function insertCheck() {
-	var registration = $('input[name=jumin1]').val()
-			+ $('input[name=jumin2]').val();
-	$('input[name=registration]').val(registration);
 	var phone = $('select[name=phone1]').val() + $('input[name=phone2]').val()
 			+ $('input[name=phone3]').val();
 	$('input[name=phone]').val(phone);
+	var registration = $('input[name=jumin1]').val()
+			+ $('input[name=jumin2]').val();
+	$('input[name=registration]').val(registration);
 	var address = $('input[name=address-search]').val() + " "
 			+ $('input[name=details-address]').val();
 	$('input[name=address]').val(address);
 	if ($('select[name=email-list]').val() == "직접 입력") {
-		$('input[name=email]').val($('input[name=tempEmail]').val());
-		alret($('input[name=email]').val());
+		var email = $('input[name=tempEmail]').val();
+		$('input[name=email]').val(email);
 	} else {
-		$('input[name=email]').val($('input[name=tempEmail]').val() + "@" + $('select[name=email-list]').val());
-		alret($('input[name=email]').val());
+		var email = $('input[name=tempEmail]').val() + "@"
+				+ $('select[name=email-list]').val();
+		$('input[name=email]').val(email);
 	}
-	/*
-	 * alert($('input[name=id]').val()); alert($('input[name=name]').val());
-	 * alert($('input[name=password]').val());
-	 * alert($('input[name=registration]').val());
-	 * alert($('input[name=address]').val());
-	 * alert($('input[name=email]').val()); alert($('input[name=phone]').val());
-	 */
-	if (!idReg.test($('input[name=id]').val())) {
-		alert("아이디는 5 ~ 15자 사이 영문 대/소문자, 숫자로 입력하세요.");
+	if (idReg.test($('input[name=id]').val())) {
+		alert("아이디는 5 ~ 15자 사이 영문, 숫자로 입력하세요.");
+		$('input[name=id]').focus();
 		return false;
 	}
 	if (id_check == 0) {
 		alert("아이디 중복 확인을 하세요.");
-		return false;
-	}
-	if (!passReg.test($('input[name=password]').val())) {
-		alert("비밀번호는 6 ~ 20자 사이 최소 1개 숫자 혹은 특수 문자를 포함하여 입력하세요.");
-		return false;
-	}
-	if ($('input[name=password]').val() != $('input[name=repassword]').val()) {
-		alert("비밀번호가 비밀번호 확인과 다릅니다.")
+		$('input[name=id]').focus();
 		return false;
 	}
 	if (!nameReg.test($('input[name=name]').val())) {
-		alert("이름은 2~5자 사이 한글 또는 영문 대/소문자로 입력하세요.");
+		alert("이름은 2 ~ 10자 사이 한글, 영문으로 입력하세요.");
+		$('input[name=name]').focus();
+		return false;
+	}
+	if (!phoneReg.test($('input[name=phone]').val())) {
+		alert("전화번호를 올바르게 입력하세요.");
+		$('input[name=phone2]').focus();
+		return false;
+	}
+	if (!passReg.test($('input[name=password]').val())) {
+		alert("비밀번호는 6 ~ 20자 사이 영문, 최소 1자의 숫자 또는 특수 문자를 포함하여 입력하세요.");
+		$('input[name=password]').focus();
+		return false;
+	}
+	if ($('input[name=password]').val() != $('input[name=repassword]').val()) {
+		alert("비밀번호 확인이 비밀번호와 다릅니다.")
+		$('input[name=repassword]').focus();
+		return false;
+	}
+	var juminno = $('input[name=registration]').val();
+	if (juminno == "" || juminno == null || juminno.length != 13) {
+		alert("주민등록번호를 올바르게 입력하세요.");
+		$('input[name=jumin1]').focus();
+		return false;
+	}
+	var jumin1 = juminno.substr(0, 6);
+	var jumin2 = juminno.substr(6, 7);
+	var yy = jumin1.substr(0, 2); // 년도
+	var mm = jumin1.substr(2, 2); // 월
+	var dd = jumin1.substr(4, 2); // 일
+	var genda = jumin2.substr(0, 1); // 성별
+	var msg, ss, cc;
+
+	// 길이가 6이 아닌 경우
+	if (jumin1.length != 6) {
+		alert("주민등록번호 앞자리를 다시 입력하세요.");
+		return false;
+	}
+	// 첫번째 자료에서 연월일(YYMMDD) 형식 중 기본 구성 검사
+	if (yy < "00" || yy > "99" || mm < "01" || mm > "12" || dd < "01"
+			|| dd > "31") {
+		alert("주민등록번호 앞자리를 다시 입력하세요.");
+		return false;
+	}
+	// 길이가 7이 아닌 경우
+	if (jumin2.length != 7) {
+		alert("주민등록번호 뒷자리를 다시 입력하세요.");
+		return false;
+	}
+	// 성별부분이 1 ~ 4 가 아닌 경우
+	if (genda < "1" || genda > "4") {
+		alert("주민등록번호 뒷자리를 다시 입력하세요.");
+		return false;
+	}
+	// 연도 계산 - 1 또는 2: 1900년대, 3 또는 4: 2000년대
+	cc = (genda == "1" || genda == "2") ? "19" : "20";
+	// 첫번째 자료에서 연월일(YYMMDD) 형식 중 날짜 형식 검사
+	if (isYYYYMMDD(parseInt(cc + yy), parseInt(mm), parseInt(dd)) == false) {
+		alert("주민등록번호 앞자리를 다시 입력하세요.");
+		return false;
+	}
+	// Check Digit 검사
+	if (!isSSN(jumin1, jumin2)) {
+		alert("입력한 주민등록번호를 검토한 후, 다시 입력하세요.");
+		return false;
+	}
+	if ($('input[name=address-search]').val() == "") {
+		alert("주소를 검색하세요.");
+		$('input[name=address-search]').focus();
+		return false;
+	}
+	if ($('input[name=details-address]').val() == "") {
+		alert("상세주소를 입력하세요.");
+		$('input[name=details-address]').focus();
 		return false;
 	}
 	if (!emailReg.test($('input[name=email]').val())) {
-		alert("이메일 형식이 맞는지 확인하세요.");
-		return false;
-	}
-	if (email_check != 1) {
-		alert("이메일 인증을 받으세요");
+		alert("이메일을 올바르게 입력하세요.");
+		$('input[name=tempEmail]').focus();
 		return false;
 	}
 	/*
@@ -281,5 +400,5 @@ function insertCheck() {
 	 * $('#newmemberPass').val(shapass); $('#newmemberPass2').val(shapass);
 	 */
 	alert("환영합니다! #dog 회원가입이 완료되었습니다!");
-	return false;
+	return true;
 }

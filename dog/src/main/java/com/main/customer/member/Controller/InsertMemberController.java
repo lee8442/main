@@ -17,7 +17,7 @@ public class InsertMemberController {
 	@RequestMapping(value = "/insertMember.do", method = RequestMethod.GET)
 	public String insertMemberForm() {
 		System.out.println("회원가입 페이지");
-		return "simple/member/insertMemberForm";
+		return "simple/member/insertMember";
 	}
 	
 	@RequestMapping(value = "/idCheck.do", method = RequestMethod.POST)
@@ -38,6 +38,6 @@ public class InsertMemberController {
 	public String insertMember(MemberVO vo) {
 		System.out.println("회원가입 완료");
 		InsertMemberService.insertMember(vo);
-		return "main/main/main";
+		return "redirect:main.do";
 	}
 }

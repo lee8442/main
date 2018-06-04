@@ -56,10 +56,7 @@ div.text {
 
 .tab {
 	display: block;
-	margin-left: 155px;
-}
-
-ul.tab {
+	margin: 100px 0 0 155px;
 	list-style: none;
 }
 
@@ -122,6 +119,7 @@ html ul.tab li.active, html ul.tab li.active a:hover {
 }
 
 .tabcontent-name {
+	float: left;
 	margin-top: 150px;
 }
 
@@ -129,7 +127,6 @@ html ul.tab li.active, html ul.tab li.active a:hover {
 	height: 40px;
 	padding: 5px;
 	margin-left: 38px;
-	float: right;
 	width: 220px;
 	font-size: 20px;
 }
@@ -158,17 +155,15 @@ html ul.tab li.active, html ul.tab li.active a:hover {
 	position: relative;
 }
 
-.tebcontent-b-name {
+.tabcontent-b-name {
 	font-weight: bold;
 	font-size: 17px;
-	float: left;
 	margin-top: 15px;
 }
 
-.tebcontent-b-tel {
+.tabcontent-b-tel {
 	font-weight: bold;
 	font-size: 17px;
-	float: left;
 	margin-top: 15px;
 }
 
@@ -177,14 +172,13 @@ html ul.tab li.active, html ul.tab li.active a:hover {
 	height: 40px;
 	margin-left: 60px;
 	float: left;
-	    margin-top: 10px;
+	margin-top: 10px;
 }
 
 .phone-input-1 {
 	width: 50px;
 	height: 40px;
-	float: left;
-	    margin-top: 10px;
+	margin-top: 10px;
 }
 
 /*  content2 시작  */

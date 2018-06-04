@@ -14,7 +14,6 @@
 				href="idpassFind.do" class="a3">아이디/비밀번호 찾기</a>
 		</div>
 		<div class="body-list">
-
 			<div class="text">
 				<h1>아이디 / 비밀번호찾기</h1>
 			</div>
@@ -27,32 +26,29 @@
 			<div class="tab-container">
 				<!-- 아이디찾기  -->
 				<div id="tab1" class="tab_content" style="display: none;">
-
-					<div class="tabcontent-block">
-						<input type="submit" class="tabcontent-ok" value="확인">
-					</div>
-					<div class="tabcontent-name">
-						<b class="tebcontent-b-name">이름</b> <input type="search" id="name"
-							class="name" placeholder="이름을 입력해주세요">
-					</div>
 					<div>
-						<b class="tebcontent-b-tel">전화번호</b>
-					</div>
-					<div>
-						<div>
-							<select class="phone-list-1" name="phone1">
-								<option value="010">010</option>
-								<option value="070">070</option>
-							</select>
-						</div>
-						<div>
-							<input class="phone-input-1" name="phone2" type="text"
-								onkeyup="phoneInput(this)"> <br> <b>ㅡ</b> <input
-								class="phone-input-1" name="phone3" type="text"
-								onkeyup="phoneInput(this)">
+						<div class="tabcontent-name">
+							<div>
+								<b class="tabcontent-b-name">이름</b><br /> <b
+									class="tabcontent-b-tel">전화번호</b>
+							</div>
+							<div>
+								<input type="search" id="name" class="name"
+									placeholder="이름을 입력해주세요.">
+								<select class="phone-list-1" name="phone1">
+									<option value="010">010</option>
+									<option value="070">070</option>
+								</select> <b>ㅡ</b> <input class="phone-input-1" name="phone2" type="text"
+									onkeyup="phoneInput(this)"> <b>ㅡ</b> <input
+									class="phone-input-1" name="phone3" type="text"
+									onkeyup="phoneInput(this)">
+							</div>
 						</div>
 					</div>
 					<input name="phone" type="hidden">
+					<div class="tabcontent-block">
+						<input type="submit" class="tabcontent-ok" value="확인">
+					</div>
 				</div>
 				<!-- 비밀번호 찾기  -->
 				<div id="tab2" class="tab_content" style="display: block;">
