@@ -13,7 +13,7 @@
 			<li class="menu">상품관리</li>
 			<li><a href="selectCategoryForm.ado"> 상품분류</a></li>
 			<li><a href="insertProductRegForm.ado"> 상품등록</a></li>
-			<li><a href="selectProductListForm.ado"> 상품목록</a></li>
+			<li><a href="selectProductList.ado"> 상품목록</a></li>
 			<br />
 			<li class="menu">주문관리</li>
 			<li><a href="../order/adminOrderList.jsp"> 주문목록</a></li>

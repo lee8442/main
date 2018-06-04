@@ -38,7 +38,7 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<ProductVO> productList(ProductVO vo) {
 		// TODO Auto-generated method stub
 		System.out.println("===> mybatis로 디비에서 목록받아오기기능 수행");
-		return SqlSession.selectList("ProductReg.productList",vo);
+		return SqlSession.selectList("myBatis.admin.productReg.productList",vo);
 	}
 	//소분류
 	@Override
