@@ -23,6 +23,16 @@
 	<context:component-scan base-package="com.main.admin.*.Controller" use-default-filters="false">
 		<context:include-filter expression="org.springframework.stereotype.Controller" type="annotation" />
 	</context:component-scan>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="1000000" />
+	</bean>
+	
+	<bean id="uploadPath" class="java.lang.String">
+    <!-- 파일업로드 디렉토리-->
+    <constructor-arg value="C:\Users\user\Desktop\eclipse-Spring\dog4\src\main\webapp\resources\image\main\"/>
+</bean>
+	
 
 	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
 		<property name="prefix" value="/WEB-INF/views/customerView/" /> <property 

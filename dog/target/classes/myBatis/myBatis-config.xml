@@ -27,12 +27,21 @@
 	<!--Sql Mapper 설정 -->
 	<mappers>
 		<!-- 위치값을 줄때 루트 폴터는 resources 폴더이다. -->
-		<mapper resource="myBatis/customer/member/insertMemberSql.xml" />
+		<mapper 
+			resource="myBatis/customer/member/insertMemberSql.xml" />
 		<mapper
 			resource="myBatis/admin/productReg/insertProductSql.xml" />
 		<mapper
 			resource="myBatis/admin/productReg/selectProductListSql.xml" />
 		<mapper
 			resource="myBatis/admin/productReg/selectCategorySql.xml" />
+		<mapper
+			resource="myBatis/customer/main/selectBestProductSql.xml" />		
 	</mappers>
+	
+	
+	
+	
+	
+	
 </configuration>

@@ -24,6 +24,7 @@ public class ProductDAOImpl implements ProductDAO {
 		// SqslSession.insert("네임스페이스"."메소드아이디", vo객체)
 		// Sqlsession.insert("ProductReg.regProduct", vo);
 		SqlSession.insert("ProductReg.regProduct", vo);
+		SqlSession.commit();
 			
 	}
 	//대분류

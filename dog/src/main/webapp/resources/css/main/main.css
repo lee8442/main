@@ -5,21 +5,17 @@
 #container {
 	height: 100%;
 }
-
 #container:after {
 	content: "";
 	clear: both;
 	display: block;
 }
-
 #content {
 	width: 100%;
 }
-
 .cf {
-	margin-top: 100px;
+	margin-top: 50px;
 }
-
 #content .hot {
 	font-size: 25px;
 	width: 1200px;
@@ -27,13 +23,11 @@
 	margin: 30px auto 0;
 	height: 300px;
 }
-
 #content .hot .imageLogin_full {
 	height: 278px;
 	width: 760px;
 	float: left;
 }
-
 #content .hot .imageLogin_full .imageLogin {
 	display: none;
 	width: 741px;
@@ -43,12 +37,10 @@
 	margin-top: 10px;
 	vertical-align: middle;
 }
-
 #content .hot .imageLogin_full .imageLogin .newImage {
 	margin-left: 30px;
 	margin-top: 10px;
 }
-
 #content .hot .imageLogin_full .prev, .next {
 	cursor: pointer;
 	position: absolute;
@@ -64,38 +56,32 @@
 	border-radius: 0 3px 3px 0;
 	user-select: none;
 }
-
 #content .hot .imageLogin_full .next {
 	right: 0;
 	border-radius: 3px 0 0 3px;
 }
-
 #content .hot .imageLogin_full .prev:hover, .next:hover {
 	background-color: #f1f1f1;
 	color: black;
 }
-
 #content .hot .boardImage {
 	width: 440px;
 	height: 228px;
 	float: right;
 	margin-top: 58px;
 }
-
 #content .hot .boardImage  .boardImage_top {
 	background-color: #f1f1f1;
 	width: 70%;
 	height: 75%;
 	margin: 0 auto 0;
 }
-
 #content .hot .boardImage  .boardImage_top .login_Form {
 	float: left;
 	width: 208px;
 	height: 100px;
 	border: 1px solid #d7d7d7;
 }
-
 #content .hot .boardImage  .boardImage_top .login_Form .loginId {
 	margin-left: 18px;
 	height: 30px;
@@ -104,14 +90,12 @@
 	width: 171px;
 	font-size: 15px;
 }
-
 #content .hot .boardImage  .boardImage_top .login_Image {
 	width: 100px;
 	height: 100px;
 	float: right;
 	border: 1px solid #d7d7d7;
 }
-
 #content .hot .boardImage  .boardImage_top .login_Image .loginbtn {
 	height: 70px;
 	width: 70px;
@@ -123,47 +107,34 @@
 	border-bottom: 0;
 	border-right: 0;
 }
-
 #content .hot .boardImage  .boardImage_top .loginSaveForm {
 	font-size: 15px;
 }
-
 #content .hot .boardImage  .boardImage_top .loginSaveForm .loginCheck {
 	margin-left: 20px;
 }
-
 #content .hot .boardImage  .boardImage_top .loginSaveForm .loginSave {
 	float: left;
 	width: 308px;
 	margin-top: 13px;
 }
-
 #content .hot .boardImage  .boardImage_top .loginSaveForm a {
 	padding-left: 15px;
 	font-size: 15px;
 }
-
 #content .hot .boardImage  .boardImage_top .loginFind {
 	font-size: 15px;
 }
-
 #content .hot .boardImage  .boardImage_top .loginFind a.loginFind-id {
 	font-size: 14px;
 	margin-left: 20px;
 }
-
-#content .hot .boardImage  .boardImage_top .loginFind a.loginFind-signUp
-	{
-	
-}
-
 #content .hot .boardImage .boardImage_bottom {
 	width: 70%;
 	height: 20%;
 	margin: 0 auto 0;
 	text-align: center;
 }
-
 #content .hot .boardImage .boardImage_bottom .loginBtn {
 	width: 154px;
 	height: 60px;
@@ -171,7 +142,6 @@
 	color: white;
 	float: left;
 }
-
 #content .hot .boardImage .boardImage_bottom .loginBtn2 {
 	width: 154px;
 	height: 60px;
@@ -179,33 +149,56 @@
 	color: white;
 	float: left;
 }
-
 #content .box {
 	width: 1200px;
 	margin: 50px auto 0;
 }
-
 #content .box h4 {
 	font-size: 25px;
 	margin-bottom: 10px;
 }
-
 #content .box ul {
 	margin-left: 30px;
 }
-
 #content .box ul li {
 	float: left;
 	width: 210px;
-	height: 280px;
+	height: 350px;
 	background-color: #566270;
 	margin-left: 13px;
 }
-
 #content .box ul li:nth-child(1) {
 	margin-left: 0;
 }
-
+#content .box .bestiamge {
+	height: 200px;
+	width: 210px;
+	background-color: green;
+}
+#content .box .productname {
+	height: 25px;
+	background-color: red;
+	width: 210px;
+	text-align: center;
+}
+#content .box .productprice {
+	height: 25px;
+	background-color: #408080;
+	width: 210px;
+	text-align: center;
+}
+#content .box .productsimple_explain {
+	height: 25px;
+	background-color: fuchsia;
+	width: 210px;
+	text-align: center;
+}
+#content .box .productexplain {
+	height: 75px;
+	background-color: olive;
+	width: 210px;
+	text-align: center;
+}
 #content .dogParkfull {
 	width: 100%;
 	margin-top: 100px;
@@ -224,79 +217,66 @@
 	background-color: aqua;
 	float: left;
 }
-
 #content .dogParkfull .dogPark .dogParkleft .dogParkleftup {
 	width: 300px;
 	height: 200px;
 	background-color: #8080ff;
 }
-
 #content .dogParkfull .dogPark .dogParkleft .dogParkleftdown {
 	width: 300px;
 	height: 200px;
 	background-color: #ff8000;
 }
-
 #content .dogParkfull .dogPark .dogParkcenter {
 	width: 600px;
 	height: 400px;
 	float: left;
 	background-color: silver;
 }
-
 #content .dogParkfull .dogPark .dogParkcenterup {
 	width: 600px;
 	height: 200px;
 	background-color: maroon;
 	float: left;
 }
-
 #content .dogParkfull .dogPark .dogParkcenterup .dogParkcenterup_left {
 	width: 300px;
 	height: 200px;
 	background-color: #400040;
 	float: left;
 }
-
 #content .dogParkfull .dogPark .dogParkcenterup .dogParkcenterup_right {
 	width: 300px;
 	height: 200px;
 	background-color: #804040;
 	float: left;
 }
-
 #content .dogParkfull .dogPark .dogParkcenterdown {
 	width: 600px;
 	height: 200px;
 	background-color: #00ffff;
 	float: left;
 }
-
 #content .dogParkfull .dogPark .dogParkright {
 	width: 300px;
 	height: 400px;
 	background-color: yellow;
 	float: left;
 }
-
 #content .dogParkfull .dogParkwrite {
 	text-align: center;
 }
-
 #content .boxNew {
 	width: 1200px;
 	margin: 50px auto 0;
 }
-
 #content .boxNew h4 {
 	font-size: 25px;
 	margin-bottom: 10px;
 }
-
 #content .boxNew ul {
 	margin-left: 30px;
 }
-
 #content .boxNew ul li {
 	float: left;
 	width: 330px;
@@ -304,7 +284,6 @@
 	background-color: #566270;
 	margin-left: 55px;
 }
-
 #content .boxNew ul li:nth-child(1) {
 	margin-left: 0;
 }

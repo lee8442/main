@@ -4,9 +4,23 @@
 
 <mapper namespace="ProductReg"  >
 	
-	<!-- 상품 등록 -->
+	<!-- <resultMap type="com.main.admin.product.VO.ProductVO" id="insertproductVOMAP" >
+		<result property="code" column="code"/>
+		<result property="name" column="name"/>
+		<result property="price" column="price"/>
+		<result property="explain" column="explain"/>
+		<result property="image" column="image"/>
+		<result property="small_class" column="small_class"/>
+		<result property="hire_date" column="hire_date" javaType="String" jdbcType="DATE"/>
+	</resultMap> -->
+			
+
+	<!--
 	<insert id="regProduct"  parameterType="ProductVO">
-	insert into product (code,name,price,stock,explain,simple_explain)values(#{code},#{name},#{price},#{stock},#{explain},#{simple_explain})
-	</insert>
+	insert into product values(#{code},#{name},#{price},#{explain},#{simple_explain},#{image},#{small_class),#{hire_date)
+	</insert> -->
 	
+		<insert id="regProduct"	parameterType="com.main.admin.product.VO.ProductVO" >
+		<![CDATA[insert into product values(#{code},#{name},#{price},#{explain},#{simple_explain},#{image},#{small_class},#{hire_date})]]>
+	</insert>
 </mapper>

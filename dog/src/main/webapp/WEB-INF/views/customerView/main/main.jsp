@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+	
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/main/main.css">
@@ -66,16 +70,26 @@
 			<div class="box">
 				<h4>추천 상품</h4>
 				<ul class="cf">
-					<li><a href="detailsPage.do"> </a><img
-						src="resources/member/image/image03.jpg"></li>
-					<li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li>
-					<li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li>
-					<li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li>
-					<li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li>
+			
+				<c:forEach var="BestProduct" items="${selectBestProduct }">
+					<li>
+						<div class="bestiamge">
+							<img src="${BestProduct.image}">
+						</div> 
+						<div class="productname">
+							${BestProduct.name}
+						</div>
+						<div class="productprice">
+							${BestProduct.price}
+						</div>
+						<div class="productsimple_explain">
+							${BestProduct.simple_explain}
+						</div>
+						<div class="productexplain">
+							${BestProduct.explain}
+						</div>
+					</li>
+					</c:forEach>
 				</ul>
 			</div>
 			<div class="box">
