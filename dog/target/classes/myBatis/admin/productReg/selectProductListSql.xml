@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="ProductReg">
-	<!-- 상품 목록 -->
+<mapper namespace="myBatis.admin.productReg">
+		<!-- 상품 목록 -->
 	<select id="productList" resultType="ProductVO">
-		select * from product	
+		<![CDATA[select * from product order by code asc]]>
 	</select>
 </mapper>
