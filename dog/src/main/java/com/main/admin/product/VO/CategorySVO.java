@@ -1,30 +1,36 @@
 package com.main.admin.product.VO;
 
 public class CategorySVO {
-	private int Bcode;
-	private int code;
+	private String big_class_code;
+	private String code;
 	private String name;
-	public int getBcode() {
-		return Bcode;
+
+	public String getBig_class_code() {
+		return big_class_code;
 	}
-	public void setBcode(int bcode) {
-		Bcode = bcode;
+
+	public void setBcode(String big_class_code) {
+		this.big_class_code = big_class_code;
 	}
-	public int getCode() {
+
+	public String getCode() {
 		return code;
 	}
-	public void setCode(int code) {
+
+	public void setCode(String code) {
 		this.code = code;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	@Override
 	public String toString() {
-		return "ProductVO [Bcode=" + Bcode + ", code=" + code + ", name=" + name + "]";
+		return "ProductVO [big_class_code=" + big_class_code + ", code=" + code + ", name=" + name + "]";
 	}
-
 }

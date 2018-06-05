@@ -75,7 +75,15 @@
 	<div id="warp">
 		<div id="listBox">
 			<div id="input-form">
-				검색:<input type="text" id="keyword" placeholder="상품이름을 입력하세요.." />
+			<select id="big" onchange="selectBig()">
+				<option>대분류</option>
+				<c:forEach var="CBig" items="${selectBigCategory }">
+					<option value="${CBig.code }">${CBig.name }</option>
+				</c:forEach>
+			</select> <select id="small">
+				<option>소분류</option>
+			</select>
+				검색 : <input type="text" id="keyword" placeholder="상품이름을 입력하세요." />
 			</div>
 			<div id="select_list">
 				<table width="1100" id="list-table" class="table-list">
@@ -87,7 +95,7 @@
 							<th>가격</th>
 						</tr>
 					</thead>
-					<c:forEach var="thislist" items="${list }" varStatus="i">
+					<c:forEach var="thislist" items="${list}" varStatus="i">
 						<tbody>
 							<tr>
 								<td>${i.count}</td>

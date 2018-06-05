@@ -16,12 +16,12 @@ public class SelectCategoryServiceImpl implements SelectCategoryService {
    private ProductDAO productDAO;
    //대분류
    @Override
-   public List<CategoryVO> selectBigCategory(CategoryVO vo) throws Exception {
-      return productDAO.selectBigCategory(vo);
+   public List<CategoryVO> selectBigCategory() {
+      return productDAO.selectBigCategory();
    }
    //소분류
    @Override
-	public List<CategorySVO> selectSmallCategory(int bigCategory) {
+	public List<CategorySVO> selectSmallCategory(String bigCategory) {
 		return productDAO.selectSmallCategory(bigCategory);
 	}
 }

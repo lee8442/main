@@ -2,15 +2,18 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="getCategory">
-   <resultMap id="resultGetCategory" type="com.main.admin.product.VO.CategorySVO">
-      <result property="code" column="code"/>
-      <result property="name" column="name" />
-      <result property="big_class_code" column="big_class_code"/>
-   </resultMap>
-   <select id="selectBigCategory" parameterType="com.main.admin.product.VO.CategoryVO" resultType="com.main.admin.product.VO.CategoryVO">
+	<resultMap id="resultGetCategory"
+		type="com.main.admin.product.VO.CategorySVO">
+		<result property="code" column="code" />
+		<result property="name" column="name" />
+		<result property="big_class_code" column="big_class_code" />
+	</resultMap>
+	<select id="selectBigCategory"
+		resultType="com.main.admin.product.VO.CategoryVO">
       <![CDATA[select * from big_class]]>
-   </select>
-   <select id="selectSmallCategory" parameterType="int" resultType="com.main.admin.product.VO.CategorySVO">
+	</select>
+	<select id="selectSmallCategory" parameterType="String"
+		resultType="com.main.admin.product.VO.CategorySVO">
 		<![CDATA[select * from small_class where big_class_code = #{bigCategory}]]>
 	</select>
 </mapper>

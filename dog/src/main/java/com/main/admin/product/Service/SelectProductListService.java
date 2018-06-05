@@ -5,5 +5,5 @@ import java.util.List;
 import com.main.admin.product.VO.ProductVO;
 
 public interface SelectProductListService {
-	public List<ProductVO> productList(ProductVO vo);
+	public List<ProductVO> productList();
 }

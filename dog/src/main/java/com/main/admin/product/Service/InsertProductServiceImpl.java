@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.main.admin.product.DAO.ProductDAO;
 import com.main.admin.product.VO.CategoryVO;
 import com.main.admin.product.VO.ProductVO;
+
 @Service
 public class InsertProductServiceImpl implements InsertProductService {
 	@Autowired
@@ -17,9 +18,9 @@ public class InsertProductServiceImpl implements InsertProductService {
 	public void ProductReg(ProductVO vo) {
 		productDAO.ProductReg(vo);
 	}
-	
-	 @Override
-	   public List<CategoryVO> selectBigCategory(CategoryVO vo) throws Exception {
-	      return productDAO.selectBigCategory(vo);
-	   }
+
+	@Override
+	public List<CategoryVO> selectBigCategory() {
+		return productDAO.selectBigCategory();
+	}
 }

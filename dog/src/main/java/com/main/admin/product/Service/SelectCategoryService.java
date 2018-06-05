@@ -6,8 +6,9 @@ import com.main.admin.product.VO.CategorySVO;
 import com.main.admin.product.VO.CategoryVO;
 
 public interface SelectCategoryService {
-	//대분류
-	public List<CategoryVO> selectBigCategory(CategoryVO vo) throws Exception;
-	//소분류
-	public List<CategorySVO> selectSmallCategory(int bigCategory);
+	// 대분류
+	public List<CategoryVO> selectBigCategory();
+
+	// 소분류
+	public List<CategorySVO> selectSmallCategory(String bigCategory);
 }

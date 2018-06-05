@@ -9,9 +9,9 @@ import com.main.admin.product.VO.ProductVO;
 public interface ProductDAO {
 	public void ProductReg(ProductVO vo);
 
-	public List<ProductVO> productList(ProductVO vo);
+	public List<ProductVO> productList();
 	//대분류
-	public List<CategoryVO> selectBigCategory(CategoryVO vo);
+	public List<CategoryVO> selectBigCategory();
 	//소분류
-	public List<CategorySVO> selectSmallCategory(int bigCategory);
+	public List<CategorySVO> selectSmallCategory(String bigCategory);
 }
