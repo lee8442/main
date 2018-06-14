@@ -24,7 +24,6 @@
 				<option value="${CBig.code }">${CBig.name }</option>
 			</c:forEach>
 		</select>
-		<!-- 교체요망 -->
 		<label>소분류</label> <select id="small">
 			<option>소분류</option>
 		</select> <label>CODE</label><input type="text" placeholder="숫자 4글자"
@@ -44,7 +43,7 @@
 		<input type=hidden name="hire_date" value="2011-01-01"> <input
 			width="70" type="hidden" name="image" value="image"> <input
 			type="submit" value="등록"> <input type="reset"
-			onclick="window.location='#'" value="취소">
+			onclick="window.location='main.ado'" value="취소">
 	</form>
 	<script type="text/javascript"
 		src="resources/admin_js/product/insertProduct.js"></script>

@@ -7,11 +7,11 @@ public class ProductVO {
 	private String code;
 	private String name;
 	private int price;
-	private String explain;
 	private String simple_explain;
+	private String explain;
 	private String image;
 	private String small_class;
-	private String hire_date;
+	private String reg_date;
 
 	public MultipartFile getImage_file() {
 		return image_file;
@@ -45,20 +45,20 @@ public class ProductVO {
 		this.price = price;
 	}
 
-	public String getExplain() {
-		return explain;
-	}
-
-	public void setExplain(String explain) {
-		this.explain = explain;
-	}
-
 	public String getSimple_explain() {
 		return simple_explain;
 	}
 
 	public void setSimple_explain(String simple_explain) {
 		this.simple_explain = simple_explain;
+	}
+
+	public String getExplain() {
+		return explain;
+	}
+
+	public void setExplain(String explain) {
+		this.explain = explain;
 	}
 
 	public String getImage() {
@@ -77,18 +77,18 @@ public class ProductVO {
 		this.small_class = small_class;
 	}
 
-	public String getHire_date() {
-		return hire_date;
+	public String getReg_date() {
+		return reg_date;
 	}
 
-	public void setHire_date(String hire_date) {
-		this.hire_date = hire_date;
+	public void setReg_date(String reg_date) {
+		this.reg_date = reg_date;
 	}
 
 	@Override
 	public String toString() {
-		return "ProductVO [code=" + code + ", name=" + name + ", price=" + price + ", explain=" + explain
-				+ ", simple_explain=" + simple_explain + ", image=" + image + ", small_class=" + small_class
-				+ ", hire_date=" + hire_date + "]";
+		return "ProductVO [code=" + code + ", name=" + name + ", price=" + price + ", simple_explain=" + simple_explain
+				+ ", explain=" + explain + ", image=" + image + ", small_class=" + small_class + ", reg_date="
+				+ reg_date + "]";
 	}
 }

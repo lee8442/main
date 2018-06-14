@@ -1,1 +1,10 @@
 @charset "UTF-8";
+h3 {
+	margin-left: 2%;
+	display: inline-block;
+}
+
+#time {
+	float: right;
+	margin-right: 3%;
+}

@@ -18,15 +18,14 @@ public class SelectProductListController {
 	private SelectCategoryService selectCategoryService;
 	@Autowired
 	SelectProductListService selectProductListService;
-	
-	@RequestMapping(value="/selectProductList.ado")
+
+	@RequestMapping(value = "/selectProductList.ado")
 	public String selectProductList(Model model) {
-		System.out.println("상품리스트 페이지");
+		System.out.println("상품 목록 페이지");
 		List<CategoryVO> selectBigCategory = selectCategoryService.selectBigCategory();
 		model.addAttribute("selectBigCategory", selectBigCategory);
 		List<ProductVO> list = selectProductListService.productList();
 		model.addAttribute("list", list);
-		
 		return "admin/product/selectProductList";
 	}
 }

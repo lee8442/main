@@ -19,7 +19,7 @@ public class InsertMemberController {
 		System.out.println("회원가입 페이지");
 		return "simple/member/insertMember";
 	}
-	
+
 	@RequestMapping(value = "/idCheck.do", method = RequestMethod.POST)
 	@ResponseBody
 	public int idCheck(String id) {
@@ -27,13 +27,13 @@ public class InsertMemberController {
 		int result = InsertMemberService.idCheck(id);
 		return result;
 	}
-	
+
 	@RequestMapping(value = "/mapSearch.do")
 	public String mapSearch() {
 		System.out.println("주소 검색 결과");
 		return "simple/member/mapSearch";
 	}
-	
+
 	@RequestMapping(value = "/insertMember.do", method = RequestMethod.POST)
 	public String insertMember(MemberVO vo) {
 		System.out.println("회원가입 완료");

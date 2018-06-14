@@ -7,6 +7,6 @@
 
 	<select id="bestProduct" parameterType="com.main.customer.main.VO.MainVO" resultType="com.main.customer.main.VO.MainVO">
 		<!-- <![CDATA[select name, price, explain, simple_explain, image from product]]> -->
-		<![CDATA[select * from product WHERE code=90 or code=91 or code=92 or code=93 or code=94]]>
+		<![CDATA[select * from product where code='Aaa00001' or code='Cah00001' or code='Dal00001' or code='Ean00001' or code='Bad00001']]>
 	</select>
 </mapper>

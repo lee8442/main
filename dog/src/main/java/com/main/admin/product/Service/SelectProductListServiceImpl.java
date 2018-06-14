@@ -11,10 +11,10 @@ import com.main.admin.product.VO.ProductVO;
 @Service("selectProductListService")
 public class SelectProductListServiceImpl implements SelectProductListService {
 	@Autowired
-	private ProductDAO ProductRegDAO;
+	private ProductDAO ProductDAO;
 
 	@Override
 	public List<ProductVO> productList() {
-		return ProductRegDAO.productList();
+		return ProductDAO.productList();
 	}
 }

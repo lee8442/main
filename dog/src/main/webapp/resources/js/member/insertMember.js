@@ -303,7 +303,7 @@ function insertCheck() {
 				+ $('select[name=email-list]').val();
 		$('input[name=email]').val(email);
 	}
-	if (idReg.test($('input[name=id]').val())) {
+	if (idReg.test($('input[name=id]').val()) || $('input[name=id]').val() == "") {
 		alert("아이디는 5 ~ 15자 사이 영문, 숫자로 입력하세요.");
 		$('input[name=id]').focus();
 		return false;
