@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myBatis.customer.main">
+	<!-- <resultMap id="map" type="com.main.customer.member.VO.MemberVO"> <result 
+		property="id" column="id" jdbcType="VARCHAR" /> </resultMap> -->
+
+	<select id="recomProduct" parameterType="com.main.customer.main.VO.MainVO" resultType="com.main.customer.main.VO.MainVO">
+		<!-- <![CDATA[select name, price, explain, simple_explain, image from product]]> -->
+		<![CDATA[select * from product WHERE code='Aab2222' or code='Eao4321' or code='Baf빗' or code='Daj1111' or code='Aaa7777']]>
+	</select>
+</mapper>
