@@ -196,7 +196,7 @@
 	<script type="text/javascript">
 		var productArray = new Array();
 		<c:forEach var="list" items="${list}">
-		var productInf	o = new Object();
+		var productInfo = new Object();
 		productInfo.code = "${list.code}";
 		productInfo.name = "${list.name}";
 		productInfo.price = "${list.price}";
