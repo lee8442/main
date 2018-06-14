@@ -7,9 +7,10 @@
 			alias="ProductVO" />
 		<typeAlias type="com.main.admin.product.VO.CategoryVO"
 			alias="CategoryVO" />
-			<typeAlias type="com.main.admin.product.VO.CategorySVO"
+		<typeAlias type="com.main.admin.product.VO.CategorySVO"
 			alias="CategorySVO" />
-			<typeAlias type="com.main.customer.productInquiry.VO.InquiryCategoryVO"
+		<typeAlias
+			type="com.main.customer.productInquiry.VO.InquiryCategoryVO"
 			alias="InquiryCategoryVO" />
 	</typeAliases>
 	<!--DataSource 설정 -->
@@ -29,22 +30,21 @@
 	<!--Sql Mapper 설정 -->
 	<mappers>
 		<!-- 위치값을 줄때 루트 폴터는 resources 폴더이다. -->
-		<mapper 
-			resource="myBatis/customer/member/insertMemberSql.xml" />
-			<mapper resource="myBatis/customer/product/InquiryCategorySql.xml" />
-		<mapper
-			resource="myBatis/admin/productReg/insertProductSql.xml" />
-		<mapper
-			resource="myBatis/admin/productReg/selectProductListSql.xml" />
-		<mapper
-			resource="myBatis/admin/productReg/selectCategorySql.xml" />
-		<mapper
-			resource="myBatis/customer/main/selectBestProductSql.xml" />		
+		<mapper resource="myBatis/customer/member/insertMemberSql.xml" />
+		<mapper resource="myBatis/customer/product/InquiryCategorySql.xml" />
+		<mapper resource="myBatis/admin/productReg/insertProductSql.xml" />
+		<mapper resource="myBatis/admin/productReg/selectProductListSql.xml" />
+		<mapper resource="myBatis/admin/productReg/selectCategorySql.xml" />
+		<mapper resource="myBatis/customer/main/selectBestProductSql.xml" />
+		<mapper resource="myBatis/customer/main/selectNewProductSql.xml" />
+		<mapper resource="myBatis/customer/member/loginsql.xml" />
+		<mapper resource="myBatis/customer/main/selectRecomProductSql.xml" />
+		<mapper resource="myBatis/customer/product/selectBigCodeProductListSql.xml" />
+		<mapper resource="myBatis/customer/product/selectBigCodeNameSql.xml" />
+		<mapper resource="myBatis/customer/product/selectSmallCodeNameSql.xml" />
+		<mapper resource="myBatis/customer/product/selectSmallCodeProductListSql.xml" />
+		<mapper resource="myBatis/customer/product/selectSBigCodeNameSql.xml" />
+		<mapper resource="myBatis/customer/product/selectSSmallCodeNameSql.xml" />
+		<mapper resource="myBatis/customer/header/selectSmallProductSqlA.xml" />
 	</mappers>
-	
-	
-	
-	
-	
-	
 </configuration>

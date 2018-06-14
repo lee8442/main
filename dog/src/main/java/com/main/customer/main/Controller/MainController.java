@@ -14,17 +14,28 @@ import com.main.customer.main.VO.MainVO;
 public class MainController {
 	@Autowired
 	MainService MainService;
-	
+
 	@RequestMapping(value = "/main.do")
 	public String main(MainVO vo, Model model) {
-		
+
 		System.out.println("메인 페이지");
-		
+
 		List<MainVO> selectBestProduct = MainService.selectBestProduct(vo);
-		
+
 		model.addAttribute("selectBestProduct", selectBestProduct);
+
+		List<MainVO> selectNewProduct = MainService.selectNewProduct(vo);
+
+		model.addAttribute("selectNewProduct", selectNewProduct);
+
+		List<MainVO> selectRecomProduct = MainService.selectRecomProduct(vo);
+
+		model.addAttribute("selectRecomProduct", selectRecomProduct);
+
+
 		
 		
 		return "main/main/main";
 	}
+
 }

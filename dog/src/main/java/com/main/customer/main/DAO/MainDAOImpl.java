@@ -17,10 +17,25 @@ public class MainDAOImpl implements MainDAO {
 		SqlSession = SqlSessionFactoryBean.getSqlSessionInstance();
 	}
 	
-	
 	@Override
 	public List<MainVO> selectBestProduct(MainVO vo) {
 		return SqlSession.selectList("myBatis.customer.main.bestProduct");
 	}
+
+
+	@Override
+	public List<MainVO> selectNewProduct(MainVO vo) {
+		// TODO Auto-generated method stub
+		return SqlSession.selectList("myBatis.customer.main.newProduct");
+	}
+
+
+	@Override
+	public List<MainVO> selectRecomProduct(MainVO vo) {
+		// TODO Auto-generated method stub
+		return SqlSession.selectList("myBatis.customer.main.recomProduct");
+	}
+
+
 
 }

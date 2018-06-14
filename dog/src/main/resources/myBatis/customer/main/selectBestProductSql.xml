@@ -5,8 +5,8 @@
 	<!-- <resultMap id="map" type="com.main.customer.member.VO.MemberVO"> <result 
 		property="id" column="id" jdbcType="VARCHAR" /> </resultMap> -->
 
-	<select id="bestProduct" parameterType="com.main.customer.main.VO.MainVO" resultType="com.main.customer.main.VO.MainVO">
+	<select id="bestProduct" parameterType="com.main.customer.main.VO.MainVO" resultType="com.main.admin.product.VO.ProductVO">
 		<!-- <![CDATA[select name, price, explain, simple_explain, image from product]]> -->
-		<![CDATA[select * from product where code='Aaa00001' or code='Cah00001' or code='Dal00001' or code='Ean00001' or code='Bad00001']]>
+		<![CDATA[select * from product where code='Aab2222' or code='Aaa3333' or code='Aaa4444' or code='Aaa5555' or code='Aaa6666']]>
 	</select>
 </mapper>

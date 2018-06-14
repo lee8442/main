@@ -1,14 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/layout/header.css">
+<script type="text/javascript" src="resources/js/jquery/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<header id="header"></header>
+	<header id="header"> </header>
 	<div id="visual">
 		<img class="mySlides" src="resources/image/main/img1.png"
 			style="width: 100%; height: 300px; z-index: -1000;"> <img
@@ -34,68 +37,72 @@
 			</ul>
 		</nav>
 	</div>
-	<div id="content">
+	<div id="headercotent">
 		<div class="mainMenu_full">
 			<div class="mainMenu">
 				<ul class="cf">
-					<li><a href="#" class="allCategories"><img
-							class="listimage" src="resources/image/main/List.png">전체카테고리</a>
+					<li><a href="productListBigCode.do?bigcode=A"
+						class="allCategories"><img class="listimage"
+							src="resources/image/main/List.png">전체카테고리</a></li>
+					<li><a id="bigcode" href="productListBigCode.do?bigcode=A">사료/간식</a>
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
-								<ul class="mainMenu_backul mainMenu_ul mainMenu_backul00">
-									<li><a href="#">Sliders</a></li>
-									<li><a href="#">Extensions</a></li>
-									<li><a href="#">Extensions</a></li>
+								<ul id="smallre" class="mainMenu_backul mainMenu_backul01">
+									<!-- <li id="smallre">
+									</li> -->
+									<%-- 									<c:forEach var="SmallProduct_01" items="${selectSmallProduct_01}">
+										<li><a href="productListSmallCode.do?smallcode=${SmallProduct_01.code }">${SmallProduct_01.name}</a></li>
+									</c:forEach> --%>
 								</ul>
 							</div>
 						</div></li>
-					<li><a href="#">사료/간식</a>
+					<li><a id="bigcode" href="productListBigCode.do?bigcode=B">미용/목욕</a>
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
-								<ul class="mainMenu_backul mainMenu_backul01">
-									<li class="mainMenu_backul"><a href="#">피부/피모건강</a></li>
-									<li class="mainMenu_backul"><a href="#">다이어트</a></li>
-									<li class="mainMenu_backul"><a href="#">영양공급</a></li>
+								<ul id="smallre" class="mainMenu_backul mainMenu_backul02">
+		<%-- 							<c:forEach var="SmallProduct_02"
+										items="${selectSmallProduct_02}">
+										<li><a
+											href="productListSmallCode.do?smallcode=${SmallProduct_02.code }">${SmallProduct_02.name}</a></li>
+									</c:forEach> --%>
 								</ul>
 							</div>
 						</div></li>
-					<li><a href="#">미용/목욕</a>
+					<li><a id="bigcode" href="productListBigCode.do?bigcode=C"
+						class="toy">장난감</a>
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
-								<ul class="mainMenu_backul mainMenu_backul02">
-									<li><a href="#">샴푸/린스</a></li>
-									<li><a href="#">발톱관리</a></li>
-									<li><a href="#">이발기/미용가위</a></li>
+								<ul id="smallre" class="mainMenu_backul mainMenu_backul03">
+			<%-- 						<c:forEach var="SmallProduct_03"
+										items="${selectSmallProduct_03}">
+										<li><a
+											href="productListSmallCode.do?smallcode=${SmallProduct_03.code }">${SmallProduct_03.name}</a></li>
+									</c:forEach> --%>
 								</ul>
 							</div>
 						</div></li>
-					<li><a href="#" class="toy">장난감</a>
+					<li><a id="bigcode" href="productListBigCode.do?bigcode=D">하우스/울타리</a>
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
-								<ul class="mainMenu_backul mainMenu_backul03">
-									<li><a href="#">공/원반</a></li>
-									<li><a href="#">봉제장난감</a></li>
-									<li><a href="#">고무장난감</a></li>
+								<ul id="smallre" class="mainMenu_backul mainMenu_backul04">
+	<%-- 								<c:forEach var="SmallProduct_04"
+										items="${selectSmallProduct_04}">
+										<li><a
+											href="productListSmallCode.do?smallcode=${SmallProduct_04.code }">${SmallProduct_04.name}</a></li>
+									</c:forEach> --%>
 								</ul>
 							</div>
 						</div></li>
-					<li><a href="#">하우스/울타리</a>
+					<li class="cloth"><a id="bigcode"
+						href="productListBigCode.do?bigcode=E">의류</a>
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
-								<ul class="mainMenu_backul mainMenu_backul04">
-									<li><a href="#">동굴형 울타리</a></li>
-									<li><a href="#">철창 울타리</a></li>
-									<li><a href="#">이동 가방</a></li>
-								</ul>
-							</div>
-						</div></li>
-					<li class="cloth"><a href="#">의류</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul mainMenu_backul05">
-									<li><a href="#">자켓/점퍼</a></li>
-									<li><a href="#">원피스</a></li>
-									<li><a href="#">셔츠</a></li>
+								<ul id="smallre" class="mainMenu_backul mainMenu_backul05">
+<%-- 									<c:forEach var="SmallProduct_05"
+										items="${selectSmallProduct_05}">
+										<li><a
+											href="productListSmallCode.do?smallcode=${SmallProduct_05.code }">${SmallProduct_05.name}</a></li>
+									</c:forEach> --%>
 								</ul>
 							</div>
 						</div></li>

@@ -8,4 +8,10 @@ public interface MainDAO {
 
 	public List<MainVO> selectBestProduct(MainVO vo);
 	
+	public List<MainVO> selectNewProduct(MainVO vo);
+	
+	public List<MainVO> selectRecomProduct(MainVO vo);
+	
+
+	
 }

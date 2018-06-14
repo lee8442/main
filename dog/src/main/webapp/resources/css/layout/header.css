@@ -100,21 +100,22 @@
 }
 
 #container:after {
-   content: "";
+   headercotent: "";
    clear: both;
    display: block;
 }
 
-#content {
+#headercotent {
    width: 100%;
+   margin-top: 100px;
 }
 
-#content .mainMenu_full {
+#headercotent .mainMenu_full {
    width: 1200px;
    margin: auto;
 }
 
-#content .mainMenu_full ul li {
+#headercotent .mainMenu_full ul li {
    float: left;
    margin-right: 20px;
    height: 70px;
@@ -123,21 +124,21 @@
    line-height: 75px;
 }
 
-#content .mainMenu_full ul li.allCategories_li {
+#headercotent .mainMenu_full ul li.allCategories_li {
    margin-right: 30px;
    margin-left: 0;
 }
 
-#content .mainMenu_full ul li.main_img {
+#headercotent .mainMenu_full ul li.main_img {
    margin-right: 0;
    margin-top: 18px;
 }
 
-#content .mainMenu_full ul li.best {
+#headercotent .mainMenu_full ul li.best {
    margin-right: 20px;
 }
 
-#content .mainMenu_full ul li a.smallgroup {
+#headercotent .mainMenu_full ul li a.smallgroup {
    font-size: 12px;
 }
 
@@ -149,14 +150,14 @@
    text-align: center;
    margin-left: 0;
 }
-#content .mainMenu_full .mainMenu .allCategories .listimage{
+#headercotent .mainMenu_full .mainMenu .allCategories .listimage{
    width: 30px;
    height: 30px;
    float: left;
    margin-top: 20px;
 }
 
-#content .mainMenu_full .mainMenu .mainMenu_backfull {
+#headercotent .mainMenu_full .mainMenu .mainMenu_backfull {
    width: 100%;
    height: 150px;
    position: absolute;
@@ -167,7 +168,7 @@
    margin-top: -5px;
 }
 
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back {
+#headercotent .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back {
    margin: auto;
    width: 1200px;
    background-color: #ffffff;
@@ -175,45 +176,43 @@
    border-top: 0.5px solid;
 }
 
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul li {
+
+#headercotent .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul li {
    float: none;
-   height: 40px;
+   height: 30px;
 }
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul00 a {
+#headercotent .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul00 a {
    font-size: 13px;
 }
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul01 a {
+#headercotent .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul01 a {
    font-size: 13px;
-   margin-left: 160px;
+   margin-left: 190px;
 }
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul02 a {
+#headercotent .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul02 a {
    font-size: 13px;
-   margin-left: 280px;
+   margin-left: 315px;
 }
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul03 a {
+#headercotent .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul03 a {
    font-size: 13px;
-   margin-left: 400px;
+   margin-left: 430px;
 }
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul04 a {
+#headercotent .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul04 a {
    font-size: 13px;
-   margin-left: 500px;
+   margin-left: 525px;
    
 }
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul05 a {
+#headercotent .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul05 a {
       font-size: 13px;
-   margin-left: 650px;
+   margin-left: 675px;
    
 }
-#content .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul06 a {
+#headercotent .mainMenu_full .mainMenu .mainMenu_backfull .mainMenu_back .mainMenu_backul06 a {
       font-size: 13px;
-   margin-left: 730px;
+   margin-left: 760px;
 }
 
-#content .mainMenu_full .cf li:hover .mainMenu_backfull {
+#headercotent .mainMenu_full .cf li:hover .mainMenu_backfull {
    display: block;
 }
 
-.cf {
-   margin-top: 100px;
-}
    

@@ -19,4 +19,16 @@ public class MainServiceImpl implements MainService {
 		return MainDAO.selectBestProduct(vo);
 	}
 
+	@Override
+	public List<MainVO> selectNewProduct(MainVO vo) {
+		return MainDAO.selectNewProduct(vo);
+	}
+
+	@Override
+	public List<MainVO> selectRecomProduct(MainVO vo) {
+		return MainDAO.selectRecomProduct(vo);
+	}
+
+
+
 }
