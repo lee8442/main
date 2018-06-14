@@ -21,6 +21,6 @@
 	</insert> -->
 	
 		<insert id="regProduct"	parameterType="com.main.admin.product.VO.ProductVO" >
-		<![CDATA[insert into product values(#{code},#{name},#{price},#{explain},#{simple_explain},#{image},#{small_class},#{hire_date})]]>
+		<![CDATA[insert into product values(#{code},#{name},#{price},#{explain},#{simple_explain},#{image},#{small_class},sysdate)]]>
 	</insert>
 </mapper>

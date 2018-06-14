@@ -17,8 +17,8 @@
 		<div id="content">
 			<div class="hot cf">
 				<c:forEach var="NewProduct" items="${selectNewProduct }">
-
 					<input name="newimage" type="hidden" value="${NewProduct.image }">
+					<input name="newcode" type="hidden" value="${NewProduct.code }">
 				</c:forEach>
 				<!-- 신상품 사진 -->
 				<div class="imageLogin_full">
@@ -27,18 +27,6 @@
 						<a href="#" class="b"><img id="slide" class="newImage"
 							width="100%" height="230px;"> </a>
 					</div>
-					<!-- 	<div class="imageLogin">
-						<h3>신상품 사진</h3>
-						<img id="slide1" class="newImage" src="resources/image/main/img3.png"
-							width="100%" height="230px;">
-					</div>
-					<div class="imageLogin">
-						<h3>신상품 사진</h3>
-						<img id="slide2" class="newImage" src="resources/image/main/img2.png"
-							width="100%" height="230px;">
-					</div> -->
-					<!-- <a  class="prev" onclick="plusSlides(-1), prev()">&#10094;</a> <a
-						class="next" onclick="plusSlides(1), next()">&#10095;</a> -->
 				</div>
 				<!-- 신상품 사진 우측 -->
 				<%if(session.getAttribute("userId")!=null){%>
@@ -106,7 +94,7 @@
 					<c:forEach var="BestProduct" items="${selectBestProduct }">
 						<li>
 							<div class="bestiamge">
-								<a href="bestProduct.do?code=${BestProduct.code }"> <img
+								<a href="detailPage.do?code=${BestProduct.code }"> <img
 									class="bestimage_01" src="${BestProduct.image}"></a>
 							</div>
 							<div class="productname">${BestProduct.name}</div>
@@ -126,7 +114,7 @@
 				<c:forEach var="RecomProduct" items="${selectRecomProduct }">
 					<li><a href="#"></a>
 						<div class="recomiamge">
-							<a href="recomProduct.do?code=${RecomProduct.code }"> 
+							<a href="detailPage.do?code=${RecomProduct.code }"> 
 							<img class="recomimage_01" src="${RecomProduct.image}"></a>
 						</div>
 						<div class="productname">${RecomProduct.name}</div>
@@ -137,16 +125,6 @@
 						<div class="productsimple_explain">
 							${RecomProduct.simple_explain}</div></li>
 				</c:forEach>
-
-
-					<!-- <li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li>
-					<li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li>
-					<li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li>
-					<li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li> -->
 				</ul>
 			</div>
 			<div class="dogParkfull cf">
@@ -169,17 +147,6 @@
 					<h2># DOG PARK</h2>
 				</div>
 			</div>
-<!-- 			<div class="boxNew">
-				<h4>신상품</h4>
-				<ul class="cfNew">
-					<li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li>
-					<li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li>
-					<li><a href="#"></a><img
-						src="resources/member/image/image03.jpg"></li>
-				</ul>
-			</div> -->
 		</div>
 	</div>
 	<script type="text/javascript" src="resources/js/main/main.js"></script>

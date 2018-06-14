@@ -1,6 +1,7 @@
 var newImage;
+var newCode;
 
-var slideIndex = 1
+var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -29,7 +30,7 @@ function showSlides(n) {
 $(document).ready(
 		function() {
 			/*베스트상품 세일가격*/
-			var fileValue = $("input[name='price']").length;
+			/*var fileValue = $("input[name='price']").length;
 
 			var fileData = new Array(fileValue);
 			var fileData1 = new Array(fileValue);
@@ -47,11 +48,11 @@ $(document).ready(
 
 				inp[i].readOnly = true;
 				ina[i].readOnly = true;
-			}
+			}*/
 
 			var newImageValue = $("input[name='newimage']").length;
 			newImage1 = new Array(newImageValue);
-
+		
 			for (var i = 0; i < newImageValue; i++) {
 				newImage1[i] = $("input[name='newimage']")[i].value;
 			}
@@ -66,6 +67,13 @@ function rotate() {
 	var newImageValue = $("input[name='newimage']").length;
 	newImage1 = new Array(newImageValue);
 
+	var newCodeValue = $("input[name='newcode']").length;
+	newCode1 = new Array(newCodeValue);
+	
+	for(var i=0; i< newCodeValue; i++){
+		newCode1[i] = $("input[name='newcode']")[i].value;
+	}
+	
 	for (var i = 0; i < newImageValue; i++) {
 		newImage1[i] = $("input[name='newimage']")[i].value;
 	}
@@ -87,13 +95,13 @@ function rotate() {
 		document.images.slide.src = imgs[n];
 	(n == (imgs.length - 1)) ? n = 0 : n++;
 	if (n == 1) {
-		$('.b').prop('href', "image.do?image=" + newImage1[0]);
+		$('.b').prop('href', "detailPage.do?code=" + newCode1[0]);
 	}
 	if (n == 2) {
-		$('.b').prop('href', "image.do?image=" + newImage1[1]);
+		$('.b').prop('href', "detailPage.do?code=" + newCode1[1]);
 	}
 	if (n == 0) {
-		$('.b').prop('href', "image.do?image=" + newImage1[2]);
+		$('.b').prop('href', "detailPage.do?code=" + newCode1[2]);
 	}
 	setTimeout("rotate()", interval);
 }

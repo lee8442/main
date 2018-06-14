@@ -2,6 +2,7 @@ var bigcode = 0;
 var smallcode = 0;
 
 function selectBig() {
+	
 	var bigCategory = new String("bigCategory=" + $("#big").val());
 	if($("#big").val() != "대분류"){
 		fetch("getSmallCategory.ado?" + bigCategory, {
@@ -26,16 +27,16 @@ function selectBig() {
 	}
 		var sel = document.getElementById("big");
 		bigcode = sel.options[sel.selectedIndex].value;
-		if (bigcode == 0) {
+		if (bigcode == "대분류") {
 			$('#small').attr('disabled', 'true');
 			$('#witer_code').val("");	
 			$('#witer_code').attr('disabled', 'true');
 			$('#small').val("");	
 		}
-		if (bigcode != 0) {
+		if (bigcode != "대분류") {
 			$('#small').removeAttr("disabled");
 		}
-		if (bigcode == 0) {
+		if (bigcode == "대분류") {
 			bigcode = "코드를 선택하세요.";
 		}
 		$("#code").val(bigcode);
@@ -44,7 +45,6 @@ function selectBig() {
 function selectSmall() {
 	var sel = document.getElementById("small");
 	smallcode = sel.options[sel.selectedIndex].value;
-	alert(smallcode);
 	if(smallcode == 0){
 		$('#witer_code').attr('disabled', 'true');
 		$('#witer_code').val("");
