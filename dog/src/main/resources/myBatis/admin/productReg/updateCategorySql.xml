@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="updateCategory">
+	<update id="updateCategoryS" parameterType="com.main.admin.product.VO.CategorySVO" >
+		<![CDATA[update small_class set name=#{name} where code = #{code}]]>
+	</update>
+	<select id="selectCategoryS" parameterType="com.main.admin.product.VO.CategorySVO" resultType="com.main.admin.product.VO.CategorySVO">
+		<![CDATA[select * from small_class where code = #{code}]]>
+	</select>
+</mapper>

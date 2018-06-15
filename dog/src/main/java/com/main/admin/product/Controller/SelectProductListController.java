@@ -20,9 +20,9 @@ public class SelectProductListController {
 	SelectProductListService selectProductListService;
 
 	@RequestMapping(value = "/selectProductList.ado")
-	public String selectProductList(Model model) {
+	public String selectProductList(Model model, CategoryVO vo) {
 		System.out.println("상품 목록 페이지");
-		List<CategoryVO> selectBigCategory = selectCategoryService.selectBigCategory();
+		List<CategoryVO> selectBigCategory = selectCategoryService.selectBigCategory(vo);
 		model.addAttribute("selectBigCategory", selectBigCategory);
 		List<ProductVO> list = selectProductListService.productList();
 		model.addAttribute("list", list);

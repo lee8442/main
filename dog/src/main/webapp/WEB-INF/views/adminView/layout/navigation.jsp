@@ -11,12 +11,12 @@
 	<div id="asideleft">
 		<ul>
 			<li class="menu">상품관리</li>
-			<li><a href="selectCategory.ado"> 상품분류</a></li>
+			<li><a href="productCategoryForm.ado"> 상품분류</a></li>
 			<li><a href="insertProduct.ado"> 상품등록</a></li>
 			<li><a href="selectProductList.ado"> 상품목록</a></li>
 			<br />
 			<li class="menu">주문관리</li>
-			<li><a href="../order/adminOrderList.jsp"> 주문목록</a></li>
+			<li><a href="orderListForm.ado"> 주문목록</a></li>
 			<li><a href="../order/adminReleaseCondition.jsp"> 출고현황</a></li>
 			<li><a href="../order/adminRefundList.jsp"> 환불목록</a></li>
 			<li><a href="../order/adminRefund.jsp"> 환불처리</a></li>

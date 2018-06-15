@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="selectOrder">
+	
+	<select id="Order" parameterType="com.main.admin.order.VO.OrderVO" resultType="com.main.admin.order.VO.OrderVO">
+		<![CDATA[select * from product_order]]>
+	</select>
+	
+</mapper>

@@ -10,8 +10,16 @@ public interface ProductDAO {
 	public void ProductReg(ProductVO vo);
 
 	public List<ProductVO> productList();
-	//대분류
-	public List<CategoryVO> selectBigCategory();
 	//소분류
 	public List<CategorySVO> selectSmallCategory(String bigCategory);
+	
+	public List<CategoryVO> selectBigCategory(CategoryVO vo);
+	
+	public void insertCategory(CategorySVO vo);
+	
+	public void updateCategory(CategorySVO vo);
+	
+	public List<CategorySVO> selectCategoryUp(CategorySVO svo);
+	
+	public void deleteCategory(String DelCode);
 }

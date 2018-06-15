@@ -31,9 +31,9 @@ public class InsertProductController {
 	String uploadPath;
 
 	@RequestMapping(value = "/insertProduct.ado", method = RequestMethod.GET)
-	public String insertProductForm(Model model) {
+	public String insertProductForm(Model model, CategoryVO vo) {
 		System.out.println("상품 등록 페이지");
-		List<CategoryVO> selectBigCategory = selectCategoryService.selectBigCategory();
+		List<CategoryVO> selectBigCategory = selectCategoryService.selectBigCategory(vo);
 		model.addAttribute("selectBigCategory", selectBigCategory);
 		return "admin/product/productReg";
 	}

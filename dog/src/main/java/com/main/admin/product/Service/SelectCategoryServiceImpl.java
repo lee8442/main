@@ -15,13 +15,15 @@ public class SelectCategoryServiceImpl implements SelectCategoryService {
    @Autowired
    private ProductDAO productDAO;
    //대분류
-   @Override
-   public List<CategoryVO> selectBigCategory() {
-      return productDAO.selectBigCategory();
-   }
+  
    //소분류
    @Override
 	public List<CategorySVO> selectSmallCategory(String bigCategory) {
 		return productDAO.selectSmallCategory(bigCategory);
+	}
+   
+   @Override
+	public List<CategoryVO> selectBigCategory(CategoryVO vo) {
+		return productDAO.selectBigCategory(vo);
 	}
 }

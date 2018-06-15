@@ -17,6 +17,13 @@ public class ProductDAOImpl implements ProductDAO {
 	public ProductDAOImpl() {
 		SqlSession = SqlSessionFactoryBean.getSqlSessionInstance();
 	}
+	
+	@Override
+	public void insertCategory(CategorySVO vo) {
+		SqlSession.insert("insertCategory.insertCategoryS", vo);
+		SqlSession.commit();
+		System.out.println("카테고리 등록 완료");
+	}
 
 	@Override
 	public void ProductReg(ProductVO vo) {
@@ -25,30 +32,47 @@ public class ProductDAOImpl implements ProductDAO {
 		SqlSession.commit();
 	}
 
-	// 대분류
-	@Override
-	public List<CategoryVO> selectBigCategory() {
-		System.out.println("대분류 목록 가져오기");
-		return SqlSession.selectList("getCategory.selectBigCategory");
-	}
+	
 
-	// 소분류
-	@Override
-	public List<CategorySVO> selectSmallCategory(String bigCategory) {
-		List<CategorySVO> smallCategory = SqlSession.selectList("getCategory.selectSmallCategory", bigCategory);
-		int index = smallCategory.size();
-		System.out.println("소분류 목록 가져오기");
-		for (int i = 0; i < index; i++) {
-			System.out.println("결과 " + i + " : " + smallCategory.get(i).getBig_class_code());
-			System.out.println("결과 " + i + " : " + smallCategory.get(i).getName());
-			System.out.println("결과 " + i + " : " + smallCategory.get(i).getCode());
-		}
-		return smallCategory;
-	}
 
 	@Override
 	public List<ProductVO> productList() {
 		System.out.println("상품 목록 가져오기");
 		return SqlSession.selectList("myBatis.admin.productReg.productList");
+	}
+	
+	@Override
+	public void deleteCategory(String DelCode) {
+		SqlSession.delete("deleteCategory.deleteCategoryS", DelCode);
+		SqlSession.commit();
+		System.out.println("카테고리 삭제 완료");
+	}
+	
+	
+	//수정페이지로 이동시 클릭했던 checkbox 자료불러오기
+	@Override
+	public List<CategorySVO> selectCategoryUp(CategorySVO svo){
+		List<CategorySVO> selectUpCategory = SqlSession.selectList("updateCategory.selectCategoryS", svo);
+		return selectUpCategory;
+	}
+
+	@Override
+	public List<CategoryVO> selectBigCategory(CategoryVO vo) {
+		return SqlSession.selectList("getCategory.selectBigCategory");
+	}
+
+	@Override
+	public List<CategorySVO> selectSmallCategory(String bigCategory) {
+		List<CategorySVO> smallCategory = SqlSession.selectList("getCategory.selectSmallCategory", bigCategory);
+		System.out.println("소분류 검색 완료");
+		
+		return smallCategory;
+	}
+	
+	@Override
+	public void updateCategory(CategorySVO vo) {
+		SqlSession.update("updateCategory.updateCategoryS", vo);
+		SqlSession.commit();
+		System.out.println("카테고리 수정 완료");
 	}
 }

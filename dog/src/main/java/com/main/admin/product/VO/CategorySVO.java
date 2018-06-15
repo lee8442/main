@@ -31,6 +31,8 @@ public class CategorySVO {
 
 	@Override
 	public String toString() {
-		return "ProductVO [big_class_code=" + big_class_code + ", code=" + code + ", name=" + name + "]";
+		return "CategorySVO [big_class_code=" + big_class_code + ", code=" + code + ", name=" + name + "]";
 	}
+
+	
 }

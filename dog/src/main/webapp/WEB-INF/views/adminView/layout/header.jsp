@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="resources/admin_css/layout/header.css">
 </head>
 <body>
-	<h3>#dog 관리자페이지</h3>
+	<h3><a href="main.ado">#dog 관리자페이지</a></h3>
 	<p id="time"></p>
 	<hr />
 	<script type="text/javascript"

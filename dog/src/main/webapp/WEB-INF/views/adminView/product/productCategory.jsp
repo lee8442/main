@@ -7,8 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css"
-	href="../css/productCategorics.css" />
+<link rel="stylesheet" type="text/css" href="resources/admin_css/product/productCategory.css" />
 
 </head>
 <body>
@@ -21,39 +20,30 @@
 			<option value="${CBig.code }">${CBig.name }</option>
 		</c:forEach>
 	</select>
-	<select id="small">
-		<option>소분류</option>
-	</select>
-	<input type="button" onclick="#" value="검색">
+	<input type="button" onclick="selectButton()" value="검색">
 	<br />
 
-	<input type="button"
-		onclick="window.location='productCategoriInsert.jsp'" value="카테고리 추가">
-	<input type="button" onclick="window.location='productCategoriUD.jsp'"
-		value="카테고리 수정 삭제">
+	
+	<form action="updateCategoryForm.ado">
+	<table id="CategoryList" border="1">
+		<tr>
+			<td class="listName">대분류</td>
+			<td class="listName">소분류</td>
+		<tr>
+		<tr id="divCategoryBig">
+			<td id="divBigVal">
+				<label>대분류</label><br/>
+			</td>
+			<td id="divSmallVal">
+				<input id="smallCheck" type="checkbox">소분류<br/>
+			</td>
+		</tr>
+		</table>
+	<input id="buttonIn" type="button" onclick="window.location='insertCategoryForm.ado'" value="카테고리 추가">
+	<input type="submit" value="카테고리 수정">
+	<input type="button" onclick="deleteButton()" value="카테고리 삭제">
 	<br />
-
-	<div id="divCategory">
-		<div id="divBig">
-			<label>대분류</label>
-		</div>
-		<div id="divSmall">
-			<label>소분류</label>
-		</div>
-	</div>
-	<br />
-	<c:forEach var="#" items="#">
-		<div id="divCategory">
-			<c:forEach var="CBig" items="${selectBigCategory }">
-				<div id="divBigVal">
-					<input type="checkbox">${CBig.name }<br />
-				</div>
-			</c:forEach>
-			<div id="divSmallVal"></div>
-		</div>
-	</c:forEach>
-
-	<script type="text/javascript"
-		src="resources/admin_js/product/productCategory.js"></script>
+	</form>
+	<script type="text/javascript" src="resources/admin_js/product/productCategory.js"></script>
 </body>
 </html>

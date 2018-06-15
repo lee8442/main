@@ -18,11 +18,16 @@ public class SelectCategoryController {
 	private SelectCategoryService selectCategoryService;
 
 	// 분류관리 폼이동
-	@RequestMapping(value = "/selectCategory.ado")
-	public String selectCategory(Model model) {
-		System.out.println("대분류 목록 출력");
-		List<CategoryVO> selectBigCategory = selectCategoryService.selectBigCategory();
-		model.addAttribute("selectBigCategory", selectBigCategory);
+	
+	
+	@RequestMapping(value = "/productCategoryForm.ado")
+	public String productCategory(Model model,CategoryVO vo, CategorySVO svo) throws Exception {
+		System.out.println("상품분류 페이지");
+		
+		List<CategoryVO> selectBigCategory = selectCategoryService.selectBigCategory(vo);
+	      model.addAttribute("selectBigCategory", selectBigCategory);
+	      System.out.println("대분류 출력완료");
+	      
 		return "admin/product/productCategory";
 	}
 
@@ -34,4 +39,6 @@ public class SelectCategoryController {
 		List<CategorySVO> selectSmallCategory = selectCategoryService.selectSmallCategory(bigCategory);
 		return selectSmallCategory;
 	}
+	
+	
 }

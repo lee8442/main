@@ -20,7 +20,7 @@ public class InsertProductServiceImpl implements InsertProductService {
 	}
 
 	@Override
-	public List<CategoryVO> selectBigCategory() {
-		return productDAO.selectBigCategory();
+	public List<CategoryVO> selectBigCategory(CategoryVO vo) {
+		return productDAO.selectBigCategory(vo);
 	}
 }
