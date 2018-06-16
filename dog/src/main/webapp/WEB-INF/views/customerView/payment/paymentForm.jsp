@@ -12,6 +12,9 @@
 <body>
 	<div id="paymentcontent">
 		<div class="guide">
+		<div class="bar">
+							<a href="main.do" class="a1">홈</a> &nbsp;> 
+						</div>
 			<h2>교환및 배송안내</h2>
 			<ul>
 				<li>º&nbsp;샵고수의 무료배송비 기준은 구매금액 30,000원부터입니다. 단 이벤트, 할인샵 등 파격세일 상품 등의 배송비 무료기준에는 합산되지 않습니다.</li>
