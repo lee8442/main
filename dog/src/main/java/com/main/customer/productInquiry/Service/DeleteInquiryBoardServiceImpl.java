@@ -4,14 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.main.customer.productInquiry.DAO.InquiryDAO;
-import com.main.customer.productInquiry.VO.InquiryVO;
 
 @Service
-public class InsertInquiryBoardServiceImpl implements InsertInquiryBoardService {
+public class DeleteInquiryBoardServiceImpl implements DeleteInquiryBoardService {
 	@Autowired
 	private InquiryDAO inquiryDAO;
+	
+	@Override
+	public int delete(int num) {
+		return	inquiryDAO.delete(num);
+		}
 
-	public void InsertInquiryBoard(InquiryVO vo) {
-			inquiryDAO.InsertInquiryBoard(vo);
-	}
+
 }

@@ -1,4 +1,4 @@
-function  QnAformCheck(){
+/*function  QnAformCheck(){
 	var question = document.QnA_board.question.value;
 	var email = document.QnA_board.email.value;
 	var title = document.QnA_board.title.value;
@@ -23,4 +23,5 @@ function  QnAformCheck(){
 		document.QnA_board.QnA_content.focus();
 		return false;
 	}
-}
+}*/
+

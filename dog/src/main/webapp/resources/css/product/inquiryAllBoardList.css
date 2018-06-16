@@ -775,7 +775,7 @@ ul.xans-board-listheader li {
 
 .xans-board-listpackage table .subject {
 	word-break: break-all;
-	text-align: left;
+	text-align: center;
 	padding-left: 8px
 }
 
@@ -870,7 +870,7 @@ ul.xans-board-listheader li {
 }
 
 .xans-board-buttonlist {
-	padding: 15px 0 10px 0;
+	
 	text-align: right
 }
 
@@ -913,7 +913,7 @@ ul.xans-board-listheader li {
 
 .xans-board-search p {
 	margin: 0 0 8px;
-	padding: 0 0 0 0
+	padding: 40px 0 0 420px;
 }
 
 .xans-board-search p.category:before {
@@ -1248,8 +1248,9 @@ input[type=radio], input[type=checkbox] {
 }
 
 input[type=text], input[type=password] {
-	height: 22px;
-	line-height: 24px;
+	height: 26px;
+    line-height: 24px;
+    font-size: 15px;
 	padding: 2px 8px;
 	border: 1px solid #e7e7e7
 }
@@ -1544,7 +1545,7 @@ body {
 }
 
 #container #contents {
-	width: 1260px;
+	width: 1140px;
 	margin: 5px auto 50px;
 	min-height: 600px
 }
@@ -5135,7 +5136,7 @@ div.ec-base-help ul li {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
-	font-size: 16px;
+	font-size: 23px;
 	line-height: 17px;
 	color: #2e2e2e;
 	font-weight: bold
@@ -5562,7 +5563,7 @@ input.btn.W100P, button.btn.W100P {
 
 .btn.Small {
 	font-size: 11px;
-	height: 26px;
+	height: 27px;
 	line-height: 26px
 }
 
@@ -5583,7 +5584,9 @@ input.btn.W100P, button.btn.W100P {
 }
 
 .btn.Wnormal {
-	min-width: 80px
+	min-width: 80px;
+	float: right;
+	margin-right: 25px;
 }
 
 .btn.Login {
@@ -11120,7 +11123,6 @@ transform
 	font-weight: 400;
 	font-size: 11px
 }
-
 .board-nav-style1 li a {
 	display: inline-block;
 	*display: inline;
@@ -11129,9 +11131,30 @@ transform
 	padding: 16px 31px;
 	letter-spacing: 1px
 }
-
 .board-nav-style1 li a:hover {
 	border: 1px solid #434343;
 	background: #434343;
 	color: #fff
+}
+.no{
+	width: 100px;
+}
+.id{
+	width:100px;
+}
+.contents{
+	width: 600px;
+}
+.date{
+	width: 130px;
+}
+
+.bar{
+	float: right;
+}
+.a1{
+	font-size: 13px;
+}
+.a2{
+	font-size: 13px;
 }

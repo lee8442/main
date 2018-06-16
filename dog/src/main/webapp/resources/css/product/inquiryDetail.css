@@ -1,0 +1,43 @@
+@charset "UTF-8";
+.bar{
+	    float: right;
+   
+    margin-right: 200px;
+    
+}
+
+.a1{
+	font-size: 13px;
+}
+.a2{
+	font-size: 13px;
+}
+.image{
+	width: 140px;
+	height: 90px;
+	
+}
+.contents{
+	width: 630px;
+	height: 220.23px;
+}
+.replytext{
+	margin: 7px 0 0 0px;
+    width: 570px;
+    height: 30px;
+    padding: 5px;
+    font-size: 15px;
+}
+input.reply{
+	float: right;
+     margin-top: 10px
+}
+.replybox{
+	height: 100px;
+}
+.replycontent{
+	height: 100px;
+}
+.replytext{
+	width: 550px;
+}

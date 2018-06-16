@@ -23,3 +23,15 @@ if (myCode == 0 || myCode == 0)
 //게시판설명
 else if (myCode == 0 || myCode == 0)
 { document.getElementById("board-nav2").style.display = 'table'; }
+
+function aaa(num) {
+	location.href='productInquiryDetail.do?num='+num;
+}
+function bbb(){
+	var sel=document.getElementById('searchOption').value;
+	var keyword=$('#search').val();
+	if(sel=='검색'){
+		return;
+	}
+	location.href='productInquiry.do?page=1&sel='+sel+'&keyword='+keyword;
+}

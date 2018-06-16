@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,54 +9,60 @@
 <link rel="stylesheet" href=" resources/css/product/inquiryWrite.css">
 </head>
 <body>
-<center>
-<form id="QnA_board"method="post" action="" name="QnA_board" enctype="multipart/form-data" onsubmit="return QnAformCheck();">
-    <input type="hidden" name="board_id" value="${sessionScope.sessionID}">
-    <br>
-    <b><font size="6" color="black">1 : 1상품문의</font></b>
-    <br>
-    <table border="3" bordercolor="lightgray" align="center" class="this">
-	<tr class="this">
-		<td class="thistd">아이디</td>
-		<td class="thistd">${sessionScope.sessionID }</td>
-	</tr>
-	<tr class="this">
-		<td class="thistd">질문유형</td>
-		<td class="thistd">
-		<select name="what_question">
-		<option value="0">문의</option>
-		<option value="1">환불문의</option>
-		<option value="2">배송문의</option>
-		<option value="3">사이즈문의</option>
-		<option value="4">기타문의</option>
-		</select></td>
-	</tr>
-	<tr class="this">
-		<td class="thistd">이메일</td>
-		<td class="thistd"><input type="text" name="email"/></td>
-	</tr>
-	<tr class="this">
-		<td class="thistd">제목</td>
-		<td class="thistd"><input type="text" name="title" /></td>
-	</tr>
-	<tr class="this">
-		<td class="thistd">내용</td> 
-		<td class="thistd"><textarea name="QnA_content" cols="100" rows="30" ></textarea></td>
-	</tr>
-	<tr class="this">
-		<td class="thistd">비밀번호</td>
-		<td class="thistd"><input type="password" name="pass"/></td>
-	</tr>
-	<tr valign="middle" class="this">
-                <td colspan="5" scope="row" class="thistd">
-                <input type="submit" value="등록" >
-                <input type="reset" value="취소" >
-                <input type="button" value="상품목록" >
-                </td>
-   </tr>            
-</table>
-</form>
-</center>
-	<script type="text/javascript" src="resources/js/member/QnAView"></script>
+	<center>
+		<form id="inquiryWrite" method="post" action="insertInquiryBoard.do"
+			name="inquiryWrite" enctype="multipart/form-data">
+			<input type="hidden" name="member_id"
+				value="${sessionScope.sessionID}"> <br>
+			<div class="bar">
+				<a href="main.do" class="a1">홈</a> &nbsp;> <a
+					href="productInquiry.do" class="a2">1:1상품문의목록</a>
+			</div>
+			<br> <b><font size="6" color="black">1:1상품문의쓰기</font></b> <br>
+			<table border="3" bordercolor="lightgray" align="center" class="this">
+				<tr class="this">
+					<td class="thistd">아이디</td>
+					<td class="thistd">${sessionScope.sessionID}</td>
+				</tr>
+				<tr class="this">
+					<td class="thistd">질문유형</td>
+					<td class="thistd"><select name="type_code" onchange="aaa()"
+						class="type_code">
+							<option>선택하세요</option>
+							<c:forEach var="qq" items="${QuestionCategory }">
+								<option value="${qq.code }">${qq.name }</option>
+							</c:forEach>
+					</select></td>
+				</tr>
+
+				<tr class="this">
+					<td class="thistd">제목</td>
+					<td class="thistd"><input type="text" name="subject" /></td>
+				</tr>
+				<tr class="this">
+					<td class="thistd">파일업로드</td>
+					<td class="thistd"><input type="file" name="file" /></td>
+
+				</tr>
+				<tr class="this">
+					<td class="th">내용</td>
+					<td class="thistd"><textarea style="resize: none;"
+							name="content" class="contents" cols="80" rows="30"></textarea></td>
+				</tr>
+				<tr class="this">
+					<td class="thistd">비밀번호</td>
+					<td class="thistd"><input type="password" name="password" /></td>
+				</tr>
+				<tr valign="middle" class="this">
+					<td colspan="5" scope="row" class="thistd"><input
+						type="submit" value="등록" class="save" onclick="QnAformCheck()">
+						<input type="reset" value="취소" class="cancel"
+						onclick="window.location='productInquiry.do' "></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+	<script type="text/javascript"
+		src="resources/js/product/inquiryWrite.js"></script>
 </body>
 </html>

@@ -12,6 +12,57 @@ public class InquiryVO {
 	private int ref;
 	private int step;
 	private int depth;
+	private int recnt;
+	private String password;
+	private String name;
+	private String image;
+	private String column;
+	private String keyword;
+	private int viewcount;
+	
+
+	public int getRecnt() {
+		return recnt;
+	}
+	public void setRecnt(int recnt) {
+		this.recnt = recnt;
+	}
+	public int getViewcount() {
+		return viewcount;
+	}
+	public void setViewcount(int viewcount) {
+		this.viewcount = viewcount;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public String getColumn() {
+		return column;
+	}
+	public void setColumn(String column) {
+		this.column = column;
+	}
+	public String getKeyword() {
+		return keyword;
+	}
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public int getNum() {
 		return num;
 	}
@@ -65,5 +116,11 @@ public class InquiryVO {
 	}
 	public void setDepth(int depth) {
 		this.depth = depth;
+	}
+	@Override
+	public String toString() {
+		return "InquiryVO [num=" + num + ", member_id=" + member_id + ", type_code=" + type_code + ", subject="
+				+ subject + ", content=" + content + ", inquiry_date=" + inquiry_date + ", ref=" + ref + ", step="
+				+ step + ", depth=" + depth + ", password=" + password + "]";
 	}
 }

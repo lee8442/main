@@ -5,13 +5,13 @@ import org.springframework.stereotype.Service;
 
 import com.main.customer.productInquiry.DAO.InquiryDAO;
 import com.main.customer.productInquiry.VO.InquiryVO;
-
 @Service
-public class InsertInquiryBoardServiceImpl implements InsertInquiryBoardService {
+public class UpdateInquiryBoardServiceImpl implements UpdateInquiryBoardService{
 	@Autowired
-	private InquiryDAO inquiryDAO;
-
-	public void InsertInquiryBoard(InquiryVO vo) {
-			inquiryDAO.InsertInquiryBoard(vo);
+	private	InquiryDAO inquiryDAO;
+	
+	@Override
+	public void updateInquiryInsert(InquiryVO vo) {
+		inquiryDAO.updateInquiryInsert(vo);
 	}
 }
