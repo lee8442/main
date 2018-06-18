@@ -9,5 +9,5 @@ public class IdpassFind {
 	public String idpassFind() {
 		System.out.println("아이디, 비밀번호 찾기");
 		return "simple/member/idpassFind";
-	}
+	} 
 }
