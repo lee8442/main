@@ -68,24 +68,13 @@
 	select count(*) from inquiry where num=#{num} and password = #{password}
 	</select>
 	<!-- 답글입력  -->
-	<insert id="insertReply" parameterType="ReplyVO">
-		insert 
-		into reply (rno, num, replytext, replyer,regdate)
-        values (rno_seq.NEXTVAL, #{num}, #{replytext}, #{replyer},sysdate)
+	<insert id="insertReply" parameterType="ReplyVO" >
+		insert into reply(rno, num, replytext) values (rno_seq.NEXTVAL,#{num},#{replytext})
 	</insert>
-	
-	<select id="listReply" resultType="Integer"  parameterType="ReplyVO">
+	<select id="listReply" resultType="ReplyVO" >
 		SELECT * FROM reply r, inquiry m
-        WHERE  r.replyer = m.member_id AND num=#{num}
+        WHERE  r.num = m.num AND m.num=#{num}
         ORDER BY rno
 	</select>
-		<sql id="pagingHeader">
-    SELECT * FROM (
-        SELECT ROWNUM AS rn, A.* FROM (
-</sql>
-<sql id="pagingFooter">
-        ) A
-    ) WHERE rn BETWEEN #{start} AND #{end}
-</sql>
 	
 </mapper>

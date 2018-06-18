@@ -22,11 +22,14 @@ public class ReplyDAOImpl implements ReplyDAO{
 
 	// 댓글 목록
 	public List<ReplyVO>list(Integer num){
+		
 		return SqlSession.selectList("listReply",num);
+		
 	}
 	 // 댓글 작성
     public void create(ReplyVO vo) {
        SqlSession.insert("insertReply", vo);
+       SqlSession.commit();
     }
     // 댓글 수정
     public void update(ReplyVO vo) {

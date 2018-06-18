@@ -42,19 +42,6 @@
 				</div>
 				<div class="boardList">
 					<table width="100%" border="1" summary="">
-						<caption>상품 게시판 목록</caption>
-						<colgroup
-							class="xans-element- xans-board xans-board-listheader-4 xans-board-listheader xans-board-4 ">
-							<col style="width: 70px;">
-							<col style="width: 77px;">
-							<col style="width: 135px;" class="displaynone">
-							<col style="width: auto;">
-							<col style="width: 105px;">
-							<col style="width: 80px;" class="">
-							<col style="width: 53px;" class="">
-							<col style="width: 53px;" class="displaynone">
-							<col style="width: 78px;" class="displaynone">
-						</colgroup>
 						<thead
 							class="xans-element- xans-board xans-board-listheader-4 xans-board-listheader xans-board-4 ">
 							<tr style="">
@@ -69,7 +56,7 @@
 						</thead>
 						<tbody
 							class="xans-element- xans-board xans-board-list-4 xans-board-list xans-board-4">
-							<c:forEach var="ii" items="${selectInquiry}">
+							<c:forEach var="ii" items="${blist}">
 								<tr style="background-color: #FFFFFF; color: #555555;"
 									class="xans-record-">
 									<td>${ii.num }</td>
@@ -93,34 +80,8 @@
 					</table>
 
 				</div>
-				<c:forEach var="row" items="${map.rlist}">
-					<tr>
-						<td>${row.bno}</td>
-						<!-- 게시글 상세보기 페이지로 이동시 게시글 목록페이지에 있는 검색조건, 키워드, 현재페이지 값을 유지하기 위해 -->
-						<td></td>
-						<td>${row.userName}</td>
-						<td>
-							<!-- 원하는 날짜형식으로 출력하기 위해 fmt태그 사용 --> <fmt:formatDate
-								value="${row.regdate}" pattern="yyyy-MM-dd HH:mm:ss" />
-						</td>
-						<td>${row.viewcnt}</td>
-					</tr>
-				</c:forEach>
+				
 			</div>
-			<c:forEach var="row" items="${map.rlist}">
-					<tr>
-						<td>${row.bno}</td>
-						<!-- 게시글 상세보기 페이지로 이동시 게시글 목록페이지에 있는 검색조건, 키워드, 현재페이지 값을 유지하기 위해 -->
-						<td></td>
-						<td>${row.userName}</td>
-						<td>
-							<!-- 원하는 날짜형식으로 출력하기 위해 fmt태그 사용 --> <fmt:formatDate
-								value="${row.regdate}" pattern="yyyy-MM-dd HH:mm:ss" />
-						</td>
-						<td>${row.viewcnt}</td>
-					</tr>
-				</c:forEach>
-				   <tr>
             <td colspan="5">
                 <!-- **처음페이지로 이동 : 현재 페이지가 1보다 크면  [처음]하이퍼링크를 화면에 출력-->
                 <c:if test="${map.boardPager.curBlock > 1}">
