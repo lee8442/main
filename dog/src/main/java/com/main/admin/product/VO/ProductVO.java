@@ -12,6 +12,7 @@ public class ProductVO {
 	private String image;
 	private String small_class;
 	private String reg_date;
+	private String big_class;
 
 	public MultipartFile getImage_file() {
 		return image_file;
@@ -84,11 +85,19 @@ public class ProductVO {
 	public void setReg_date(String reg_date) {
 		this.reg_date = reg_date;
 	}
+	
+	public String getBig_class() {
+		return big_class;
+	}
+
+	public void setBig_class(String big_class) {
+		this.big_class = big_class;
+	}
 
 	@Override
 	public String toString() {
-		return "ProductVO [code=" + code + ", name=" + name + ", price=" + price + ", simple_explain=" + simple_explain
-				+ ", explain=" + explain + ", image=" + image + ", small_class=" + small_class + ", reg_date="
-				+ reg_date + "]";
+		return "ProductVO [image_file=" + image_file + ", code=" + code + ", name=" + name + ", price=" + price
+				+ ", simple_explain=" + simple_explain + ", explain=" + explain + ", image=" + image + ", small_class="
+				+ small_class + ", reg_date=" + reg_date + ", big_class=" + big_class + "]";
 	}
 }

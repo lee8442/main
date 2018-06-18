@@ -7,6 +7,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
+input {
+	height: 22px;
+}
+
+select {
+	width: 130px;
+	height: 28px;
+	margin: 5px 0;
+}
+
 #warp {
 	width: 80%;
 	float: left;
@@ -26,23 +36,23 @@
 }
 
 #select_list {
-	width: 45%;
+	width: 50%;
 	height: 95%;
 	margin-left: 10px;
 	margin-top: 10px;
 	text-align: center;
 	float: left;
-	overflow: auto;
+	overflow: overlay;
 }
 
 #select_info {
-	width: 50%;
+	width: 45%;
 	margin-left: 20px;
 	float: left;
 }
 
 #list-table {
-	width: 100%;
+	width: 97%;
 	border-collapse: collapse;
 }
 
@@ -58,6 +68,26 @@
 #list-table>tbody>tr>td {
 	padding: 10px 0 10px 0;
 	height: 25px;
+}
+
+#list-table>thead>tr>th:nth-child(4n+1) {
+	width: 10%;
+}
+
+#list-table>thead>tr>th:nth-child(4n+2) {
+	width: 20%;
+}
+
+#list-table>thead>tr>th:nth-child(4n+3) {
+	width: 30%;
+}
+
+#list-table>thead>tr>th:nth-child(4n+4) {
+	width: 20%;
+}
+
+#list-table>thead>tr>th:nth-child(4n+5) {
+	width: 20%;
 }
 
 #list-table>tbody>tr>td:nth-child(4n+1) {
@@ -82,6 +112,7 @@
 
 .table-list tbody tr:hover {
 	background-color: #e5ce5838;
+	cursor: pointer;
 }
 
 .clicked {
@@ -92,34 +123,46 @@
 	padding: 0 10px 0 10px;
 }
 
-.productTr {
-	border-top: 1px solid black;
-	background-color: #e5ce5838;
+.imageForm {
+	width: 73px;
 }
 
-.productTr table {
-	width: 100%;
+#select_info label {
+	margin: 0 5px 0 0;
 }
 
-.productTr td {
-	padding: 5px 0 5px 0;
+#select_info div {
+	height: 100px;
 }
 
-.productTr td:nth-child(2n+1) {
-	width: 30%;
+#select_info input[type='text'] {
+	margin: 5px 0;
 }
 
-.productTr td:nth-child(2n+2) {
-	width: 70%;
+#select_info textarea {
+	margin: 5px 0;
 }
 
-.productTr td img {
-	width: 200px;
-	height: 200px;
+#select_info div label {
+	float: left;
+	margin: 36px 5px 36px 0;
 }
 
-.productTr table td {
-	border-bottom: 1px solid black;
+#select_info div label:last-of-type {
+	font: 400 13.3333px Arial;
+	margin: 41px 5px 41px 0;
+}
+
+#select_info div img {
+	float: left;
+	height: 90px;
+	width: 90px;
+	margin: 5px 5px 0 0;
+}
+
+#select_info div input {
+	float: left;
+	margin: 36px 3px 0 0;
 }
 </style>
 <title>Insert title here</title>
@@ -130,13 +173,13 @@
 	<div id="warp">
 		<div id="listBox">
 			<div id="input-form">
-				<select id="big" onchange="selectBig()">
-					<option>대분류</option>
+				<select id="big" onchange="selectBig($(this))">
+					<option value="0">대분류</option>
 					<c:forEach var="CBig" items="${selectBigCategory}">
 						<option value="${CBig.code}">${CBig.name}</option>
 					</c:forEach>
 				</select> <select id="small">
-					<option>소분류</option>
+					<option value="0">소분류</option>
 				</select> 검색 : <input type="text" id="keyword" placeholder="상품이름을 입력하세요." />
 			</div>
 			<div id="select_list">
@@ -168,22 +211,27 @@
 			<div id="select_info">
 				<form action="productReg.ado" method="post"
 					enctype="multipart/form-data">
-					<label>대분류</label> <select id="big" onchange="selectBig()">
-						<option>대분류</option>
+					<label>대분류</label> <select id="select_info_big"
+						onchange="selectBig($(this))">
+						<option value="0">대분류</option>
 						<c:forEach var="CBig" items="${selectBigCategory}">
 							<option value="${CBig.code}">${CBig.name}</option>
 						</c:forEach>
-					</select> <label>소분류</label> <select id="small">
-						<option>소분류</option>
-					</select> <label>CODE</label><input type="text" placeholder="숫자 4글자"
+					</select> <label>소분류</label> <select id="select_info_small">
+						<option value="0">소분류</option>
+					</select><br /> <label>CODE</label><input type="text" placeholder="숫자 4글자"
 						id="witer_code" name="code"><br /> <label>상품CODE</label><input
 						type="text" disabled="disabled" id="code"><br /> <label>상품명</label>
 					<input type="text" name="name" placeholder="상품명을 적어주세요."><br />
 					<label>상품가격</label> <input type="text" name="price"
-						placeholder="가격을 적어주세요."><br /> <label>상품이미지 등록</label> <input
-						type="file" name="image_file" class="imageForm"><br /> <label>상품설명</label>
-					<input type="text" name="simple_explain" placeholder="간략한 설명">상품목록에
-					이미지와 함께 보여질 상품 설명입니다.<br /> <label>상품 상세설명</label><br />
+						placeholder="가격을 적어주세요."><br />
+					<div>
+						<label>상품이미지 등록</label> <img
+							src="resources/image/main/default.png"></img> <input type="file"
+							name="image_file" class="imageForm"><label></label> <br />
+					</div>
+					<label>상품설명</label> <input type="text" name="simple_explain"
+						placeholder="간략한 설명"><br /> <label>상품 상세설명</label><br />
 					<textarea name="explain" rows="20" cols="80"
 						placeholder="상품설명을 반드시 입력해주세요"></textarea>
 					<br /> <input type="hidden" id="small_code" name="small_class">
@@ -205,6 +253,7 @@
 		productInfo.image = "${list.image}";
 		productInfo.small_class = "${list.small_class}";
 		productInfo.reg_date = "${list.reg_date}";
+		productInfo.big_class = "${list.big_class}";
 		productArray.push(productInfo);
 		</c:forEach>
 	</script>

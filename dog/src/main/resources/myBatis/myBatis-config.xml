@@ -42,22 +42,17 @@
 		<mapper resource="myBatis/customer/member/insertMemberSql.xml" />
 		<mapper
 			resource="myBatis/customer/product/InquiryCategorySql.xml" />
+		<mapper resource="myBatis/admin/product/insertProductSql.xml" />
 		<mapper
-			resource="myBatis/admin/productReg/insertProductSql.xml" />
-			<mapper
 			resource="myBatis/customer/product/InquiryQuestionCategorySql.xml" />
 		<mapper
-			resource="myBatis/admin/productReg/selectProductListSql.xml" />
+			resource="myBatis/admin/product/selectProductListSql.xml" />
+		<mapper resource="myBatis/admin/product/selectCategorySql.xml" />
+		<mapper resource="myBatis/admin/product/insertCategorySql.xml" />
 		<mapper
-			resource="myBatis/admin/productReg/selectCategorySql.xml" />
-		<mapper
-			resource="myBatis/admin/productReg/insertCategorySql.xml" />
-			 <mapper 
-		resource="myBatis/customer/product/productInquiryBoardSql.xml" /> 
-		<mapper
-			resource="myBatis/admin/productReg/deleteCategorySql.xml" />
-		<mapper
-			resource="myBatis/admin/productReg/updateCategorySql.xml" />
+			resource="myBatis/customer/product/productInquiryBoardSql.xml" />
+		<mapper resource="myBatis/admin/product/deleteCategorySql.xml" />
+		<mapper resource="myBatis/admin/product/updateCategorySql.xml" />
 		<mapper resource="myBatis/admin/order/SelectOrderSql.xml" />
 		<mapper resource="myBatis/admin/order/UpdateOrderSql.xml" />
 		<mapper
