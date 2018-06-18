@@ -1,10 +1,9 @@
 package com.main.admin.order.Service;
 
-import com.main.admin.order.VO.OrderVO;
 
 public interface UpdateOrderService {
 	
-	public void updateOrderStart(OrderVO vo);
+	public void updateOrderStart(int orderCode);
 	
-	public void updateOrderEnd(OrderVO vo);
+	public void updateOrderEnd(int orderCode);
 }
