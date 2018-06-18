@@ -59,6 +59,6 @@
 			</table>
 		</form>
 	</center>
-	<script type="text/javascript" src="resources/js/member/productReView.js"></script>
+	<script type="text/javascript" src="resources/js/product/reviewWrite.js"></script>
 </body>
 </html>

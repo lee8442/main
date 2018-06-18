@@ -40,6 +40,7 @@
 	<mappers>
 		<!-- 위치값을 줄때 루트 폴터는 resources 폴더이다. -->
 		<mapper resource="myBatis/customer/member/insertMemberSql.xml" />
+		<mapper resource="myBatis/customer/member/loginSql.xml" />
 		<mapper
 			resource="myBatis/customer/product/InquiryCategorySql.xml" />
 		<mapper
@@ -64,7 +65,6 @@
 			resource="myBatis/customer/main/selectBestProductSql.xml" />
 		<mapper
 			resource="myBatis/customer/main/selectNewProductSql.xml" />
-		<mapper resource="myBatis/customer/member/loginsql.xml" />
 		<mapper
 			resource="myBatis/customer/main/selectRecomProductSql.xml" />
 		<mapper
