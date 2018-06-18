@@ -19,10 +19,7 @@ public class HeaderController {
 	@RequestMapping(value = "/headersmall.do")
 	@ResponseBody
 	public List<ProductVO> main(String bigName) {
-		System.out.println("해더하냐" + bigName);
 		List<ProductVO> selectSmallProduct = HeaderService.selectSmallProduct(bigName);
-
-		System.out.println(selectSmallProduct);
 		return selectSmallProduct;
 	}
 

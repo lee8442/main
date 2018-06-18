@@ -41,45 +41,29 @@
 		<!-- 위치값을 줄때 루트 폴터는 resources 폴더이다. -->
 		<mapper resource="myBatis/customer/member/insertMemberSql.xml" />
 		<mapper resource="myBatis/customer/member/loginSql.xml" />
-		<mapper
-			resource="myBatis/customer/product/InquiryCategorySql.xml" />
-		<mapper
-			resource="myBatis/admin/productReg/insertProductSql.xml" />
-			<mapper
-			resource="myBatis/customer/product/InquiryQuestionCategorySql.xml" />
-		<mapper
-			resource="myBatis/admin/productReg/selectProductListSql.xml" />
-		<mapper
-			resource="myBatis/admin/productReg/selectCategorySql.xml" />
-		<mapper
-			resource="myBatis/admin/productReg/insertCategorySql.xml" />
-			 <mapper 
-		resource="myBatis/customer/product/productInquiryBoardSql.xml" /> 
-		<mapper
-			resource="myBatis/admin/productReg/deleteCategorySql.xml" />
-		<mapper
-			resource="myBatis/admin/productReg/updateCategorySql.xml" />
+		<mapper resource="myBatis/customer/product/InquiryCategorySql.xml" />
+		<mapper resource="myBatis/admin/productReg/insertProductSql.xml" />
+		<mapper resource="myBatis/customer/product/InquiryQuestionCategorySql.xml" />
+		<mapper resource="myBatis/admin/productReg/selectProductListSql.xml" />
+		<mapper resource="myBatis/admin/productReg/selectCategorySql.xml" />
+		<mapper resource="myBatis/admin/productReg/insertCategorySql.xml" />
+		<mapper resource="myBatis/customer/product/productInquiryBoardSql.xml" /> 
+		<mapper resource="myBatis/admin/productReg/deleteCategorySql.xml" />
+		<mapper resource="myBatis/admin/productReg/updateCategorySql.xml" />
 		<mapper resource="myBatis/admin/order/SelectOrderSql.xml" />
 		<mapper resource="myBatis/admin/order/UpdateOrderSql.xml" />
-		<mapper
-			resource="myBatis/customer/main/selectBestProductSql.xml" />
-		<mapper
-			resource="myBatis/customer/main/selectNewProductSql.xml" />
-		<mapper
-			resource="myBatis/customer/main/selectRecomProductSql.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectBigCodeProductListSql.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectBigCodeNameSql.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectSmallCodeNameSql.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectSmallCodeProductListSql.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectSBigCodeNameSql.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectSSmallCodeNameSql.xml" />
-		<mapper
-			resource="myBatis/customer/header/selectSmallProductSqlA.xml" />
+		<mapper resource="myBatis/customer/main/selectBestProductSql.xml" />
+		<mapper resource="myBatis/customer/main/selectNewProductSql.xml" />
+		<mapper resource="myBatis/customer/main/selectRecomProductSql.xml" />
+		<mapper resource="myBatis/customer/product/selectBigCodeProductListSql.xml" />
+		<mapper resource="myBatis/customer/product/selectBigCodeNameSql.xml" />
+		<mapper resource="myBatis/customer/product/selectSmallCodeNameSql.xml" />
+		<mapper resource="myBatis/customer/product/selectSmallCodeProductListSql.xml" />
+		<mapper resource="myBatis/customer/product/selectSBigCodeNameSql.xml" />
+		<mapper resource="myBatis/customer/product/selectSSmallCodeNameSql.xml" />
+		<mapper resource="myBatis/customer/header/selectSmallProductSqlA.xml" />
+		<mapper resource="myBatis/customer/product/selectDetailPageList.xml" />
+		<mapper resource="myBatis/customer/product/selectProductOrderList.xml" />		
+		
 	</mappers>
 </configuration>

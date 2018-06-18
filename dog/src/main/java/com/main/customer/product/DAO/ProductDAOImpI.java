@@ -48,6 +48,12 @@ public class ProductDAOImpI implements ProductDAO {
 	public List<ProductVO> selectSSmallCodeProductList(String smallcode) {
 		return SqlSession.selectList("myBatis.customer.product.SsmallCodeName", smallcode);
 	}
+
+	@Override
+	public List<ProductVO> selectDetailPageList(String code) {
+		// TODO Auto-generated method stub
+		return SqlSession.selectList("myBatis.customer.product.DetailPageList", code);
+	}
 	
 
 }
