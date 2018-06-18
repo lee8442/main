@@ -219,8 +219,7 @@ select {
 						</c:forEach>
 					</select> <label>소분류</label> <select id="select_info_small">
 						<option value="0">소분류</option>
-					</select><br /> <label>CODE</label><input type="text" placeholder="숫자 4글자"
-						id="witer_code" name="code"><br /> <label>상품CODE</label><input
+					</select><br /> <label>상품CODE</label><input
 						type="text" disabled="disabled" id="code"><br /> <label>상품명</label>
 					<input type="text" name="name" placeholder="상품명을 적어주세요."><br />
 					<label>상품가격</label> <input type="text" name="price"
