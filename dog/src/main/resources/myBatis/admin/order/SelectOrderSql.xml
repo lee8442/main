@@ -4,7 +4,10 @@
 <mapper namespace="selectOrder">
 	
 	<select id="Order" parameterType="com.main.admin.order.VO.OrderVO" resultType="com.main.admin.order.VO.OrderVO">
-		<![CDATA[select * from product_order]]>
+		<![CDATA[select * from product_order, product where product_order.product_code = product.code]]>
 	</select>
 	
+	<select id="OrderDelivery" parameterType="com.main.admin.order.VO.DeliveryVO" resultType="com.main.admin.order.VO.DeliveryVO">
+		<![CDATA[select * from product_order_delivery ]]>
+	</select>
 </mapper>

@@ -65,9 +65,14 @@
 						id="password" /></td>
 				</tr>
 				<tr class="this">
+			<%-- <c:if test="${sessionScope.userId != null}">--%>
 					<td class="thistd">댓글</td>
-					<td class="thistd"><textarea style="resize: none;"  rows="3"  cols="79"   id="replytext" class="replytext"></textarea>
+					<td class="thistd">
+					
+					<textarea style="resize: none;"  rows="3"  cols="79"   id="replytext"></textarea>
+					
 					<input type="button" id="insertReply" class="reply"value="댓글작성" /> </td>
+				<%--</c:if>--%>
 				</tr>
 				<tr valign="middle" class="this">
 					<td colspan="5" scope="row" class="thistd">
@@ -84,25 +89,29 @@
 		$('#insertReply').click(function(){
 				var replytext = $("#replytext").val();		
 				var num = ${ivo.num};
-				var param={ 'num=' + num
-			 &	' replytext='+ replytext;}
+				var param='&num='+num+'&replytext='+ replytext;
 				$.ajax({
 					type: "post",
 					url: "insert.do",
 					data:param,
 					success:function(){
 						alert("ok");
-						listReply("1");
+						listReply(1);
 					}
 				});
 			});
-		function listReply(){
+		listReply();
+		function listReply(num){
 	        $.ajax({
 	            type: "get",
-	            url: "${path}list.do?num=${ivo.num}",
+	            url: "list.do?num=${ivo.num}",
 	            success: function(result){
+	            	var text='';
+					 $.each(result , function(i){
+	            		text+=result[i].replytext+'<br>';
+          	           });	
 	            // responseText가 result에 저장됨.
-	                $("#listReply").html(result);
+	                $("#listReply").html(text);
 	            }
 	        });
 	    }

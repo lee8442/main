@@ -1,6 +1,5 @@
 var myIndex = 0;
 carousel();
-var length = 0;
 
 function carousel() {
 	var i;
@@ -19,7 +18,7 @@ function carousel() {
 $(".cf li").hover(function() {
  	  $(this).find("#smallre").html("");
  	  
- 	  length = 0;
+ 	  var length = 0;
 	
 	//$(this).children("div").children("div").css("height", height);
 	

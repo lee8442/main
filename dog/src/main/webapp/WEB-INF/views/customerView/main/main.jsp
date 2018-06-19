@@ -2,15 +2,12 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/main/main.css">
-<script type="text/javascript"
-	src="resources/js/jquery/jquery-3.3.1.min.js"></script>
 </head>
 <body onload="rotate()">
 	<div id="container">
@@ -29,64 +26,69 @@
 					</div>
 				</div>
 				<!-- 신상품 사진 우측 -->
-				<%if(session.getAttribute("userId")!=null){%>
-				<div class="boardImage">
-					<div class="boardImage_top">
-						<div class="login_Form01"><%=session.getAttribute("userId") %>님
-							환영합니다.
-						</div>
-						<div class="logininpormation">
-							<a href="#">개인정보</a><br>
-						</div>
-						<div class="loginSave">
-							<a href="#">구매목록</a><br>
-						</div>
-						<div class="loginFind">
-							<a href="#">주문조회</a><br>
-						</div>
-						<div class="boardImage_bottom">
-							<input class="loginBtn" type="button" value="마이페이지"> <input
-								class="loginBtn2" type="button" value="로그아웃"
-								onclick="location.href='logout.do'">
-						</div>
-					</div>
-				</div>
-				<% }else{ %>
-				<div class="boardImage">
-					<div class="boardImage_top">
-						<form action="login.do" method="post">
-							<div class="login_Form">
-								<input name="id" class="loginId" type="text" placeholder="아이디">
-								<br /> <input name="password" class="loginId" type="password"
-									placeholder="비밀번호">
+				<c:choose>
+					<c:when test="${not empty sessionScope.login }">
+						<div class="boardImage">
+							<div class="boardImage_top">
+								<div class="login_Form01">${sessionScope.login.name}님
+									환영합니다.</div>
+								<div class="logininpormation">
+									<a href="#">개인정보</a><br>
+								</div>
+								<div class="loginSave">
+									<a href="#">구매목록</a><br>
+								</div>
+								<div class="loginFind">
+									<a href="#">주문조회</a><br>
+								</div>
+								<div class="boardImage_bottom">
+									<input class="loginBtn" type="button" value="마이페이지"
+										onclick="goMyPage()">
+									<form action="logout.do" method="post">
+										<input class="loginBtn2" type="submit" value="로그아웃">
+									</form>
+								</div>
 							</div>
-							<div class="login_Image">
-								<input class="loginbtn" type="submit" value="로그인">
+						</div>
+					</c:when>
+					<c:otherwise>
+						<div class="boardImage">
+							<div class="boardImage_top">
+								<form action="login.do" method="post"
+									onsubmit="return loginCheck()">
+									<div class="login_Form">
+										<input name="id" class="loginId" type="text" placeholder="아이디">
+										<br /> <input name="password" class="loginId" type="password"
+											placeholder="비밀번호">
+									</div>
+									<div class="login_Image">
+										<input class="loginbtn" type="submit" value="로그인">
+									</div>
+								</form>
+								<div class="loginFind">
+									<a class="loginFind-id" href="idpassFind.do"> <input
+										type="button" value="아이디찾기"> <input type="button"
+										value="비밀번호 찾기">
+									</a> <a class="loginFind-signUp" href="insertMember.do"> <input
+										class="regibtn" type="button" value="회원가입">
+									</a>
+								</div>
+								<div class="boardImage_bottom_01">
+									<input class="loginBtn" type="image"
+										src=" resources/image/main/naver.png" onfocus="this.blur()">
+								</div>
+								<div class="boardImage_bottom_02">
+									<input class="loginBtn2" type="image"
+										src=" resources/image/main/kakao.JPG" onfocus="this.blur()">
+								</div>
+								<div class="loginwiter">
+									<div class="loginwiternaver">네이버로 로그인</div>
+									<div class="loginwiterkakao">카카오톡으로 로그인</div>
+								</div>
 							</div>
-						</form>
-						<div class="loginFind">
-							<a class="loginFind-id" href="idpassFind.do"> <input
-								type="button" value="아이디찾기"> <input type="button"
-								value="비밀번호 찾기">
-							</a> <a class="loginFind-signUp" href="insertMember.do"> <input
-								class="regibtn" type="button" value="회원가입">
-							</a>
 						</div>
-						<div class="boardImage_bottom_01">
-							<input class="loginBtn" type="image"
-								src=" resources/image/main/naver.png" onfocus="this.blur()">
-						</div>
-						<div class="boardImage_bottom_02">
-							<input class="loginBtn2" type="image"
-								src=" resources/image/main/kakao.JPG" onfocus="this.blur()">
-						</div>
-						<div class="loginwiter">
-							<div class="loginwiternaver">네이버로 로그인</div>
-							<div class="loginwiterkakao">카카오톡으로 로그인</div>
-						</div>
-					</div>
-				</div>
-				<% }%>
+					</c:otherwise>
+				</c:choose>
 			</div>
 			<div class="box">
 				<h4>베스트 상품</h4>
@@ -111,20 +113,20 @@
 			<div class="box">
 				<h4>추천상품</h4>
 				<ul class="cf">
-				<c:forEach var="RecomProduct" items="${selectRecomProduct }">
-					<li><a href="#"></a>
-						<div class="recomiamge">
-							<a href="detailPage.do?code=${RecomProduct.code }"> 
-							<img class="recomimage_01" src="${RecomProduct.image}"></a>
-						</div>
-						<div class="productname">${RecomProduct.name}</div>
-						<div class="productprice" id="price">
-							<input type="text" name="price" class="price"
-								value="${RecomProduct.price}원">
-						</div>
-						<div class="productsimple_explain">
-							${RecomProduct.simple_explain}</div></li>
-				</c:forEach>
+					<c:forEach var="RecomProduct" items="${selectRecomProduct }">
+						<li><a href="#"></a>
+							<div class="recomiamge">
+								<a href="detailPage.do?code=${RecomProduct.code }"> <img
+									class="recomimage_01" src="${RecomProduct.image}"></a>
+							</div>
+							<div class="productname">${RecomProduct.name}</div>
+							<div class="productprice" id="price">
+								<input type="text" name="price" class="price"
+									value="${RecomProduct.price}원">
+							</div>
+							<div class="productsimple_explain">
+								${RecomProduct.simple_explain}</div></li>
+					</c:forEach>
 				</ul>
 			</div>
 			<div class="dogParkfull cf">

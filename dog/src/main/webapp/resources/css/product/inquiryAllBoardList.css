@@ -936,7 +936,7 @@ ul.xans-board-listheader li {
 }
 
 .xans-board-search select {
-	margin: 0 2px 0 0;
+	margin: 0 2px 0 350px;
 	width: 72px;
 	height: 26px;
 	padding: 2px;
@@ -5586,7 +5586,7 @@ input.btn.W100P, button.btn.W100P {
 .btn.Wnormal {
 	min-width: 80px;
 	float: right;
-	margin-right: 25px;
+	margin-right: 400px;
 }
 
 .btn.Login {

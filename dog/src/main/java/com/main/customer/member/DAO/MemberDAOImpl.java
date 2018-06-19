@@ -29,4 +29,11 @@ public class MemberDAOImpl implements MemberDAO {
 		System.out.println("결과 : " + result);
 		return result;
 	}
+	//로그인 구현
+			@Override
+			public MemberVO login(MemberVO vo) {
+				System.out.println("로그인 실행 완료");
+				MemberVO userId= SqlSession.selectOne("myBatis.customer.member.login", vo);
+				return userId;
+			}
 }

@@ -25,7 +25,7 @@ public class InquiryDAOImpl implements InquiryDAO {
 	@Override
 	public int InsertInquiryBoard(InquiryVO vo) {
 		
-		return SqlSession.insert("InquiryBoard.insertInquiry", vo);
+		return SqlSession.insert("insertInquiry", vo);
 	}
 
 	@Override

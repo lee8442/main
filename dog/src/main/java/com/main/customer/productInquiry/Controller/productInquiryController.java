@@ -2,26 +2,25 @@ package com.main.customer.productInquiry.Controller;
 
 
 import java.io.File;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.main.customer.productInquiry.DAO.InquiryDAO;
 import com.main.customer.productInquiry.Service.BoardPager;
 import com.main.customer.productInquiry.Service.DeleteInquiryBoardService;
@@ -35,6 +34,7 @@ import com.main.customer.productInquiry.VO.InquiryCategoryVO;
 import com.main.customer.productInquiry.VO.InquiryQuestionCategoryVO;
 import com.main.customer.productInquiry.VO.InquiryVO;
 import com.main.customer.productInquiry.VO.ReplyVO;
+import com.sun.org.glassfish.gmbal.ManagedAttribute;
 
 @Controller
 public class productInquiryController {
@@ -94,14 +94,16 @@ public class productInquiryController {
 	
 		  // 데이터를 맵에 저장
 	    Map<String, Object> map = new HashMap<String, Object>();
-	    map.put("blist", blist); // list
+	    //map.put("blist", blist); // list
 	    map.put("count", count); // 레코드의 갯수
 	    map.put("searchOption", searchOption); // 검색옵션
 	    map.put("keyword", keyword); // 검색키워드
 	    map.put("boardPager", boardPager);
-	    
+	    System.out.println(boardPager.getCurPage());
+	    System.out.println(boardPager.getTotPage());
 	    ModelAndView mav = new ModelAndView();
 	    mav.addObject("map", map); // 맵에 저장된 데이터를 mav에 저장
+	    mav.addObject("blist", blist);
 	    mav.setViewName("simple/product/productInquiry"); // 뷰를 list.jsp로 설정
 	    
 		return mav;
@@ -118,14 +120,13 @@ public class productInquiryController {
 	}
 	// 상풍문의 글 등록
 	@RequestMapping(value = "/insertInquiryBoard.do")
-	synchronized public String insertInquiryBoard(InquiryVO vo, MultipartFile file) {
+	synchronized public String insertInquiryBoard(@ModelAttribute InquiryVO vo, MultipartFile file) {
 		try {
 			vo.setMember_id("visitor");
-			// if(session.getAttribute //세션값있을때 (로그인했을때) setMemberId다시 해주면 됨
-			System.out.println("글 등록 이벤트  ");
+			/* if((boolean) session.getAttribute(vo.setMember_id("member_id"))); //세션값있을때 (로그인했을때) setMemberId다시 해주면 됨
+*/			System.out.println("글 등록 이벤트  ");
 			vo.setImage(file.getOriginalFilename());
 			System.out.println("image name=" + vo.getImage());
-
 			File fd = new File("D:/file/" + vo.getImage());
 			if (!fd.exists()) {
 				fd.mkdirs();
@@ -142,8 +143,8 @@ public class productInquiryController {
 			System.out.println("오류발생");
 			e.printStackTrace();
 		}
+		System.out.println(vo.toString());
 		insertInquiryBoardService.InsertInquiryBoard(vo);
-
 		return "redirect:productInquiry.do";
 	}
 	// 상품문의게시판 업데이트 비밀번호 체크
@@ -198,30 +199,23 @@ public class productInquiryController {
 			e.printStackTrace();
 		}
 		
-		
 		int no = Integer.parseInt(num);
 		System.out.println(no);
 		InquiryVO uvo = selectInquiryBoardService.selectInquiryDetail(no);
 		model.addAttribute("uvo", uvo);
 		System.out.println("uvo추가됨");
-		
-		
-		
 		List<InquiryQuestionCategoryVO> QuestionCategory = inquiryQuestionCategoryService.QuestionCategory();
 		inquiryQuestionCategoryService.QuestionCategory();
 		model.addAttribute("QuestionCategory", QuestionCategory);
-		
 		return "simple/product/productInquiryUpdate";
 	}
 	//업데이트 글 저장 
 		@RequestMapping(value="/updateInquiryInsert.do")
 	public String updateInsert(Model model,String num,InquiryVO vo, MultipartFile file) {
 			try {
-				
 				System.out.println("글 등록 이벤트  ");
 				vo.setImage(file.getOriginalFilename());
 				System.out.println("image name=" + vo.getImage());
-
 				File fd = new File("D:/file/" + vo.getImage());
 				if (!fd.exists()) {
 					fd.mkdirs();
@@ -238,26 +232,19 @@ public class productInquiryController {
 				System.out.println("오류발생");
 				e.printStackTrace();
 			}
-			
 			int no = Integer.parseInt(num);
 			System.out.println(no);
 			InquiryVO uvo = selectInquiryBoardService.selectInquiryDetail(no);
 			model.addAttribute("uvo", uvo);
 			System.out.println("uvo추가됨");
-			
-			
-			
 			List<InquiryQuestionCategoryVO> QuestionCategory = inquiryQuestionCategoryService.QuestionCategory();
 			inquiryQuestionCategoryService.QuestionCategory();
 			model.addAttribute("QuestionCategory", QuestionCategory);
-			
-			
-		return"redirect:productInquiry.do";
+			return"redirect:productInquiry.do";
 	}
 	// 상품문의 상세페이지
 	@RequestMapping(value = "/productInquiryDetail.do")
 	public String productInquiryDetail(String num, Model model) {
-		
 		System.out.println("1:1상품목록 상세페이지");
 		int num_i = Integer.parseInt(num);
 		System.out.println(num_i);
@@ -269,24 +256,17 @@ public class productInquiryController {
 	}	
 	//댓글 입력 
 	@RequestMapping(value="insert.do")
-	public void insert(@ModelAttribute ReplyVO vo,Integer num, Model model) {
-	
-	
+	synchronized public @ManagedAttribute String insert(ReplyVO vo) {
+		System.out.println(vo.getNum());
 		System.out.println(vo.getRno());
+		System.out.println(vo.getReplytext());
 		replyService.create(vo);	
-		
-		
-		System.out.println(vo);
+		return "redirect:productInquiry.do";
 	}
 	//댓글 목록(controller방식 : view(화면)을 리턴 
 	@RequestMapping(value="list.do")
-	public ModelAndView list(@RequestParam int num, ModelAndView mav) {
+	public @ResponseBody Object list(@RequestParam int num) {
 		List<ReplyVO>rlist =replyService.list(num);
-		//뷰이름지정
-		mav.setViewName("simple/product/replyList");
-		mav.addObject("rlist",rlist);
-		return mav;
+		return rlist;
 	}
 }
-
-

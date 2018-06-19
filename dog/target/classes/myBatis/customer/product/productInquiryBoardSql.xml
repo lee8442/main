@@ -3,89 +3,90 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="InquiryBoard">
-<!-- 글 등록  -->
+	<!-- 글 등록 -->
 	<insert id="insertInquiry" parameterType="InquiryVO">
 		insert into
-		inquiry(num,member_id,type_code,subject,content,inquiry_date,password,image,viewcount,ref,step,depth,recnt)
-		values(num_seq.NEXTVAL,#{member_id},#{type_code},#{subject},#{content},sysdate,#{password},#{image},0,#{ref},#{step},#{depth},#{recnt})		
+		inquiry(num,member_id,type_code,subject,content,inquiry_date,password,image,viewcount)
+		values(num_seq.NEXTVAL,#{member_id},#{type_code},#{subject},#{content},sysdate,#{password},#{image},0)
 	</insert>
-<!-- 글 목록 -->
-	<select id="selectInquiry"  resultType="InquiryVO" parameterType="InquiryVO">
-		select  b.*, (select count(*) from reply where num= b.num)  as recnt
-		from inquiry b,inquiry_type
-		where type_code=code
-	  order by ref desc,step asc
+	<!-- 글 목록 -->
+	<select id="selectInquiry" resultType="InquiryVO"
+		parameterType="InquiryVO">
+		select b.*, (select count(*) from reply where num = b.num) as recount from inquiry_type a, inquiry b where b.type_code = a.code order by num asc
 	</select>
 	<sql id="search">
-        <choose>
-            <!-- 검색옵션이 전체 검색일 경우 -->
-            <when test="keyword == 'all'">
-                WHERE b.subject = m.user_id
-                AND    
-                (subject like '%'||#{keyword}||'%'
-                OR content like '%'||#{keyword}||'%'
-                OR member_id like '%'||#{keyword}||'%')
-            </when>
-            <!-- 전체 검색이 아닐 경우 -->
-            <otherwise>
-                WHERE b.writer = m.member_id 
-                AND ${searchOption} like '%'||#{keyword}||'%'
-            </otherwise>
-        </choose>
-    </sql>
-<!-- 글 상세  -->
-	<select id="selectInquiryDetail"  resultType="InquiryVO">
-		select * from 
-		inquiry,inquiry_type 
+		<choose>
+			<!-- 검색옵션이 전체 검색일 경우 -->
+			<when test="keyword == 'all'">
+				WHERE b.subject = m.user_id
+				AND
+				(subject like
+				'%'||#{keyword}||'%'
+				OR content like '%'||#{keyword}||'%'
+				OR member_id
+				like '%'||#{keyword}||'%')
+			</when>
+			<!-- 전체 검색이 아닐 경우 -->
+			<otherwise>
+				WHERE b.writer = m.member_id
+				AND ${searchOption} like
+				'%'||#{keyword}||'%'
+			</otherwise>
+		</choose>
+	</sql>
+	<!-- 글 상세 -->
+	<select id="selectInquiryDetail" resultType="InquiryVO">
+		select * from
+		inquiry,inquiry_type
 		where type_code=code and num=#{num}
 	</select>
-<!-- 업데이트  -->
-	<update id="updateInquiryInsert" parameterType="InquiryVO" >
-	update inquiry set
-			type_code = #{type_code},
-			subject = #{subject},
-			content = #{content},
-			image = #{image}
-		where  num=#{num}
-	</update> 
-<!-- 글 목록 조회수  -->
-	<update id="increaseViewCount"  >
+	<!-- 업데이트 -->
+	<update id="updateInquiryInsert" parameterType="InquiryVO">
 		update inquiry
-			set viewcount = viewcount+1 
-			where num= #{num}	 
-	</update> 
-<!-- 글삭제 -->
-	<delete id="delete" parameterType="Integer" >
+		set
+		type_code = #{type_code},
+		subject = #{subject},
+		content = #{content},
+		image = #{image}
+		where num=#{num}
+	</update>
+	<!-- 글 목록 조회수 -->
+	<update id="increaseViewCount">
+		update inquiry
+		set viewcount = viewcount+1
+		where num=
+		#{num}
+	</update>
+	<!-- 글삭제 -->
+	<delete id="delete" parameterType="Integer">
 		delete
-			from inquiry where num = #{num}
+		from inquiry where num =
+		#{num}
 	</delete>
-<!-- ref 조회 -->
+	<!-- ref 조회 -->
 	<select id="maxRefInquiry" resultType="Integer">
-		select max(ref) from inquiry
+		select max(ref) from
+		inquiry
 	</select>
-<!-- 비밀번호 체크 -->
-	<select id="checkPwInquiry" resultType="Integer" parameterType="InquiryVO">
-	select count(*) from inquiry where num=#{num} and password = #{password}
+	<!-- 비밀번호 체크 -->
+	<select id="checkPwInquiry" resultType="Integer"
+		parameterType="InquiryVO">
+		select count(*) from inquiry where num=#{num} and
+		password = #{password}
 	</select>
-	<!-- 답글입력  -->
+	<!-- 답글입력 -->
 	<insert id="insertReply" parameterType="ReplyVO">
-		insert 
-		into reply (rno, num, replytext, replyer,regdate)
-        values (rno_seq.NEXTVAL, #{num}, #{replytext}, #{replyer},sysdate)
+		insert into
+		reply(rno,
+		num, replytext) values
+		(rno_seq.NEXTVAL,#{num},#{replytext})
 	</insert>
-	
-	<select id="listReply" resultType="Integer"  parameterType="ReplyVO">
-		SELECT * FROM reply r, inquiry m
-        WHERE  r.replyer = m.member_id AND num=#{num}
-        ORDER BY rno
+	<select id="listReply" resultType="ReplyVO">
+		SELECT * FROM reply
+		r, inquiry
+		m
+		WHERE r.num = m.num AND m.num=#{num}
+		ORDER BY rno
 	</select>
-		<sql id="pagingHeader">
-    SELECT * FROM (
-        SELECT ROWNUM AS rn, A.* FROM (
-</sql>
-<sql id="pagingFooter">
-        ) A
-    ) WHERE rn BETWEEN #{start} AND #{end}
-</sql>
-	
+
 </mapper>

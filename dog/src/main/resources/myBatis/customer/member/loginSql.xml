@@ -5,7 +5,7 @@
 <mapper namespace="myBatis.customer.member">
 	<select id="login"
 		parameterType="com.main.customer.member.VO.MemberVO"
-		resultType="String">
-		<![CDATA[select id from member where id = #{id} and password = #{password}]]>
+		resultType="com.main.customer.member.VO.MemberVO">
+		<![CDATA[select * from MEMBER where id =#{id} and password =#{password}]]>
 	</select>
 </mapper>

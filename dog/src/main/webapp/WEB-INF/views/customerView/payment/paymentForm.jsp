@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,9 +13,6 @@
 <body>
 	<div id="paymentcontent">
 		<div class="guide">
-		<div class="bar">
-							<a href="main.do" class="a1">홈</a> &nbsp;> 
-						</div>
 			<h2>교환및 배송안내</h2>
 			<ul>
 				<li>º&nbsp;샵고수의 무료배송비 기준은 구매금액 30,000원부터입니다. 단 이벤트, 할인샵 등 파격세일 상품 등의 배송비 무료기준에는 합산되지 않습니다.</li>
@@ -28,9 +26,10 @@
 		<div class="order_product">
 			<h2>주문하실 상품</h2>
 			<table class="order_table">
+				
 				<tr>
 					<th>
-						<div class="left order_table01"><input class="checkbox" type="checkbox"> </div>
+						<div class="left order_table01"><!-- <input class="checkbox" type="checkbox"> --> </div>
 						<div class="left order_table02">상품명</div>
 						<div class="left order_table03">판매가격</div>
 						<div class="left order_table04">수량</div>
@@ -41,22 +40,22 @@
 				</tr>
 				<tr class="order_line">	
 					<td>
-		 				<div class="left order_table_center01"><input class="checkbox" type="checkbox"></div>
+		 				<div class="left order_table_center01"><!-- <input class="checkbox" type="checkbox"> --></div>
 					 	<div class="left order_table_center02">
-					 		<div class="order_image"><img src="resources/image/main/dog.png"></div>
-					 		<div>더독 치킨(노령견용)3KG</div>
+					 		<div class="order_image"><img src="${productOrder.get(0).image }"></div>
+					 		<div>${productOrder.get(0).simple_explain }</div>
 					 	</div>
-						<div class="left order_table_center03">18,000원</div>
-						<div class="left order_table_center04">2개↑</div>
-						<div class="left order_table_center05">35,800</div>
-						<div class="left order_table_center06">358원</div>
+						<div class="left order_table_center03"><span class="order_table_price">${productOrder.get(0).price}</span>원</div>
+						<div class="left order_table_center04"><span class="order_table_amount">${amount}</span>개</div>
+						<div class="left order_table_center05"><span class="order_table_result"></span>개</div>	
+						<div class="left order_table_center06"><span class="order_table_point"></span>원</div>
 						<div class="left order_table_center07"><input type="button" value="X"></div>
 					</td>
 				</tr>
 			</table>
 			<div class="order_bottom">
 				<div class="order_bottom_left">주문합계</div>
-				<div class="order_bottom_right">35,800원[상품금액] + 5,000원[배송비] = 40,800원[결제금액]</div>
+				<div class="order_bottom_right"><span class="order_table_resultBottom"></span>원[상품금액] + <span class="order_table_deliveryMoney">5000</span>원[배송비] = <span class="order_table_paymentMoney"></span>원[결제금액]</div>
 			</div>
 		</div>
 		<form action="payment.do" method="post">

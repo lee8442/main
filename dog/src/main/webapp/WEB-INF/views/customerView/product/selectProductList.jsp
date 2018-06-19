@@ -34,7 +34,7 @@
 					<c:forEach var="ProductList" items="${selectBigCodeProductList }">
 						<li>
 							<div class="productListimage">
-								<a href="recomProduct.do?code=${ProductList.code }"> <img
+								<a href="detailPage.do?code=${ProductList.code }"> <img
 									class="productListimage_01" src="${ProductList.image}"></a>
 							</div>
 							<div class="productname">${ProductList.name}</div>
@@ -54,7 +54,7 @@
 			<c:forEach var="RecomProduct" items="${selectRecomProduct }">
 				<li>
 					<div class="productListimage">
-						<a href="recomProduct.do?code=${RecomProduct.code }"> <img
+						<a href="detailPage.do?code=${RecomProduct.code }"> <img
 							class="productListimage_01" src="${RecomProduct.image }"></a>
 					</div>
 					<div class="productname">${RecomProduct.name}</div>
@@ -72,7 +72,7 @@
 			<c:forEach var="BestProduct" items="${selectBestProduct }">
 				<li>
 					<div class="productListimage">
-						<a href="bestProduct.do?code=${BestProduct.code }"> <img
+						<a href="detailPage.do?code=${BestProduct.code }"> <img
 							class="productListimage_01" src="${BestProduct.image }"></a>
 					</div>
 					<div class="productname">${BestProduct.name}</div>

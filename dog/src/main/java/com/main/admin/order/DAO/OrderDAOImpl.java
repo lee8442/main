@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.main.admin.order.VO.DeliveryVO;
 import com.main.admin.order.VO.OrderVO;
 import com.main.util.SqlSessionFactoryBean;
 
@@ -23,16 +24,22 @@ public class OrderDAOImpl implements OrderDAO {
 	}
 	
 	@Override
-	public void updateOrderStart(OrderVO vo) {
-		sqlSession.update("UpdateOrder.OrderDeliveryStart", vo);
+	public void updateOrderStart(int orderCode) {
+		sqlSession.update("updateOrder.OrderDeliveryStart", orderCode);
 		sqlSession.commit();
 		System.out.println("처리상태 수정 완료");
 	}
 	
 	@Override
-	public void updateOrderEnd(OrderVO vo) {
-		sqlSession.update("UpdateOrder.OrderDeliveryEnd", vo);
+	public void updateOrderEnd(int orderCode) {
+		sqlSession.update("updateOrder.OrderDeliveryEnd", orderCode);
 		sqlSession.commit();
 		System.out.println("처리상태 수정 완료");
+	}
+	@Override
+	public List<DeliveryVO> selectDelivery(DeliveryVO vo){
+		List<DeliveryVO> OrderList = sqlSession.selectList("selectOrder.OrderDelivery", vo);
+		return OrderList;
+		
 	}
 }

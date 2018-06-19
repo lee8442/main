@@ -36,6 +36,9 @@
 	<definition name="simple/*/*/*" extends="simpleLayout">
 		<put-attribute name="content" value="/WEB-INF/views/customerView/{1}/{2}/{3}.jsp" />
 	</definition>
+	<definition name="ajax/*/*" >
+		<put-attribute name="content" value="/WEB-INF/views/customerView/{1}/{2}.jsp" />
+	</definition>
 	
 	<!-- 특정 layout을 사용하지 않을 경우
 	<definition name="member/memberForm" extends="layout">

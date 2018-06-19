@@ -55,7 +55,7 @@
 				</tr>
 				<tr valign="middle" class="this">
 					<td colspan="5" scope="row" class="thistd"><input
-						type="submit" value="등록" class="save" onclick="QnAformCheck()">
+						type="submit" value="등록" class="save" >
 						<input type="reset" value="취소" class="cancel"
 						onclick="window.location='productInquiry.do' "></td>
 				</tr>

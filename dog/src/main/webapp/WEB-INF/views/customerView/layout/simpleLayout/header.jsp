@@ -8,7 +8,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/layout/header.css">
-<script type="text/javascript" src="resources/js/jquery/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 	<header id="header"> </header>
@@ -29,10 +28,25 @@
 				<a href="main.do">#DOG</a>
 			</div>
 			<ul class="topMenu cf">
-				<li><a href="loginForm.do">로그인&nbsp;ㅣ</a></li>
-				<li><a href="insertMember.do">회원가입&nbsp;ㅣ</a></li>
-				<li><a href="#">주문배송조회&nbsp;ㅣ</a></li>
-				<li><a href="#">장바구니&nbsp;ㅣ</a></li>
+				<c:choose>
+					<c:when test="${empty sessionScope.login }">
+						<li><a href="login.do">로그인</a>
+							<p>|</p></li>
+						<li><a href="insertMember.do">회원가입</a>
+							<p>|</p></li>
+					</c:when>
+					<c:otherwise>
+						<li><form id="logout" action="logout.do" method="post">
+								<a href="#"
+									onclick="document.getElementById('logout').submit();">로그아웃</a>
+							</form>
+							<p>|</p></li>
+					</c:otherwise>
+				</c:choose>
+				<li><a href="#">주문배송조회</a>
+					<p>|</p></li>
+				<li><a href="#">장바구니</a>
+					<p>|</p></li>
 				<li><a href="#">고객센터</a></li>
 			</ul>
 		</nav>
@@ -48,11 +62,6 @@
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
 								<ul id="smallre" class="mainMenu_backul mainMenu_backul01">
-									<!-- <li id="smallre">
-									</li> -->
-									<%-- 									<c:forEach var="SmallProduct_01" items="${selectSmallProduct_01}">
-										<li><a href="productListSmallCode.do?smallcode=${SmallProduct_01.code }">${SmallProduct_01.name}</a></li>
-									</c:forEach> --%>
 								</ul>
 							</div>
 						</div></li>
@@ -60,11 +69,6 @@
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
 								<ul id="smallre" class="mainMenu_backul mainMenu_backul02">
-		<%-- 							<c:forEach var="SmallProduct_02"
-										items="${selectSmallProduct_02}">
-										<li><a
-											href="productListSmallCode.do?smallcode=${SmallProduct_02.code }">${SmallProduct_02.name}</a></li>
-									</c:forEach> --%>
 								</ul>
 							</div>
 						</div></li>
@@ -73,11 +77,6 @@
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
 								<ul id="smallre" class="mainMenu_backul mainMenu_backul03">
-			<%-- 						<c:forEach var="SmallProduct_03"
-										items="${selectSmallProduct_03}">
-										<li><a
-											href="productListSmallCode.do?smallcode=${SmallProduct_03.code }">${SmallProduct_03.name}</a></li>
-									</c:forEach> --%>
 								</ul>
 							</div>
 						</div></li>
@@ -85,11 +84,6 @@
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
 								<ul id="smallre" class="mainMenu_backul mainMenu_backul04">
-	<%-- 								<c:forEach var="SmallProduct_04"
-										items="${selectSmallProduct_04}">
-										<li><a
-											href="productListSmallCode.do?smallcode=${SmallProduct_04.code }">${SmallProduct_04.name}</a></li>
-									</c:forEach> --%>
 								</ul>
 							</div>
 						</div></li>
@@ -98,11 +92,6 @@
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
 								<ul id="smallre" class="mainMenu_backul mainMenu_backul05">
-<%-- 									<c:forEach var="SmallProduct_05"
-										items="${selectSmallProduct_05}">
-										<li><a
-											href="productListSmallCode.do?smallcode=${SmallProduct_05.code }">${SmallProduct_05.name}</a></li>
-									</c:forEach> --%>
 								</ul>
 							</div>
 						</div></li>

@@ -3,11 +3,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="updateOrder">
 
-	<update id="OrderDeliveryStart" parameterType="com.main.admin.order.VO.OrderVO" >
-		<![CDATA[update product_order set delivery_code=0 where code = #{code}]]>
+	<update id="OrderDeliveryStart" parameterType="int" >
+		<![CDATA[update product_order set delivery_code=0 where code = #{orderCode}]]>
 	</update>
 	
-	<update id="OrderDeliveryEnd" parameterType="com.main.admin.order.VO.OrderVO" >
-		<![CDATA[update product_order set delivery_code=1 where code = #{code}]]>
+	<update id="OrderDeliveryEnd" parameterType="int" >
+		<![CDATA[update product_order set delivery_code=1 where code = #{orderCode}]]>
 	</update>
 </mapper>
