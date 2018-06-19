@@ -64,11 +64,11 @@
 											<img src="/file/${ii.image }" />
 										</c:if></td>
 									<td>${ii.member_id }</td>
-									<td>${ii.name }</td>
+									<td>${ii.type_code }</td>
 									<td colspan="4"><a href="javascript:aaa(${ii.num })">${ii.subject }
 											<!-- ** 댓글이 있으면 게시글 이름 옆에 출력하기 --> 
-											<c:if test="${ii.recnt > 0}">
-												<span style="color: red;">(${ii.recnt}) </span>
+											<c:if test="${ii.recount > 0}">
+												<span style="color: red;">(${ii.recount}) </span>
 											</c:if>
 									</a></td>
 									<td><fmt:formatDate value="${ii.inquiry_date }"
