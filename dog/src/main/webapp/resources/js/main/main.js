@@ -27,53 +27,50 @@ function showSlides(n) {
 	x[slideIndex - 1].style.display = "block";
 }
 
-$(document).ready(
-		function() {
-			/*베스트상품 세일가격*/
-			/*var fileValue = $("input[name='price']").length;
+$(document).ready(function() {
+	/* 베스트상품 세일가격 */
+	/*
+	 * var fileValue = $("input[name='price']").length;
+	 * 
+	 * var fileData = new Array(fileValue); var fileData1 = new
+	 * Array(fileValue);
+	 * 
+	 * var inp = document.getElementsByName("saleprice"); var ina =
+	 * document.getElementsByName("price");
+	 * 
+	 * for (var i = 0; i < fileValue; i++) {
+	 * 
+	 * inp[i].value = fileData[i] = $("input[name='price']")[i].value 0.7 + "원";
+	 * 
+	 * ina[i].value = fileData1[i] = $("input[name='price']")[i].value + "원";
+	 * 
+	 * inp[i].readOnly = true; ina[i].readOnly = true; }
+	 */
 
-			var fileData = new Array(fileValue);
-			var fileData1 = new Array(fileValue);
+	var newImageValue = $("input[name='newimage']").length;
+	newImage1 = new Array(newImageValue);
 
-			var inp = document.getElementsByName("saleprice");
-			var ina = document.getElementsByName("price");
+	for (var i = 0; i < newImageValue; i++) {
+		newImage1[i] = $("input[name='newimage']")[i].value;
+	}
+});
 
-			for (var i = 0; i < fileValue; i++) {
-
-				inp[i].value = fileData[i] = $("input[name='price']")[i].value
-						* 0.7 + "원";
-
-				ina[i].value = fileData1[i] = $("input[name='price']")[i].value
-						+ "원";
-
-				inp[i].readOnly = true;
-				ina[i].readOnly = true;
-			}*/
-
-			var newImageValue = $("input[name='newimage']").length;
-			newImage1 = new Array(newImageValue);
-		
-			for (var i = 0; i < newImageValue; i++) {
-				newImage1[i] = $("input[name='newimage']")[i].value;
-			}
-		});
-
-//신상품 자동슬라이더
+// 신상품 자동슬라이더
 var interval = 2500;
 var n = 0;
 
 function rotate() {
-	
+
 	var newImageValue = $("input[name='newimage']").length;
 	newImage1 = new Array(newImageValue);
 
 	var newCodeValue = $("input[name='newcode']").length;
 	newCode1 = new Array(newCodeValue);
-	
-	for(var i=0; i< newCodeValue; i++){
+
+	for (var i = 0; i < newCodeValue; i++) {
 		newCode1[i] = $("input[name='newcode']")[i].value;
 	}
-	
+
 	for (var i = 0; i < newImageValue; i++) {
 		newImage1[i] = $("input[name='newimage']")[i].value;
 	}
@@ -117,4 +114,10 @@ function loginCheck() {
 		return false;
 	}
 	return true;
+}
+function goMyPage() {
+	window.location.href = "myPage.do";
+}
+function goAdminPage() {
+	window.location.href = "main.ado";
 }

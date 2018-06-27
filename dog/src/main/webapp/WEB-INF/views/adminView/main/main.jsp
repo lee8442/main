@@ -18,6 +18,12 @@
 			<p id="fp">관리자 페이지 사용안내사항을 작성할 예정입니다.</p>
 		</div>
 	</div>
+	<script>
+		history.pushState(null, null, location.href);
+		window.onpopstate = function() {
+			history.go(1);
+		};
+	</script>
 	<script type="text/javascript" src="resources/admin_js/main/main.js"></script>
 </body>
 </html>

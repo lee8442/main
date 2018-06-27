@@ -5,11 +5,13 @@
 #container {
 	height: 100%;
 }
+
 #container:after {
 	content: "";
 	clear: both;
 	display: block;
 }
+
 #content {
 	width: 100%;
 }
@@ -21,11 +23,13 @@
 	margin: 30px auto 0;
 	height: 300px;
 }
+
 #content .hot .imageLogin_full {
 	height: 278px;
 	width: 760px;
 	float: left;
 }
+
 #content .hot .imageLogin_full .imageLogin {
 	display: none;
 	width: 741px;
@@ -35,10 +39,12 @@
 	margin-top: 10px;
 	vertical-align: middle;
 }
+
 #content .hot .imageLogin_full .imageLogin .newImage {
 	margin-left: 30px;
 	margin-top: 25px;
 }
+
 #content .hot .imageLogin_full .prev, .next {
 	cursor: pointer;
 	position: absolute;
@@ -54,26 +60,31 @@
 	border-radius: 0 3px 3px 0;
 	user-select: none;
 }
+
 #content .hot .imageLogin_full .next {
 	right: 0;
 	border-radius: 3px 0 0 3px;
 }
+
 #content .hot .imageLogin_full .prev:hover, .next:hover {
 	background-color: #f1f1f1;
 	color: black;
 }
+
 #content .hot .boardImage {
 	width: 440px;
 	height: 228px;
 	float: right;
 	margin-top: 73px;
 }
+
 #content .hot .boardImage  .boardImage_top {
 	background-color: #f1f1f1;
 	width: 70%;
 	height: 100%;
 	margin: 0 auto 0;
 }
+
 #content .hot .boardImage  .boardImage_top .login_Form {
 	float: left;
 	width: 218px;
@@ -84,7 +95,7 @@
 	width: 308px;
 	height: 70px;
 	text-align: center;
-	line-height: 70px;	
+	line-height: 70px;
 }
 
 #content .hot .boardImage  .boardImage_top .login_Form .loginId {
@@ -95,11 +106,13 @@
 	width: 180px;
 	font-size: 15px;
 }
+
 #content .hot .boardImage  .boardImage_top .login_Image {
 	width: 90px;
 	height: 100px;
 	float: right;
 }
+
 #content .hot .boardImage  .boardImage_top .login_Image .loginbtn {
 	height: 70px;
 	width: 70px;
@@ -111,13 +124,16 @@
 	border-bottom: 0;
 	border-right: 0;
 }
+
 #content .hot .boardImage  .boardImage_top .logininpormation {
 	height: 25px;
 }
+
 #content .hot .boardImage  .boardImage_top .logininpormation a {
 	padding-left: 15px;
 	font-size: 13px;
 }
+
 #content .hot .boardImage  .boardImage_top .loginFind {
 	height: 25px;
 }
@@ -135,6 +151,7 @@
 #content .hot .boardImage  .boardImage_top .loginFind {
 	font-size: 13px;
 }
+
 #content .hot .boardImage  .boardImage_top .loginFind a.loginFind-id {
 	font-size: 13px;
 	float: none;
@@ -145,22 +162,22 @@
 	height: 30px;
 }
 
-#content .hot .boardImage .loginwiter .loginwiternaver{
+#content .hot .boardImage .loginwiter .loginwiternaver {
 	float: left;
 	margin-left: 27px;
 }
 
-#content .hot .boardImage .loginwiter .loginwiterkakao{
-float: right;
+#content .hot .boardImage .loginwiter .loginwiterkakao {
+	float: right;
 	margin-right: 20px;
 }
 
-#content .hot .boardImage .boardImage_bottom_01{
+#content .hot .boardImage .boardImage_bottom_01 {
 	float: left;
 	margin-top: 25px;
 }
 
-#content .hot .boardImage .boardImage_bottom_02{
+#content .hot .boardImage .boardImage_bottom_02 {
 	margin-top: 25px;
 }
 
@@ -173,6 +190,7 @@ float: right;
 	margin-left: 15px;
 	margin-top: 20px;
 }
+
 #content .hot .boardImage .boardImage_bottom_02 .loginBtn2 {
 	width: 130px;
 	height: 50px;
@@ -182,6 +200,7 @@ float: right;
 	margin-left: 15px;
 	margin-top: 45px;
 }
+
 #content .hot .boardImage .boardImage_bottom .loginBtn {
 	height: 40px;
 	width: 130px;
@@ -192,6 +211,7 @@ float: right;
 	border-left: 0;
 	border-bottom: 0;
 	border-right: 0;
+	float: left;
 }
 
 #content .hot .boardImage .boardImage_bottom .loginBtn2 {
@@ -206,8 +226,6 @@ float: right;
 	border-right: 0;
 }
 
-
-
 #content .box {
 	width: 1200px;
 	margin: 30px auto 0;
@@ -217,7 +235,7 @@ float: right;
 	margin-top: 30px;
 }
 
-#content .box .best li{
+#content .box .best li {
 	border: 1px solid;
 }
 
@@ -225,15 +243,18 @@ float: right;
 	font-size: 25px;
 	margin-bottom: 10px;
 }
+
 #content .box ul {
 	margin-left: 30px;
 }
+
 #content .box ul li {
 	float: left;
 	width: 210px;
 	height: 300px;
 	margin-left: 13px;
 }
+
 #content .box ul li:nth-child(1) {
 	margin-left: 0;
 }
@@ -243,10 +264,11 @@ float: right;
 	width: 210px;
 	border: 1px solid;
 }
+
 #content .box .bestiamge .bestimage_01 {
 	height: 198px;
-    width: 208px;
-    vertical-align: top;
+	width: 208px;
+	vertical-align: top;
 }
 
 #content .box .productname {
@@ -254,45 +276,43 @@ float: right;
 	width: 210px;
 	text-align: center;
 }
+
 #content .box .productprice {
 	height: 25px;
 	width: 210px;
 	text-align: center;
 }
 
-#content .box .price{
+#content .box .price {
 	border: none;
 	text-align: center;
 	width: 60px;
 }
 
-
-#content .box .saleprice{
+#content .box .saleprice {
 	border: none;
 	text-align: center;
 	color: red;
 	font-weight: bold;
 }
 
-
 #content .box .productsimple_explain {
 	height: 100px;
 	width: 210px;
 	text-align: center;
 	color: blue;
-	
 }
-
 
 #content .box .recomiamge {
 	height: 200px;
 	width: 210px;
 	border: 1px solid;
 }
+
 #content .box .recomiamge .recomimage_01 {
 	height: 198px;
-    width: 208px;
-    vertical-align: top;
+	width: 208px;
+	vertical-align: top;
 }
 
 #content .box .productname {
@@ -300,13 +320,14 @@ float: right;
 	width: 210px;
 	text-align: center;
 }
+
 #content .box .productprice {
 	height: 25px;
 	width: 210px;
 	text-align: center;
 }
 
-#content .box .price{
+#content .box .price {
 	border: none;
 	text-align: center;
 	width: 60px;
@@ -325,7 +346,6 @@ float: right;
 	width: 210px;
 	text-align: center;
 	color: blue;
-	
 }
 
 #content .dogParkfull {
@@ -346,66 +366,79 @@ float: right;
 	background-color: aqua;
 	float: left;
 }
+
 #content .dogParkfull .dogPark .dogParkleft .dogParkleftup {
 	width: 300px;
 	height: 200px;
 	background-color: #8080ff;
 }
+
 #content .dogParkfull .dogPark .dogParkleft .dogParkleftdown {
 	width: 300px;
 	height: 200px;
 	background-color: #ff8000;
 }
+
 #content .dogParkfull .dogPark .dogParkcenter {
 	width: 600px;
 	height: 400px;
 	float: left;
 	background-color: silver;
 }
+
 #content .dogParkfull .dogPark .dogParkcenterup {
 	width: 600px;
 	height: 200px;
 	background-color: maroon;
 	float: left;
 }
+
 #content .dogParkfull .dogPark .dogParkcenterup .dogParkcenterup_left {
 	width: 300px;
 	height: 200px;
 	background-color: #400040;
 	float: left;
 }
+
 #content .dogParkfull .dogPark .dogParkcenterup .dogParkcenterup_right {
 	width: 300px;
 	height: 200px;
 	background-color: #804040;
 	float: left;
 }
+
 #content .dogParkfull .dogPark .dogParkcenterdown {
 	width: 600px;
 	height: 200px;
 	background-color: #00ffff;
 	float: left;
 }
+
 #content .dogParkfull .dogPark .dogParkright {
 	width: 300px;
 	height: 400px;
 	background-color: yellow;
 	float: left;
 }
+
 #content .dogParkfull .dogParkwrite {
 	text-align: center;
 }
+
 #content .boxNew {
 	width: 1200px;
 	margin: 50px auto 0;
 }
+
 #content .boxNew h4 {
 	font-size: 25px;
 	margin-bottom: 10px;
 }
+
 #content .boxNew ul {
 	margin-left: 30px;
 }
+
 #content .boxNew ul li {
 	float: left;
 	width: 330px;
@@ -413,6 +446,22 @@ float: right;
 	background-color: #566270;
 	margin-left: 55px;
 }
+
 #content .boxNew ul li:nth-child(1) {
 	margin-left: 0;
+}
+
+#content .hot .boardImage .admin_boardImage_top {
+	background-color: #f1f1f1;
+	width: 70%;
+	height: 60%;
+	margin: 0 auto 0;
+}
+
+.admin_boardImage_top>div {
+	text-align: center;
+}
+
+.admin_boardImage_top>div>form {
+	margin-top: 25px;
 }

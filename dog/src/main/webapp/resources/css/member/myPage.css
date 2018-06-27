@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+#warp {
+	width: 1900px;
+	height: 1300px;
+}
+
+#this_menu {
+	width: 1800px;
+	height: 1350px;
+	position: absolute;
+	margin-top: 85px;
+	left: 60px;
+}
+
+#page {
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	top: 90px;
+	left: 110px;
+	font-size: 25px;
+	font-family: sans-serif, fantasy;
+}
+
+#name_box {
+	position: absolute;
+	width: 1600px;
+	height: 230px;
+	top: 160px;
+	left: 110px;
+	border-bottom: 1px solid silver;
+}
+
+}
+.my_level {
+	float: left;
+	margin-top: 25px;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.my_level  li {
+	float: left;
+	width: 145px;
+	border-left: 1px solid #e7e7e7;
+	background: #fafafa;
+	height: 90px;
+	padding: 9px 16px 9px 0;
+	border-left: 1px solid #e7e7e7;
+	border-right: 1px solid #e7e7e7;
+	background: #fafafa;
+	height: 90px;
+}
+
+.my_level li
+.label {
+	font-size: 11px;
+	color: #a0a0a0;
+	margin-left: 14px;
+}
+
+.my_level li
+.value {
+	font-size: 11px;
+	color: #a0a0a0;
+	margin: 5px 0 0 15px;
+}
+
+.my_level li
+strong {
+	font-size: 17px;
+	color: #000;
+}
+
+#name_box .edit {
+	clear: both;
+	float: left;
+	margin: 11px 0 0 0;
+}
+
+#name_box .edit_two {
+	clear: both;
+	float: left;
+	margin: -30px 0 0px 155px;
+}
+
+.btn.Wbig {
+	min-width: 150px;
+}
+
+.btn.Small {
+	font-size: 11px;
+	height: 30px;
+	line-height: 26px;
+}
+
+.btn.Light {
+	background: #fff;
+	color: #7d7d7d;
+	border: 1px solid #ccc;
+}
+
+.btn {
+	font-family: "Roboto";
+	cursor: pointer;
+	outline: none;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0px 8px 0 9px;
+	margin: 0;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+}
+
+.point {
+	padding: 0;
+	width: 1570px;
+	height: 55px;
+	margin: auto;
+	margin-top: 440px;
+	margin-right: 120px;
+}
+
+.title 
+h3 {
+	float: left;
+	color: #353535;
+	height: 27px;
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.mybank {
+	clear: both;
+	padding: 15px 0px 85px 0;
+	border: 1px solid #e7e7e7;
+	background: #fcfcfc;
+	position: absolute;
+	top: 500px;
+	width: 1600px;
+	height: 0px;
+}
+
+.mybank ul {
+	display: table;
+	width: 100%;
+	min-width: 756px;
+	font-size: 0;
+	line-height: 0;
+	background:
+		url(http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/bg_myshop_line.gif)
+		repeat-y 50% 0;
+}
+
+.mybank li {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	width: 50%;
+	margin: 1px 0 2px;
+	font-size: 15px;
+	color: #353535;
+	line-height: 24px;
+	vertical-align: top;
+	background:
+		url(http://img.echosting.cafe24.com/skin/base_ko_KR/myshop/ico_myshop.gif)
+		no-repeat 21px 8px;
+}
+
+.mybank li .tit {
+	float: left;
+	width: 30%;
+	padding: 0 0 0 29px;
+	font-weight: normal;
+}
+
+.mybank li .use {
+	color: #008bcc;
+}
+
+.mybank li .data {
+	float: right;
+	width: 35%;
+	padding: 0 72px 0 0;
+	text-align: right;
+}
+
+.order {
+	position: absolute;
+	width: 1600px;
+	height: 500px;
+	margin-top: 240px;
+	margin-left: 105px;
+}
+
+.order
+table {
+	margin-top: 50px;
+	border-collapse: separate;
+	color: #353535;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.order
+table th {
+	padding: 13px 0 12px;
+	border-top: 2px solid #353535;
+	font-weight: normal;
+	vertical-align: middle;
+	background: #fcfcfc;
+}
+
+thead {
+	display: table-header-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+.txtLittle {
+	font-size: 15px;
+}
+
+tr {
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+
+.order
+table th:first-child {
+	border-left: 0;
+}
+
+table .number {
+	width: 115px;
+}
+
+table .number2 {
+	width: 125px;
+}
+
+table .thumb {
+	width: 90px;
+}
+
+table .product {
+	width: 500px;
+}
+
+table .quantity {
+	width: 60px;
+}
+
+table .price {
+	width: 110px;
+}
+
+table .state {
+	width: 110px;
+}
+
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+table td {
+	padding: 5px 0 5px;
+	border-top: 1px solid #e6e6e6;
+	text-align: center;
+	vertical-align: middle;
+}
+
+table .empty {
+	padding: 185px 0;
+	font-size: 25px;
+	text-align: center;
+	font-weight: normal;
+	color: #757575;
+}

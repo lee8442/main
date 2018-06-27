@@ -13,4 +13,8 @@ public class LoginServiceImpl implements LoginService {
 	public MemberVO login(MemberVO vo) {
 		return MemberDAO.login(vo);
 	}
+	@Override
+	public MemberVO adminLogin(MemberVO adminvo) {
+		return MemberDAO.adminLogin(adminvo);
+	}
 }

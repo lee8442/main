@@ -21,21 +21,49 @@
 	<mvc:annotation-driven />
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/reviewAllBoardList.do"/>
-			<bean class="com.main.customer.member.Interceptor.LoginInterceptor"/>
+			<mvc:mapping path="/reviewAllBoardList.do" />
+			<mvc:mapping path="/myPage.do" />
+			<mvc:mapping path="/deleteMyProfile.do" />
+			<bean
+				class="com.main.customer.member.Interceptor.LoginInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
-	<context:component-scan base-package="com.main.customer.*.Controller" use-default-filters="false">
-		<context:include-filter expression="org.springframework.stereotype.Controller" type="annotation" />
+	<context:component-scan
+		base-package="com.main.customer.*.Controller"
+		use-default-filters="false">
+		<context:include-filter
+			expression="org.springframework.stereotype.Controller"
+			type="annotation" />
 	</context:component-scan>
-	
+
 	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
 		<property name="prefix" value="/WEB-INF/views/customerView/" /> <property 
 		name="suffix" value=".jsp" /> </bean> -->
-		
-		<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	<!-- 자바 이메일 보내기 -->
+	<bean id="mailSender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="defaultEncoding" value="utf-8" />
+
+		<property name="username" value="rlqhr2@gmail.com" />
+		<property name="password" value="eka03rl06!@" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="emailSender"
+		class="com.main.customer.main.Email.EmailSender" />
+	<bean id="email" class="com.main.customer.member.VO.Email" />
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="1000000" />
 	</bean>
-	
-	
+
+
 </beans>

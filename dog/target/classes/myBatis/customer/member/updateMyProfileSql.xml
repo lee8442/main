@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="myBatis.customer.member">
+	<update id="updateMyProfile"
+		parameterType="com.main.customer.member.VO.MemberVO">
+		<![CDATA[update member set password=#{password},address=#{address},email=#{email} where id=#{id}]]>
+	</update>
+</mapper>

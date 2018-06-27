@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 h3 {
 	margin-left: 2%;
 	display: inline-block;
@@ -7,4 +8,20 @@ h3 {
 #time {
 	float: right;
 	margin-right: 3%;
+}
+
+#admin_zone {
+	width: 302px;
+	height: 55px;
+	position: absolute;
+	top: 25px;
+	left: 1325px;
+}
+
+#logout {
+	float: right;
+}
+
+a {
+	text-decoration: none;
 }

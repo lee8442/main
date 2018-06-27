@@ -1,5 +1,7 @@
 package com.main.customer.member.VO;
 
+import java.util.Date;
+
 public class MemberVO {
 	private String id;
 	private String name;
@@ -8,6 +10,16 @@ public class MemberVO {
 	private String address;
 	private String email;
 	private String phone;
+	private Date join_date;
+	
+	
+	public Date getJoin_date() {
+		return join_date;
+	}
+
+	public void setJoin_date(Date join_date) {
+		this.join_date = join_date;
+	}
 
 	public String getId() {
 		return id;

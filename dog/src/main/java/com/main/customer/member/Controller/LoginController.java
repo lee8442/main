@@ -21,20 +21,27 @@ public class LoginController {
 		System.out.println("로그인 페이지");
 		return "simple/member/loginForm";
 	}
-	
+
 	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
-	public String login(MemberVO vo, HttpSession session ,Model model){
+	public String login(MemberVO vo, MemberVO adminvo, HttpSession session, Model model) {
 		System.out.println("로그인 실행");
 		MemberVO userInfo = LoginService.login(vo);
-		if(userInfo !=null) {
+		MemberVO adminInfo = LoginService.adminLogin(adminvo);
+		if (userInfo != null) {
 			session.setAttribute("login", userInfo);
 			return "redirect:main.do";
+		} else if (adminInfo != null) {
+			session.setAttribute("adminLogin", adminInfo);
+			return "redirect:main.ado";
 		} else {
+			System.out.println("실패합니까");
 			model.addAttribute("loginErr", "false");
 			return "redirect:login.do";
 		}
+
 	}
-	@RequestMapping(value="/logout.do", method= RequestMethod.POST)
+
+	@RequestMapping(value = "/logout.do", method = RequestMethod.POST)
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "redirect:main.do";

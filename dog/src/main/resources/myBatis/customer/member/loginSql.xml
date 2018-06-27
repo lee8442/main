@@ -6,6 +6,11 @@
 	<select id="login"
 		parameterType="com.main.customer.member.VO.MemberVO"
 		resultType="com.main.customer.member.VO.MemberVO">
-		<![CDATA[select * from MEMBER where id =#{id} and password =#{password}]]>
+		<![CDATA[select * from MEMBER where id =#{id} and password =#{password} and DELETE_STATE=0]]>
+	</select>
+	<select id="adminLogin"
+		parameterType="com.main.customer.member.VO.MemberVO"
+		resultType="com.main.customer.member.VO.MemberVO">
+		<![CDATA[select * from admin where id =#{id} and password =#{password}]]>
 	</select>
 </mapper>

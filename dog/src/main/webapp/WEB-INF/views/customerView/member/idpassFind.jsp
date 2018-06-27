@@ -5,6 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="resources/css/member/idpassFind.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>idSearch</title>
 </head>
 <body class="body">
@@ -25,62 +27,53 @@
 			</div>
 			<div class="tab-container">
 				<!-- 아이디찾기  -->
-				<div id="tab1" class="tab_content" style="display: none;">
-					<div>
-						<div class="tabcontent-name">
-							<div>
-								<b class="tabcontent-b-name">이름</b><br /> <b
-									class="tabcontent-b-tel">전화번호</b>
+				<div id="tab1" class="tab_content">
+					<div class="tabcontent-name">
+						<form action="findId.do" method="POST" id="this_form"
+							class="hide_content" onsubmit="return checkForm()">
+							<div class="input-container">
+								<i class="fa fa-user icon"></i> <input class="input-field"
+									type="text" placeholder="Username" name="name"
+									autocomplete="off">
 							</div>
-							<div>
-								<input type="search" id="name" class="name"
-									placeholder="이름을 입력해주세요.">
-								<select class="phone-list-1" name="phone1">
-									<option value="010">010</option>
-									<option value="070">070</option>
-								</select> <b>ㅡ</b> <input class="phone-input-1" name="phone2" type="text"
-									onkeyup="phoneInput(this)"> <b>ㅡ</b> <input
-									class="phone-input-1" name="phone3" type="text"
-									onkeyup="phoneInput(this)">
+							<div class="input-container">
+								<i class="fa fa-envelope icon"></i> <input class="input-field"
+									type="text" placeholder="Email" name="email" autocomplete="off">
 							</div>
-						</div>
-					</div>
-					<input name="phone" type="hidden">
-					<div class="tabcontent-block">
-						<input type="submit" class="tabcontent-ok" value="확인">
+							<button type="submit" class="btn">Register</button>
+						</form>
 					</div>
 				</div>
 				<!-- 비밀번호 찾기  -->
 				<div id="tab2" class="tab_content" style="display: block;">
 					<div class="tabcontent-block">
-						<input type="submit" class="tabcontent-ok2" value="확인">
-						<div class="tab-pass-content">
-							<ul class="tab-pass-ul">
-								<li><a class="content-name-a">이름</a><input
-									class="content-name" type="text"></li>
-								<li><b>전화번호</b>
-									<div>
-										<select class="phone-list" name="phone1">
-											<option value="010">010</option>
-											<option value="070">070</option>
-										</select><b class="b-">ㅡ</b><input class="phone-input" name="phone2"
-											type="text" onkeyup="phoneInput(this)"><b class="b-">ㅡ</b><input
-											class="phone-input" name="phone3" type="text"
-											onkeyup="phoneInput(this)">
-									</div> <input name="phone" type="hidden"></li>
-								<li><a class="content-id-ok-a">아이디</a><input
-									class="content-id" type="text"> <input
-									class="content-id-ok" type="submit" value="아이디확인"></li>
-								<li><a class="content-tel-ok-a">인증번호</a><input
-									class="content-tel-ok" onclick="" type="button" value="인증번호받기">
-									<input class="content-submit" type="text" disabled="disabled"></li>
-							</ul>
-						</div>
+						<form action="findPassword.do" method="POST" id="this_form_two"
+							onsubmit="return checkFormTwo()"class="hide_content" >
+							<div class="input-container">
+								<i class="fa fa-user icon"></i> <input class="input-field"
+									type="text" placeholder="UserId" name="id" autocomplete="off">
+							</div>
+							<div class="input-container">
+								<i class="fa fa-user icon"></i> <input class="input-field"
+									type="text" placeholder="Username" name="name"
+									autocomplete="off">
+							</div>
+							<div class="input-container">
+								<i class="fa fa-envelope icon"></i> <input class="input-field"
+									type="text" placeholder="Email" name="email" autocomplete="off"
+									id="pass_email">
+							</div>
+							<button type="submit" class="btn" id="find_password">Register</button>
+						</form>
 					</div>
 				</div>
 			</div>
+			<div class="tab_content"></div>
 		</div>
 	</div>
 	<script type="text/javascript" src="resources/js/member/idpassFind.js"></script>
+	<script>
+		var loginErr = "${param.loginErr}";
+	</script>
 </body>
 </html>

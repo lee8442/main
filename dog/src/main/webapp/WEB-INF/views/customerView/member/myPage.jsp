@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,18 +10,20 @@
 <link rel="stylesheet" href="resources/css/member/myPage.css">
 </head>
 <body>
+	<c:if test="${not empty sessionScope.login}"></c:if>
 	<div id="warp">
 		<div id="this_menu">
 			<div id="page">
 				<h2>My page</h2>
 			</div>
 			<div id="name_box">
-				<p style="font-size: 30px; border-bottom:1px solid silver;">남기복[ ]</p>
+				<p style="font-size: 30px; border-bottom: 1px solid silver;">${sessionScope.login.name }[
+					]</p>
 				<br />
 				<ul class="my_level">
 					<li><span class="label">적립금</span>
 						<div class="value">
-							<strong>db서 포인트</strong>
+							<strong>${seesionScope.login.point }</strong>
 						</div></li>
 					<li><span class="label">구매건수</span>
 						<div class="value">
@@ -29,7 +31,11 @@
 						</div></li>
 				</ul>
 				<div class="edit">
-					<a href="" class="btn Small Wbig Light"><i>프로필 수정</i></a>
+					<a href="updateMyProfile.do" class="btn Small Wbig Light"><i>프로필
+							수정</i></a>
+				</div>
+				<div class="edit_two">
+					<a href="deleteMyProfile.do" class="btn Small Wbig Light"><i>회원탈퇴</i></a>
 				</div>
 			</div>
 			<div class="point">
@@ -47,9 +53,11 @@
 				</div>
 			</div>
 			<div class="order">
-				<div class="title"><h3>Order List</h3></div>
+				<div class="title">
+					<h3>Order List</h3>
+				</div>
 				<table width="100%" border="1" summary>
-				<!-- 최근 주문상품 -->
+					<!-- 최근 주문상품 -->
 					<thead>
 						<tr class="txtLittle">
 							<th scope="col" class="number">주문일자</th>
@@ -64,7 +72,7 @@
 					<tbody class="displaynone">
 						<tr class="">
 							<td class="number txtLittle displaynone">
-							<!-- 주문일자 -->
+								<!-- 주문일자 -->
 							</td>
 							<td class="number2">
 								<!-- 주문번호 -->

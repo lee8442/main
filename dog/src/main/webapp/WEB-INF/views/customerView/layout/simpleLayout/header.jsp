@@ -27,28 +27,41 @@
 				</div>
 				<a href="main.do">#DOG</a>
 			</div>
-			<ul class="topMenu cf">
-				<c:choose>
-					<c:when test="${empty sessionScope.login }">
-						<li><a href="login.do">로그인</a>
-							<p>|</p></li>
-						<li><a href="insertMember.do">회원가입</a>
-							<p>|</p></li>
-					</c:when>
-					<c:otherwise>
-						<li><form id="logout" action="logout.do" method="post">
-								<a href="#"
-									onclick="document.getElementById('logout').submit();">로그아웃</a>
-							</form>
-							<p>|</p></li>
-					</c:otherwise>
-				</c:choose>
-				<li><a href="#">주문배송조회</a>
-					<p>|</p></li>
-				<li><a href="#">장바구니</a>
-					<p>|</p></li>
-				<li><a href="#">고객센터</a></li>
-			</ul>
+			<c:if test="${empty sessionScope.adminLogin }">
+				<ul class="topMenu cf">
+					<c:choose>
+						<c:when test="${empty sessionScope.login }">
+							<li><a href="login.do">로그인</a>
+								<p>|</p></li>
+							<li><a href="insertMember.do">회원가입</a>
+								<p>|</p></li>
+							<li><a href="#">주문배송조회</a>
+								<p>|</p></li>
+							<li><a href="#">장바구니</a>
+								<p>|</p></li>
+							<li><a href="#">고객센터</a></li>
+						</c:when>
+						<c:otherwise>
+							<li><form id="bye" action="logout.do" method="post">
+									<a href="#" onclick="document.getElementById('bye').submit();">로그아웃</a>
+								</form>
+								<p>|</p></li>
+							<li><a href="#">주문배송조회</a>
+								<p>|</p></li>
+							<li><a href="#">장바구니</a>
+								<p>|</p></li>
+							<li><a href="#">고객센터</a></li>
+						</c:otherwise>
+					</c:choose>
+				</ul>
+			</c:if>
+			<c:if test="${not empty sessionScope.adminLogin }">
+				<ul class="topMenu cf">
+					<li><form id="bye" action="logout.do" method="post">
+							<a href="#" onclick="document.getElementById('bye').submit();"></a>
+						</form></li>
+				</ul>
+			</c:if>
 		</nav>
 	</div>
 	<div id="headercotent">

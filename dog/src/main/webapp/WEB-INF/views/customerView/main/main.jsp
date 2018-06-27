@@ -26,11 +26,10 @@
 					</div>
 				</div>
 				<!-- 신상품 사진 우측 -->
-				<c:choose>
-					<c:when test="${not empty sessionScope.login }">
+				<c:if test="${not empty sessionScope.login }">
 						<div class="boardImage">
 							<div class="boardImage_top">
-								<div class="login_Form01">${sessionScope.login.name}님                                
+								<div class="login_Form01">${sessionScope.login.name}님
 									환영합니다.</div>
 								<div class="logininpormation">
 									<a href="#">개인정보</a><br>
@@ -50,8 +49,9 @@
 								</div>
 							</div>
 						</div>
-					</c:when>
-					<c:otherwise>
+					</c:if>
+					<c:if test="${empty sessionScope.login && empty sessionScope.adminLogin}">
+					<%-- <c:otherwise> --%>
 						<div class="boardImage">
 							<div class="boardImage_top">
 								<form action="login.do" method="post"
@@ -67,8 +67,7 @@
 								</form>
 								<div class="loginFind">
 									<a class="loginFind-id" href="idpassFind.do"> <input
-										type="button" value="아이디찾기"> <input type="button"
-										value="비밀번호 찾기">
+										type="button" value="아이디/비밀번호찾기">
 									</a> <a class="loginFind-signUp" href="insertMember.do"> <input
 										class="regibtn" type="button" value="회원가입">
 									</a>
@@ -87,8 +86,25 @@
 								</div>
 							</div>
 						</div>
-					</c:otherwise>
-				</c:choose>
+						</c:if>
+					<%-- </c:otherwise> --%>
+				<%-- </c:choose> --%>
+				<!-- admin 로그인일 때 보여줄 화면 -->
+					<c:if test="${not empty sessionScope.adminLogin }">
+						<div class="boardImage">
+							<div class="admin_boardImage_top">
+								<div class="login_Form01">${sessionScope.adminLogin.id}님
+									환영합니다.</div>
+								<div class="boardImage_bottom">
+									<input class="loginBtn" type="button" value="관리자페이지"
+										onclick="goAdminPage()">
+									<form action="logout.do" method="post" >
+										<input class="loginBtn2" type="submit" value="로그아웃" >
+									</form>
+								</div>
+							</div>
+						</div>
+						</c:if>
 			</div>
 			<div class="box">
 				<h4>베스트 상품</h4>

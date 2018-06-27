@@ -89,12 +89,12 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	height: 380px;
+	display: -webkit-box;
 }
 
 .tab_content {
-	display: block;
-	width: 455px;
-	height: 350px;
+	width: 915px;
+	height: 465px;
 	margin: auto;
 }
 
@@ -118,11 +118,14 @@ html ul.tab li.active, html ul.tab li.active a:hover {
 	border-bottom: 1px solid #c0c0c0;
 }
 
-.tabcontent-name {
-	float: left;
-	margin-top: 150px;
+/* .id_fine_world {
+	height: 410px;
+	position: absolute;
+	bottom: -175px;
+	width: 1056px;
+	left: 430px;
+} */
 }
-
 .name {
 	height: 40px;
 	padding: 5px;
@@ -302,4 +305,59 @@ html ul.tab li.active, html ul.tab li.active a:hover {
 	border-left: 0;
 	border-bottom: 0;
 	position: relative;
+}
+
+/* 여기서부터는 w3참고 */
+.input-container {
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	width: 100%;
+	margin-bottom: 35px;
+}
+
+.icon {
+	padding: 10px;
+	background: #000000;
+	color: white;
+	min-width: 50px;
+	text-align: center;
+}
+
+.input-field {
+	width: 100%;
+	padding: 10px;
+	outline: none;
+}
+
+.input-field:focus {
+	border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+	background-color: #000000;
+	color: white;
+	padding: 15px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+.btn:hover {
+	opacity: 1;
+}
+
+#this_form {
+	max-width: 500px;
+	margin: auto;
+	margin-top: 90px;
+	margin-top: 70px;
+}
+
+#this_form_two {
+	max-width: 500px;
+	margin: auto;
+	margin-top: 90px;
+	margin-top: 70px;
 }

@@ -4,4 +4,5 @@ import com.main.customer.member.VO.MemberVO;
 
 public interface LoginService {
 	public MemberVO login(MemberVO vo);
+	public MemberVO adminLogin(MemberVO adminvo);
 }

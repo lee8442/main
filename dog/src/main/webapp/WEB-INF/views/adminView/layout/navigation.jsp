@@ -27,7 +27,7 @@
 			<li><a href="../sales/salesAdminDetailed.jsp"> 상세매출</a></li>
 			<br />
 			<li class="menu">고객관리</li>
-			<li><a href="#"> 회원</a></li>
+			<li><a href="selectMemberList.ado"> 회원</a></li>
 			<li><a href="#"> 관리자</a></li>
 			<br />
 			<li class="menu">게시판관리</li>

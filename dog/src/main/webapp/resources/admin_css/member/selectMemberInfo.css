@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+#member_update>table>tbody>tr>td:nth-child(2n+1) {
+	text-align: center;
+	background-color: beige;
+}
+
+#member_update>table>tbody>tr>td:nth-child(2n+2) {
+	text-align: center;
+	background-color: ghostwhite;
+}
+
+#member_update>table {
+	width: 900px;
+	height: 400px;
+	border: 2px solid black;
+	font-family: 바탕체, sans-serif;
+	font-size: 25px;
+}
+
+#update_form {
+	width: 1660px;
+	height: 700px;
+	float: left;
+}
+
+#update_title {
+	height: 80px;
+	width: 1660px;
+	border-bottom: silver;
+	border-bottom-style: solid;
+	display: flex;
+	font-family: sans-serif;
+}
+
+td {
+	border: 1px solid black;
+}
+
+.input {
+	width: 315px;
+}
+
+#phone2 {
+	width: 116px;
+}
+
+#phone3 {
+	width: 116px;
+}
+
+.details-address {
+	width: 315px;
+}

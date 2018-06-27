@@ -47,6 +47,8 @@
 		<!--admin -->
 		<!--board -->
 		<!--member -->
+		<mapper resource="myBatis/admin/member/deleteMemberSql.xml"/>
+		<mapper resource="myBatis/admin/member/selectListMemberSql.xml"/>
 		<!--order -->
 		<mapper resource="myBatis/admin/order/selectOrderListSql.xml" />
 		<mapper resource="myBatis/admin/order/updateOrderSql.xml" />
@@ -86,6 +88,10 @@
 		<!--member -->
 		<mapper resource="myBatis/customer/member/insertMemberSql.xml" />
 		<mapper resource="myBatis/customer/member/loginSql.xml" />
+		<mapper resource="myBatis/customer/member/selectFindIdSql.xml"/>
+		<mapper resource="myBatis/customer/member/selectFindPasswordSql.xml"/>
+		<mapper resource="myBatis/customer/member/deleteMyProfileSql.xml"/>
+		<mapper resource="myBatis/customer/member/updateMyProfileSql.xml"/>
 		<!--order -->
 		<!--payment -->
 		<!--product -->
