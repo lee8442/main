@@ -3,7 +3,11 @@ package com.main.admin.order.Service;
 
 public interface UpdateOrderService {
 	
-	public void updateOrderStart(int orderCode);
+	public void updateOrderStart(String orderCodeS);
 	
-	public void updateOrderEnd(int orderCode);
+	public void updateOrderEnd(String orderCodeS);
+	
+	public void orderRefundEnd(String cancleCodeS);
+	
+	public void orderExchangeEnd(String cancleCodeS);
 }

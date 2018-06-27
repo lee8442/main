@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="admin.order.updateOrder">
-	<update id="OrderDeliveryStart" parameterType="int">
-		<![CDATA[update product_order set delivery_code=0 where code = #{orderCode}]]>
-	</update>
+<mapper namespace="admin.order">
 
-	<update id="OrderDeliveryEnd" parameterType="int">
-		<![CDATA[update product_order set delivery_code=1 where code = #{orderCode}]]>
+	<update id="orderDeliveryStart" parameterType="String" >
+		<![CDATA[update product_order set delivery_code=0 where code = #{orderCodeS}]]>
+	</update>
+	
+	<update id="orderDeliveryEnd" parameterType="String" >
+		<![CDATA[update product_order set delivery_code=1 where code = #{orderCodeS}]]>
+	</update>
+	
+	<update id="orderRefundEnd" parameterType="String" >
+		<![CDATA[update product_order set cancle_code=2 where code = #{cancleCodeS}]]>
+	</update>
+	
+	<update id="orderExchangeEnd" parameterType="String" >
+		<![CDATA[update product_order set cancle_code=4 where code = #{cancleCodeS}]]>
 	</update>
 </mapper>

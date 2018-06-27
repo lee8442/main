@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.main.admin.order.DAO.OrderDAO;
-import com.main.admin.order.VO.DeliveryVO;
 import com.main.admin.order.VO.OrderVO;
 
 @Service
@@ -20,7 +19,19 @@ public class SelectOrderServiceImpl implements SelectOrderService {
 	}
 	
 	@Override
-	public List<DeliveryVO> selectDelivery(DeliveryVO vo){
-		return orderDAO.selectDelivery(vo);
+	public List<OrderVO> endOrderList(OrderVO vo){
+		return orderDAO.endOrderList(vo);
 	}
+	
+	@Override
+	public List<OrderVO> orderRefundList(OrderVO vo){
+		return orderDAO.orderRefundList(vo);
+	}
+	
+	@Override
+	public List<OrderVO> orderExchangeList(OrderVO vo){
+		return orderDAO.orderExchangeList(vo);
+	}
+	
+	
 }

@@ -5,11 +5,13 @@ public class SmallCategoryVO {
 	private String code;
 	private String name;
 
+	
+
 	public String getBig_class_code() {
 		return big_class_code;
 	}
 
-	public void setBcode(String big_class_code) {
+	public void setBig_class_code(String big_class_code) {
 		this.big_class_code = big_class_code;
 	}
 

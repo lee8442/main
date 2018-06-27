@@ -60,48 +60,72 @@
 					<!-- 최근 주문상품 -->
 					<thead>
 						<tr class="txtLittle">
-							<th scope="col" class="number">주문일자</th>
 							<th scope="col" class="number2">주문번호</th>
-							<th scope="col" class="thumb">이미지</th>
-							<th scope="col" class="product">상품정보</th>
+							<th scope="col" class="thumb">구매자</th>
+							<th scope="col" class="thumb">상품명</th>
+							<th scope="col" class="number">주문일자</th>
 							<th scope="col" class="quantity">수량</th>
-							<th scope="col" class="price">상품구매금액</th>
-							<th scope="col" class="state">주문처리상태</th>
+							<th scope="col" class="price">구매금액</th>
+							<th scope="col" class="state">주문현황</th>
+							<th scope="col" class="state">주문상태</th>
+							<th scope="col" class="product">배송지</th>
 						</tr>
 					</thead>
 					<tbody class="displaynone">
+					<c:forEach var="List" items="${myOrderList }">
 						<tr class="">
-							<td class="number txtLittle displaynone">
-								<!-- 주문일자 -->
-							</td>
+							
 							<td class="number2">
 								<!-- 주문번호 -->
+								<input id="orderCheck" type="checkbox" class="orderCheck" onclick="OrderCodeCheck(this)" name="code" value="${List.code }">${List.code }
 							</td>
 							<td class="thumb">
-								<!-- 썸네일 이미지 -->
+								<!-- 구매자 -->
+								<label>${List.member_id }</label>
 							</td>
-							<td class="product">
-								<!-- 상품정보 -->
+							<td class="thumb">
+								<!-- 상품명 -->
+								<label>${List.product_code }</label>
 							</td>
+							<td class="number txtLittle displaynone">
+								<!-- 주문일자 -->
+								<fmt:formatDate value="${List.product_order_date }" pattern="yyyy-MM-dd-HH-mm"/>
+							</td>
+							
 							<td class="quantity txtLittle">
 								<!-- 수량 -->
+								<label>${List.amount }</label>
 							</td>
 							<td class="price txtLittle">
 								<!-- 구매금액 -->
+								<label>${List.price }</label>
 							</td>
 							<td class="state">
-								<!-- 주문처리상태 -->
+								<!-- 주문현황 -->
+								<label>${List.delivery_code }</label>
+							</td>
+							<td class="state">
+								<!-- 주문상태 -->
+								<label>${List.cancle_code }</label>
+							</td>
+							<td class="product">
+								<!-- 배송지 -->
+								<label>${List.delivery_address }</label>
 							</td>
 						</tr>
-					</tbody>
-					<tbody class="">
+						</c:forEach>
 						<tr>
-							<td colspan="7" class="empty">주문 내역이 없습니다</td>
+							<td><input type="button" onclick="orderCancle()" value="주문취소"></td>
+							<td><input type="button" onclick="orderRefundStart()" value="환불신청"></td>
+							<td><input type="button" onclick="orderRefundCancle()" value="환불취소"></td>
+							<td><input type="button" onclick="orderExchangeStart()" value="교환신청"></td>
+							<td><input type="button" onclick="orderExchangeCancle()" value="교환취소"></td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="resources/js/member/myPage.js"></script>
 </body>
 </html>

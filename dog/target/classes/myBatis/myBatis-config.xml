@@ -50,7 +50,7 @@
 		<mapper resource="myBatis/admin/member/deleteMemberSql.xml"/>
 		<mapper resource="myBatis/admin/member/selectListMemberSql.xml"/>
 		<!--order -->
-		<mapper resource="myBatis/admin/order/selectOrderListSql.xml" />
+		<mapper resource="myBatis/admin/order/selectOrderSql.xml" />
 		<mapper resource="myBatis/admin/order/updateOrderSql.xml" />
 		<!--payment -->
 		<!--product -->
@@ -59,8 +59,7 @@
 		<mapper resource="myBatis/admin/product/updateCategorySql.xml" />
 		<mapper resource="myBatis/admin/product/deleteCategorySql.xml" />
 		<mapper resource="myBatis/admin/product/insertProductSql.xml" />
-		<mapper
-			resource="myBatis/admin/product/selectProductListSql.xml" />
+		<mapper resource="myBatis/admin/product/selectProductListSql.xml" />
 		<mapper resource="myBatis/admin/product/updateProductSql.xml" />
 		<mapper resource="myBatis/admin/product/deleteProductSql.xml" />
 		<!--customer -->
@@ -93,6 +92,8 @@
 		<mapper resource="myBatis/customer/member/deleteMyProfileSql.xml"/>
 		<mapper resource="myBatis/customer/member/updateMyProfileSql.xml"/>
 		<!--order -->
+		<mapper resource="myBatis/customer/myPage/selectMyPageOrderSql.xml" />
+		<mapper resource="myBatis/customer/myPage/updateMyPageOrderSql.xml" />
 		<!--payment -->
 		<!--product -->
 		<mapper
@@ -107,5 +108,6 @@
 			resource="myBatis/customer/product/selectSmallCodeNameSql.xml" />
 		<mapper
 			resource="myBatis/customer/product/selectSmallCodeProductListSql.xml" />
+			
 	</mappers>
 </configuration>

@@ -30,6 +30,9 @@ public class InsertCategoryController {
 	@RequestMapping(value = "/insertCategory.ado")
 	public String insertCateogry(SmallCategoryVO vo) {
 		System.out.println("상품 분류 등록 완료");
+		System.out.println("캌퉷:" + vo.toString());
+		
+		
 		insertCategoryService.insertCategory(vo);
 		
 		return "redirect:productCategoryForm.ado";

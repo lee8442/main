@@ -17,9 +17,9 @@
 			<br />
 			<li class="menu">주문관리</li>
 			<li><a href="orderList.ado"> 주문목록</a></li>
-			<li><a href="../order/adminReleaseCondition.jsp"> 출고현황</a></li>
-			<li><a href="../order/adminRefundList.jsp"> 환불목록</a></li>
-			<li><a href="../order/adminRefund.jsp"> 환불처리</a></li>
+			<li><a href="orderRefundList.ado"> 환불목록</a></li>
+			<li><a href="orderExchangeList.ado"> 교환목록</a></li>
+			<li><a href="endOrderList.ado"> 완료목록</a></li>
 			<br />
 			<li class="menu">매출관리</li>
 			<li><a href="../sales/salesAdminDay.jsp"> 일간매출</a></li>

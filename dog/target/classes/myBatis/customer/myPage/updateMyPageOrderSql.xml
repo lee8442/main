@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="customer.myPage">
+
+	<update id="orderRefundStart" parameterType="int" >
+		<![CDATA[update product_order set cancle_code=1 where code = #{cancelCode}]]>
+	</update>
+	<update id="orderCancle" parameterType="int" >
+		<![CDATA[update product_order set cancle_code=0 where code = #{cancelCode}]]>
+	</update>
+	
+	<update id="orderRefundCancle" parameterType="int" >
+		<![CDATA[update product_order set cancle_code=-1 where code = #{cancelCode}]]>
+	</update>
+	
+	<update id="orderExchangeStart" parameterType="int" >
+		<![CDATA[update product_order set cancle_code=3 where code = #{cancelCode}]]>
+	</update>
+	
+	<update id="orderExchangeCancle" parameterType="int" >
+		<![CDATA[update product_order set cancle_code=-1 where code = #{cancelCode}]]>
+	</update>
+</mapper>

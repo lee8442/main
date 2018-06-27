@@ -1,23 +1,25 @@
-function orderCodeCheck(check) {
-	var obj = $(".orderCheck");
-	for (var i = 0; i < obj.length; i++) {
-		if (obj[i] != check) {
+function orderCodeCheck(Check){
+	var obj = $(".OrderCheck");
+	for(var i=0; i<obj.length; i++){
+		if(obj[i] != Check){
 			obj[i].checked = false;
 		}
 	}
-	$("#orderCheck").prop("checked");
+	$("#OrderCheck").prop("checked");
 }
-
-function startDelivery() {
-	var orderCodeS = new String("deliveryCode=" + $("#orderCheck:checked").val());
-	fetch("updateStartDelivery.ado?" + orderCodeS, {
+//배송중
+function OrderDeliveryStert() {
+	var orderCodeS = new String("orderCodeS=" + $("#OrderCheck:checked").val());
+		fetch("updateOrderDeliveryStart.ado?" + orderCodeS, {
+			method : "POST",
+		});
+		location.reload();
+	}
+//배송완료
+function OrderDeliveryEnd() {
+	var orderCodeS = new String("orderCodeS=" + $("#OrderCheck:checked").val());
+	fetch("updateOrderDeliveryEnd.ado?" + orderCodeS, {
 		method : "POST",
 	});
-}
-
-function endDelivery() {
-	var orderCodeS = new String("orderCodeS=" + $("#orderCheck:checked").val());
-	fetch("updateEndDelivery.ado?" + orderCodeS, {
-		method : "POST",
-	});
+	location.reload();
 }

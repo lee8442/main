@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="admin.order">
+	<!-- 배송목록 -->
+	<select id="order" parameterType="com.main.admin.order.VO.OrderVO" resultType="com.main.admin.order.VO.OrderVO">
+		<![CDATA[select distinct a.code, b.name as member_id, c.name as product_code, a.amount,
+		  a.product_order_date, e.state as delivery_code, d.state as cancle_code, a.delivery_address, c.price
+		 from member b, product c, product_order_cancel d, product_order_delivery e ,
+         (select distinct code, member_id, regexp_substr(product_code ,'[^,]+', 1, level) as product_code, 
+         regexp_substr(amount ,'[^,]+', 1, level) as amount, product_order_date, delivery_code, cancle_code, delivery_address 
+         from product_order connect by regexp_substr(product_code , '[^,]+', 1, level) is not null and regexp_substr(amount , '[^,]+', 1, level) is not null) a
+         where a.member_id = b.id and a.cancle_code = d.code and a.delivery_code = e.code and a.product_code = c.code and
+         (delivery_code =-1 or delivery_code = 0) and cancle_code != 0
+     	 order by product_order_date desc, code asc]]>
+	</select>
+	<!-- 환불 목록 -->
+	<select id="orderRefundList" parameterType="com.main.admin.order.VO.OrderVO" resultType="com.main.admin.order.VO.OrderVO">
+		<![CDATA[select distinct a.code, b.name as member_id, c.name as product_code, a.amount,
+		  a.product_order_date, e.state as delivery_code, d.state as cancle_code, a.delivery_address, c.price
+		 from member b, product c, product_order_cancel d, product_order_delivery e ,
+         (select distinct code, member_id, regexp_substr(product_code ,'[^,]+', 1, level) as product_code, 
+         regexp_substr(amount ,'[^,]+', 1, level) as amount, product_order_date, delivery_code, cancle_code, delivery_address 
+         from product_order connect by regexp_substr(product_code , '[^,]+', 1, level) is not null and regexp_substr(amount , '[^,]+', 1, level) is not null) a
+         where a.member_id = b.id and a.cancle_code = d.code and a.delivery_code = e.code and a.product_code = c.code and
+         cancle_code = 1
+     	 order by product_order_date desc, code asc]]>
+	</select>
+	<!-- 교환목록 -->
+	<select id="orderExchangeList" parameterType="com.main.admin.order.VO.OrderVO" resultType="com.main.admin.order.VO.OrderVO">
+		<![CDATA[select distinct a.code, b.name as member_id, c.name as product_code, a.amount,
+		  a.product_order_date, e.state as delivery_code, d.state as cancle_code, a.delivery_address, c.price
+		 from member b, product c, product_order_cancel d, product_order_delivery e ,
+         (select distinct code, member_id, regexp_substr(product_code ,'[^,]+', 1, level) as product_code, 
+         regexp_substr(amount ,'[^,]+', 1, level) as amount, product_order_date, delivery_code, cancle_code, delivery_address 
+         from product_order connect by regexp_substr(product_code , '[^,]+', 1, level) is not null and regexp_substr(amount , '[^,]+', 1, level) is not null) a
+         where a.member_id = b.id and a.cancle_code = d.code and a.delivery_code = e.code and a.product_code = c.code and
+         cancle_code = 3
+     	 order by product_order_date desc, code asc]]>
+	</select>
+	<!-- 완료 목록 -->
+	<select id="endOrderList" parameterType="com.main.admin.order.VO.OrderVO" resultType="com.main.admin.order.VO.OrderVO">
+		<![CDATA[select distinct a.code, b.name as member_id, c.name as product_code, a.amount,
+		  a.product_order_date, e.state as delivery_code, d.state as cancle_code, a.delivery_address, c.price
+		 from member b, product c, product_order_cancel d, product_order_delivery e ,
+         (select distinct code, member_id, regexp_substr(product_code ,'[^,]+', 1, level) as product_code, 
+         regexp_substr(amount ,'[^,]+', 1, level) as amount, product_order_date, delivery_code, cancle_code, delivery_address 
+         from product_order connect by regexp_substr(product_code , '[^,]+', 1, level) is not null and regexp_substr(amount , '[^,]+', 1, level) is not null) a
+         where a.member_id = b.id and a.cancle_code = d.code and a.delivery_code = e.code and a.product_code = c.code and
+         (delivery_code =1 or cancle_code = 2 or cancle_code = 4)
+     	 order by product_order_date desc, code asc]]>
+	</select>
+	
+</mapper>

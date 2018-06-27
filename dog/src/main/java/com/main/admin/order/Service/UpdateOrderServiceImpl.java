@@ -8,16 +8,26 @@ import com.main.admin.order.DAO.OrderDAO;
 public class UpdateOrderServiceImpl implements UpdateOrderService {
 	@Autowired
 	private OrderDAO orderDAO;
-	
+	//출고
 	@Override
-	public void updateOrderStart(int orderCode) {
-		System.out.println("service" + orderCode);
-		orderDAO.updateOrderStart(orderCode);
-
+	public void updateOrderStart(String orderCodeS) {
+		orderDAO.updateOrderStart(orderCodeS);
 	}
+	//배송완료
 	@Override
-	public void updateOrderEnd(int orderCode) {
-		orderDAO.updateOrderEnd(orderCode);
-
+	public void updateOrderEnd(String orderCodeS) {
+		orderDAO.updateOrderEnd(orderCodeS);
+	}
+	//환불
+	@Override
+	public void orderRefundEnd(String cancleCodeS) {
+		System.out.println("환불 처리중(서비스)");
+		orderDAO.orderRefundEnd(cancleCodeS);
+		System.out.println("환불처리중 (서비스2)");
+	}
+	//교환
+	@Override
+	public void orderExchangeEnd(String cancleCodeS) {
+		orderDAO.orderExchangeEnd(cancleCodeS);
 	}
 }

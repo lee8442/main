@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 #categori ul{
 	list-style: none;
 	text-align: center;
@@ -7,21 +6,16 @@
 #categori ul li{
 	display: inline;
 }
-#dfirst{
+.listName{
 	boder: 1px;
 	display: inline-block;
 	width: 350px;
 }
-#dsecond{
-	boder: 1px;
+#divSmallVal{
 	display: inline-block;
-	width: 350px;
+	width: 349px;
 }
-#dfirst2{
+#divBigVal{
 	display: inline-block;
-	width: 350px;
-}
-#dsecond2{
-	display: inline-block;
-	width: 350px;
+	width: 349px;
 }
