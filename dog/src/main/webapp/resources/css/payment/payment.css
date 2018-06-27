@@ -81,7 +81,7 @@
 	line-height: 40px;
 }
 #paymentcontent .order_product .order_table06{
-	width: 100px;
+	width: 200px;
 	height: 40px;
 	line-height: 40px;
 }
@@ -141,7 +141,7 @@
 	text-align: center;
 }
 #paymentcontent .order_product .order_table_center06{
-	width: 100px;
+	width: 200px;
 	height: 100px;
 	line-height: 100px;
 	text-align: center;
@@ -200,6 +200,13 @@
 	line-height: 90px;
 }
 
+#paymentcontent .information .information_table .information_table_right_point{
+	width: 850px;
+	height: 90.7px;
+	float: left;	
+	border-bottom: 1px solid #adadad;
+	border-right: 1px solid #adadad;
+}
 #paymentcontent .information .information_table .information_table_right{
 	width: 850px;
 	height: 90.7px;
@@ -208,7 +215,6 @@
 	border-right: 1px solid #adadad;
 	line-height: 90px;
 }
-
 #paymentcontent .information .information_table .information_table_right .textarea{
 	margin-left: 2px;
 }
@@ -228,23 +234,21 @@
 	height: 30px;
 }
 
-#paymentcontent .information .information_table .information_table_right .savemoney{
-	width: 150px;
+#paymentcontent .information .information_table .information_table_right_point .savemoneyuse{
+	width: 50px;
 	height: 30px;
+	margin-left: 5px;
+}
+#paymentcontent .information .information_table .information_table_right_point .savemoney{
 	margin-left: 20px;
-	background-color: #efefef;
 }
-
-#paymentcontent .information .information_table .information_table_right .savemoneyuse{
+#paymentcontent .information .information_table .information_table_right_point .savemoneycheck{
 	width: 50px;
 	height: 30px;
 	margin-left: 5px;
 }
-
-#paymentcontent .information .information_table .information_table_right .savemoneycheck{
-	width: 50px;
-	height: 30px;
-	margin-left: 5px;
+#paymentcontent .information .information_table .information_table_right_point .user_point{
+	margin-left: 20px;
 }
 	
 #paymentcontent .information .information_table .information_table_right .addressdiv1{
@@ -271,7 +275,7 @@
 	width: 100px;
 	height: 25px;
 	float: left;
-	margin-left: 20px;
+	margin-left: 15px;
 }
 
 #paymentcontent .information .information_table .information_table_right .addressdiv1 p{
@@ -283,25 +287,25 @@
 }
 
 #paymentcontent .information .information_table .information_table_right .addressdiv2{
-	width: 840px;
+	width: 800px;
 	height: 30px;
-	margin-left: 5px;
+	margin-left: 20px;
 }
 
 #paymentcontent .information .information_table .information_table_right .addressdiv2 .address03{
-	width: 830px;
+	width: 800px;
 	height: 25px;
 	float: left;
 }
 
 #paymentcontent .information .information_table .information_table_right .addressdiv3{
-	width: 840px;
+	width: 800px;
 	height: 30px;
-	margin-left: 5px;
+	margin-left: 20px;
 }
 
 #paymentcontent .information .information_table .information_table_right .addressdiv3 .address04{
-	width: 830px;
+	width: 800px;
 	height: 25px;
 	float: left;
 }

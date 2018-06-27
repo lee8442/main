@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myBatis.customer.payment">
+
+	<insert id="insertpayment" parameterType="OrderVO" >
+		<![CDATA[
+		insert into product_order(code,member_id,product_code,amount,product_order_date,delivery_address,phone,name,message,use_point,card,bankbook,account,montant) values(
+		(select decode(count(code), 0, '000001', lpad(to_char(max(to_number(substr(code, 1, 6)))+1), 6, '0'))
+ 		from product_order), #{member_id}, #{product_code}, #{amount}, sysdate, #{delivery_address},#{phone},#{name},#{message},#{use_point},#{card},#{bankbook},#{account},#{montant})
+		]]>
+	</insert>
+
+	<update id="updatepoint" parameterType="OrderVO">
+		update member set point = #{left_point} where id=#{member_id}
+	</update>
+
+</mapper>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myBatis.customer.product">
+	<!-- <resultMap id="map" type="com.main.customer.member.VO.MemberVO"> <result 
+		property="id" column="id" jdbcType="VARCHAR" /> </resultMap> -->
+
+	<select id="paymentProductList" resultType="ProductVO"
+		parameterType="java.util.HashMap">
+		select code, name, price, image from product where code in
+		(select
+		product_code from product_basket where member_id=#{id} and
+		<if test="list.size != 0">
+			<foreach collection="list" item="item" index="index"
+				separator="or">
+				code=#{item}
+			</foreach>
+		</if>
+		) order by code desc
+	</select>
+
+	<select id="paymentProductBasketList" resultType="BasketVO"
+		parameterType="java.util.HashMap">
+		select member_id, product_code, sum(amount) as amount from
+		product_basket
+		where member_id=#{id} and
+		<if test="list.size != 0">
+			<foreach collection="list" item="item" index="index" separator="or">
+				product_code=#{item}
+			</foreach>
+		</if>
+		group by member_id, product_code order by product_code desc
+	</select>
+	
+	<select id="paymentDirectProductList" resultType="ProductVO">
+		select code, name, price,image from product where code = #{code}
+	</select>
+	
+	
+</mapper>

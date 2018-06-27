@@ -7,6 +7,6 @@
 
 	<select id="recomProduct" parameterType="com.main.customer.main.VO.MainVO" resultType="com.main.customer.main.VO.MainVO">
 		<!-- <![CDATA[select name, price, explain, simple_explain, image from product]]> -->
-		<![CDATA[select * from product WHERE code='Aab2222' or code='Eao4321' or code='Baf빗' or code='Daj1111' or code='Aaa7777']]>
+		<![CDATA[select * from product WHERE (code='pd00020' or code='pd00021' or code='pd00022' or code='pd00019' or code='pd00024') and delete_state=1]]>
 	</select>
 </mapper>

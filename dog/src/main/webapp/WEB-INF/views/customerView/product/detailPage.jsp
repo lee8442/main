@@ -153,7 +153,7 @@
 										</div>
 										<div class="ac-basket wrap">
 										<form action="detailPage.do" method="post" id="submitbasket">
-								 		<input name="member_id" type="hidden">
+								 		<input name="member_id" type="hidden" value="${sessionScope.login.id }">
 										<input name="product_code" type="hidden" value="${selectDetailPage.get(0).code }">
 										<input name="amount" type="hidden" id="amount" value="1">
 										</form>

@@ -1,0 +1,221 @@
+#paymentcontent {
+	width: 100%;
+	min-height: 1000px;
+}
+
+#paymentcontent .bar {
+	width: 1200px;
+	margin: auto;
+}
+
+#paymentcontent .guide {
+	width: 1200px;
+	margin: auto;
+	font-size: 18px;
+}
+
+#paymentcontent .guide h2 {
+	font-size: 24px;
+}
+
+#paymentcontent .guide ul {
+	list-style-type: circle;
+	margin-left: 20px;
+}
+
+#paymentcontent .guide ul li {
+	margin-top: 25px;
+}
+
+#paymentcontent .order_product {
+	width: 1200px;
+	margin: auto;
+	margin-top: 30px;
+	font-size: 17px;
+}
+
+#paymentcontent .order_product .order_table {
+	border-bottom: 2px solid #8e8e8e;
+	margin-top: 20px;
+}
+
+#paymentcontent .order_product h2 {
+	font-size: 24px;
+}
+
+#paymentcontent .order_product tr th {
+	border-top: 5px solid red;
+	width: 1300px;
+	height: 40px;
+	border-bottom: 2px solid #8e8e8e;
+}
+
+#paymentcontent .order_product .left {
+	float: left;
+	line-height: 20px;
+}
+
+#paymentcontent .order_product .order_table01 {
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#paymentcontent .order_product .order_table01 .checkbox {
+	width: 50px;
+	height: 20px;
+}
+
+#paymentcontent .order_product .order_table02 {
+	width: 400px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#paymentcontent .order_product .order_table03 {
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#paymentcontent .order_product .order_table04 {
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#paymentcontent .order_product .order_table05 {
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#paymentcontent .order_product .order_table06 {
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#paymentcontent .order_product .order_table07 {
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#paymentcontent .order_product .order_line {
+	border-bottom: 2px #8e8e8e;
+}
+
+#paymentcontent .order_product .order_table_center01 {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#paymentcontent .order_product .order_table_center01 .checkbox {
+	width: 50px;
+	height: 20px;
+}
+
+#paymentcontent .order_product .order_table_center02 {
+	width: 400px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#paymentcontent .order_product .order_table_center02 .order_image {
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+#paymentcontent .order_product .order_table_center03 {
+	width: 200px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#paymentcontent .order_product .order_table_center04 {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#paymentcontent .order_product .order_table_center04 .amount_num {
+	float: left;
+	width: 20px;
+	height: 80px;
+	margin-left: 37px;
+}
+
+#paymentcontent .order_product .order_table_center04 .amount_clickdiv {
+	margin-top: 36px;
+	width: 35px;
+	height: 40px;
+	float: left;
+}
+
+#paymentcontent .order_product .order_table_center04 .amount_up {
+	height: 20px;
+	width: 30px;
+}
+
+#paymentcontent .order_product .order_table_center04 .amount_down {
+	height: 20px;
+	width: 30px;
+}
+
+#paymentcontent .order_product .order_table_center05 {
+	width: 200px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#paymentcontent .order_product .order_table_center06 {
+	width: 200px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#paymentcontent .order_product .order_table_center07 {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#paymentcontent .order_product .order_bottom {
+	width: 1200px;
+	margin: auto;
+	height: 80px;
+	line-height: 70px;
+	font-size: 23px;
+}
+
+#paymentcontent .order_product .order_bottom .order_bottom_left {
+	float: left;
+	margin-left: 20px;
+}
+
+#paymentcontent .order_product .order_bottom .order_bottom_right {
+	float: right;
+	margin-right: 50px;
+}
+
+#paymentcontent .order_product .productsum{
+	text-align: right;
+}
+#paymentcontent .order_product .basketbtn{
+	text-align: center;
+}
+
+
+

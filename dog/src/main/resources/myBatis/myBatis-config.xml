@@ -5,8 +5,8 @@
 	<!--typeAliases 설정 -->
 	<typeAliases>
 		<!--admin -->
-		<typeAlias type="com.main.admin.order.VO.OrderVO"
-			alias="OrderVO" />
+		<!-- <typeAlias type="com.main.admin.order.VO.OrderVO"
+			alias="OrderVO" /> -->
 		<typeAlias type="com.main.admin.product.VO.ProductVO"
 			alias="ProductVO" />
 		<typeAlias type="com.main.admin.product.VO.BigCategoryVO"
@@ -25,7 +25,11 @@
 			alias="InquiryQuestionCategoryVO" />
 		<typeAlias
 			type="com.main.customer.productInquiry.VO.ReplyVO" alias="ReplyVO" />
-	</typeAliases>
+		<typeAlias 
+			type="com.main.admin.product.VO.Product_OrderVO" alias="OrderVO"/>
+		<typeAlias
+			type="com.main.admin.product.VO.Product_BasketVO" alias="BasketVO" />
+		</typeAliases>
 
 	<!--DataSource 설정 -->
 	<environments default="development">
@@ -95,19 +99,22 @@
 		<mapper resource="myBatis/customer/myPage/selectMyPageOrderSql.xml" />
 		<mapper resource="myBatis/customer/myPage/updateMyPageOrderSql.xml" />
 		<!--payment -->
+		<mapper resource="myBatis/customer/payment/insertPaymentSql.xml"/>
+		<mapper resource="myBatis/customer/payment/selectMemberPointSql.xml"/> 
+		<mapper resource="myBatis/customer/payment/deleteProductBasketSql.xml"/>
 		<!--product -->
-		<mapper
-			resource="myBatis/customer/product/selectBigCodeNameSql.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectBigCodeProductListSql.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectProductDetail.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectProductOrderList.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectSmallCodeNameSql.xml" />
-		<mapper
-			resource="myBatis/customer/product/selectSmallCodeProductListSql.xml" />
-			
+		<mapper resource="myBatis/customer/product/selectBigCodeNameSql.xml" />
+		<mapper resource="myBatis/customer/product/selectBigCodeProductListSql.xml" />
+		<mapper resource="myBatis/customer/product/selectProductDetail.xml" />
+		<mapper resource="myBatis/customer/product/selectProductOrderList.xml" />
+		<mapper resource="myBatis/customer/product/selectSmallCodeNameSql.xml" />
+		<mapper resource="myBatis/customer/product/selectSmallCodeProductListSql.xml" />
+		<mapper resource="myBatis/customer/product/deleteProductBasketSql.xml"/>
+		<mapper resource="myBatis/customer/product/updateProductBasketSql.xml"/>
+		<mapper resource="myBatis/customer/product/selectPaymentBasketSql.xml"/>
+		<mapper resource="myBatis/customer/product/insertProductBasketSql.xml" />
+		<mapper resource="myBatis/customer/product/selectProductBasketSql.xml"/>
+				
+		<!-- <mapper resource="myBatis/customer/product/selectDetailPageListSql.xml" /> -->		
 	</mappers>
 </configuration>

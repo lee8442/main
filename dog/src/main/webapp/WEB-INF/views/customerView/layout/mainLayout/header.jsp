@@ -35,7 +35,7 @@
 								<p>|</p></li>
 							<li><a href="insertMember.do">회원가입</a>
 								<p>|</p></li>
-							<li><a href="#">주문배송조회</a>
+							<li><a href="#">주문조회</a>
 								<p>|</p></li>
 							<li><a href="#">장바구니</a>
 								<p>|</p></li>
@@ -43,13 +43,13 @@
 						</c:when>
 						<c:otherwise>
 							<li><form id="bye" action="logout.do" method="post">
-									<a href="#" onclick="document.getElementById('bye').submit();">로그아웃</a>
+									<a href="#" onclick="document.getElementById('bye').submit();">로그아웃 |&nbsp;  </a>
 								</form>
-								<p>|</p></li>
-							<li><a href="#">주문배송조회</a>
-								<p>|</p></li>
-							<li><a href="#">장바구니</a>
-								<p>|</p></li>
+							</li>
+							<li><a href="#"> 주문조회 |&nbsp; </a>
+							</li>
+							<li><a href="productBasket.do"> 장바구니 |&nbsp; </a>
+							</li>
 							<li><a href="#">고객센터</a></li>
 						</c:otherwise>
 					</c:choose>

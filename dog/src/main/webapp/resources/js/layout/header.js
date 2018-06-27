@@ -37,7 +37,6 @@ $(".cf li").hover(function() {
 	       method : "POST",
 	    }).then(function(response) {
 	       if(!response.ok){
-	          alert("에러가 발생했습니다.");
 	          threwError(response.statusText);
 	       }
 	       return response.json();
