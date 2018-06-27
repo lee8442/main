@@ -1,5 +1,7 @@
 package com.main.customer.member.Controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +22,7 @@ public class DeleteMyProfileController {
 	}
 
 	@RequestMapping(value = "/deleteGo.do")
-	public String deleteGo(MemberVO vo, Model model) {
+	public String deleteGo(MemberVO vo, Model model ,HttpSession session) {
 		System.out.println("회원탈퇴 완료 사실은 update");
 		int x = 1;
 		if (x == 1) {
@@ -31,6 +33,7 @@ public class DeleteMyProfileController {
 			 * out.flush(); session.invalidate();
 			 */
 			deleteMyProfileService.myProfileDelete(vo);
+			session.invalidate();
 			model.addAttribute("deleteMSG", "true");
 			return "redirect:main.do";
 		} else if (x == 0) {
