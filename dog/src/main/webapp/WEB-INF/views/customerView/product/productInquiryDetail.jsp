@@ -12,13 +12,13 @@
 </head>
 <body>
 	<center>
-		<form id="inquiryWrite" method="post" name="inquiryWrite">
+		<form id="inquiryWrite" method="post" name="inquiryWrite" ></form>  
 			<input type="hidden" name="member_id"
-				value="${sessionScope.sessionID}"> <input type="hidden"
+				value="${sessionScope.login}"> <input type="hidden"
 				name="num" id="num" value="${ivo.num}"> <br>
 			<div class="bar">
 				<a href="main.do" class="a1">홈</a> &nbsp;> <a
-					href="productInquiry.do" class="a2">1:1상품문의목록</a>
+					href="productInquiryForm.do" class="a2">1:1상품문의목록</a>
 			</div>
 			<br> <b><font size="6" color="black">1:1상품문의 </font></b> <br>
 			<table border="3" bordercolor="lightgray" align="center" class="this" id="inquiryWrite">
@@ -37,7 +37,7 @@
 				<tr class="this">
 					<td class="thistd">이미지</td>
 					<td class="thistd"><img class="image"
-						src="/file/${ivo.image }" /></td>
+						src="/file/${ivo.image }" />
 				</tr>
 				<tr class="this">
 					<td class="thistd">제목</td>
@@ -47,17 +47,20 @@
 				<tr class="this">
 					<td class="th">내용</td>
 					<td class="thistd">
-					<div style="resize: none;" name="content" class="contents" cols="80" rows="30">${ivo.content }</div></td>					
+					<div style="resize: none;" name="content" class="contents" cols="80" rows="30" class="ckeditor" >${ivo.content }</div>
+					 </td>					
 				</tr>
+				<%-- <c:if test="${sessionScope.member_id != null}">--%>
 				<tr class="this">
-					<td class="th">댓글목록</td>
+					<td class="th"><b class="b_admin">관리자</b></td>
 					<td class="thistd">
 					<div style="resize: none;" id="listReply" class="replycontent" cols="80" rows="30"></div></td>					
 				</tr>
+				<%--</c:if>--%>
 					<tr class="this"> 
 					<td class="thistd">날짜</td>
 					<td class="thistd">
-					<fmt:formatDate value="${ivo.inquiry_date }" pattern="yyyy-MM-dd" /></td>
+					<fmt:formatDate value="${ivo.inquiry_date }" pattern="yyyy-MM-dd HH:mm:ss" /></td>
 				</tr>
 				<tr class="this">
 					<td class="thistd">비밀번호</td>
@@ -69,7 +72,7 @@
 					<td class="thistd">댓글</td>
 					<td class="thistd">
 					
-					<textarea style="resize: none;"  rows="3"  cols="79"   id="replytext"></textarea>
+					<textarea style="resize: none;"  rows="2"  cols="79"   id="replytext" class="replytext">[관리자]</textarea>
 					
 					<input type="button" id="insertReply" class="reply"value="댓글작성" /> </td>
 				<%--</c:if>--%>
@@ -78,7 +81,7 @@
 					<td colspan="5" scope="row" class="thistd">
 					<a onclick="updateCheck()"><input type="button" value="수정" ></a> 
 					<a onclick="deleteCheck()"><input type="button" value="삭제"></a> 
-					<input type="reset" value="취소" onclick="window.location='productInquiry.do' "></td>
+					<input type="reset" value="취소" onclick="window.location='productInquiryForm.do' "></td>
 				</tr>
 			</table>
 		</form>
@@ -119,5 +122,6 @@
 	</script>
 	<script type="text/javascript"
 		src="resources/js/product/inquiryDetail.js"></script>
+					<script type="text/javascript" src="resources/js/ckeditor/ckeditor.js"></script>	
 </body>
 </html>

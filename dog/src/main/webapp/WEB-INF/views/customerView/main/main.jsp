@@ -80,10 +80,7 @@
 									<input class="loginBtn2" type="image"
 										src=" resources/image/main/kakao.JPG" onfocus="this.blur()">
 								</div>
-								<div class="loginwiter">
-									<div class="loginwiternaver">네이버로 로그인</div>
-									<div class="loginwiterkakao">카카오톡으로 로그인</div>
-								</div>
+
 							</div>
 						</div>
 						</c:if>

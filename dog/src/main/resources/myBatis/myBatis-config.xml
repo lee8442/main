@@ -15,20 +15,23 @@
 			alias="SmallCategoryVO" />
 		<!--customer -->
 		<typeAlias
-			type="com.main.customer.productInquiry.VO.InquiryCategoryVO"
+			type="com.main.customer.board.VO.InquiryCategoryVO"
 			alias="InquiryCategoryVO" />
 		<typeAlias
-			type="com.main.customer.productInquiry.VO.InquiryVO"
+			type="com.main.customer.board.VO.InquiryVO"
 			alias="InquiryVO" />
 		<typeAlias
-			type="com.main.customer.productInquiry.VO.InquiryQuestionCategoryVO"
+			type="com.main.customer.board.VO.InquiryQuestionCategoryVO"
 			alias="InquiryQuestionCategoryVO" />
 		<typeAlias
-			type="com.main.customer.productInquiry.VO.ReplyVO" alias="ReplyVO" />
+			type="com.main.customer.board.VO.ReplyVO" alias="ReplyVO" />
 		<typeAlias 
 			type="com.main.admin.product.VO.Product_OrderVO" alias="OrderVO"/>
 		<typeAlias
 			type="com.main.admin.product.VO.Product_BasketVO" alias="BasketVO" />
+		<typeAlias
+			type="com.main.customer.board.VO.ReviewVO" alias="ReviewVO" />
+		
 		</typeAliases>
 
 	<!--DataSource 설정 -->
@@ -74,6 +77,8 @@
 			resource="myBatis/customer/board/inquiryQuestionCategorySql.xml" />
 		<mapper
 			resource="myBatis/customer/board/productInquiryBoardSql.xml" />
+		<mapper
+			resource="myBatis/customer/board/productReviewBoardSql.xml" />
 		<!--header -->
 		<mapper
 			resource="myBatis/customer/header/selectBigCodeNameSql.xml" />

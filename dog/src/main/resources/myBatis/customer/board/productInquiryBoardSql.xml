@@ -2,38 +2,53 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="InquiryBoard">
+<mapper namespace="maBatis.customer.product">
 	<!-- 글 등록 -->
 	<insert id="insertInquiry" parameterType="InquiryVO">
 		insert into
 		inquiry(num,member_id,type_code,subject,content,inquiry_date,password,image,viewcount)
-		values(num_seq.NEXTVAL,#{member_id},#{type_code},#{subject},#{content},sysdate,#{password},#{image},0)
+		values
+		(num_seq.NEXTVAL,#{member_id},#{type_code},#{subject},#{content},sysdate,#{password},#{image},0)
 	</insert>
-	<!-- 글 목록 -->
-	<select id="selectInquiry" resultType="InquiryVO"
-		parameterType="InquiryVO">
-		select b.*, (select count(*) from reply where num = b.num) as recount from inquiry_type a, inquiry b where b.type_code = a.code order by num asc
+	<!-- 글목록 -->
+	<select id="selectInquiry" resultType="InquiryVO">
+		<include refid="paging_header"></include>
+		select
+		ROWNUM,b.num,b.MEMBER_ID,b.subject,b.content,b.image,b.inquiry_date,b.VIEWCOUNT,b.show,t.name,
+		(select count(*) from reply where num= b.num) as recount
+		from inquiry b,inquiry_type t,member m
+		WHERE b.member_id = m.id and b.type_code= t.code
+		<include refid="search" />
+		order by num desc
+		<include refid="paging_footer"></include>
+	</select>
+	<select id="countArticle" resultType="int">
+		select count(*) from inquiry b, member m
+		WHERE b.member_id = m.id
+		<include refid="search" />
 	</select>
 	<sql id="search">
 		<choose>
 			<!-- 검색옵션이 전체 검색일 경우 -->
-			<when test="keyword == 'all'">
-				WHERE b.subject = m.user_id
+			<when test="search_option == 'all' ">
 				AND
-				(subject like
-				'%'||#{keyword}||'%'
+				(subject like '%'||#{keyword}||'%'
 				OR content like '%'||#{keyword}||'%'
-				OR member_id
-				like '%'||#{keyword}||'%')
+				OR member_id like '%'||#{keyword}||'%')
 			</when>
-			<!-- 전체 검색이 아닐 경우 -->
-			<otherwise>
-				WHERE b.writer = m.member_id
-				AND ${searchOption} like
-				'%'||#{keyword}||'%'
-			</otherwise>
 		</choose>
 	</sql>
+	<sql id="paging_header">
+		select *
+		from (
+		select rownum as rn, a.*
+		from (
+	</sql>
+	<sql id="paging_footer">
+		) A
+		) WHERE rn BETWEEN #{start} AND #{end}
+	</sql>
+
 	<!-- 글 상세 -->
 	<select id="selectInquiryDetail" resultType="InquiryVO">
 		select * from
@@ -48,7 +63,7 @@
 		subject = #{subject},
 		content = #{content},
 		image = #{image}
-		where num=#{num}
+		where num= #{num}
 	</update>
 	<!-- 글 목록 조회수 -->
 	<update id="increaseViewCount">
@@ -59,15 +74,11 @@
 	</update>
 	<!-- 글삭제 -->
 	<delete id="delete" parameterType="Integer">
-		delete
-		from inquiry where num =
-		#{num}
+		<!-- delete from inquiry where num = #{num} -->
+		update inquiry
+		set show='N'
+		where num=#{num}
 	</delete>
-	<!-- ref 조회 -->
-	<select id="maxRefInquiry" resultType="Integer">
-		select max(ref) from
-		inquiry
-	</select>
 	<!-- 비밀번호 체크 -->
 	<select id="checkPwInquiry" resultType="Integer"
 		parameterType="InquiryVO">
@@ -81,6 +92,7 @@
 		num, replytext) values
 		(rno_seq.NEXTVAL,#{num},#{replytext})
 	</insert>
+	<!-- 답글목록 -->
 	<select id="listReply" resultType="ReplyVO">
 		SELECT * FROM reply
 		r, inquiry

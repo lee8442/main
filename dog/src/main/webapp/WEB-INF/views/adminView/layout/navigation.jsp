@@ -31,9 +31,8 @@
 			<li><a href="#"> 관리자</a></li>
 			<br />
 			<li class="menu">게시판관리</li>
-			<li><a href="#"> 상품평</a></li>
-			<li><a href="#"> 1:1문의</a></li>
-			<li><a href="#"> FAQ</a></li>
+			<li><a href="reviewAllBoardList.do"> 상품평</a></li>
+			<li><a href="productInquiryForm.do"> 1:1문의</a></li>
 			<br />
 			<li class="menu">통계관리</li>
 			<li><a href="#"> 상품별 현황</a></li>

@@ -27,11 +27,24 @@ else if (myCode == 0 || myCode == 0)
 function aaa(num) {
 	location.href='productInquiryDetail.do?num='+num;
 }
-function bbb(){
-	var sel=document.getElementById('searchOption').value;
-	var keyword=$('#search').val();
+function productSearch(){
+	var sel=document.getElementById('search_option').value;
+	var keyword = $('#search').val();
 	if(sel=='검색'){
 		return;
 	}
-	location.href='productInquiry.do?page=1&sel='+sel+'&keyword='+keyword;
+	location.href='productInquiryForm.do?page=1&sel='+sel+'&keyword='+keyword;
 }
+function check(){
+	if(document.search.keyword.value ==""){
+		alert("검색어를 입력하세요 ");
+		document.search.keyword.fous();
+		return;
+	}
+	document.search.submit();
+}
+function frmPaging() {
+    document.getElementById("frmPaging").submit();
+}
+
+
