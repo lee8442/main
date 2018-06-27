@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-td b.b-p {
+.b-admin{
 	
 }
 
@@ -105,6 +105,10 @@ b {
 .input_box {
 	margin-top: 10px;
 }
+.b-admin{
+	float: right;
+	color:blue;
+}
 
 .list {
 	float: right;
@@ -115,11 +119,10 @@ b {
 }
 
 .delete {
-	float: left;
-	height: 30px;
-	width: 50px;
-	font-size: 15px;
-	font-weight: bold;
+    height: 49px;
+    width: 85px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .cancel {

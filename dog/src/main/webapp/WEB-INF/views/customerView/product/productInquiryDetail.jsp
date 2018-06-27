@@ -20,6 +20,11 @@
 				<a href="main.do" class="a1">홈</a> &nbsp;> <a
 					href="productInquiryForm.do" class="a2">1:1상품문의목록</a>
 			</div>
+			<c:if test="${sessionScope.adminLogin != null}">
+						<div>
+							<b class="b-admin">게시판 관리 [관리자]</b>
+						</div>
+						</c:if>
 			<br> <b><font size="6" color="black">1:1상품문의 </font></b> <br>
 			<table border="3" bordercolor="lightgray" align="center" class="this" id="inquiryWrite">
 				<tr class="this">
@@ -50,13 +55,13 @@
 					<div style="resize: none;" name="content" class="contents" cols="80" rows="30" class="ckeditor" >${ivo.content }</div>
 					 </td>					
 				</tr>
-				<%-- <c:if test="${sessionScope.member_id != null}">--%>
+				 
 				<tr class="this">
 					<td class="th"><b class="b_admin">관리자</b></td>
 					<td class="thistd">
 					<div style="resize: none;" id="listReply" class="replycontent" cols="80" rows="30"></div></td>					
 				</tr>
-				<%--</c:if>--%>
+				
 					<tr class="this"> 
 					<td class="thistd">날짜</td>
 					<td class="thistd">
@@ -68,21 +73,31 @@
 						id="password" /></td>
 				</tr>
 				<tr class="this">
-			<%-- <c:if test="${sessionScope.userId != null}">--%>
+			<c:if test="${sessionScope.adminLogin != null}">
 					<td class="thistd">댓글</td>
 					<td class="thistd">
 					
 					<textarea style="resize: none;"  rows="2"  cols="79"   id="replytext" class="replytext">[관리자]</textarea>
 					
 					<input type="button" id="insertReply" class="reply"value="댓글작성" /> </td>
-				<%--</c:if>--%>
+				</c:if>
 				</tr>
+				<c:if test="${sessionScope.memberLogin != null}">
 				<tr valign="middle" class="this">
 					<td colspan="5" scope="row" class="thistd">
 					<a onclick="updateCheck()"><input type="button" value="수정" ></a> 
 					<a onclick="deleteCheck()"><input type="button" value="삭제"></a> 
 					<input type="reset" value="취소" onclick="window.location='productInquiryForm.do' "></td>
 				</tr>
+				</c:if>
+				<c:if test="${sessionScope.adminLogin != null}">
+				<tr>
+				<td>
+					<a onclick="updateCheck()"><input type="button" value="수정" ></a> 
+					<a onclick="deleteCheck()"><input type="button" value="삭제"></a> 
+				</td>
+				</tr>
+				</c:if>
 			</table>
 		</form>
 	</center>

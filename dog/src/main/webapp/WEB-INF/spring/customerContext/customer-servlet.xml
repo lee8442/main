@@ -21,7 +21,7 @@
 	<mvc:annotation-driven />
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/reviewAllBoardList.do" />
+			<!-- <mvc:mapping path="/reviewAllBoardList.do" /> -->
 			<mvc:mapping path="/myPage.do" />
 			<mvc:mapping path="/deleteMyProfile.do" />
 			<bean

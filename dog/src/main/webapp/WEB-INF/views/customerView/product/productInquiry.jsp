@@ -56,6 +56,7 @@
 						</thead>
 						<tbody
 							class="xans-element- xans-board xans-board-list-4 xans-board-list xans-board-4">
+							
 							<c:forEach var="ii" items="${list}">
 								<c:choose>
 									<c:when test="${ii.show == 'Y'}">
@@ -88,8 +89,10 @@
 										</tr>
 									</c:otherwise>
 								</c:choose>
-
 							</c:forEach>
+							
+						
+							
 						</tbody>
 					</table>
 				</div>

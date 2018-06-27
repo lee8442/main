@@ -24,8 +24,12 @@
 						<p class="info">상품 사용후기입니다.</p>
 					</div>
 				</div>
+				
 				${map.count}개의 상품평이 있습니다.
 				<!-- 카테고리 -->
+				<c:if test="${sessionScope.adminLogin != null}">
+					<b class="b-admin">게시판 관리</b>
+					</c:if> 
 				<div class="sec-sort">
 					<div class="boardSort">
 						<span
@@ -35,6 +39,7 @@
 				<div class="boardList">
 					<table width="100%" border="1" summary="">
 						<caption>상품 게시판 목록</caption>
+						
 						<div>
 							<b class="b_product_review">[상품별점]</b>
 						</div>
@@ -130,8 +135,10 @@
 							<input type="hidden" name="simple_explain" value="${simple_explain }">
 						</c:forEach>
 					</div>
+						<c:if test="${sessionScope.adminLogin != null}">
+					
 					<input type="submit" value="삭제" class="delete" id="btnDelete">
-					<%-- </c:if> --%>
+					</c:if> 
 					<div class="input_box">
 						<input type="button" value="전체목록" class="list"
 							onclick="window.location='reviewAllBoardList.do' ">
