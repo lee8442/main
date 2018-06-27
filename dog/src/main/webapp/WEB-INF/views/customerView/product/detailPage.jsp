@@ -90,7 +90,7 @@
 										<span class="sizeGuide displaynone"><a href="#none"
 											class="size_guide_info" product_no="17"><i
 												class="fa fa-expand" aria-hidden="true"></i>사이즈 가이드</a></span>
-									</div>	 	
+									</div>
 									<div id="totalProducts" class=" ">
 										<div class="thead-wrap"></div>
 										<table border="1" summary="">
@@ -152,11 +152,13 @@
 												id="btnReserve" style="display: none;">예약주문</span>
 										</div>
 										<div class="ac-basket wrap">
-										<form action="detailPage.do" method="post" id="submitbasket">
-								 		<input name="member_id" type="hidden" value="${sessionScope.login.id }">
-										<input name="product_code" type="hidden" value="${selectDetailPage.get(0).code }">
-										<input name="amount" type="hidden" id="amount" value="1">
-										</form>
+											<form action="detailPage.do" method="post" id="submitbasket">
+												<input name="member_id" type="hidden"
+													value="${sessionScope.login.id }"> <input
+													name="product_code" type="hidden"
+													value="${selectDetailPage.get(0).code }"> <input
+													name="amount" type="hidden" id="amount" value="1">
+											</form>
 											<a href="#none" class="df-btn basket "
 												onclick="document.getElementById('submitbasket').submit()">장바구니</a>
 										</div>
@@ -296,7 +298,7 @@
 						<div class="board">
 							<h3>REVIEW</h3>
 							<p class="desc">상품의 사용후기를 적어주세요.</p>
-
+							<b class="b_review">${map.reviewcount}개의 게시물이 있습니다.</b>
 							<div class="xans-element- xans-product xans-product-review">
 								<a name="use_review"></a>
 								<p class="noAccess displaynone">글읽기 권한이 없습니다.</p>
@@ -314,17 +316,87 @@
 										</colgroup>
 										<thead>
 											<tr>
-												<th scope="col">번호</th>
-												<th scope="col">제목</th>
-												<th scope="col">작성자</th>
-												<th scope="col">작성일</th>
-												<th scope="col">조회</th>
-												<th scope="col" class="displaynone">평점</th>
+												<th scope="col" class="th_no">NO</th>
+												<th scope="col" class="thumb">IMAGE</th>
+												<th scope="col" class="th_id">ID</th>
+												<th scope="col" class="th_subject">SUBJECT</th>
+												<th scope="col" class="">DATE</th>
+												<th scope="col" class="th_star">★PRODUCT REVIEW★</th>
+												<th scope="col" class="th_view">VIEW</th>
 											</tr>
 										</thead>
 										<tbody class="center">
 											<tr class="xans-record-">
+												<c:forEach var="ii" items="${vlist}">
+													<c:choose>
+														<c:when test="${ii.show == 'Y'}">
+															<tr style="background-color: #FFFFFF; color: #555555;"
+																class="xans-record-">
+																<td>${ii.num }</td>
+																<td><c:if
+																		test="${not empty ii.image and ii.image != ''}">
+																		<img src="/file/${ii.image }" />
+																	</c:if></td>
+																<td>${ii.member_id }</td>
+																<td><a href="javascript:bbb(${ii.num })"
+																	class="a_subject">${ii.subject } </a></td>
+																<td><fmt:formatDate
+																		value="${ii.product_review_date }"
+																		pattern="MM-dd HH:mm:ss" /></td>
+																<td class="thistd">
+																	<div class="starRev">
+																		<c:choose>
+																			<c:when test="${ii.grade == 5 }">
+																				<span class="starR on" id="selectStar1">별1</span>
+																				<span class="starR on" id="selectStar2">별2</span>
+																				<span class="starR on" id="selectStar3">별3</span>
+																				<span class="starR on" id="selectStar4">별4</span>
+																				<span class="starR on" id="selectStar5">별5</span>
+																			</c:when>
+																			<c:when test="${ii.grade == 4 }">
+																				<span class="starR on" id="selectStar1">별1</span>
+																				<span class="starR on" id="selectStar2">별2</span>
+																				<span class="starR on" id="selectStar3">별3</span>
+																				<span class="starR on" id="selectStar4">별4</span>
+																				<span class="starR " id="selectStar5">별5</span>
+																			</c:when>
+																			<c:when test="${ii.grade == 3 }">
+																				<span class="starR on" id="selectStar1">별1</span>
+																				<span class="starR on" id="selectStar2">별2</span>
+																				<span class="starR on" id="selectStar3">별3</span>
+																				<span class="starR " id="selectStar4">별4</span>
+																				<span class="starR " id="selectStar5">별5</span>
+																			</c:when>
+																			<c:when test="${ii.grade == 2 }">
+																				<span class="starR on" id="selectStar1">별1</span>
+																				<span class="starR on" id="selectStar2">별2</span>
+																				<span class="starR " id="selectStar3">별3</span>
+																				<span class="starR " id="selectStar4">별4</span>
+																				<span class="starR " id="selectStar5">별5</span>
+																			</c:when>
+																			<c:when test="${ii.grade == 1 }">
+																				<span class="starR on" id="selectStar1">별1</span>
+																				<span class="starR " id="selectStar2">별2</span>
+																				<span class="starR " id="selectStar3">별3</span>
+																				<span class="starR " id="selectStar4">별4</span>
+																				<span class="starR " id="selectStar5">별5</span>
+																			</c:when>
+																		</c:choose>
+																		<input type="hidden" id="selectStar" value="1">
+																	</div>
+																</td>
+																<td>${ii.view_count }</td>
+															</tr>
 
+														</c:when>
+														<c:otherwise>
+															<tr>
+																<td colspan="10" align="center" class="delete_td">삭제된
+																	게시물 입니다</td>
+															</tr>
+														</c:otherwise>
+													</c:choose>
+												</c:forEach>
 											</tr>
 										</tbody>
 									</table>
@@ -332,10 +404,9 @@
 							</div>
 
 							<p class="ec-base-button fs-0">
-								<span class="gRight"> <a href="productReview.do"
+								<span class="gRight"> <a href="reviewWrite.do"
 									class="df-btn dark normal mr-5">상품후기작성</a> <a
-									href="/board/product/list.html?board_no=4"
-									class="df-btn light normal">모두보기</a>
+									href="reviewAllBoardList.do" class="df-btn light normal">모두보기</a>
 								</span>
 							</p>
 
@@ -373,18 +444,48 @@
 											<col style="width: 100px;">
 											<col style="width: 100px;">
 										</colgroup>
+										<b class="b_count">${map.count}개의 게시물이 있습니다.</b>
 										<thead>
 											<tr>
-												<th scope="col">번호</th>
-												<th scope="col">제목</th>
-												<th scope="col">작성자</th>
-												<th scope="col">작성일</th>
-												<th scope="col">조회</th>
+												<th scope="col">NO.</th>
+												<th scope="col">ID</th>
+												<th scope="col" width="190px">INQUIRYTITLE</th>
+												<th scope="col" colspan="4">SUBJECT</th>
+												<th scope="col">DATE</th>
+												<th scope="col">VIEW</th>
 											</tr>
 										</thead>
 										<tbody class="center">
 											<tr class="xans-record-">
-
+												<c:forEach var="ii" items="${list }">
+													<c:choose>
+														<c:when test="${ii.show == 'Y'}">
+															<tr style="background-color: #FFFFFF; color: #555555;"
+																class="xans-record-">
+																<td>${ii.num }</td>
+																<td>${ii.member_id }</td>
+																<td>${ii.name }</td>
+																<td colspan="4"><c:if test="${ii.recount > 0}">
+																		<span style="color: red;" class="replyend">[답변완료]</span>
+																	</c:if> <a href="javascript:aaa(${ii.num })" class="a_subject">${ii.subject }
+																		<!-- ** 댓글이 있으면 게시글 이름 옆에 출력하기 --> <c:if
+																			test="${ii.recount > 0}">
+																			<span style="color: red;">(${ii.recount}) </span>
+																		</c:if>
+																</a></td>
+																<td><fmt:formatDate value="${ii.inquiry_date }"
+																		pattern="yyyy-MM-dd HH:mm:ss" /></td>
+																<td>${ii.viewcount }</td>
+															</tr>
+														</c:when>
+														<c:otherwise>
+															<tr>
+																<td colspan="10" align="center" class="delete_td">삭제된
+																	게시물 입니다</td>
+															</tr>
+														</c:otherwise>
+													</c:choose>
+												</c:forEach>
 											</tr>
 										</tbody>
 									</table>
@@ -392,10 +493,9 @@
 							</div>
 
 							<p class="ec-base-button fs-0">
-								<span class="gRight fs-0"> <a href="../user/QnAView.jsp"
+								<span class="gRight fs-0"> <a href="productInquiryWrite.do"
 									class="df-btn dark normal mr-5">상품문의하기</a> <a
-									href="/board/product/list.html?board_no=6"
-									class="df-btn light normal">모두보기</a>
+									href="productInquiryForm.do" class="df-btn light normal">모두보기</a>
 								</span>
 							</p>
 
@@ -406,7 +506,7 @@
 						</div>
 					</div>
 				</div>
-
+				<a class="move_top" href="#">TOP</a>
 			</div>
 		</div>
 	</div>

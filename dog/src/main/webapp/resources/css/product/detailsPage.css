@@ -1,5 +1,61 @@
+.th_star{
+	width: 270px;
+}
+.th_id{
+	width: 130px;
+}
+
+.th_subject{
+	width: 300px;
+}
+.b_review{
+	float: left;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-bottom: 10px;
+        font-style: italic;
+}
+.th_view{
+	width: 50px;
+}
+.starR {
+	background:
+		url('http://miuu227.godohosting.com/images/icon/ico_review.png')
+		no-repeat right 0;
+	background-size: auto 100%;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+
+.starR.on {
+	background-position: 0 0;
+}
+
+.move_top {
+	height:46px;
+            width:100%;
+           padding:3px;
+            font-size:45px;
+            border:1px dotted red;
+           color:red;
+            z-index:999;
+}
+
 .displaynone {
 	display: none !important;
+}
+
+.b_count{
+	float: left;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-bottom: 10px;
+        font-style: italic;
 }
 
 body.eMobilePopup {
@@ -7252,8 +7308,12 @@ h1, h3 {
 	padding: 12px 0 11px;
 	border-bottom: 1px solid #e7e7e7;
 	color: #353535;
+	
 	vertical-align: middle;
 	font-weight: normal
+}
+.ec-base-table thead th subject{
+	width: 400px;
 }
 
 .ec-base-table tbody th {
@@ -7456,7 +7516,9 @@ h1, h3 {
 }
 
 .ec-base-table img {
-	vertical-align: middle
+	vertical-align: middle;
+	width: 150px;
+	
 }
 
 @media print {

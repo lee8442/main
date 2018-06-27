@@ -6,6 +6,7 @@ import java.util.List;
 import com.main.admin.product.VO.ProductVO;
 import com.main.admin.product.VO.Product_BasketVO;
 import com.main.admin.product.VO.Product_OrderVO;
+import com.main.customer.board.VO.InquiryVO;
 
 public interface ProductDAO {
 	//대분류 목록
@@ -38,5 +39,5 @@ public interface ProductDAO {
 	public List<Product_BasketVO> selectPaymentProductBasket(HashMap<String, Object> hm);
 	//바로결제 시 상품결제에서 상품리스트
 	public List<ProductVO> selectDirectPaymentProductBasket(String code);
-	
+
 }

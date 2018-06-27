@@ -99,4 +99,5 @@ public class InquiryDAOImpl implements InquiryDAO {
 		
 		return SqlSession.selectOne("countArticle",map);
 	}
+
 }

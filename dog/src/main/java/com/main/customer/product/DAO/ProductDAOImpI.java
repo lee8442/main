@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.main.admin.product.VO.ProductVO;
 import com.main.admin.product.VO.Product_BasketVO;
 import com.main.admin.product.VO.Product_OrderVO;
+import com.main.customer.board.VO.InquiryVO;
 import com.main.util.SqlSessionFactoryBean;
 
 @Repository
@@ -105,5 +106,4 @@ public class ProductDAOImpI implements ProductDAO {
 	public List<ProductVO> selectDirectPaymentProductBasket(String code) {
 		return SqlSession.selectList("myBatis.customer.product.paymentDirectProductList", code);
 	}
-
 }

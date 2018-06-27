@@ -22,6 +22,7 @@ public class InquiryVO {
 	private MultipartFile file;
 	private int recount;
 	private String show;
+	
 
 	public String getSearch_option() {
 		return search_option;

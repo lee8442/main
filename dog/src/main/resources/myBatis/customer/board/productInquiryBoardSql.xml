@@ -100,5 +100,4 @@
 		WHERE r.num = m.num AND m.num=#{num}
 		ORDER BY rno
 	</select>
-
 </mapper>

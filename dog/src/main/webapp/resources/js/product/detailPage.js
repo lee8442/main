@@ -74,11 +74,12 @@ $(document).ready(function() {
 			$("#money").text(b*0.01+"원");
 			$(".totalnum").text(b+"원");
 			$("#submitpayment_amunt").val($("#quantity").val());
-			
-			
 		});
-	
 	});
 
-
-
+function aaa(num) {
+	location.href='productInquiryDetail.do?num='+num;
+}
+function bbb(num) {
+	location.href='selectReviewDetail.do?num='+num;
+}
