@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+warp {
+	margin-left: 10px;
+}
+
+label {
+	display: inline-block;
+	width: 150px;
+	margin: 7px 5px 7px 0;
+	word-break: break-all;
+	vertical-align: middle;
+}
+
+input {
+	display: inline-block;
+	width: 158px;
+	height: 22px;
+	padding-left: 2px;
+}
+
+select {
+	width: 164px;
+	height: 28px;
+}
+
+img {
+	height: 90px;
+	width: 90px;
+	vertical-align: middle;
+	margin: 5px 5px 5px 0;
+}
+
+.imageForm {
+	width: 73px;
+}
+
+#warp>div:first {
+	height: 100px;
+}
+
+#warp>span {
+	height: 100px;
+}
+
+#warp>div>label:first-of-type {
+	vertical-align: middle;
+	margin: 0;
+}
+
+.image_file_label {
+	margin: 0px 3px 0 0;
+	width: 48px;
+	display: inline-block;
+	padding: .5em .75em;
+	color: #fff;
+	font-size: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #2dbcc3;
+	cursor: pointer;
+	border: 1px solid #ebebeb;
+	border-bottom-color: #e2e2e2;
+	border-radius: .25em;
+}
+
+#warp>div>input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+#warp>div>label:last-of-type {
+	font: 400 13.3333px Arial;
+}
+
+.explain_image_div label:first-of-type {
+	width: 50px;
+}
+
+span>label:last-of-type {
+	width: 100px;
+	margin-left: 5px;
+	font: 400 13.3333px Arial;
+}
+
+span>input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.box {
+	height: 40px;
+}
+
+.box>label:first-of-type {
+	width: 300px;
+	margin: 3px 0 5px 0;
+}
+
+.box label {
+	font: 400 13.3333px Arial;
+}
+
+#warp>input:last-of-type {
+	width: 100px;
+	margin: 15px 0 0 100px;
+}

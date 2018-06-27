@@ -2,170 +2,13 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<style>
-input {
-	height: 22px;
-}
-
-select {
-	width: 130px;
-	height: 28px;
-	margin: 5px 0;
-}
-
-#warp {
-	width: 80%;
-	float: left;
-}
-
-#listBox {
-	width: 100%;
-	height: 715px;
-	margin: auto;
-}
-
-#input-form {
-	width: 100%;
-	height: 40px;
-	margin-left: 10px;
-	margin-top: 10px;
-}
-
-#select_list {
-	width: 50%;
-	height: 95%;
-	margin-left: 10px;
-	margin-top: 10px;
-	text-align: center;
-	float: left;
-	overflow: overlay;
-}
-
-#select_info {
-	width: 45%;
-	margin-left: 20px;
-	float: left;
-}
-
-#list-table {
-	width: 97%;
-	border-collapse: collapse;
-}
-
-#list-table>thead>tr {
-	background-color: #333;
-	color: #fff;
-}
-
-#list-table>tbody>tr {
-	border-bottom: 1px solid gray;
-}
-
-#list-table>tbody>tr>td {
-	padding: 10px 0 10px 0;
-	height: 25px;
-}
-
-#list-table>thead>tr>th:nth-child(4n+1) {
-	width: 10%;
-}
-
-#list-table>thead>tr>th:nth-child(4n+2) {
-	width: 20%;
-}
-
-#list-table>thead>tr>th:nth-child(4n+3) {
-	width: 30%;
-}
-
-#list-table>thead>tr>th:nth-child(4n+4) {
-	width: 20%;
-}
-
-#list-table>thead>tr>th:nth-child(4n+5) {
-	width: 20%;
-}
-
-#list-table>tbody>tr>td:nth-child(4n+1) {
-	width: 10%;
-}
-
-#list-table>tbody>tr>td:nth-child(4n+2) {
-	width: 20%;
-}
-
-#list-table>tbody>tr>td:nth-child(4n+3) {
-	width: 30%;
-}
-
-#list-table>tbody>tr>td:nth-child(4n+4) {
-	width: 20%;
-}
-
-#list-table>tbody>tr>td:nth-child(4n+5) {
-	width: 20%;
-}
-
-.table-list tbody tr:hover {
-	background-color: #e5ce5838;
-	cursor: pointer;
-}
-
-.clicked {
-	background-color: #ec732c59;
-}
-
-.mode {
-	padding: 0 10px 0 10px;
-}
-
-.imageForm {
-	width: 73px;
-}
-
-#select_info label {
-	margin: 0 5px 0 0;
-}
-
-#select_info div {
-	height: 100px;
-}
-
-#select_info input[type='text'] {
-	margin: 5px 0;
-}
-
-#select_info textarea {
-	margin: 5px 0;
-}
-
-#select_info div label {
-	float: left;
-	margin: 36px 5px 36px 0;
-}
-
-#select_info div label:last-of-type {
-	font: 400 13.3333px Arial;
-	margin: 41px 5px 41px 0;
-}
-
-#select_info div img {
-	float: left;
-	height: 90px;
-	width: 90px;
-	margin: 5px 5px 0 0;
-}
-
-#select_info div input {
-	float: left;
-	margin: 36px 3px 0 0;
-}
-</style>
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css"
+	href="resources/admin_css/product/selectProductList.css">
 </head>
 <body>
 	<h3>상품 목록</h3>
@@ -175,8 +18,8 @@ select {
 			<div id="input-form">
 				<select id="big" onchange="selectBig($(this))">
 					<option value="0">대분류</option>
-					<c:forEach var="CBig" items="${selectBigCategory}">
-						<option value="${CBig.code}">${CBig.name}</option>
+					<c:forEach var="bigCategoryList" items="${selectBigCategory}">
+						<option value="${bigCategoryList.code}">${bigCategoryList.name}</option>
 					</c:forEach>
 				</select> <select id="small">
 					<option value="0">소분류</option>
@@ -196,7 +39,7 @@ select {
 					<tbody>
 						<c:forEach var="list" items="${list}" varStatus="i">
 							<tr>
-								<td>${i.count}</td>
+								<td id="${list.big_class}${list.small_class}">${i.count}</td>
 								<td>${list.code}</td>
 								<td>${list.name}</td>
 								<td>${list.price}</td>
@@ -209,33 +52,41 @@ select {
 				</table>
 			</div>
 			<div id="select_info">
-				<form action="productReg.ado" method="post"
-					enctype="multipart/form-data">
+				<form action="updateProduct.ado" method="post"
+					onsubmit="return updateCheck()" enctype="multipart/form-data">
 					<label>대분류</label> <select id="select_info_big"
 						onchange="selectBig($(this))">
 						<option value="0">대분류</option>
 						<c:forEach var="CBig" items="${selectBigCategory}">
 							<option value="${CBig.code}">${CBig.name}</option>
 						</c:forEach>
-					</select> <label>소분류</label> <select id="select_info_small">
+					</select> <label>소분류</label> <select name="small_class"
+						id="select_info_small">
 						<option value="0">소분류</option>
-					</select><br /> <label>상품CODE</label><input
-						type="text" disabled="disabled" id="code"><br /> <label>상품명</label>
-					<input type="text" name="name" placeholder="상품명을 적어주세요."><br />
+					</select><br /> <label>상품CODE</label><input id="code" type="text"
+						disabled="disabled"><br /> <label>상품명</label> <input
+						type="text" name="name" placeholder="상품명을 적어주세요."><br />
 					<label>상품가격</label> <input type="text" name="price"
 						placeholder="가격을 적어주세요."><br />
 					<div>
-						<label>상품이미지 등록</label> <img
-							src="resources/image/main/default.png"></img> <input type="file"
-							name="image_file" class="imageForm"><label></label> <br />
+						<label>상품 이미지</label> <img
+							src="resources/image/product/default.png"></img> <label
+							for="image_file" class="image_file_label">업로드</label> <input
+							type="file" id="image_file" name="image_file" class="imageForm"
+							onchange="img(this)" accept=".gif, .jpg, .png, .jpeg"><label></label>
+						<br />
 					</div>
-					<label>상품설명</label> <input type="text" name="simple_explain"
-						placeholder="간략한 설명"><br /> <label>상품 상세설명</label><br />
-					<textarea name="explain" rows="20" cols="80"
-						placeholder="상품설명을 반드시 입력해주세요"></textarea>
-					<br /> <input type="hidden" id="small_code" name="small_class">
-					<input width="70" type="hidden" name="image" value="image">
-					<input class="able" type="submit" value="수정">
+					<label>상품 설명</label> <input type="text" name="simple_explain"
+						placeholder="간략한 설명"><br /> <label>상품 상세설명</label>
+					<div class="explain_image_div box">
+						<label>상세설명 이미지 최대 6장까지 등록할 수 있습니다.</label> <label
+							for="add_explain_image" class="image_file_label"> + 추가</label> <input
+							type="button" id="add_explain_image" class="imageForm"> <label
+							for="delete_explain_image" class="image_file_label"> - 삭제</label>
+						<input type="button" id="delete_explain_image" class="imageForm">
+					</div>
+					<br /> <input type="hidden" name="code"> <input
+						class="able" type="submit" value="수정">
 				</form>
 			</div>
 		</div>

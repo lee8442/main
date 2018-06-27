@@ -2,8 +2,6 @@ package com.main.admin.order.VO;
 
 import java.util.Date;
 
-import org.springframework.web.multipart.MultipartFile;
-
 public class OrderVO {
 	private int code;
 	private String member_id;
@@ -13,117 +11,75 @@ public class OrderVO {
 	private int delivery_code;
 	private int cancle_code;
 	private String delivery_address;
-	
-	private MultipartFile image_file;
-	private String name;
-	private int price;
-	private String simple_explain;
-	private String explain;
-	private String image;
-	private String small_class;
-	private String reg_date;
-	
-	
-	public MultipartFile getImage_file() {
-		return image_file;
+
+	public int getCode() {
+		return code;
 	}
-	public void setImage_file(MultipartFile image_file) {
-		this.image_file = image_file;
+
+	public void setCode(int code) {
+		this.code = code;
 	}
-	public String getName() {
-		return name;
+
+	public String getMember_id() {
+		return member_id;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setMember_id(String member_id) {
+		this.member_id = member_id;
 	}
-	public int getPrice() {
-		return price;
+
+	public String getProduct_code() {
+		return product_code;
 	}
-	public void setPrice(int price) {
-		this.price = price;
+
+	public void setProduct_code(String product_code) {
+		this.product_code = product_code;
 	}
-	public String getSimple_explain() {
-		return simple_explain;
+
+	public int getAmount() {
+		return amount;
 	}
-	public void setSimple_explain(String simple_explain) {
-		this.simple_explain = simple_explain;
+
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
-	public String getExplain() {
-		return explain;
+
+	public Date getProduct_order_date() {
+		return product_order_date;
 	}
-	public void setExplain(String explain) {
-		this.explain = explain;
+
+	public void setProduct_order_date(Date product_order_date) {
+		this.product_order_date = product_order_date;
 	}
-	public String getImage() {
-		return image;
+
+	public int getDelivery_code() {
+		return delivery_code;
 	}
-	public void setImage(String image) {
-		this.image = image;
+
+	public void setDelivery_code(int delivery_code) {
+		this.delivery_code = delivery_code;
 	}
-	public String getSmall_class() {
-		return small_class;
+
+	public int getCancle_code() {
+		return cancle_code;
 	}
-	public void setSmall_class(String small_class) {
-		this.small_class = small_class;
+
+	public void setCancle_code(int cancle_code) {
+		this.cancle_code = cancle_code;
 	}
-	public String getReg_date() {
-		return reg_date;
+
+	public String getDelivery_address() {
+		return delivery_address;
 	}
-	public void setReg_date(String reg_date) {
-		this.reg_date = reg_date;
+
+	public void setDelivery_address(String delivery_address) {
+		this.delivery_address = delivery_address;
 	}
+
 	@Override
 	public String toString() {
 		return "OrderVO [code=" + code + ", member_id=" + member_id + ", product_code=" + product_code + ", amount="
 				+ amount + ", product_order_date=" + product_order_date + ", delivery_code=" + delivery_code
 				+ ", cancle_code=" + cancle_code + ", delivery_address=" + delivery_address + "]";
-	}
-	public int getCode() {
-		return code;
-	}
-	public void setCode(int code) {
-		this.code = code;
-	}
-	public String getMember_id() {
-		return member_id;
-	}
-	public void setMember_id(String member_id) {
-		this.member_id = member_id;
-	}
-	public String getProduct_code() {
-		return product_code;
-	}
-	public void setProduct_code(String product_code) {
-		this.product_code = product_code;
-	}
-	public int getAmount() {
-		return amount;
-	}
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-	public Date getProduct_order_date() {
-		return product_order_date;
-	}
-	public void setProduct_order_date(Date product_order_date) {
-		this.product_order_date = product_order_date;
-	}
-	public int getDelivery_code() {
-		return delivery_code;
-	}
-	public void setDelivery_code(int delivery_code) {
-		this.delivery_code = delivery_code;
-	}
-	public int getCancle_code() {
-		return cancle_code;
-	}
-	public void setCancle_code(int cancle_code) {
-		this.cancle_code = cancle_code;
-	}
-	public String getDelivery_address() {
-		return delivery_address;
-	}
-	public void setDelivery_address(String delivery_address) {
-		this.delivery_address = delivery_address;
 	}
 }

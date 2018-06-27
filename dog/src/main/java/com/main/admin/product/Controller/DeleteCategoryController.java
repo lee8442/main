@@ -9,12 +9,12 @@ import com.main.admin.product.Service.DeleteCategoryService;
 @Controller
 public class DeleteCategoryController {
 	@Autowired
-	private DeleteCategoryService deletecategoryService;
+	private DeleteCategoryService deleteCategoryService;
 	
 	@RequestMapping(value = "/deleteCategory.ado", method = RequestMethod.POST)
 	public String deleteCategory(String DelCode) {
 		System.out.println("삭제실행");
-		deletecategoryService.deleteCategory(DelCode);
+		deleteCategoryService.deleteCategory(DelCode);
 		System.out.println("삭제완료");
 		return "redirect:productCategoryForm.ado";
 	}

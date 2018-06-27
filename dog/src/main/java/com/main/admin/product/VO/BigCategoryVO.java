@@ -1,6 +1,6 @@
 package com.main.admin.product.VO;
 
-public class CategoryVO {
+public class BigCategoryVO {
 	private String name;
 	private String code;
 

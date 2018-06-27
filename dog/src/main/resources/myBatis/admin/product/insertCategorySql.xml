@@ -2,11 +2,11 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="insertCategory">
-	
-	<insert id="insertCategoryS" parameterType="com.main.admin.product.VO.CategorySVO" >
+	<insert id="insertCategoryS" parameterType="SmallCategoryVO" >
 		<![CDATA[insert into small_class values(#{code}, #{big_class_code}, #{name})]]>
 	</insert>
-	<select id="selectBigCategory" parameterType="com.main.admin.product.VO.CategoryVO" resultType="com.main.admin.product.VO.CategoryVO">
+	
+	<select id="selectBigCategory" parameterType="BigCategoryVO" resultType="BigCategoryVO">
 		<![CDATA[select * from big_class]]>
 	</select>
 </mapper>

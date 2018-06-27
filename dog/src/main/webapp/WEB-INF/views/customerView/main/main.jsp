@@ -22,7 +22,7 @@
 					<div class="imageLogin">
 						<h3>신상품 사진</h3>
 						<a href="#" class="b"><img id="slide" class="newImage"
-							width="100%" height="230px;"> </a>
+							width="100%" height="230px"> </a>
 					</div>
 				</div>
 				<!-- 신상품 사진 우측 -->
@@ -30,7 +30,7 @@
 					<c:when test="${not empty sessionScope.login }">
 						<div class="boardImage">
 							<div class="boardImage_top">
-								<div class="login_Form01">${sessionScope.login.name}님
+								<div class="login_Form01">${sessionScope.login.name}님                                
 									환영합니다.</div>
 								<div class="logininpormation">
 									<a href="#">개인정보</a><br>

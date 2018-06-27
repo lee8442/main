@@ -8,8 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.main.admin.product.Service.InsertCategoryService;
-import com.main.admin.product.VO.CategorySVO;
-import com.main.admin.product.VO.CategoryVO;
+import com.main.admin.product.VO.SmallCategoryVO;
+import com.main.admin.product.VO.BigCategoryVO;
 
 @Controller
 public class InsertCategoryController {
@@ -18,17 +18,17 @@ public class InsertCategoryController {
 	
 	
 	@RequestMapping(value = "/insertCategoryForm.ado" )
-	public String insertCategoryForm(Model model, CategoryVO vo) {
+	public String insertCategoryForm(Model model, BigCategoryVO vo) {
 		System.out.println("상품 분류 입력 페이지");
 		
-		List<CategoryVO> selectBigCategory = insertCategoryService.selectBigCategory(vo);
+		List<BigCategoryVO> selectBigCategory = insertCategoryService.selectBigCategory(vo);
 		model.addAttribute("selectBigCategory", selectBigCategory);
 		
 		return "admin/product/productCategoryInsert";
 	}
 
 	@RequestMapping(value = "/insertCategory.ado")
-	public String insertCateogry(CategorySVO vo) {
+	public String insertCateogry(SmallCategoryVO vo) {
 		System.out.println("상품 분류 등록 완료");
 		insertCategoryService.insertCategory(vo);
 		

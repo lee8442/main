@@ -16,7 +16,7 @@
 			<li><a href="selectProductList.ado"> 상품목록</a></li>
 			<br />
 			<li class="menu">주문관리</li>
-			<li><a href="orderListForm.ado"> 주문목록</a></li>
+			<li><a href="orderList.ado"> 주문목록</a></li>
 			<li><a href="../order/adminReleaseCondition.jsp"> 출고현황</a></li>
 			<li><a href="../order/adminRefundList.jsp"> 환불목록</a></li>
 			<li><a href="../order/adminRefund.jsp"> 환불처리</a></li>

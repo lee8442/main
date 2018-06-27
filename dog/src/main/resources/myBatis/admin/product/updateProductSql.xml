@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="admin.product">
+	<update id="updateProduct" parameterType="ProductVO">
+		<![CDATA[update product set name = #{name}, price = #{price}, explain = #{explain}, simple_explain = #{simple_explain}, image = #{image}, small_class = #{small_class} where code = #{code}]]>
+	</update>
+
+	<select id="selectImage" parameterType="String"
+		resultType="ProductVO">
+		<![CDATA[select image, explain from product where code = #{code}]]>
+	</select>
+</mapper>

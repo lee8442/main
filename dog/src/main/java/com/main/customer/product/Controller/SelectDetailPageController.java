@@ -11,8 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.main.admin.order.VO.BasketVO;
 import com.main.admin.product.VO.ProductVO;
-import com.main.admin.product.VO.Product_BasketVO;
 import com.main.customer.product.Service.SelectDetailPageListService;
 
 @Controller
@@ -35,7 +35,7 @@ public class SelectDetailPageController {
 	}
 	
 	@RequestMapping(value = "/detailPage.do", method = RequestMethod.POST)
-	public String detailPage(Product_BasketVO vo, HttpSession session) {
+	public String detailPage(BasketVO vo, HttpSession session) {
 	/*	String id = (String) session.getAttribute("login");
 		vo.setMember_id(id);*/
 		System.out.println(vo.getProduct_code());

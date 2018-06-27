@@ -17,35 +17,33 @@ import com.main.admin.order.VO.OrderVO;
 public class OrderController {
 	@Autowired
 	private SelectOrderService selectOrderService;
-	
+
 	@Autowired
 	private UpdateOrderService updateOrderService;
-	
-	@RequestMapping(value = "/orderListForm.ado")
-	public String productCategory(Model model,OrderVO vo, DeliveryVO svo) {
+
+	@RequestMapping(value = "/orderList.ado", method = RequestMethod.GET)
+	public String productCategory(Model model, OrderVO vo, DeliveryVO svo) {
 		System.out.println("주문목록 페이지");
-		List<OrderVO> OrderList = selectOrderService.OrderList(vo);
-	    	model.addAttribute("OrderList", OrderList);
-	    
+		List<OrderVO> orderList = selectOrderService.OrderList(vo);
+		model.addAttribute("orderList", orderList);
 		return "admin/order/orderList";
 	}
-	
-	@RequestMapping(value = "/updateOrderDeliveryStart.ado")
+
+	@RequestMapping(value = "/updateStartDelivery.ado")
 	public String updateOrderStart(String orderCodeS) {
-		System.out.println("주문현황 불러오기 완료");
-		
-		int orderCode = Integer.parseInt(orderCodeS);
+		System.out.println("배송 시작");
+		int orderCode = Integer.valueOf(orderCodeS);
 		updateOrderService.updateOrderStart(orderCode);
 		System.out.println("처리상태 수정 완료");
-		return "redirect:orderListForm.ado";
+		return "redirect:orderList.ado";
 	}
-	
-	@RequestMapping(value = "/updateOrderDeliveryEnd.ado", method = RequestMethod.POST)
+
+	@RequestMapping(value = "/updateEndDelivery.ado")
 	public String updateOrderEnd(String orderCodeS) {
-		System.out.println("주문현황 불러오기 완료");
-		int orderCode = Integer.parseInt(orderCodeS);
+		System.out.println("배송 완료");
+		int orderCode = Integer.valueOf(orderCodeS);
 		updateOrderService.updateOrderEnd(orderCode);
 		System.out.println("처리상태 수정 완료");
-		return "redirect:orderListForm.ado";
+		return "redirect:orderList.ado";
 	}
 }

@@ -19,26 +19,26 @@ public class OrderDAOImpl implements OrderDAO {
 	
 	@Override
 	public List<OrderVO> OrderList(OrderVO vo){
-		List<OrderVO> OrderList = sqlSession.selectList("selectOrder.Order", vo);
+		List<OrderVO> OrderList = sqlSession.selectList("admin.order.selectOrderList.Order", vo);
 		return OrderList;
 	}
 	
 	@Override
 	public void updateOrderStart(int orderCode) {
-		sqlSession.update("updateOrder.OrderDeliveryStart", orderCode);
+		sqlSession.update("admin.order.updateOrder.OrderDeliveryStart", orderCode);
 		sqlSession.commit();
 		System.out.println("처리상태 수정 완료");
 	}
 	
 	@Override
 	public void updateOrderEnd(int orderCode) {
-		sqlSession.update("updateOrder.OrderDeliveryEnd", orderCode);
+		sqlSession.update("admin.order.updateOrder.OrderDeliveryEnd", orderCode);
 		sqlSession.commit();
 		System.out.println("처리상태 수정 완료");
 	}
 	@Override
 	public List<DeliveryVO> selectDelivery(DeliveryVO vo){
-		List<DeliveryVO> OrderList = sqlSession.selectList("selectOrder.OrderDelivery", vo);
+		List<DeliveryVO> OrderList = sqlSession.selectList("admin.order.selectOrderList.OrderDelivery", vo);
 		return OrderList;
 		
 	}

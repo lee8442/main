@@ -63,7 +63,7 @@
 			<div class="mainMenu">
 				<ul class="cf">
 					<li><a href="productListBigCode.do?bigcode=A"
-						class="allCategories"><img class="listimage"
+						id="bigcode" class="allCategories"><img class="listimage"
 							src="resources/image/main/List.png">전체카테고리</a></li>
 					<li><a id="bigcode" href="productListBigCode.do?bigcode=A">사료/간식</a>
 						<div class="mainMenu_backfull">
@@ -102,7 +102,7 @@
 								</ul>
 							</div>
 						</div></li>
-					<li class="best"><a href="#">베스트상품</a>
+					<li class="best"><a href="#" id="bigcode">베스트상품</a>
 						<div class="mainMenu_backfull">
 							<div class="mainMenu_back">
 								<ul class="mainMenu_backul mainMenu_backul06">

@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.main.admin.product.DAO.ProductDAO;
-import com.main.admin.product.VO.CategorySVO;
-import com.main.admin.product.VO.CategoryVO;
+import com.main.admin.product.VO.SmallCategoryVO;
+import com.main.admin.product.VO.BigCategoryVO;
 
 @Service
 public class InsertCategoryServiceImpl implements InsertCategoryService {
@@ -15,12 +15,12 @@ public class InsertCategoryServiceImpl implements InsertCategoryService {
 	private ProductDAO ProductDAO;
 
 	@Override
-	public List<CategoryVO> selectBigCategory(CategoryVO vo) {
+	public List<BigCategoryVO> selectBigCategory(BigCategoryVO vo) {
 		return ProductDAO.selectBigCategory(vo);
 	}
 	
 	@Override
-	public void insertCategory(CategorySVO vo) {
+	public void insertCategory(SmallCategoryVO vo) {
 		ProductDAO.insertCategory(vo);
 	}
 }

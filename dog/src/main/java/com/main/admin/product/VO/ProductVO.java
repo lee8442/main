@@ -1,9 +1,12 @@
 package com.main.admin.product.VO;
 
+import java.util.List;
+
 import org.springframework.web.multipart.MultipartFile;
 
 public class ProductVO {
 	private MultipartFile image_file;
+	private List<MultipartFile> explain_image_file;
 	private String code;
 	private String name;
 	private int price;
@@ -20,6 +23,14 @@ public class ProductVO {
 
 	public void setImage_file(MultipartFile image_file) {
 		this.image_file = image_file;
+	}
+
+	public List<MultipartFile> getExplain_image_file() {
+		return explain_image_file;
+	}
+
+	public void setExplain_image_file(List<MultipartFile> explain_image_file) {
+		this.explain_image_file = explain_image_file;
 	}
 
 	public String getCode() {
@@ -85,7 +96,7 @@ public class ProductVO {
 	public void setReg_date(String reg_date) {
 		this.reg_date = reg_date;
 	}
-	
+
 	public String getBig_class() {
 		return big_class;
 	}
@@ -96,8 +107,9 @@ public class ProductVO {
 
 	@Override
 	public String toString() {
-		return "ProductVO [image_file=" + image_file + ", code=" + code + ", name=" + name + ", price=" + price
-				+ ", simple_explain=" + simple_explain + ", explain=" + explain + ", image=" + image + ", small_class="
-				+ small_class + ", reg_date=" + reg_date + ", big_class=" + big_class + "]";
+		return "ProductVO [image_file=" + image_file + ", explain_image_file=" + explain_image_file + ", code=" + code
+				+ ", name=" + name + ", price=" + price + ", simple_explain=" + simple_explain + ", explain=" + explain
+				+ ", image=" + image + ", small_class=" + small_class + ", reg_date=" + reg_date + ", big_class="
+				+ big_class + "]";
 	}
 }

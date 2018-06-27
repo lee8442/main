@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.main.admin.product.Service.SelectCategoryService;
 import com.main.admin.product.Service.UpdateCategoryService;
-import com.main.admin.product.VO.CategorySVO;
-import com.main.admin.product.VO.CategoryVO;
+import com.main.admin.product.VO.SmallCategoryVO;
+import com.main.admin.product.VO.BigCategoryVO;
 @Controller
 public class UpdateCategoryController {
 	@Autowired
@@ -19,27 +19,22 @@ public class UpdateCategoryController {
 	private SelectCategoryService selectCategoryService;
 	
 	@RequestMapping(value = "/updateCategoryForm.ado")
-	public String updateCategory(Model model, CategoryVO vo, CategorySVO svo) {
+	public String updateCategory(Model model, BigCategoryVO vo, SmallCategoryVO svo) {
 		
-		List<CategoryVO> selectBigCategory = selectCategoryService.selectBigCategory(vo);
+		List<BigCategoryVO> selectBigCategory = selectCategoryService.selectBigCategory(vo);
 		model.addAttribute("selectBigCategory", selectBigCategory);
 		
 		
-		List<CategorySVO> selectCategoryUp = updateCategoryService.selectCategoryUp(svo);
+		List<SmallCategoryVO> selectCategoryUp = updateCategoryService.selectCategoryUp(svo);
 		model.addAttribute("selectCategoryUp", selectCategoryUp);
 		
 		return "admin/product/productCategoryUpdate";
 	}
 	
-	
-	
-	
 	@RequestMapping(value = "/updateCategory.ado")
-	public String updateCateogryS(CategorySVO vo) {
-		System.out.println("상품 분류 등록 완료");
-		
+	public String updateCateogryS(SmallCategoryVO vo) {
+		System.out.println("소분류 수정 실행");
 		updateCategoryService.updateCategory(vo);
-		System.out.println("소분류 수정 완료");
 		return "redirect:productCategoryForm.ado";
 	}
 }

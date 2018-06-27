@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-<mapper namespace="myBatis.admin.productReg">
+<mapper namespace="admin.product">
 	<!-- 상품 목록 -->
 	<select id="productList" resultType="ProductVO">
-		<![CDATA[select a.*, b.big_class_code as big_class from product a, small_class b where a.small_class = b.code order by a.code asc]]>
+		<![CDATA[select a.*, b.big_class_code as big_class from product a, small_class b where a.small_class = b.code and a.delete_state = 1 order by a.code asc]]>
 	</select>
 </mapper>

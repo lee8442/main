@@ -5,8 +5,8 @@
 	<!-- <resultMap id="map" type="com.main.customer.member.VO.MemberVO"> <result 
 		property="id" column="id" jdbcType="VARCHAR" /> </resultMap> -->
 
-	<select id="SsmallCodeName" resultType="com.main.admin.product.VO.ProductVO">
+	<select id="bigCodeName" resultType="String" parameterType="String">
 		<!-- <![CDATA[select name, price, explain, simple_explain, image from product]]> -->
-		<![CDATA[select code, name from small_class where big_class_code in (select big_class_code from small_class where code=#{smallcode}) ]]>
+		<![CDATA[select name from big_class where code= #{bigcode}]]>
 	</select>
 </mapper>

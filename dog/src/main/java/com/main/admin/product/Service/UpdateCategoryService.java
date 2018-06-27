@@ -2,10 +2,10 @@ package com.main.admin.product.Service;
 
 import java.util.List;
 
-import com.main.admin.product.VO.CategorySVO;
+import com.main.admin.product.VO.SmallCategoryVO;
 
 public interface UpdateCategoryService {
-	public void updateCategory(CategorySVO vo);
+	public void updateCategory(SmallCategoryVO vo);
 	
-	public List<CategorySVO> selectCategoryUp(CategorySVO svo);
+	public List<SmallCategoryVO> selectCategoryUp(SmallCategoryVO svo);
 }

@@ -1,8 +1,8 @@
-package com.main.admin.product.VO;
+package com.main.admin.order.VO;
 
 import java.util.Date;
 
-public class Product_BasketVO {
+public class BasketVO {
 
 	private int code;
 	private String member_id;

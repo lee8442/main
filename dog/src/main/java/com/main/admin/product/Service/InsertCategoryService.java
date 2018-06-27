@@ -2,11 +2,11 @@ package com.main.admin.product.Service;
 
 import java.util.List;
 
-import com.main.admin.product.VO.CategorySVO;
-import com.main.admin.product.VO.CategoryVO;
+import com.main.admin.product.VO.SmallCategoryVO;
+import com.main.admin.product.VO.BigCategoryVO;
 
 public interface InsertCategoryService {
-	public List<CategoryVO> selectBigCategory(CategoryVO vo);
+	public List<BigCategoryVO> selectBigCategory(BigCategoryVO vo);
 	
-	public void insertCategory(CategorySVO vo);
+	public void insertCategory(SmallCategoryVO vo);
 }
