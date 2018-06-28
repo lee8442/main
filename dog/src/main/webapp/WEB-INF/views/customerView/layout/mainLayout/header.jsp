@@ -18,7 +18,7 @@
 			style="width: 100%; height: 300px; z-index: -1000;"> <img
 			class="mySlides" src="resources/image/main/img3.png"
 			style="width: 100%; height: 300px; z-index: -1000;"> <img
-			class="mySlides" src="resources/image/main/img5.png"
+			class="mySlides" src="resources/image/main/img4.png"
 			style="width: 100%; height: 300px; z-index: -1000;">
 		<nav id="nav" class="cf">
 			<div class="title">
