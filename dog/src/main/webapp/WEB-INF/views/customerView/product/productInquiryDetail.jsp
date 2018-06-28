@@ -82,22 +82,26 @@
 								onclick="if(this.value=='[관리자]') this.value='';"></textarea> <input
 							type="button" id="insertReply" class="reply" value="댓글작성" /></td>
 				</c:if>
+				<c:if test="${sessionScope.memberLogin != null}">
 				<tr class="this">
 					<td class="thistd">비밀번호</td>
 					<td class="thistd"><input type="password" name="password"
 						id="password" /></td>
 				</tr>
 				<tr valign="middle" class="this">
-					<td colspan="5" scope="row" class="thistd"><a
+					<td colspan="5" scope="row" class="thistd">
+					
+					<a
 						onclick="updateCheck()"><input type="button" value="수정" ></a>
+						</c:if>
 						<c:if test="${sessionScope.adminLogin != null}">
 							<a onclick="deleteCheck()"><input type="button" value="삭제"></a>
-						</c:if> <input type="reset" value="취소"
-						onclick="window.location='productInquiryForm.do' "></td>
-				</tr>
+						</c:if> 
+					
 			</table>
-			<input type="button" value="전체목록"
+				<input type="button" value="전체목록"
 				onclick="window.location='productInquiryForm.do' " class="btn_list">
+			
 		</form>
 	</center>
 	<script>
