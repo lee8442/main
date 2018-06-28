@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+ a { color:black;   
+  -moz-transition:color .2s ease;   
+  -o-transition:color .2s ease;   
+  -ms-transition:color .2s ease;   
+  -webkit-transition:color .2s ease;   
+  transition:color .2s ease;   
+  } a:hover { color:red; }  
+  
 * {
 	box-sizing: border-box;
 }

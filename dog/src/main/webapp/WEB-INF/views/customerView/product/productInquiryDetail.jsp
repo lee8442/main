@@ -72,31 +72,19 @@
 				<c:if test="${sessionScope.adminLogin != null}">
 					<tr class="this">
 						<td class="thistd">댓글</td>
-						<td class="thistd"><textarea style="resize: none;" rows="2"
-								cols="79" id="replytext" class="replytext"
-								onclick="if(this.value=='[관리자]') this.value='';"></textarea> <input
-							type="button" id="insertReply" class="reply" value="댓글작성" /></td>
+					    <td class="thistd">
+							<textarea style="resize: none;" rows="2" cols="79" id="replytext" class="replytext" ></textarea>
+								<input type="button" id="insertReply" class="reply" value="댓글작성" />
+					   </td>
 				</c:if>
-				
 				<tr class="this">
 					<td class="thistd">비밀번호</td>
 					<td class="thistd"><input type="password" name="password"
 						id="password" /></td>
 				</tr>
-				
-				<c:if test="${sessionScope.adminLogin != null}">
-				<tr class="this">
-					<td class="thistd">비밀번호</td>
-					<td class="thistd"><input type="password" name="password"
-						id="password" /></td>
-				</tr>
-				</c:if>
 				<tr valign="middle" class="this">
 					<td colspan="5" scope="row" class="thistd">
-					
-					
-					<a onclick="updateCheck()"><input type="button" value="수정" ></a>
-				 
+					<a onclick="updateCheck()"><input type="button" value="수정"  class="btn_b"></a>
 				    	<c:if test="${sessionScope.adminLogin != null}">
 						<a onclick="updateCheck()"><input type="button" value="수정" ></a>
 						<a onclick="deleteCheck()"><input type="button" value="삭제"></a>

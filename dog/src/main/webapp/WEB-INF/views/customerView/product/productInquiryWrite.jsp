@@ -13,7 +13,7 @@
 		<form id="inquiryWrite" method="post" action="insertInquiryBoard.do"
 			name="inquiryWrite" enctype="multipart/form-data" class="updateForm">
 			<input type="hidden" name="member_id"
-				value="<%= session.getAttribute("name") %>"><br/>
+				value=""><br/>
 			<div class="bar">
 				<a href="main.do" class="a1">홈</a> &nbsp;> <a
 					href="productInquiryForm.do" class="a2">1:1상품문의목록</a>
@@ -21,7 +21,7 @@
 			<br> <b><font size="6" color="black" class="updateFont">1:1상품문의쓰기</font></b> <br>
 			<table border="3" bordercolor="lightgray" align="center" class="this">
 				<tr class="this">
-					<td class="thistd">아이디</td>
+					<td class="thistd">이름</td>
 					<td class="thistd">${sessionScope.login.name}</td>
 				</tr>
 				<tr class="this">

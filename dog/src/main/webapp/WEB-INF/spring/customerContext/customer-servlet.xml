@@ -23,9 +23,9 @@
 		<mvc:interceptor>
 			<!-- <mvc:mapping path="/reviewAllBoardList.do" /> -->
 			<mvc:mapping path="/myPage.do" />
-			<mvc:mapping path="/deleteMyProfile.do" />
-			<bean
-				class="com.main.customer.member.Interceptor.LoginInterceptor" />
+			<mvc:mapping path="/deleteMyProfile.do" /> 
+		 	<bean
+				class="com.main.customer.member.Interceptor.LoginInterceptor" /> 
 		</mvc:interceptor>
 	</mvc:interceptors>
 	<context:component-scan
