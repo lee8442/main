@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +22,7 @@ import com.main.customer.board.VO.InquiryQuestionCategoryVO;
 import com.main.customer.board.VO.InquiryVO;
 import com.main.customer.board.VO.PagerVO;
 import com.main.customer.board.VO.ReplyVO;
+import com.main.customer.member.VO.MemberVO;
 import com.sun.org.glassfish.gmbal.ManagedAttribute;
 
 @Controller
@@ -35,7 +38,7 @@ public class SelectInquiryBoardController {
 	@Autowired
 	InquiryQuestionCategoryService inquiryQuestionCategoryService;
 	
-
+			MemberVO mvo;
 
 	// 상품문의 게시판 목록
 		@RequestMapping(value = "/productInquiryForm.do")
@@ -75,8 +78,9 @@ public class SelectInquiryBoardController {
 
 		// 상품문의 글쓰기페이지
 		@RequestMapping(value = "/productInquiryWrite.do")
-		public String productInquiryWrite(InquiryQuestionCategoryVO vo, Model model) throws Exception {
+		public String productInquiryWrite(InquiryQuestionCategoryVO vo, Model model,HttpSession session) throws Exception {
 			System.out.println("상품문의 글쓰기 페이지");
+			
 			List<InquiryQuestionCategoryVO> QuestionCategory = inquiryQuestionCategoryService.QuestionCategory();
 			model.addAttribute("QuestionCategory", QuestionCategory);
 

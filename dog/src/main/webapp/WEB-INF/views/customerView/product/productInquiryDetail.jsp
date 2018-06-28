@@ -41,11 +41,6 @@
 					<td class="thistd">${ivo.name }</td>
 				</tr>
 				<tr class="this">
-					<td class="thistd">이미지</td>
-					<td class="thistd"><img class="image"
-						src="/file/${ivo.image }" />
-				</tr>
-				<tr class="this">
 					<td class="thistd">제목</td>
 					<td class="thistd">${ivo.subject }</td>
 				</tr>
@@ -82,23 +77,34 @@
 								onclick="if(this.value=='[관리자]') this.value='';"></textarea> <input
 							type="button" id="insertReply" class="reply" value="댓글작성" /></td>
 				</c:if>
-				<c:if test="${sessionScope.memberLogin != null}">
+				
 				<tr class="this">
 					<td class="thistd">비밀번호</td>
 					<td class="thistd"><input type="password" name="password"
 						id="password" /></td>
 				</tr>
+				
+				<c:if test="${sessionScope.adminLogin != null}">
+				<tr class="this">
+					<td class="thistd">비밀번호</td>
+					<td class="thistd"><input type="password" name="password"
+						id="password" /></td>
+				</tr>
+				</c:if>
 				<tr valign="middle" class="this">
 					<td colspan="5" scope="row" class="thistd">
 					
-					<a
-						onclick="updateCheck()"><input type="button" value="수정" ></a>
-						</c:if>
-						<c:if test="${sessionScope.adminLogin != null}">
-							<a onclick="deleteCheck()"><input type="button" value="삭제"></a>
-						</c:if> 
+					
+					<a onclick="updateCheck()"><input type="button" value="수정" ></a>
+				 
+				    	<c:if test="${sessionScope.adminLogin != null}">
+						<a onclick="updateCheck()"><input type="button" value="수정" ></a>
+						<a onclick="deleteCheck()"><input type="button" value="삭제"></a>
+						</c:if> 	
+						
 					
 			</table>
+			
 				<input type="button" value="전체목록"
 				onclick="window.location='productInquiryForm.do' " class="btn_list">
 			

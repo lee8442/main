@@ -18,7 +18,7 @@
 			<table class="this_table" >
 				<tr class="this">
 					<td id="title" class="thistd">작성자</td>
-					<td class="thistd">${sessionScope.sessionID}</td>
+					<td class="thistd">${sessionScope.login.name}</td>
 				</tr>
 				<tr class="this">
 					<td id="title" class="thistd">제 목</td>

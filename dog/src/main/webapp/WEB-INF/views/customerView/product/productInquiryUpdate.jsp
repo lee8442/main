@@ -41,11 +41,6 @@
 		</select></td>
 				</tr>
 				<tr class="this">
-					<td class="thistd">이미지</td>
-					<td class="thistd"><input type="file" name="file" />
-					<img class="image" src="/file/${uvo.image }" /></td>
-				</tr>
-				<tr class="this">
 					<td class="thistd">제목</td>
 					<td class="thistd"><input type="text" name="subject" value="${uvo.subject }"/></td>
 				</tr>

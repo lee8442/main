@@ -50,7 +50,6 @@
 							class="xans-element- xans-board xans-board-listheader-4 xans-board-listheader xans-board-4 ">
 							<tr style="">
 								<th scope="col">NO.</th>
-								<th scope="col" width="150px">IMAGE</th>
 								<th scope="col">ID</th>
 								<th scope="col" width="190px">INQUIRYTITLE</th>
 								<th scope="col" colspan="4">SUBJECT</th>
@@ -64,10 +63,6 @@
 										<tr style="background-color: #FFFFFF; color: #555555;"
 											class="xans-record-">
 											<td>${ii.num }</td>
-											<td><c:if
-													test="${not empty ii.image and ii.image != ''}">
-													<img src="/file/${ii.image }" />
-												</c:if></td>
 											<td>${ii.member_id }</td>
 											<td>${ii.name }</td>
 											<td colspan="4"><c:if test="${ii.recount > 0}">

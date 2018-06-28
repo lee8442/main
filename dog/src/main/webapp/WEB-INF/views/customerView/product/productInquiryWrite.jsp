@@ -13,7 +13,7 @@
 		<form id="inquiryWrite" method="post" action="insertInquiryBoard.do"
 			name="inquiryWrite" enctype="multipart/form-data" class="updateForm">
 			<input type="hidden" name="member_id"
-				value="${sessionScope.sessionID}"> <br>
+				value="<%= session.getAttribute("name") %>"><br/>
 			<div class="bar">
 				<a href="main.do" class="a1">홈</a> &nbsp;> <a
 					href="productInquiryForm.do" class="a2">1:1상품문의목록</a>
@@ -22,7 +22,7 @@
 			<table border="3" bordercolor="lightgray" align="center" class="this">
 				<tr class="this">
 					<td class="thistd">아이디</td>
-					<td class="thistd">${sessionScope.sessionID}</td>
+					<td class="thistd">${sessionScope.login.name}</td>
 				</tr>
 				<tr class="this">
 					<td class="thistd">질문유형</td>
@@ -37,11 +37,6 @@
 				<tr class="this">
 					<td class="thistd">제목</td>
 					<td class="thistd"><input type="text" name="subject" /></td>
-				</tr>
-				<tr class="this">
-					<td class="thistd">첨부파일</td>
-					<td class="thistd"><input  type="file" name="file" class=""/>
-					</td>
 				</tr>
 				<tr class="this">
 					<td class="th">내용</td>

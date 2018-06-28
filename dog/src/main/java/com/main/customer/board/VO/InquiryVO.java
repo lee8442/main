@@ -14,7 +14,6 @@ public class InquiryVO {
 	private Date inquiry_date;
 	private String password;
 	private String name;
-	private String image;
 	private String column;
 	private String search_option;
 	private String keyword;
@@ -84,12 +83,7 @@ public class InquiryVO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getImage() {
-		return image;
-	}
-	public void setImage(String image) {
-		this.image = image;
-	}
+
 	public String getColumn() {
 		return column;
 	}
@@ -125,7 +119,7 @@ public class InquiryVO {
 	public String toString() {
 		return "InquiryVO [num=" + num + ", member_id=" + member_id + ", type_code=" + type_code + ", subject="
 				+ subject + ", content=" + content + ", inquiry_date=" + inquiry_date + ", password=" + password
-				+ ", name=" + name + ", image=" + image + ", column=" + column + ", keyword=" + keyword + ", viewcount="
+				+ ", name=" + name + ", column=" + column + ", keyword=" + keyword + ", viewcount="
 				+ viewcount + ", file=" + file + ", recount=" + recount + "]";
 	}
 	
