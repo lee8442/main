@@ -9,9 +9,18 @@ function deleteCheck(){
 		alert('비밀번호를 확인하세요')
 	}
 }
+
 function updateCheck(){
+	var password = $('#password').val();
+	var pass =Number(password);
 	var num = $(".this:first tr:first td:last-child").text();
-	location.href='updateInquiry.do?num='+num;
+	if(pass >0 ){
+		alert("수정")
+		location.href='updateInquiry.do?num='+num+'&password='+password;
+	}else{
+		alert('비밀번호를 확인하세요')
+	}
+	
 }
 
 function aaa(num) {

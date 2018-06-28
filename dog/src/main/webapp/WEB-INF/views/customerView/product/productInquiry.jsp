@@ -33,6 +33,10 @@
 					</div>
 				</div>
 				${map.count}개의 게시물이 있습니다.
+				
+				<c:if test="${sessionScope.adminLogin != null}">
+				<b class="admin-mode">[관리자모드]</b>
+				</c:if>
 				<!-- 카테고리 -->
 				<div class="sec-sort">
 					<div class="boardSort">
@@ -56,10 +60,7 @@
 						</thead>
 						<tbody
 							class="xans-element- xans-board xans-board-list-4 xans-board-list xans-board-4">
-							
 							<c:forEach var="ii" items="${list}">
-								<c:choose>
-									<c:when test="${ii.show == 'Y'}">
 										<tr style="background-color: #FFFFFF; color: #555555;"
 											class="xans-record-">
 											<td>${ii.num }</td>
@@ -81,18 +82,7 @@
 													pattern="yyyy-MM-dd HH:mm:ss" /></td>
 											<td>${ii.viewcount }</td>
 										</tr>
-									</c:when>
-									<c:otherwise>
-										<tr>
-											<td colspan="10" align="center" class="delete_td">삭제된
-												게시물 입니다</td>
-										</tr>
-									</c:otherwise>
-								</c:choose>
 							</c:forEach>
-							
-						
-							
 						</tbody>
 					</table>
 				</div>
@@ -134,7 +124,6 @@
 				<fieldset class="boardSearch">
 					<legend>게시물 검색</legend>
 					<p class="category displaynone"></p>
-					
 					<p>
 						<select id="searchOption" name="searchOption">
 							<option value="subject"
@@ -146,12 +135,9 @@
 						</select>
 						<input name="keyword" class="inputTypeText" type="text">
 						<input type="submit" value="검색" class="btn Small Light mL5">
-						
 						<a href="productInquiryForm.do" class="btn Normal Wnormal_2 Dark ">전체목록</a>
 						<a href="productInquiryWrite.do" class="btn Normal Wnormal Dark ">쓰기</a>
-						
 					</p>
-					
 				</fieldset>
 			</div>
 		</form>

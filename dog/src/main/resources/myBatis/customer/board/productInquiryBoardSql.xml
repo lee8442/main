@@ -74,10 +74,7 @@
 	</update>
 	<!-- 글삭제 -->
 	<delete id="delete" parameterType="Integer">
-		<!-- delete from inquiry where num = #{num} -->
-		update inquiry
-		set show='N'
-		where num=#{num}
+		 delete from inquiry where num = #{num} 
 	</delete>
 	<!-- 비밀번호 체크 -->
 	<select id="checkPwInquiry" resultType="Integer"

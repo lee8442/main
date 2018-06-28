@@ -40,7 +40,7 @@ public class InquiryDAOImpl implements InquiryDAO {
 
 	@Override
 	public int delete(int num) {
-		return SqlSession.update("delete", num);
+		return SqlSession.delete("delete", num);
 	}
 
 

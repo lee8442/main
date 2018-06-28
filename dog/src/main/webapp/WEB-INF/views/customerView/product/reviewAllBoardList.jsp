@@ -32,6 +32,10 @@
 					</div>
 				</div>
 				${map.reviewcount}개의 상품평이 있습니다.
+				<c:if test="${sessionScope.adminLogin != null}">
+				<b class="admin-mode">[관리자모드]</b>
+				</c:if>
+				
 				<!-- 카테고리 -->
 				<div class="sec-sort">
 					<div class="boardSort">

@@ -83,3 +83,4 @@ function aaa(num) {
 function bbb(num) {
 	location.href='selectReviewDetail.do?num='+num;
 }
+

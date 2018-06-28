@@ -127,8 +127,7 @@
 					</table>
 					
 				
-				<form action="deleteReview.do" id="form1" method="post">
-					<%--<c:if test="${sessionScope.member_id != null}">--%>
+				<form action="deleteReview.do" id="form1" method="post" >
 					<div>
 						<c:forEach var="ii" items="${pplist}">
 							<input type="hidden" name="num" value="${ii.num }">

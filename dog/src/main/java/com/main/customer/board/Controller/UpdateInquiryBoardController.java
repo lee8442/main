@@ -77,9 +77,9 @@ public class UpdateInquiryBoardController {
 
 		return "redirect:productInquiryForm.do";
 	}
-
+/*
 	// 상품문의게시판 업데이트 비밀번호 체크
-	@RequestMapping(value = "/checkPw.do", method = RequestMethod.POST, produces = "plain/text;charset=utf-8")
+	@RequestMapping(value = "/checkPw.do",method= {RequestMethod.POST,RequestMethod.GET}, produces = "plain/text;charset=utf-8")
 	public @ResponseBody Object checkpw(InquiryVO vo) {
 		System.out.println("비밀번호 체크");
 		System.out.println(vo.getPassword());
@@ -87,6 +87,7 @@ public class UpdateInquiryBoardController {
 		String paramPassword = vo.getPassword();
 		// db에서 password를 조회 vo.getNum()
 		int num = vo.getNum();
+		System.out.println(num);
 		InquiryVO dbVo = selectInquiryBoardService.selectInquiryDetail(num);
 		String dbPassword = dbVo.getPassword();// db의 password
 		// String
@@ -97,6 +98,6 @@ public class UpdateInquiryBoardController {
 		} else {
 			return "0";
 		}
-	}
+	}*/
 
 }
