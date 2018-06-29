@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.topday {
+	margin-top: 20px;
+}
+
+.toptable {
+	background-color: gray;
+	width: 500px;
+}
+
+.toptable_th {
+	width: 140px;
+}
+
+.td_center {
+	text-align: center;
+}
+
+#orderview {
+	display: none;
+}
+
+#mytable {
+	width: 80%;
+}
+
+.backgray {
+	background-color: gray;
+}
+
+.table_th {
+	width: 25%;
+}
+
+#productTableView {
+	display: none;
+}
+
+#productTableform {
+	margin-top: 10px;
+	width: 80%;
+}
+
+#chartKeyword {
+	margin-bottom: 10px;
+}
+
+#orderSales {
+	margin-right: 10px;
+}
+
+#chartContainer {
+	height: 370px;
+	width: 80%;
+	margin: auto;
+}
+
+#errorDiv {
+	margin-top: 15px;
+	padding-left: 210px;
+}

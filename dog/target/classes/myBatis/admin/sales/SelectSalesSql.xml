@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="myBatis.admin.sales">
+	<select id="selectSalesChart" resultType="OrderVO"
+		parameterType="OrderVO">
+		select
+		<include refid="chartKeyword" />
+		<include refid="use_point" />
+		from
+		(select distinct code,
+		member_id,
+		regexp_substr(product_code
+		,'[^,]+', 1, level) as
+		product_code, regexp_substr(amount ,'[^,]+',
+		1,
+		level) as amount,
+		product_order_date, delivery_code, cancle_code,
+		delivery_address, use_point from
+		product_order connect by
+		regexp_substr(product_code , '[^,]+', 1,
+		level) is not null and
+		regexp_substr(amount , '[^,]+', 1, level) is not
+		null) a, product b
+		where a.product_code = b.code and a.cancle_code in
+		(-1, 3, 4)
+		<include refid="salesDaily" />
+		group
+		by
+		<include refid="chartKeywordGroup" />
+		order by
+		<include refid="chartKeywordOrder" />
+	</select>
+
+	<sql id="chartKeyword">
+		<choose>
+			<when test="chartKeyword == '상품별 조회'">
+				sum(a.amount) as amount, b.price, b.name as product_code
+			</when>
+			<when test="chartKeyword == '주문별 조회'">
+				sum(a.amount) as amount, b.price, a.code
+			</when>
+			<when test="chartKeyword == '날짜별 조회'">
+				sum(a.amount * b.price) as price, to_char(a.product_order_date) as
+				product_order_date
+			</when>
+		</choose>
+	</sql>
+
+	<sql id="use_point">
+		<choose>
+			<when test="use_point == 1">
+				, sum(use_point) as use_point
+			</when>
+		</choose>
+	</sql>
+
+	<sql id="salesDaily">
+		<choose>
+			<when test="product_order_date == '일일'">
+				and to_char(product_order_date, 'yyyy-mm-dd') =
+				to_char(sysdate, 'yyyy-mm-dd')
+			</when>
+			<when
+				test="product_order_date2 != '' &amp;&amp; product_order_date2 != null">
+				and to_char(product_order_date, 'yyyy-mm-dd')
+				between
+				#{product_order_date} and #{product_order_date2}
+			</when>
+			<when
+				test="product_order_date2 == '' &amp;&amp; product_order_date2 != null">
+				and to_char(product_order_date, 'yyyy-mm') =
+				#{product_order_date}
+			</when>
+			<otherwise>
+				and to_char(product_order_date, 'yyyy-mm-dd') =
+				#{product_order_date}
+			</otherwise>
+		</choose>
+	</sql>
+
+	<sql id="chartKeywordGroup">
+		<choose>
+			<when test="chartKeyword == '상품별 조회'">
+				b.price, b.name
+			</when>
+			<when test="chartKeyword == '주문별 조회'">
+				b.price, a.code
+			</when>
+			<when test="chartKeyword == '날짜별 조회'">
+				to_char(a.product_order_date)
+			</when>
+		</choose>
+	</sql>
+
+	<sql id="chartKeywordOrder">
+		<choose>
+			<when test="chartKeyword == '상품별 조회'">
+				b.name
+			</when>
+			<when test="chartKeyword == '주문별 조회'">
+				a.code
+			</when>
+			<when test="chartKeyword == '날짜별 조회'">
+				to_char(a.product_order_date)
+			</when>
+		</choose>
+	</sql>
+</mapper>

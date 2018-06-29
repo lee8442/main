@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+select {
+	height: 24px;
+}
+
+#option {
+	margin-right: 10px;
+}
+
+#chartKeyword {
+	margin: 15px 0 10px 15%;
+	display: none;
+}
+
+#orderSales {
+	margin-right: 10px;
+}
+
+#chartContainer {
+	margin-top: 15px;
+	margin-left: 15%;
+	width: 80%;
+	margin: auto;
+}
+
+#errorDiv {
+	padding-left: 280px;
+}
