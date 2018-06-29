@@ -22,22 +22,16 @@
 			<li><a href="endOrderList.ado"> 완료목록</a></li>
 			<br />
 			<li class="menu">매출관리</li>
-			<li><a href="../sales/salesAdminDay.jsp"> 일간매출</a></li>
-			<li><a href="../sales/salesAdminMonth.jsp"> 월간매출</a></li>
-			<li><a href="../sales/salesAdminDetailed.jsp"> 상세매출</a></li>
+			<li><a href="salesDaily.ado"> 일일매출</a></li>
+			<li><a href="salesDay.ado"> 일간매출</a></li>
+			<li><a href="salesMonth.ado"> 월간매출통계</a></li>
 			<br />
 			<li class="menu">고객관리</li>
 			<li><a href="selectMemberList.ado"> 회원</a></li>
-			<li><a href="#"> 관리자</a></li>
 			<br />
 			<li class="menu">게시판관리</li>
 			<li><a href="reviewAllBoardList.do"> 상품평</a></li>
 			<li><a href="productInquiryForm.do"> 1:1문의</a></li>
-			<br />
-			<li class="menu">통계관리</li>
-			<li><a href="#"> 상품별 현황</a></li>
-			<li><a href="#"> 월간 판매현황</a></li>
-			<li><a href="#"> 연간 판매현황</a></li>
 		</ul>
 	</div>
 	<script type="text/javascript"

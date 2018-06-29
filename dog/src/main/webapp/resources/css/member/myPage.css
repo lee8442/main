@@ -126,13 +126,16 @@ a {
 	margin-right: 120px;
 }
 
-.title 
-h3 {
-	float: left;
+.title h3 {
 	color: #353535;
 	height: 27px;
 	font-size: 25px;
 	font-weight: 500;
+}
+
+#orderList {
+	height: 500px;
+	overflow: overlay;
 }
 
 .mybank {

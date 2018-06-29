@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import com.main.admin.product.VO.ProductVO;
 import com.main.admin.product.VO.Product_BasketVO;
 import com.main.admin.product.VO.Product_OrderVO;
-import com.main.customer.board.VO.InquiryVO;
 import com.main.util.SqlSessionFactoryBean;
 
 @Repository
@@ -38,13 +37,11 @@ public class ProductDAOImpI implements ProductDAO {
 
 	@Override
 	public List<ProductVO> selectSmallCodeProductList(String smallcode) {
-		// TODO Auto-generated method stub
 		return SqlSession.selectList("myBatis.customer.product.smallCodeProductList", smallcode);
 	}
 
 	@Override
 	public String slectSBigCodeName(String smallcode) {
-		// TODO Auto-generated method stub
 		return SqlSession.selectOne("myBatis.customer.product.SbigCodeName", smallcode);
 	}
 
@@ -55,7 +52,6 @@ public class ProductDAOImpI implements ProductDAO {
 
 	@Override
 	public List<ProductVO> selectDetailPageList(String code) {
-		// TODO Auto-generated method stub
 		return SqlSession.selectList("myBatis.customer.product.DetailPageList", code);
 	}
 
@@ -67,13 +63,11 @@ public class ProductDAOImpI implements ProductDAO {
 
 	@Override
 	public List<ProductVO> selectProduct(String member_id) {
-		// TODO Auto-generated method stub
 		return SqlSession.selectList("myBatis.customer.product.productList", member_id);
 	}
 
 	@Override
-	public List<Product_OrderVO> selectProductBasket(String member_id) {
-		// TODO Auto-generated method stub
+	public List<Product_BasketVO> selectProductBasket(String member_id) {
 		return SqlSession.selectList("myBatis.customer.product.productBasketList", member_id);
 	}
 
@@ -92,13 +86,11 @@ public class ProductDAOImpI implements ProductDAO {
 
 	@Override
 	public List<ProductVO> selectPaymentProduct(HashMap<String, Object> hm) {
-
 		return SqlSession.selectList("myBatis.customer.product.paymentProductList", hm);
 	}
 
 	@Override
 	public List<Product_BasketVO> selectPaymentProductBasket(HashMap<String, Object> hm) {
-
 		return SqlSession.selectList("myBatis.customer.product.paymentProductBasketList", hm);
 	}
 

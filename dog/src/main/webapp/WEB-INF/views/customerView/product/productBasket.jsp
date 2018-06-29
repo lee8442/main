@@ -12,8 +12,8 @@
 </head>
 <div id="paymentcontent">
 	<div class="bar">
-		<a href="main.do" class="a1">홈</a> &nbsp;> <a href="paymentForm.do"
-			class="a1">주문배송조회</a>
+		<a href="main.do" class="a1">홈</a> &nbsp;> <a href="productBasket.do"
+			class="a1">장바구니</a>
 	</div>
 	<div class="order_product">
 		<h2>장바구니</h2>

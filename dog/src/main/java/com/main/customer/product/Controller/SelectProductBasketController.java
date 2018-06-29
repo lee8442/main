@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.main.admin.product.VO.ProductVO;
-import com.main.admin.product.VO.Product_OrderVO;
+import com.main.admin.product.VO.Product_BasketVO;
 import com.main.customer.member.VO.MemberVO;
 import com.main.customer.product.Service.SelectProductBasketService;
 import com.main.customer.product.Service.SelectProductService;
@@ -35,7 +35,7 @@ public class SelectProductBasketController {
 
 		List<ProductVO> productList = selectProductService.selectProduct(member_id);
 
-		List<Product_OrderVO> productBasketList = selectProductBasketService.selectProductBasket(member_id);
+		List<Product_BasketVO> productBasketList = selectProductBasketService.selectProductBasket(member_id);
 
 		model.addAttribute("basketProductList", productBasketList);
 		model.addAttribute("productList", productList);

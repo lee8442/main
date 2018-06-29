@@ -41,7 +41,6 @@
 							<div class="productprice" id="price">${ProductList.price}</div>
 							<div class="productsimple_explain">
 								${ProductList.simple_explain}</div>
-							<div class="productexplain">${ProductList.explain}</div>
 						</li>
 					</c:forEach>
 				</ul>
@@ -61,7 +60,6 @@
 					<div class="productprice" id="price">${RecomProduct.price}</div>
 					<div class="productsimple_explain">
 						${RecomProduct.simple_explain}</div>
-					<div class="productexplain">${RecomProduct.explain}</div>
 				</li>
 			</c:forEach>
 		</ul>
@@ -79,7 +77,6 @@
 					<div class="productprice" id="price">${BestProduct.price}</div>
 					<div class="productsimple_explain">
 						${BestProduct.simple_explain}</div>
-					<div class="productexplain">${BestProduct.explain}</div>
 				</li>
 			</c:forEach>
 		</ul>

@@ -31,8 +31,7 @@
 				</td>
 				<!-- 주문일자 -->
 				<td>
-					<fmt:formatDate value="${List.product_order_date }" pattern="yyyy-MM-dd-HH-mm"/>
-					
+					<label>${List.product_order_date }</label>
 				</td>
 				
 				<!-- 상품수량(주문한 갯수 -->

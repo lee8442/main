@@ -11,7 +11,7 @@ public class MemberVO {
 	private String email;
 	private String phone;
 	private Date join_date;
-	
+	private int point;
 	
 	public Date getJoin_date() {
 		return join_date;
@@ -77,9 +77,18 @@ public class MemberVO {
 		this.phone = phone;
 	}
 
+	public int getPoint() {
+		return point;
+	}
+
+	public void setPoint(int point) {
+		this.point = point;
+	}
+
 	@Override
 	public String toString() {
 		return "MemberVO [id=" + id + ", name=" + name + ", password=" + password + ", registration=" + registration
-				+ ", address=" + address + ", email=" + email + ", phone=" + phone + "]";
+				+ ", address=" + address + ", email=" + email + ", phone=" + phone + ", join_date=" + join_date
+				+ ", point=" + point + "]";
 	}
 }

@@ -6,7 +6,7 @@
 	<select id="myPageOrder"
 		parameterType="String"
 		resultType="com.main.admin.order.VO.OrderVO">
-		<![CDATA[select distinct a.code, b.name as member_id, c.name as product_code, 
+		<![CDATA[select distinct a.code, b.name as member_id, c.name as product_code, a.amount,
 		  a.product_order_date, e.state as delivery_code, d.state as cancle_code, a.delivery_address, c.price
 		 from member b, product c, product_order_cancel d, product_order_delivery e ,
          (select distinct code, member_id, regexp_substr(product_code ,'[^,]+', 1, level) as product_code, 

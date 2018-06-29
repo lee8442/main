@@ -1,3 +1,8 @@
+$(document).ready(function() {
+	$("#order").text($(".count:last").val());
+	$("#order2").text($(".count:last").val());
+});
+
 function OrderCodeCheck(Check){
 	var obj = $(".orderCheck");
 	for(var i=0; i<obj.length; i++){

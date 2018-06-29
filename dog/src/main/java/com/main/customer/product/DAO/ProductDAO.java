@@ -5,8 +5,6 @@ import java.util.List;
 
 import com.main.admin.product.VO.ProductVO;
 import com.main.admin.product.VO.Product_BasketVO;
-import com.main.admin.product.VO.Product_OrderVO;
-import com.main.customer.board.VO.InquiryVO;
 
 public interface ProductDAO {
 	//대분류 목록
@@ -28,7 +26,7 @@ public interface ProductDAO {
 	//상품 장바구니에서 상품리스트
 	public List<ProductVO> selectProduct(String member_id);
 	//상품 장바구니에서 장바구니리스트
-	public List<Product_OrderVO> selectProductBasket(String member_id);
+	public List<Product_BasketVO> selectProductBasket(String member_id);
 	//상품 바구니 목록 삭제
 	public void deleteProductBasket(HashMap<String, Object> hm);
 	//상품 바구니 수량 수정

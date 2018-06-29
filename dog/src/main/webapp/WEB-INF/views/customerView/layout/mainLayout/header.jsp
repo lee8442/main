@@ -34,22 +34,19 @@
 								<p>|</p></li>
 							<li><a href="insertMember.do">회원가입</a>
 								<p>|</p></li>
-							<li><a href="#">주문조회</a>
+							<li><a href="myPage.do">주문조회</a>
 								<p>|</p></li>
-							<li><a href="#">장바구니</a>
-								<p>|</p></li>
-							<li><a href="#">고객센터</a></li>
+							<li><a href="productBasket.do">장바구니</a>
 						</c:when>
 						<c:otherwise>
 							<li><form id="bye" action="logout.do" method="post">
 									<a href="#" onclick="document.getElementById('bye').submit();">로그아웃 |&nbsp;  </a>
 								</form>
 							</li>
-							<li><a href="#"> 주문조회 |&nbsp; </a>
+							<li><a href="myPage.do"> 주문조회 |&nbsp; </a>
 							</li>
-							<li><a href="productBasket.do"> 장바구니 |&nbsp; </a>
+							<li><a href="productBasket.do"> 장바구니</a>
 							</li>
-							<li><a href="#">고객센터</a></li>
 						</c:otherwise>
 					</c:choose>
 				</ul>
@@ -107,19 +104,6 @@
 								</ul>
 							</div>
 						</div></li>
-					<li class="best"><a href="#" id="bigcode">베스트상품</a>
-						<div class="mainMenu_backfull">
-							<div class="mainMenu_back">
-								<ul class="mainMenu_backul mainMenu_backul06">
-									<li><a href="#">운영자추천!!</a></li>
-									<li><a href="#">이달의 대박품목!!</a></li>
-									<li><a href="#">인기상품!!</a></li>
-									
-								</ul>
-								
-							</div>
-						</div></li>
-					<li><a href="#" class="smallgroup">공지사항</a></li>
 					<li><a href="productInquiryForm.do" class="smallgroup">1:1상품문의</a></li>
 					<li><a href="reviewAllBoardList.do" class="smallgroup">상품평</a></li>
 				</ul>

@@ -11,5 +11,4 @@ public interface MainService {
 		
 		public List<MainVO> selectRecomProduct(MainVO vo);
 		
-		public List<MainVO> selectParkProduct(MainVO vo);
 }

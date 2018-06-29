@@ -5,8 +5,8 @@
 	<!--typeAliases 설정 -->
 	<typeAliases>
 		<!--admin -->
-		<!-- <typeAlias type="com.main.admin.order.VO.OrderVO"
-			alias="OrderVO" /> -->
+		<typeAlias type="com.main.admin.order.VO.OrderVO"
+			alias="OrderVO" />
 		<typeAlias type="com.main.admin.product.VO.ProductVO"
 			alias="ProductVO" />
 		<typeAlias type="com.main.admin.product.VO.BigCategoryVO"
@@ -25,13 +25,10 @@
 			alias="InquiryQuestionCategoryVO" />
 		<typeAlias
 			type="com.main.customer.board.VO.ReplyVO" alias="ReplyVO" />
-		<typeAlias 
-			type="com.main.admin.product.VO.Product_OrderVO" alias="OrderVO"/>
 		<typeAlias
 			type="com.main.admin.product.VO.Product_BasketVO" alias="BasketVO" />
 		<typeAlias
 			type="com.main.customer.board.VO.ReviewVO" alias="ReviewVO" />
-		
 		</typeAliases>
 
 	<!--DataSource 설정 -->
@@ -69,6 +66,8 @@
 		<mapper resource="myBatis/admin/product/selectProductListSql.xml" />
 		<mapper resource="myBatis/admin/product/updateProductSql.xml" />
 		<mapper resource="myBatis/admin/product/deleteProductSql.xml" />
+		<!--sales -->
+		<mapper resource="myBatis/admin/sales/SelectSalesSql.xml" />
 		<!--customer -->
 		<!--board -->
 		<mapper
@@ -93,9 +92,6 @@
 			resource="myBatis/customer/main/selectNewProductSql.xml" />
 		<mapper
 			resource="myBatis/customer/main/selectRecomProductSql.xml" />
-		<mapper
-			resource="myBatis/customer/main/selectParkProductSql.xml" />
-			
 		<!--member -->
 		<mapper resource="myBatis/customer/member/insertMemberSql.xml" />
 		<mapper resource="myBatis/customer/member/loginSql.xml" />
@@ -122,7 +118,6 @@
 		<mapper resource="myBatis/customer/product/selectPaymentBasketSql.xml"/>
 		<mapper resource="myBatis/customer/product/insertProductBasketSql.xml" />
 		<mapper resource="myBatis/customer/product/selectProductBasketSql.xml"/>
-				
 		<!-- <mapper resource="myBatis/customer/product/selectDetailPageListSql.xml" /> -->		
 	</mappers>
 </configuration>
