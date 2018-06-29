@@ -190,6 +190,9 @@
 								&amp; A<span class="board-count">0</span>
 						</a></li>
 					</ul>
+					<div>
+							<img name="explain" src="${selectDetailPage.get(0).explain }"/>
+					</div>
 					<div class="cont">
 						<div class="common-event type-a displaynone"></div>
 					</div>
@@ -328,8 +331,6 @@
 										<tbody class="center">
 											<tr class="xans-record-">
 												<c:forEach var="ii" items="${vlist}">
-													<c:choose>
-														<c:when test="${ii.show == 'Y'}">
 															<tr style="background-color: #FFFFFF; color: #555555;"
 																class="xans-record-">
 																<td>${ii.num }</td>
@@ -387,15 +388,6 @@
 																</td>
 																<td>${ii.view_count }</td>
 															</tr>
-
-														</c:when>
-														<c:otherwise>
-															<tr>
-																<td colspan="10" align="center" class="delete_td">삭제된
-																	게시물 입니다</td>
-															</tr>
-														</c:otherwise>
-													</c:choose>
 												</c:forEach>
 											</tr>
 										</tbody>
@@ -458,8 +450,6 @@
 										<tbody class="center">
 											<tr class="xans-record-">
 												<c:forEach var="ii" items="${list }">
-													<c:choose>
-														<c:when test="${ii.show == 'Y'}">
 															<tr style="background-color: #FFFFFF; color: #555555;"
 																class="xans-record-">
 																<td>${ii.num }</td>
@@ -477,31 +467,20 @@
 																		pattern="yyyy-MM-dd HH:mm:ss" /></td>
 																<td>${ii.viewcount }</td>
 															</tr>
-														</c:when>
-														<c:otherwise>
-															<tr>
-																<td colspan="10" align="center" class="delete_td">삭제된
-																	게시물 입니다</td>
-															</tr>
-														</c:otherwise>
-													</c:choose>
 												</c:forEach>
 											</tr>
 										</tbody>
 									</table>
 								</div>
 							</div>
-
 							<p class="ec-base-button fs-0">
 								<span class="gRight fs-0"> <a href="productInquiryWrite.do"
 									class="df-btn dark normal mr-5">상품문의하기</a> <a
 									href="productInquiryForm.do" class="df-btn light normal">모두보기</a>
 								</span>
 							</p>
-
 							<div
 								class="xans-element- xans-product xans-product-qnapaging df-base-paging">
-
 							</div>
 						</div>
 					</div>

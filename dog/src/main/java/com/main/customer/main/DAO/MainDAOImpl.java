@@ -36,6 +36,12 @@ public class MainDAOImpl implements MainDAO {
 		return SqlSession.selectList("myBatis.customer.main.recomProduct");
 	}
 
+	@Override
+	public List<MainVO> selectParkProduct(MainVO vo) {
+		// TODO Auto-generated method stub
+		return SqlSession.selectList("myBatis.customer.main.parkProduct");
+	}
+
 
 
 }

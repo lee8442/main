@@ -12,8 +12,7 @@
 	<div>
 		<form id="inquiryWrite" method="post" action="insertInquiryBoard.do"
 			name="inquiryWrite" enctype="multipart/form-data" class="updateForm">
-			<input type="hidden" name="member_id"
-				value=""><br/>
+			<input type="hidden" name="member_id" value="${sessionScope.login.id }"><br/>
 			<div class="bar">
 				<a href="main.do" class="a1">홈</a> &nbsp;> <a
 					href="productInquiryForm.do" class="a2">1:1상품문의목록</a>

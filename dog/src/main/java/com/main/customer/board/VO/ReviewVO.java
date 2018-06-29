@@ -18,43 +18,10 @@ public class ReviewVO {
 	private String search_option;
 	private String column;
 	private String simple_explain;
-	private String show;
 	private String keyword;
 	private int price;
 	private String name;
 	private String password;
-	
-	
-	public int getPrice() {
-		return price;
-	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public String getSimple_explain() {
-		return simple_explain;
-	}
-	public void setSimple_explain(String simple_explain) {
-		this.simple_explain = simple_explain;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getKeyword() {
-		return keyword;
-	}
-	public void setKeyword(String keyword) {
-		this.keyword = keyword;
-	}
 	public int getNum() {
 		return num;
 	}
@@ -68,11 +35,9 @@ public class ReviewVO {
 		this.member_id = member_id;
 	}
 	public String getProduct_code() {
-		System.out.println("get pc" + product_code);
 		return product_code;
 	}
 	public void setProduct_code(String product_code) {
-		System.out.println("set pc" + product_code);
 		this.product_code = product_code;
 	}
 	public String getContent() {
@@ -129,23 +94,44 @@ public class ReviewVO {
 	public void setColumn(String column) {
 		this.column = column;
 	}
-	public String getShow() {
-		return show;
+	public String getSimple_explain() {
+		return simple_explain;
 	}
-	public void setShow(String show) {
-		this.show = show;
+	public void setSimple_explain(String simple_explain) {
+		this.simple_explain = simple_explain;
+	}
+	public String getKeyword() {
+		return keyword;
+	}
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	@Override
 	public String toString() {
 		return "ReviewVO [num=" + num + ", member_id=" + member_id + ", product_code=" + product_code + ", content="
 				+ content + ", grade=" + grade + ", product_review_date=" + product_review_date + ", image=" + image
 				+ ", subject=" + subject + ", view_count=" + view_count + ", file=" + file + ", search_option="
-				+ search_option + ", column=" + column + ", show=" + show + "]";
+				+ search_option + ", column=" + column + ", simple_explain=" + simple_explain + ", keyword=" + keyword
+				+ ", price=" + price + ", name=" + name + ", password=" + password + "]";
 	}
-	public void setPassword(int sdf) {
-		// TODO Auto-generated method stub
-		
-	}
-	
+
 	
 }

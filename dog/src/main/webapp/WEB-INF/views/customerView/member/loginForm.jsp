@@ -44,14 +44,6 @@
 							</div>
 						</form>
 					</div>
-					<div class="tabcontent-sns">
-						<ul>
-							<li class="kakao"><a href="#" class="kakao_btn" id="kakao">카카오톡
-									로그인하기</a></li>
-							<li class="naver"><a href="#" class="naver_btn" id="naver">네이버
-									로그인하기</a></li>
-						</ul>
-					</div>
 				</div>
 			</div>
 		</div>

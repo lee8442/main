@@ -14,7 +14,7 @@
 	<select id="selectInquiry" resultType="InquiryVO">
 		<include refid="paging_header"></include>
 		select
-		ROWNUM,b.num,b.MEMBER_ID,b.subject,b.content,b.inquiry_date,b.VIEWCOUNT,b.show,t.name,
+		ROWNUM,b.num,b.MEMBER_ID,b.subject,b.content,b.inquiry_date,b.VIEWCOUNT,t.name,
 		(select count(*) from reply where num= b.num) as recount
 		from inquiry b,inquiry_type t,member m
 		WHERE b.member_id = m.id and b.type_code= t.code

@@ -57,13 +57,13 @@
 
 #visual #nav .topMenu li a {
 	float: left;
-	color: #ffffff;
+	color: black;
 	font-size: 15px;
 }
 
 #visual #nav .topMenu li p {
 	float: left;
-	color: #ffffff;
+	color: black;
 	font-size: 15px;
 	margin: 0 15px;
 }

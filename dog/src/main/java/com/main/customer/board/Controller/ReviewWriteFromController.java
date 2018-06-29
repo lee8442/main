@@ -23,7 +23,6 @@ public class ReviewWriteFromController {
 	@RequestMapping(value = "/reviewWrite.do")
 	public String productReviewForm(Model model,ProductVO pvo,ReviewVO rvo) {
 		System.out.println("상품리뷰 등록 페이지 ");
-		rvo.setMember_id("visitor");
 		List<ProductVO>  plist = selectProductListService.productList();
 		selectProductListService.productList();
 		model.addAttribute("plist",plist);

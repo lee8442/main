@@ -12,6 +12,6 @@ public interface MainDAO {
 	
 	public List<MainVO> selectRecomProduct(MainVO vo);
 	
-
+	public List<MainVO> selectParkProduct(MainVO vo);
 	
 }

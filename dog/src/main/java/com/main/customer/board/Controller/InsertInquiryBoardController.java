@@ -22,7 +22,7 @@ public class InsertInquiryBoardController {
 		@RequestMapping(value = "/insertInquiryBoard.do")
 		synchronized public String insertInquiryBoard(InquiryVO vo) {
 			
-				
+					
 			
 			        insertInquiryBoardService.InsertInquiryBoard(vo);
 		    		return "redirect:productInquiryForm.do";

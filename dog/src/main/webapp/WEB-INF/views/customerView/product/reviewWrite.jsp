@@ -13,7 +13,8 @@
 	<center>
 		<form id="insertReview" method="post" action="insertReview.do" name="insertReview"
 			enctype="multipart/form-data" onsubmit="return formCheck();">
-			<input type="hidden" name="board_id" value="${sessionScope.sessionID}"> 
+			<input type="hidden" name="board_id" value="${sessionScope.sessionID}">
+			<input type="hidden"  name="member_id" value="${sessionScope.login.id }"> 
 			<br> <b><font size="6" color="black" class="review_font">상품평(상품후기)글쓰기</font></b> <br>
 			<table class="this_table" >
 				<tr class="this">

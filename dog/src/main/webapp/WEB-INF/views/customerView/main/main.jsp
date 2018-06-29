@@ -21,8 +21,9 @@
 				<div class="imageLogin_full">
 					<div class="imageLogin">
 						<h3>신상품 사진</h3>
-						<a href="#" class="b"><img id="slide" class="newImage"
-							width="100%" height="230px"> </a>
+						<a href="#" class="b">
+						<img id="slide" class="newImage"
+							width="100%" height="230px"></a>
 					</div>
 				</div>
 				<!-- 신상품 사진 우측 -->
@@ -72,14 +73,7 @@
 										class="regibtn" type="button" value="회원가입">
 									</a>
 								</div>
-								<div class="boardImage_bottom_01">
-									<input class="loginBtn" type="image"
-										src=" resources/image/main/naver.png" onfocus="this.blur()">
-								</div>
-								<div class="boardImage_bottom_02">
-									<input class="loginBtn2" type="image"
-										src=" resources/image/main/kakao.JPG" onfocus="this.blur()">
-								</div>
+								
 
 							</div>
 						</div>
@@ -142,26 +136,42 @@
 					</c:forEach>
 				</ul>
 			</div>
+			
 			<div class="dogParkfull cf">
 				<div class="dogPark">
 					<div class="dogParkleft">
-						<div class="dogParkleftup"></div>
-						<div class="dogParkleftdown"></div>
+						<div class="dogParkleftup">
+							<img class="park" src="resources/image/main/main03.png" style="width: 300px; height: 200px;" >
+						</div>
+						<div class="dogParkleftdown">
+							 <img class="park" src="resources/image/main/main03.png" style="width: 300px; height: 200px;" >
+						</div>
 					</div>
 					<div class="dogParkcenter">
 						<div class="dogParkcenterup">
-							<div class="dogParkcenterup_left"></div>
-							<div class="dogParkcenterup_right"></div>
+							<div class="dogParkcenterup_left">
+								<img class="park" src="resources/image/main/main03.png" style="width: 300px; height: 200px;" >
+							</div>
+							<div class="dogParkcenterup_right">
+							<img class="park" src="resources/image/main/main03.png" style="width: 300px; height: 200px;" >
+							</div>
 						</div>
-						<div class="dogParkcenterdown"></div>
+						<div class="dogParkcenterdown">
+						 <img class="park" src="resources/image/main/main01.png"  style="width: 600px; height: 200px;" >
+						</div>
 					</div>
-					<div class="dogParkright"></div>
-					<div class="dogParkwrite"></div>
+					<div class="dogParkright">
+							<img class="park" src="resources/image/main/main03.png" style="width: 300px; height: 400px;" >
+					</div>
+					<div class="dogParkwrite">
+					
+					</div>
 				</div>
 				<div class="dogParkwrite">
 					<h2># DOG PARK</h2>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 	<script type="text/javascript" src="resources/js/main/main.js"></script>

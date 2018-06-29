@@ -150,6 +150,7 @@ div.text {
 .checkbox {
 	width: 35px;
 	height: 20px;
+	margin-left: 79px;
 }
 
 .tab-list li {
@@ -169,7 +170,7 @@ ul {
 	text-decoration: none;
 	font-size: 16px;
 	padding-top:5px;
-	float: right;
+
 }
 
 .tabcontent-sns {

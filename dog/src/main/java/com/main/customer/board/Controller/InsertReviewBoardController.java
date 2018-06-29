@@ -28,7 +28,6 @@ public class InsertReviewBoardController {
 			rvo.setGrade(star);
 			
 			try {
-			rvo.setMember_id("visitor");
 			rvo.setImage(file.getOriginalFilename());
 			System.out.println("image name=" + rvo.getImage());
 			File fd = new File("D:/myproject/mySpring/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/dog2/resources/image" + rvo.getImage());

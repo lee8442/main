@@ -29,6 +29,12 @@ public class MainServiceImpl implements MainService {
 		return MainDAO.selectRecomProduct(vo);
 	}
 
+	@Override
+	public List<MainVO> selectParkProduct(MainVO vo) {
+		// TODO Auto-generated method stub
+		return MainDAO.selectParkProduct(vo);
+	}
+
 
 
 }

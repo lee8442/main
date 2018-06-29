@@ -93,6 +93,9 @@
 			resource="myBatis/customer/main/selectNewProductSql.xml" />
 		<mapper
 			resource="myBatis/customer/main/selectRecomProductSql.xml" />
+		<mapper
+			resource="myBatis/customer/main/selectParkProductSql.xml" />
+			
 		<!--member -->
 		<mapper resource="myBatis/customer/member/insertMemberSql.xml" />
 		<mapper resource="myBatis/customer/member/loginSql.xml" />

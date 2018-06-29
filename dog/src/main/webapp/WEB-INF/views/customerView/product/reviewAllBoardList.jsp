@@ -62,13 +62,9 @@
 						<tbody
 							class="xans-element- xans-board xans-board-notice-4 xans-board-notice xans-board-4 notice">
 							<c:forEach var="ii" items="${pplist}">
-								<c:choose>
-									<c:when test="${ii.show == 'Y'}">
 										<tr style="background-color: #FFFFFF; color: #555555;"
 											class="xans-record-">
 											<td>${ii.num }</td>
-											
-
 											<td><c:if
 													test="${not empty ii.image and ii.image != ''}">
 													<img src="/file/${ii.image }" />
@@ -124,15 +120,6 @@
 												</div>
 												</td>
 										</tr>
-
-									</c:when>
-									<c:otherwise>
-										<tr>
-											<td colspan="10" align="center" class="delete_td">삭제된
-												게시물 입니다</td>
-										</tr>
-									</c:otherwise>
-								</c:choose>
 							</c:forEach>
 						</tbody>
 					</table>

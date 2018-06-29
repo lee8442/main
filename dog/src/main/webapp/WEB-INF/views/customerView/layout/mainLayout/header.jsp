@@ -12,8 +12,7 @@
 <body>
 	<header id="header"> </header>
 	<div id="visual">
-		<img class="mySlides" src="resources/image/main/img1.png"
-			style="width: 100%; height: 300px; z-index: -1000;"> <img
+		 <img
 			class="mySlides" src="resources/image/main/img2.png"
 			style="width: 100%; height: 300px; z-index: -1000;"> <img
 			class="mySlides" src="resources/image/main/img3.png"
@@ -63,14 +62,6 @@
 				</ul>
 			</c:if>
 		</nav>
-		<div class="inner cf">
-			<div class="divbox">
-				<form class="searchbox">
-					<input class="text" type="text">
-				</form>
-			</div>
-			<a href="#">검색</a>
-		</div>
 	</div>
 	<div id="headercotent">
 		<div class="mainMenu_full">

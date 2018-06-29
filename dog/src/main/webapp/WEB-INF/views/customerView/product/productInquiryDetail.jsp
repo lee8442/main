@@ -86,7 +86,6 @@
 					<td colspan="5" scope="row" class="thistd">
 					<a onclick="updateCheck()"><input type="button" value="수정"  class="btn_b"></a>
 				    	<c:if test="${sessionScope.adminLogin != null}">
-						<a onclick="updateCheck()"><input type="button" value="수정" ></a>
 						<a onclick="deleteCheck()"><input type="button" value="삭제"></a>
 						</c:if> 	
 						

@@ -20,7 +20,7 @@ public class InquiryVO {
 	private int viewcount;
 	private MultipartFile file;
 	private int recount;
-	private String show;
+
 	
 
 	public String getSearch_option() {
@@ -29,12 +29,7 @@ public class InquiryVO {
 	public void setSearch_option(String search_option) {
 		this.search_option = search_option;
 	}
-	public String getShow() {
-		return show;
-	}
-	public void setShow(String show) {
-		this.show = show;
-	}
+
 	public int getNum() {
 		return num;
 	}

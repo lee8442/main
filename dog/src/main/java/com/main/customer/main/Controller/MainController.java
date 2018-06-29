@@ -32,8 +32,10 @@ public class MainController {
 
 		model.addAttribute("selectRecomProduct", selectRecomProduct);
 
-
+		List<MainVO> selectParkProduct = MainService.selectParkProduct(vo);
 		
+		model.addAttribute("selectParkProduct",selectParkProduct);
+ 		
 		
 		return "main/main/main";
 	}

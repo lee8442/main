@@ -15,7 +15,7 @@
 		<include refid="review_paging_header"></include>
 		select rownum rnum,r.num ,r.member_id, r.product_code,
 		r.content, r.grade,r.product_review_date,p.name
-		,r.image,r.subject,r.view_count,r.show,p.simple_explain,p.price
+		,r.image,r.subject,r.view_count,p.simple_explain,p.price
 		from product_review r , product p
 		where r.product_code = p.code
 		<include refid="review_search" />
@@ -63,7 +63,7 @@
 	<select id="selectReviewDetail" resultType="ReviewVO">
 		select r.num ,r.member_id, r.content
 		, r.grade,r.product_review_date,r.product_code,p.name
-		,r.image,r.subject,r.view_count,r.show,p.price,p.simple_explain
+		,r.image,r.subject,r.view_count,p.price,p.simple_explain
 		from
 		product_review r , product p
 		where r.product_code=p.code and num=#{num}

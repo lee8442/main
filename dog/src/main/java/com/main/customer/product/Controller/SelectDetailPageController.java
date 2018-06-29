@@ -35,6 +35,7 @@ public class SelectDetailPageController {
 	SelectInquiryBoardService selectInquiryBoardService;
 	@Autowired
 	SelectReviewBoardService selectReviewBoardService;
+	
 
 	
 	@RequestMapping(value = "/detailPage.do", method = RequestMethod.GET)
@@ -54,6 +55,9 @@ public class SelectDetailPageController {
 		int end = pagerVO.getPageEnd();
 		List<InquiryVO> list = selectInquiryBoardService.listAll(start, end, search_option, keyword);
 		List<ReviewVO> vlist=selectReviewBoardService.listAll(start, end, search_option, keyword);
+	
+		
+ 		 
 		
 		System.out.println(list);
 		System.out.println(vlist);
@@ -65,6 +69,7 @@ public class SelectDetailPageController {
 		map.put("vlist", vlist);
 		map.put("reviewcount", reviewcount);
 		map.put("list", list); // list
+		
 		map.put("count", count); // 레코드의 갯수
 		map.put("pager", pagerVO);
 
@@ -72,6 +77,7 @@ public class SelectDetailPageController {
 		mav.addObject("map", map); // 맵에 저장된 데이터를 mav에 저장
 		mav.addObject("list", list);
 		mav.addObject("vlist",vlist);
+		
 		
 		System.out.println("상품상세 페이지");
 		/*MemberVO memberVO = (MemberVO) session.getAttribute("login");
